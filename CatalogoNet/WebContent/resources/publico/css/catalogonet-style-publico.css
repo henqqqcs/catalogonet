@@ -1,0 +1,1570 @@
+/*========================================================================================*/
+/*======================================= 300px ==========================================*/
+/*========================================================================================*/
+
+/*----------------------------------------------------------------------------------------*/
+/*------------------------------------ categorias ----------------------------------------*/
+
+.categorias-mais-acessadas h2 {
+  font-size: 22px;
+}
+.categorias-mais-acessadas h2 small {
+  font-size: 14px;
+  display: block;
+  margin-top: 5px;
+}
+
+/* -- categoria-gourp --*/
+.categorias-group {
+  border: 2px solid #ccc;
+  margin-bottom: 8px;
+}
+
+.categorias-group ul li {
+  border-bottom: 1px solid #666;
+}
+.categorias-group ul li:last-child {
+  border: 0;
+}
+
+
+.categorias-group h4 {
+  margin: 0;
+  padding: 12px 2px 12px 4px;
+  background-color: black;
+  color: #face0e;
+}
+.categorias-group ul li a {
+  /*background-color: blue;*/
+  background-color: #f4f4f4;
+  color: #535353;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: 8px 2px 8px 4px;
+}
+
+.categorias-group .glyphicon {
+  float: right;
+}
+/*----------------------------------- fim categoras --------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+
+/*========================================================================================*/
+/*======================================= 480px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:480px)  {
+
+/*----------------------------------------------------------------------------------------*/
+/*------------------------------------ categorias ----------------------------------------*/
+
+/*----------------------------------- fim categoras --------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+}
+
+/*========================================================================================*/
+/*======================================= 680px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:680px)  { 
+
+/*----------------------------------------------------------------------------------------*/
+/*------------------------------------ categorias ----------------------------------------*/
+
+.categorias-container {
+  clear: both;
+  margin-top: 10px;
+}
+
+.categorias-group {
+  float: left;
+  width: 25%;
+  border: 0;
+}
+
+.categorias-mais-acessadas h2 {
+  font-size: 28px;
+}
+.categorias-mais-acessadas h2 small {
+  font-size: 16px;
+  display: inline-block;
+  margin-top: 0px;
+  /*float: right;*/
+}
+.categorias-group ul li { 
+  border: 0;
+  margin-bottom: 8px;
+  /*padding-top: 8px;*/
+}
+.categorias-group h4 {
+  background-color: inherit;
+  color: inherit;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.categorias-group ul li a {
+  background-color: inherit;
+  display: inline-block;
+  width: auto;
+  font-weight: normal;
+  padding: 0px 0px 0px 4px;
+  color: inherit;
+}
+.cat-dot {
+  color: #face0e;
+}
+.categorias-group .glyphicon {
+  float: none;
+  top: 2px;
+}
+
+/*----------------------------------- fim categoras --------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+}
+
+/*========================================================================================*/
+/*======================================= 780px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:780px)  {
+
+
+/*----------------------------------------------------------------------------------------*/
+/*------------------------------------ categorias ----------------------------------------*/
+
+
+/*----------------------------------- fim categoras --------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+}
+
+/*========================================================================================*/
+/*======================================= 900px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:900px)  {
+
+
+/*----------------------------------------------------------------------------------------*/
+/*------------------------------------ categorias ----------------------------------------*/
+
+
+/*----------------------------------- fim categoras --------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+}
+
+/*========================================================================================*/
+/*======================================= 981px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:981px){
+
+
+/*----------------------------------------------------------------------------------------*/
+/*------------------------------------ categorias ----------------------------------------*/
+
+
+/*----------------------------------- fim categoras --------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+}/*========================================================================================*/
+/*======================================= 300px ==========================================*/
+/*========================================================================================*/
+
+
+/*----------------------------------------------------------------------------------------*/
+/*------------------------------------ contato -------------------------------------------*/
+
+
+/*------------------------------------ fim contato ---------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+
+/*========================================================================================*/
+/*======================================= 480px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:480px)  {
+
+
+/*----------------------------------------------------------------------------------------*/
+/*------------------------------------ contato -------------------------------------------*/
+
+
+/*------------------------------------ fim contato ---------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+}
+
+/*========================================================================================*/
+/*======================================= 680px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:680px)  { 
+
+
+/*----------------------------------------------------------------------------------------*/
+/*------------------------------------ contato -------------------------------------------*/
+
+/*------------------------------------ fim contato ---------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+}
+
+/*========================================================================================*/
+/*======================================= 780px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:780px)  {
+
+
+/*----------------------------------------------------------------------------------------*/
+/*------------------------------------ contato -------------------------------------------*/
+
+.contato-page-form {
+  float: left;
+  width: 49%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.contato-page-texto {
+  float: right;
+  width: 49%;
+  margin-right: auto;
+  margin-left: auto;
+  
+}
+/*------------------------------------ fim contato ---------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+}
+
+/*========================================================================================*/
+/*======================================= 981px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:981px){
+
+/*----------------------------------------------------------------------------------------*/
+/*------------------------------------ contato -------------------------------------------*/
+
+
+/*------------------------------------ fim contato ---------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+}
+.row-gray-divulgue {
+  background-color: #f9f9f9;
+  border-top: 1px solid #f5f5f5;
+  border-bottom: 1px solid #f5f5f5;
+
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+
+/*.divulgue-anuncio-wrapper {
+  margin-bottom: 60px;
+}*/
+
+.divulgue-anuncio-header {
+  font-size: 44px;
+  font-weight: 300;
+      line-height: 1.29;
+      margin: 1.236em 0 .618em;
+}
+
+.divulgue-anuncio-detalhe {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 18px;
+}
+
+.google-img-wrapper {
+  display: none;
+}
+
+
+@media screen and (min-width:768px)  { 
+
+.google-img-wrapper {
+  display: block;
+  margin-left: -8px;
+}
+
+
+ .google-img-wrapper img {
+    width: 100%;
+  }
+
+
+}
+
+@media screen and (min-width:991px)  { 
+
+/*  .google-img-wrapper {
+      width: 1000px;
+      height: 1000px;
+     overflow: hidden;
+  }
+
+  .google-img {
+    display: block;
+    width: 1000px;
+    margin-left: 0px;
+  }*/
+
+
+}
+
+
+/*======== divulgue-imagens-icones ========= */
+.divulgue-imagens-icones {
+  text-align: center;
+}
+
+
+.divulgue-anuncio-tabela-tittle {
+  font-size: 40px;
+}
+
+/*.imagem-teste {
+  background-color: blue;
+  min-height: 400px;
+  min-width: 400px;
+}
+
+.divulgue-anuncio-tittle {
+      font-size: 35px;
+    font-weight: 300;
+    margin-bottom: 16px;
+    margin-top: 60px;
+  }
+  
+.divulgue-anuncio-beneficios-header {
+  margin: 15px 0 9px;
+      font-size: 16px;
+    font-weight: 700;
+        line-height: 1.43;
+}
+
+
+.divulgue-anuncio-beneficios-detalhes {
+  margin: 10px 0;
+      line-height: 1.54;
+      min-height: 65px;
+}
+
+.divulgue-lista-beneficios {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.divulgue-lista-beneficios .divulgue-anuncio-beneficios-detalhes {
+  min-height: 0;
+}
+
+.divulgue-lista-beneficios ul {
+  margin: 0;
+  padding: 0;
+}
+
+.divulgue-lista-beneficios li {
+  margin-bottom: 5px;
+}
+
+.divulgue-lista-beneficios .glyphicon {
+  color: #009900;
+}
+*/
+
+/*=========== divulgue 2 =================*/
+
+.divulgue-wrapper {
+  margin-bottom: 60px;
+  margin-top: 60px;
+}
+
+
+/*==================== menu =================*/
+
+
+.divulgue-menu {
+  background-color: #f5f5f5;
+  border-bottom: 2px solid #eee;
+  width: 100%;
+  height: 100px;
+}
+
+.divulgue-menu ul {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  background-color: blue;
+}
+
+.divulgue-menu li { 
+  display: inline-block;
+  float: left;
+  width: 33.3222%;
+  height: 100px;
+  padding: 10px 5px;
+  cursor: pointer;
+}
+.divulgue-menu li:hover { 
+  background-color: #F9F9F9;
+   border-bottom: 2px solid #face0e;
+}
+.divulgue-menu li:active { 
+  background-color: #eee;
+   border-bottom: 2px solid #000;
+}
+
+
+.divulgue-menu li:hover h3 {
+  text-decoration: underline;
+}
+
+.divulgue-menu .active:hover {
+  background-color: #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.divulgue-menu .active {
+  background-color: #fff;
+  border-left: 2px solid #eee;
+  border-right: 2px solid #eee;
+}
+
+.divulgue-menu h3{
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+
+.divulgue-menu-icon img {
+  width: 50px;
+}
+
+
+@media screen and (min-width:480px)  {
+
+  .divulgue-menu ul {
+    width: 479px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: black;
+  }
+
+  .divulgue-menu-icon img {
+    width: 60px;
+  }
+
+}
+
+
+@media screen and (min-width:680px)  { 
+
+  .divulgue-menu ul {
+    width: 600px;
+  }
+
+  .divulgue-menu {
+    height: 150px;
+  }
+  .divulgue-menu li {
+    height: 150px;
+  }
+
+  .divulgue-menu-icon img {
+    width: auto;
+  }
+
+}
+
+.login-register-row {
+  max-width: 970px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-register-tittle {
+  margin: 0;
+  font-size: 22px;
+  /*font-weight: bold;*/
+  text-align: center;
+}
+
+.login-register-form {
+  padding: 10px 20px 10px 20px;
+  min-height: 276px;
+  max-height: 276px;
+}
+
+.login-register-form h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0px 0px 20px 0px;
+}
+
+.form-item-forget-pass {
+  margin-bottom: 10px;
+}
+
+.cadastro-header {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.cadastro-header h2 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/*========= cadastro ==========*/
+.form-cadastro-usuario hr {
+  border-top: 1px solid #000;
+}
+.form-cadastro-usuario h3 {
+  font-size: 18px;
+}
+
+.form-cadastro-usuario .form-group .glyphicon-asterisk{
+  font-size: 0.5em;
+  position: relative;
+  top: -6px;
+  color: red;
+}
+/*========================================================================================*/
+/*======================================= 300px ==========================================*/
+/*========================================================================================*/
+
+
+/*----------------------------------------------------------------------------------------*/
+/*-------------------------------------- index -------------------------------------------*/
+.local-top {
+  width: 100%;
+  float: left;
+}
+.local-top-item {
+  max-width: 230px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.local-titulo {
+  font-size: 24px;
+}
+.thumbnail {
+  border: 0;
+}
+.thumbnail .glyphicon {
+  color: #face0e;
+  font-size: 80%;
+}
+.thumbnail img {
+  border-top: 7px solid #face0e;
+}
+
+/*---listagem---*/
+.lista-local-ranking ol li {
+  border-bottom: 1px solid #999;
+  line-height: 18px;
+}
+.lista-local-ranking ol li:last-child {
+  border: 0;
+}
+/*-- estilos --*/
+.lista-local-ranking ol li div a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: 10px 4px 10px 4px;
+}
+.lista-local-ranking ol li div h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.lista-local-ranking ol li .item-numero {
+  float: left;
+  color: #666;
+  line-height: 30px;
+  font-size: 40px;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+.item-saiba-mais {
+  font-size: 14px;
+}
+
+/*-------------------------------------- fim index ---------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+
+/*========================================================================================*/
+/*======================================= 480px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:480px)  {
+
+
+
+/*----------------------------------------------------------------------------------------*/
+/*-------------------------------------- index -------------------------------------------*/
+.local-top {
+  width: 50%;
+}
+/*-------------------------------------- fim index ---------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+}
+
+/*========================================================================================*/
+/*======================================= 680px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:680px)  { 
+
+
+/*----------------------------------------------------------------------------------------*/
+/*-------------------------------------- index -------------------------------------------*/
+
+/*-------------------------------------- fim index ---------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+}
+
+/*========================================================================================*/
+/*======================================= 780px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:780px)  {
+
+
+/*----------------------------------------------------------------------------------------*/
+/*-------------------------------------- index -------------------------------------------*/
+
+/*-------------------------------------- fim index ---------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+}
+
+/*========================================================================================*/
+/*======================================= 900px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:900px)  {
+
+
+/*----------------------------------------------------------------------------------------*/
+/*-------------------------------------- index -------------------------------------------*/
+.local-top {
+  width: 25%;
+}
+/*-------------------------------------- fim index ---------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+}
+
+/*========================================================================================*/
+/*======================================= 981px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:981px){
+
+
+/*----------------------------------------------------------------------------------------*/
+/*-------------------------------------- index -------------------------------------------*/
+
+  
+/*-------------------------------------- fim index ---------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+}
+.pagamento-container {
+  padding: 10px 20px;
+}
+.pagamento-container .table {
+  margin-bottom: 30px;
+}
+.pagamento-container .table th {
+  /*height: 10px;*/
+  background-color:#face0e;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.pagamento-container .table td {
+  padding-left: 10px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.form-pagamento-botao {
+  text-align: center;
+}
+
+/* -- ambiente-seguro --*/
+.pagamento-ambiente-seguro {
+  padding-top: 80px;
+  margin-bottom: 40px;
+}
+.pagamento-ambiente-seguro span {
+  display: block;
+  font-size: 22px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.pagamento-pagamento h3 {
+  margin-top: 1px;
+}
+
+.pagamento-resumo .list-group .list-group-item {
+  background-color: inherit;
+}
+
+.pagamento-resumo-tittle {
+  font-size: 22px;
+  margin-bottom: 15px;
+  /*font-weight: bold;*/
+}
+
+.pagamento-resumo .pull-left {
+  font-weight: bold;
+}
+
+.form-pagamento-metodo .list-group .img {
+  overflow: hidden;
+}
+
+.form-pagamento-metodo input[type=radio] {
+  cursor: pointer;
+  width: 30px;
+  position: relative;
+  top: 2px;
+}
+
+.form-pagamento-metodo label {
+  cursor: pointer;
+}
+
+.form-pagamento-metodo .list-group-item {
+  border-color: 2px solid #dddddd;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.form-pagamento-metodo .list-group-item:hover {
+  background-color: #F6F6F6;
+}
+
+#pagamento-list-active {
+  border: 2px solid #2a9dcc !important;
+}
+
+
+/*========================================================================================*/
+/*======================================= 300px ==========================================*/
+/*========================================================================================*/
+
+
+/*----------------------------------------------------------------------------------------*/
+/*------------------------------ resultado busca -----------------------------------------*/
+
+
+/*------------- estrutura ---------------------*/
+.container-resultado-busca {
+  width: 100%;
+  max-width: 940px;
+}  
+
+.resultado-box-left {
+  float: left;
+  /*height: auto;  height: 400px;*/
+  width: 100%;
+}
+.resultado-content-left {
+  max-width: 610px;
+  /*height: 380px;*/
+}
+.resultado-box-right {
+  display: none;
+}
+
+/*----------------- fim estrutura ---------------------*/
+
+#info-resultado h1 {
+  display: inline;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#info-resultado, .alert {
+  margin-bottom: 5px;
+}
+
+.resultado-busca ul li {
+  border-top: 1px solid #666;
+}
+.resultado-busca ul li:first-child {
+  border-top: 1px solid #FFF;
+}
+.resultado-busca ul li:hover {
+  border-top: 1px solid #FFF;
+}
+.resultado-busca ul li:hover + li {
+  border-top: 0px solid red;
+}
+
+/* ------------------ anuncio-wrapper -------------------------*/
+.anuncio-wrapper {
+  padding: 7px 0px 7px 5px;
+  cursor: pointer;
+  border-left: 5px solid red;
+  border-right: 1px solid #FFF;
+  border-top: 1px solid #FFF;
+}
+
+.anuncio-wrapper:active, 
+.anuncio-wrapper:hover, 
+.anuncio-wrapper:focus {
+  background-color: #E6F0F8;
+  border-left: 1px solid #0064b4;
+  border-bottom: 1px solid #0064b4;
+  border-right: 1px solid #0064b4;
+  border-top: 1px solid #0064b4;
+  padding: 7px 0px 7px 9px;
+}
+
+.anuncio-wrapper h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+.anuncio-wrapper:hover h2 a {
+  text-decoration: underline;
+}
+
+/* ------------------- anuncio gratuito ---------------------------*/
+.anuncio-gratuito {
+ border-left: 5px solid #FFF;
+}
+/*---------------------------- anuncio profissional --------------------*/
+.anuncio-profissional {
+  border-left: 5px solid #33CC33;
+  background-color: #EBFAEB;
+}
+/*---------------------------- anuncio ultimate --------------------*/
+.anuncio-ultimate {
+  border-left: 5px solid #FF9900;
+  background-color: #FFF5E6;
+}
+#phone-dois {
+  display: none;
+}
+/*anuncio-ultimate-bar*/
+.anuncio-ultimate-bar {
+  display: none;
+}
+/*----------------------------- fim anuncios ---------------------*/
+.logotipo {
+  float: right;
+  margin-right: 5px;
+  width: 25%;
+}
+.logotipo .img-thumbnail {
+  border: 0;
+  padding: 0;
+}
+.categoria {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  font-size: 12px;
+}
+.resultado-busca .address {
+  line-height: 150%;
+}
+
+.buttons-wrapper {
+  margin-top: 7px;
+}
+.phone-wrapper, .map-wrapper {
+  display: inline-block;
+  width: 50%;
+}
+.map-wrapper { 
+  float: right;
+}
+.btn-phone {
+  width: 100%;
+
+}
+.btn-none {
+  width: 100%;
+}
+
+
+/*--------- pagination ---------------*/
+.resultado-pagination {
+  display: inline-block;
+}
+#pagination-wrapper {
+  margin-top: 30px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.pagination {
+  font-weight: bold;
+}
+.pagination li:not(:last-child):not(:first-child){
+  display: none;
+}
+/*--- anuncie aqui ----*/
+#resultado-anuncie-aqui {
+  margin-top: 20px;
+}
+
+/*------------------------------ fim resultado busca -------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+
+/*========================================================================================*/
+/*======================================= 480px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:480px)  {
+
+
+
+  /*----------------------------------------------------------------------------------------*/
+  /*------------------------------ resultado busca -----------------------------------------*/
+
+  .container-resultado-busca {
+    padding-right: 0px;
+  }
+  .resultado-content-left {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /*-------------- fim estrutura ---------------*/
+
+  .phone-wrapper, .map-wrapper {
+    display: inline;
+  }
+  .map-wrapper { 
+    float: none;
+  }
+  .btn-phone, .btn-none {
+    width: auto;
+    font-size: 17px;
+  }
+  .logotipo {
+    width: auto;
+  }
+
+  /*------------------------------ fim resultado busca -------------------------------------*/
+  /*----------------------------------------------------------------------------------------*/
+
+}
+
+/*========================================================================================*/
+/*======================================= 680px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:680px)  { 
+
+
+
+  /*----------------------------------------------------------------------------------------*/
+  /*------------------------------ resultado busca -----------------------------------------*/
+
+  .resultado-box-left {
+    width: 66.65%;
+  }
+  .resultado-box-right {
+    display: inline-block;
+    float: right;
+    width: 33.32%;
+    height: 400px;
+    /*background-color: #FF66CC;*/
+    border-top: 1px solid #FFF;
+  }
+  .resultado-content-right {
+    background-color: red;
+    margin-left: 10px;
+    height: 200px;
+  }
+  /* --------------- fim estrutura -------------------*/
+
+  #info-resultado h1 {
+    font-size: 26px;
+  }
+  #info-resultado, .alert {
+    margin-bottom: 10px;
+  }
+  .anuncio-wrapper {
+    padding-left: 15px;
+  }
+  .anuncio-wrapper:active, 
+  .anuncio-wrapper:hover, 
+  .anuncio-wrapper:focus {
+    padding-left: 19px;
+  }
+
+  .pagination li:not(:last-child):not(:first-child){
+    display: inline;
+  }
+
+
+  /*------------------------------ fim resultado busca -------------------------------------*/
+  /*----------------------------------------------------------------------------------------*/
+
+}
+
+/*========================================================================================*/
+/*======================================= 780px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:780px)  {
+
+
+  /*----------------------------------------------------------------------------------------*/
+  /*------------------------------ resultado busca -----------------------------------------*/
+  .btn-phone:hover,
+  .btn-phone:focus,
+  .btn-phone.focus,
+  .btn-phone:active,
+  .btn-phone.active,
+  .open > .dropdown-toggle.btn-phone {
+    background-color: #ffffc8;
+    border: 1px solid #ccc;
+  }
+
+  .btn-none:hover,
+  .btn-none:focus,
+  .btn-none.focus,
+  .btn-none:active,
+  .btn-none.active,
+  .open > .dropdown-toggle.btn-none {
+    background-color: #E6E6E6;
+    border: 1px solid #ccc;
+  }
+
+  /*--- show deatails anuncio ultimate ---*/
+  #phone-dois {
+    display: inline;
+  }
+  .anuncio-ultimate-bar {
+    display: block;
+    margin: 10px 25px 5px 10px;
+    border-top: 1px solid #999;
+  }
+  .bar-content {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .bar-item {
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  .bar-item a{
+    color: #000;
+  }
+
+  /*------------------------------ fim resultado busca -------------------------------------*/
+  /*----------------------------------------------------------------------------------------*/
+
+}
+
+
+/*========================================================================================*/
+/*======================================= 981px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:981px){
+
+
+
+  /*----------------------------------------------------------------------------------------*/
+  /*------------------------------ resultado busca -----------------------------------------*/
+  #info-resultado, .alert {
+    margin-bottom: 20px;
+  }
+
+
+  /*-- anuncie aqui --*/
+  .anuncie-aqui-texto {
+    float: left;
+  }
+  .well #botao-anuncie {
+    float: right;
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 14px;
+  }
+  /*------------------------------ fim resultado busca -------------------------------------*/
+  /*----------------------------------------------------------------------------------------*/
+
+}/*========================================================================================*/
+/*======================================= 300px ==========================================*/
+/*========================================================================================*/
+
+/*----------------------------------------------------------------------------------------*/
+/*----------------------------------- anuncio --------------------------------------------*/
+
+/*------------- estrutura ---------------------*/
+.container-anuncio {
+  width: 100%;
+  max-width: 940px;
+}  
+
+.anuncio-box-left {
+  float: left;
+  height: 400px;
+  width: 100%;
+}
+.anuncio-content-left {
+  max-width: 610px;
+  height: 380px;
+}
+.anuncio-box-right {
+  display: none;
+}
+
+/*----------------- fim estrutura ---------------------*/
+
+
+/* ------------------------------------ anuncio-view -----------------------------------*/
+/* ------------------ anuncio-wrapper -------------------------*/
+.anuncio-header {
+  padding: 7px 0px 7px 5px;
+  border-left: 5px solid #808080;
+  border-right: 1px solid #FFF;
+  border-top: 1px solid #FFF;
+}
+
+.anuncio-header h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/*social bar*/
+.anuncio-social-bar {
+  height: 50px;
+  width: 100%;
+  background-color: #808080;
+}
+
+/*anuncio-info*/
+.anuncio-info {
+  border-left: 5px solid #808080;
+  padding: 0px 0px 7px 5px;
+  height: auto;
+  width: 100%;
+}
+.anuncio-info .glyphicon {
+ /* color: #face0e;
+  color: #FF9900;*/
+}
+.anuncio-info-item {
+  /*background-color: red;*/
+  margin-top: 20px;
+}
+.anuncio-info-item h3,hr {
+  margin-top: 0px;
+}
+.anuncio-info-map-wrapper {
+  width: 100%;
+  height: 180px;
+  background-color: gray;
+}
+.anuncio-info-item div label {
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+.anuncio-info-comments {
+  width: 100%;
+  height: 100px;
+  background-color: blue;
+  margin-top: 5px;
+}
+
+#thumb {
+  width: 50%;
+  max-width: 120px;
+  height: 50%;
+  max-height: 120px;
+  float: left;
+  margin-left: 10px;
+}
+/* ------------------- anuncio gratuito ---------------------------*/
+
+.anuncio-gratuito {
+ border-left: 5px solid #FFF;
+}
+/*-- anuncio-view --*/
+.anuncio-view-gratuito .anuncio-header {
+  border-left: 5px solid #808080;
+}
+.anuncio-view-gratuito .anuncio-social-bar {
+  background-color: #808080;
+}
+.anuncio-view-gratuito .anuncio-info {
+  border-left: 5px solid #808080;
+}
+/*---------------------------- anuncio profissional --------------------*/
+.anuncio-profissional {
+  border-left: 5px solid #33CC33;
+  background-color: #EBFAEB;
+}
+/*-- anuncio-view --*/
+.anuncio-view-profissional .anuncio-header {
+  border-left: 5px solid #33CC33;
+  background-color: #EBFAEB;
+}
+.anuncio-view-profissional .anuncio-social-bar {
+  background-color: #33CC33;
+}
+.anuncio-view-profissional .anuncio-info {
+  border-left: 5px solid #33CC33;
+}
+/*---------------------------- anuncio ultimate --------------------*/
+.anuncio-ultimate {
+  border-left: 5px solid #FF9900;
+  background-color: #FFF5E6;
+}
+#phone-dois {
+  display: none;
+}
+/*anuncio-ultimate-bar*/
+.anuncio-ultimate-bar {
+  display: none;
+}
+/*-- anuncio-view --*/
+.anuncio-view-ultimate .anuncio-header {
+  border-left: 5px solid #FF9900;
+  background-color: #FFF5E6;
+}
+.anuncio-view-ultimate .anuncio-social-bar {
+  background-color: #FF9900;
+}
+.anuncio-view-ultimate .anuncio-info {
+  border-left: 5px solid #FF9900;
+}
+/*----------------------------- fim anuncios ---------------------*/
+.logotipo {
+  float: right;
+  margin-right: 5px;
+  width: 25%;
+}
+.logotipo .img-thumbnail {
+  border: 0;
+  padding: 0;
+}
+.categoria {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  font-size: 12px;
+}
+.anuncio-header .address {
+  line-height: 150%;
+}
+
+.buttons-wrapper {
+  margin-top: 7px;
+}
+.phone-wrapper, .map-wrapper {
+  display: inline-block;
+  width: 50%;
+}
+.map-wrapper { 
+  float: right;
+}
+.btn-phone {
+  width: 100%;
+
+}
+.btn-none {
+  width: 100%;
+}
+
+
+
+/*----------------------------------- fim anuncio ----------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+
+/*========================================================================================*/
+/*======================================= 480px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:480px)  {
+
+
+/*----------------------------------------------------------------------------------------*/
+/*----------------------------------- anuncio --------------------------------------------*/
+
+  /*-------------- estrutura -------------------*/
+  .container-anuncio {
+    padding-right: 0px;
+  }
+  .anuncio-content-left {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /*-------------- fim estrutura ---------------*/
+
+  /*-- anuncio--*/
+  .phone-wrapper, .map-wrapper {
+    display: inline;
+  }
+  .map-wrapper { 
+    float: none;
+  }
+  .btn-phone, .btn-none {
+    width: auto;
+    font-size: 17px;
+  }
+  .logotipo {
+    width: auto;
+  }
+
+/*----------------------------------- fim anuncio ----------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+}
+
+/*========================================================================================*/
+/*======================================= 680px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:680px)  { 
+
+
+/*----------------------------------------------------------------------------------------*/
+/*----------------------------------- anuncio --------------------------------------------*/
+  
+  .anuncio-box-left {
+    width: 66.65%;
+  }
+  .anuncio-box-right {
+    display: inline-block;
+    float: right;
+    width: 33.32%;
+    height: 400px;
+    /*background-color: #FF66CC;*/
+    border-top: 1px solid #FFF;
+  }
+  .anuncio-content-right {
+    background-color: red;
+    margin-left: 10px;
+    height: 200px;
+  }
+  /* --------------- fim estrutura -------------------*/
+
+  .anuncio-header {
+    padding-left: 15px;
+  }
+
+  .anuncio-info {
+    padding: 10px 0px 10px 20px;
+  }
+
+
+/*----------------------------------- fim anuncio ----------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+}
+
+/*========================================================================================*/
+/*======================================= 780px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:780px)  {
+
+
+/*----------------------------------------------------------------------------------------*/
+/*----------------------------------- anuncio --------------------------------------------*/
+
+/* ---- anuncio style ---*/
+  .btn-phone:hover,
+  .btn-phone:focus,
+  .btn-phone.focus,
+  .btn-phone:active,
+  .btn-phone.active,
+  .open > .dropdown-toggle.btn-phone {
+    background-color: auto;
+    border: 1px solid #ccc;
+    cursor: default;
+  }
+
+  /*--- show deatails anuncio ultimate ---*/
+  #phone-dois {
+    display: inline;
+  }
+  .anuncio-ultimate-bar {
+    display: block;
+    margin: 10px 25px 5px 10px;
+    border-top: 1px solid #999;
+  }
+  .bar-content {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .bar-item {
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  .bar-item a{
+    color: #000;
+  }
+
+
+/*----------------------------------- fim anuncio ----------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+}
+
+/*========================================================================================*/
+/*======================================= 981px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:981px){
+
+/*----------------------------------------------------------------------------------------*/
+/*----------------------------------- anuncio --------------------------------------------*/
+
+/*----------------------------------- fim anuncio ----------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+}/* ---------------- cabecalho-principal -----------------------*/
+#cabecalho-principal {
+
+  background-color: #face0e;
+  padding: 10px 0px 10px 0px;
+  height: auto;
+  font-size: 20px;
+}
+.cabecalho-form {
+  overflow: hidden;
+}
+
+#cabecalho-principal .form-control {
+  font-size: 0.8em;
+  height: 40px;
+}
+
+.cabecalho-form-busca, .cabecalho-form-local{
+  margin-bottom: 10px;
+  color: #4D4D4D;
+}
+.cabecalho-label-busca, .cabecalho-label-local {
+  display: none;
+}
+.btn-busca {
+  display: block;
+  width: 100%;
+  height: 40px;
+  color: #face0e;
+}
+
+.btn-busca:hover {
+  color: #face0e;
+  background-color: #484300;
+}
+
+/*---------------------------------- fim cabecalho ---------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+
+/*========================================================================================*/
+/*======================================= 780px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:780px)  {
+
+  /* ------------------- cabecalho ---------------------------------------*/
+  .cabecalho-form {
+
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+  }
+
+  .cabecalho-form-busca, .cabecalho-form-local, .cabecalho-form-botao {
+    display: inline;
+  }
+
+  .cabecalho-form-busca *, .cabecalho-form-local *, .cabecalho-form-botao * {
+    display: inline;
+  }
+
+  .cabecalho-label-busca, .cabecalho-label-local {
+    font-size: 0.9em;
+  }
+
+  .form-busca {
+    width: 250px;
+  }
+
+  .form-local {
+    width: 170px;
+  }
+
+  .btn-busca {
+    width: auto;
+    height: auto;
+  }
+  /* ----------------------------- fim cabecalho --------------------- */
+
+}
+
+
+/*========================================================================================*/
+/*======================================= 981px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:981px){
+
+
+  /*----------------------------------------------------------------------------------------*/
+  /*---------------------------------- cabecalho -------------------------------------------*/
+
+  .cabecalho-form {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    width: 95%;
+  }
+
+  .cabecalho-form-busca, .cabecalho-form-local, .cabecalho-form-botao {
+    display: inline;
+  }
+
+  .cabecalho-form-busca *, .cabecalho-form-local *, .cabecalho-form-botao * {
+    display: inline;
+  }
+
+  .cabecalho-label-busca, .cabecalho-label-local {
+    font-size: 1.0em;
+  }
+
+  .form-busca {
+    width: 300px;
+  }
+
+  .form-local {
+    width: 220px;
+  }
+
+  .btn-busca {
+    width: auto;
+    height: auto;
+  }
+
+  /*---------------------------------- fim cabecalho ---------------------------------------*/
+
+}

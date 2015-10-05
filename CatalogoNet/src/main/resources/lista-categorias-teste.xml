@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE xml>
+<categorias>
+
+	<categoria>
+		<titulo>Restaurantes em Geral</titulo>
+		<titulo-na-url>restaurantes-em-geral</titulo-na-url>
+		<keywords>
+			<keyword>restaurante</keyword>
+			<keyword>restaurantes</keyword>
+			<keyword>alimentação</keyword>
+		</keywords>
+
+		<!-- lista de subcategorias -->
+		<subcategorias>
+
+			<!-- sub-categoria -->
+			<subcategoria>
+				<titulo>Pizzaria</titulo>
+				<titulo-na-url>pizzaria</titulo-na-url>
+				<keywords>
+					<keyword>pizzaria</keyword>
+					<keyword>pizzarias</keyword>
+					<keyword>pizza</keyword>
+				</keywords>
+			</subcategoria>
+			<!-- /. sub-categoria -->
+
+			<!-- sub-categoria -->
+			<subcategoria>
+				<titulo>Japones</titulo>
+				<titulo-na-url>japones</titulo-na-url>
+				<keywords>
+					<keyword>sushi</keyword>
+					<keyword>sashimi</keyword>
+				</keywords>
+			</subcategoria>
+			<!-- /. sub-categoria -->
+
+		</subcategorias>
+		<!-- /. lista de subcategorias -->
+
+	</categoria>
+
+</categorias>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE xml>
+<locais>
+  <estado id="1">
+    <nome>Distrito Federal</nome>
+    <sigla>DF</sigla>
+    <cidades>
+      <cidade>
+        <nome>Brasília</nome>
+        <bairros>
+          <bairro>Arapoanga</bairro>
+          <bairro>Areal</bairro>
+          <bairro>Asa Norte</bairro>
+          <bairro>Asa Sul</bairro>
+          <bairro>Candangolândia</bairro>
+          <bairro>Sudoeste</bairro>
+          <bairro>Ceilândia</bairro>
+          <bairro>Ceilândia Centro</bairro>
+          <bairro>Ceilândia Norte</bairro>
+          <bairro>Gama</bairro>
+          <bairro>Sobradinho</bairro>
+          <bairro>Sobradinho II</bairro>
+          <bairro>Planaltina</bairro>
+          <bairro>UnB</bairro>
+          <bairro>São Sebastião</bairro>
+          <bairro>Brazlândia</bairro>
+          <bairro>Colorado</bairro>
+          <bairro>Cruzeiro</bairro>
+          <bairro>Cruzeiro Novo</bairro>
+          <bairro>Cruzeiro Velho</bairro>
+          <bairro>Itapoã</bairro>
+          <bairro>Guará</bairro>
+          <bairro>Guará I</bairro>
+          <bairro>Guará II</bairro>
+          <bairro>Incra</bairro>
+          <bairro>Núcleo Bandeirante</bairro>
+          <bairro>Paranoá</bairro>
+          <bairro>Lúcio Costa</bairro>
+          <bairro>Recanto das Emas</bairro>
+          <bairro>Riacho Fundo</bairro>
+          <bairro>Riacho Fundo I</bairro>
+          <bairro>Riacho Fundo II</bairro>
+          <bairro>Samambaia</bairro>
+          <bairro>Samambaia Norte</bairro>
+          <bairro>Samambaia Sul</bairro>
+          <bairro>Santa Maria</bairro>
+          <bairro>Park Way</bairro>
+          <bairro>Estrutural</bairro>
+          <bairro>Arniqueira</bairro>
+          <bairro>Fercal</bairro>
+          <bairro>Jardim Botânico</bairro>
+          <bairro>Vicente Pires</bairro>
+          <bairro>Setor Militar</bairro>
+          <bairro>Setor Noroeste</bairro>
+          <bairro>Águas Claras</bairro>
+          <bairro>Taguatinga</bairro>
+          <bairro>Taguatinga Centro</bairro>
+          <bairro>Taguatinga Norte</bairro>
+          <bairro>Taguatinga Sul</bairro>
+          <bairro>Varjão</bairro>
+          <bairro>Vila da Telebrasília</bairro>
+          <bairro>Vila Planalto</bairro>
+          <bairro>Vila São José (Taguatinga)</bairro>
+          <bairro>Octogonal</bairro>
+          <bairro>Lago Sul</bairro>
+          <bairro>Lago Norte</bairro>
+          <bairro>Cidade do Automóvel</bairro>
+          <bairro>SIA</bairro>
+          <bairro>Feira dos Importados</bairro>
+        </bairros>
+      </cidade>
+    </cidades>
+  </estado>
+</locais>
