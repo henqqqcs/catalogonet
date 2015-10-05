@@ -27,6 +27,7 @@ import com.catalogonet.local.LocalRN;
 @RequestMapping("/servicos")
 public class ServicosController {
 
+//teste
 	@Autowired
 	private LocalRN localRN;
 
