@@ -6,6 +6,7 @@
 	color: red;
 }
 
+
 @media ( max-width :768px) {
 	.form-group .glyphicon-asterisk{
 		font-size: 0.5em;
