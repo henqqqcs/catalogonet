@@ -107,6 +107,8 @@ public class LoginCadastroController {
 			map.put("usuario", usuario);
 			map.put("errors", "errors");
 			return "publico/geral/cadastro";
+			
+			
 		}
 
 		// salva o usuario
