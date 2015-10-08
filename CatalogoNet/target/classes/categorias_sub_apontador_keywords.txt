@@ -1,0 +1,1378 @@
+<!-- inicio categoria -->
+Academias = keywords: academia, esporte
+SubCategoria: Academias 
+SubCategoria: Academias Desportivas = keywords: desportiva
+SubCategoria: Personal Trainer = keywords: personal, trainer
+SubCategoria: Pilates = keywords: pilates
+SubCategoria: Artes Marciais = keywords: luta, arte, marcial, defesa, pessoal
+SubCategoria: Academia Feminina = keywords: mulher, feminina
+SubCategoria: Academia Terceira Idade = keywords: terceira, idade, idoso
+SubCategoria: Hidroginástica = keywords: hidroginastica, piscina
+SubCategoria: Escolinha de Futebol = keywords: futebol, futsal
+
+<!-- inicio categoria -->
+Administração = keywords: administraçao
+SubCategoria: Administração = keywords:
+SubCategoria: Administradores de Empresas = keywords: empresa
+SubCategoria: Administrações Regionais = keywords: regional
+SubCategoria: Convênios - Administração = keywords: convênio
+SubCategoria: Vale-Transporte - Administração e Convênios = keywords: vale, transporte, convenio
+SubCategoria: Administração de Bens e Imóveis = keywords: bens, imoveis
+
+<!-- inicio categoria -->
+Advogados = keywords: advogado, advocacia
+SubCategoria: Advogados = keywords:
+SubCategoria: Advogados - Causas Trabalhistas = keywords: trabalhista
+SubCategoria: Advogados - Causas Cíveis = keywords: civeis, civil
+SubCategoria: Advogados - Causas Previdenciárias = keywords: previdencia, previdenciario
+SubCategoria: Advogados - Causas Criminais = keywords: criminal, criminais
+SubCategoria: Advogados - Direito de Família = keywords: familia
+SubCategoria: Advogados - Causas Fiscais e Tributárias = keywords: fiscal, fiscais, tributarias
+SubCategoria: Advogados - Causas Comerciais = keywords: comercial, comerciais
+SubCategoria: Advogados - Direito de Informática e Internet = keywords: internet, informatica
+SubCategoria: Advogados - Causas Ambientais = keywords: ambiental, ambiente
+SubCategoria: Advogados - Causas Bancárias = keywords: bancarias, banco
+SubCategoria: Advogados - Causas Internacionais = keywords: internacional
+
+<!-- inicio categoria -->
+Aeroportos = keywords: aeroporto
+SubCategoria: Aeroportos = keywords: aeroporto
+
+<!-- inicio categoria -->
+Agricultura e Pecuária = keywords: agricultura, pecuaria
+SubCategoria: Agricultura e Pecuária = keywords:
+SubCategoria: Agricultura e Pecuária - Estabelecimentos e Produtos = keywords: estabelecimento, produto
+SubCategoria: Cereais = keywords: cereal, cerais
+SubCategoria: Agricultura e Pecuária - Assessoria e Pesquisa = keywords: assessoria, pesquisa
+SubCategoria: Adubos e Fertilizantes = keywords: adubo, fertilizante
+SubCategoria: Aves - Abatedouros = keywords: aves, abatedouro
+SubCategoria: Granjas = keywords: granja
+SubCategoria: Sementes = keywords: semente
+SubCategoria: Café = keywords: cafe
+SubCategoria: Verduras e Legumes = keywords: verdura, legume
+SubCategoria: Pesca - Empresas = keywords: pesca, empresa
+SubCategoria: Farinhas - Atac e Fab = keywords: farinha, atacado, fabricacao
+SubCategoria: Castanhas = keywords: castanha
+SubCategoria: Agricultura e Pecuária - Equipamentos = keywords: equipamentos
+SubCategoria: Matadouros = keywords: matadouros
+SubCategoria: Coco e Subprodutos = keywords: coco
+SubCategoria: Açaí = keywords: acai
+SubCategoria: Guaraná = keywords: guarana
+
+<!-- inicio categoria -->
+Água e Esgoto = keywords: agua, esgoto
+SubCategoria: Água e Esgoto = keywords:
+SubCategoria: Água - Fornecedores = keywords: fornecedor
+SubCategoria: Água - Equip Para Purificação = keywords: purificaçao
+SubCategoria: Filtros de Água = keywords: filtro
+SubCategoria: Água - Tratamento = keywords: tratamento
+SubCategoria: Caixas Dá Água = keywords: caixa, reservatorio
+SubCategoria: Limpeza de Caixas Dá Água = keywords: limpeza
+SubCategoria: Esgotos - Limpeza = keywords: limpeza
+SubCategoria: Água - Análises = keywords: analise
+
+<!-- inicio categoria -->
+Agências = keywords: agencia
+SubCategoria: Turismo - Agências = keywords: turismo
+SubCategoria: Agências = keywords:
+SubCategoria: Propaganda e Publicidade = keywords: propaganda, publicidade
+SubCategoria: Cobrança - Agências = keywords: cobrança
+SubCategoria: Consultoria e Agências de Empregos = keywords: emprego, trabalho
+SubCategoria: Agências de Notícias = keywords: noticias, jornalismo
+SubCategoria: Modelos e Manequins - Agências = keywords: modelo, manequin
+SubCategoria: Serviços Portuários - Agências = keywords: porto, portuario
+SubCategoria: Agências de Casamento = keywords: casamento, festa
+SubCategoria: Consultoria e Agências Em Relações Públicas = keywords: relaçoes, publicas, comunicacao
+SubCategoria: Compras - Agentes = keywords: compras, agente
+SubCategoria: Empregados Domésticos - Agências = keywords: empregado, domestico
+SubCategoria: Corridas de Cavalos - Agências = keywords: corrida, cavalo, aposta
+<!-- inicio categoria -->
+Alarme e Monitoramento = keywords: alarme, monitoramento, segurança
+SubCategoria: Alarme e Monitoramento = keywords:
+SubCategoria: Alarmes = keywords:
+SubCategoria: Cofres = keywords: cofres
+SubCategoria: Incêndio = keywords: incendio, extintor
+SubCategoria: Fechaduras Eletroeletrônicas = keywords: fechadura, eletronica
+SubCategoria: Identificação - Sistemas = keywords: identificacao, digital
+SubCategoria: Detectores de Metais = keywords: detector, metal
+<!-- inicio categoria -->
+Alimentos = keywords: alimento
+SubCategoria: Alimentos = keywords:
+SubCategoria: Supermercados = keywords: supermercado
+SubCategoria: Produtos Alimentícios = keywords: produtos, alimenticios
+SubCategoria: Salgadinhos = keywords: salgadinho
+SubCategoria: Frutas, Legumes e Verduras = keywords: fruta, legume, verdura
+SubCategoria: Laticínios = keywords: laticinios
+SubCategoria: Chocolates = keywords: chocolate
+SubCategoria: Frios e Queijos = keywords: frios, queijo
+SubCategoria: Produtos Naturais e Dietéticos = keywords: natural, dietetico, dieta
+SubCategoria: Doces - Atac e Fab = keywords: atacado, fabricacao
+SubCategoria: Refeições Coletivas - Fornecedores = keywords: marmita, fornecedor
+SubCategoria: Balas e Bombons = keywords: bala, bombom, bombons
+SubCategoria: Aves e Ovos = keywords: ave, ovo
+SubCategoria: Cestas de Café da Manhã e Natal = keywords: cesta, cafe, manha, natal, aniversario
+SubCategoria: Condimentos e Molhos = keywords: condimento, molho
+SubCategoria: Biscoitos = keywords: biscoito
+SubCategoria: Refeições - Entregas Em Domicílio = keywords: entrega, domicilio, casa
+SubCategoria: Gelo = keywords: gelo
+SubCategoria: Cestas Básicas = keywords: cesta, basica
+SubCategoria: Pães - Fornecedores = keywords: pao, paes, forncedor, fornecedores
+SubCategoria: Massas Alimentícias = keywords: massa
+SubCategoria: Quitandas = keywords: quitanda
+SubCategoria: Suplementos Alimentares = keywords: suplmento, alimentar, whey, protein
+SubCategoria: Lanches - Fornecimento = keywords: lanche, forncimento, fornecedor
+SubCategoria: Espetinhos de Churrasco = keywords: espetinho, churrasco
+SubCategoria: Polpas = keywords: polpa, fruta
+SubCategoria: Carnes - Atac = keywords: carne, atacado
+SubCategoria: Mercados Municipais = keywords: mercado, municipal
+SubCategoria: Congelados = keywords: congelado
+SubCategoria: Marmitas - Fornecimento = keywords: marmita, fornedor, fornecimento
+SubCategoria: Alimentos Congelados = keywords: congelados
+SubCategoria: Restaurantes Industriais - Administração = keywords: indutriais, industrial
+SubCategoria: Pamonharias = keywords: pamonha, milho
+SubCategoria: Atacadistas = keywords: atacado, atacadista
+SubCategoria: Chocolates - Atac e Fab = keywords: chocolate, atacado, fabricacao
+SubCategoria: Produtos Orgânicos = keywords: produto, organico
+SubCategoria: Frutos do Mar = keywords: frutos, mar, peixaria
+SubCategoria: Produtos Naturais = keywords: produtos, naturais, natural
+SubCategoria: Supermercados - Art e Equip = keywords: supermercado, equipamento
+SubCategoria: Supermercados 24h = keywords: 24h, horas
+SubCategoria: Vasilhames = keywords: vasilhas, vasilhames
+SubCategoria: Produtos Regionais = keywords: produto, regional
+SubCategoria: Refrigeração = keywords: refrigeracao, congelador, geladeira, gondula
+<!-- inicio categoria -->
+Animais = keywords: animal, animais
+SubCategoria: Animais = keywords:
+SubCategoria: Animais - Produtos Para = keywords: produtos
+SubCategoria: Animais - Criação e Vendas = keywords: criacao, venda
+SubCategoria: Aquários Peixes Ornamentais = keywords: aquario, peixe, ornamental
+SubCategoria: Animais - Institutos de Beleza = keywords: pet, shop, banho, tosa
+SubCategoria: Transporte de Animais = keywords: transporte
+SubCategoria: Apicultura = keywords: abelha, mel, criacao
+SubCategoria: Aqüicultura = keywords: criacao, peixe, crustaceo, molusco
+SubCategoria: Inseminação Artificial Para Animais = keywords: inseminacao, artificial
+SubCategoria: Piscicultura = keywords:cultivo, criacao, peixe
+SubCategoria: Cemitérios de Animais = keywords: cemiterio, morto
+<!-- inicio categoria -->
+Ar-Condicionado = keywords: ar, condicionado
+SubCategoria: Ar-Condicionado = keywords:
+SubCategoria: Ar-Condicionado - Conserto, Limpeza e Conservação = keywords: conserto, limpeza, conservacao
+SubCategoria: Ar-Condicionado - Locação, Projeto e Instalação = keywords: locacao, projeto, instalacao
+SubCategoria: Ar-Condicionado - Artigos e Equipamentos = keywords: artigo, equipamento
+<!-- inicio categoria -->
+Armazéns = keywords: armazem, amazens
+SubCategoria: Armazéns, Empórios e Mercearias = keywords: emporio, mercearia
+<!-- inicio categoria -->
+Artes = keywords: arte
+SubCategoria: Artesanato e Artigos Regionais = keywords: artesanato, regional
+SubCategoria: Empresários Artísticos = keywords: empresario, artistico
+SubCategoria: Academias Artísticas, Científicas e Literárias = keywords: academia, arte, academia, literaria
+SubCategoria: Artes - Artigos e Materiais = keywords: material, materias, equipamentos
+SubCategoria: Artistas Plásticos = keywords: artista, arte, plastica
+SubCategoria: Artesanatos - Artigos Reciclados = keywords: artesanato, reciclagem, reciclado
+SubCategoria: Objetos de Arte e Antigüidades - Restauração = keywords: objetos, antiguidade, antigo
+SubCategoria: Monumentos = keywords: monumento
+SubCategoria: Artes = keywords: 
+<!-- inicio categoria -->
+Assessoria = keywords: assessoria
+SubCategoria: Assessoria = keywords:
+SubCategoria: Comércio Exterior - Assessoria = keywords: comercio, exterior
+SubCategoria: Importação e Exportação - Assessoria = keywords: importacao, exportacao
+SubCategoria: Assessoria de Imprensa = keywords: imprensa
+SubCategoria: Assessoria Fiscal e Tributária = keywords: fiscal, tributaria, imposto, renda
+SubCategoria: Multas de Trânsito - Assessoria = keywords: multa, transito, recurso
+SubCategoria: Assessoria Aeronáutica = keywords: aeronautica
+SubCategoria: Certidões = keywords: certidoes, certidao
+<!-- inicio categoria -->
+Associações e Sindicatos = keywords: associaçao, associaçoes, sidicato
+SubCategoria: Associações e Sindicatos = keywords:
+SubCategoria: Sindicatos e Federações = keywords: federaçoes, federaçao
+SubCategoria: Institutos e Fundações = keywords: institutos, fundaçoes, fundaçao
+SubCategoria: Associações Culturais, Desportivas e Sociais = keywords: cultural, culturais, esportiva, desportiva, social
+SubCategoria: Associações Beneficentes = keywords: beneficente
+SubCategoria: Associações Comerciais = keywords: comercial
+SubCategoria: Apae = keywords: apae
+SubCategoria: Conselhos de Classe Profissionais = keywords: conselho, profissional, profissionais
+SubCategoria: Ong - Organizações Não-Governamentais = keywords: ong, organizaçoes
+SubCategoria: Direitos Autorais - Sociedades = keywords: direitos, autorais
+<!-- inicio categoria -->
+Auto Escolas = keywords: auto, escola, habilitaçao, dirigir
+SubCategoria: Auto escolas = keywords: carteira, motorista
+<!-- inicio categoria -->
+Automação = keywords: automaçao
+SubCategoria: Automação = keywords:
+SubCategoria: Automação Industrial = keywords: industria
+SubCategoria: Automação Comercial = keywords: comercio, comercial
+SubCategoria: Portas Automáticas = keywords: porta, automatica
+SubCategoria: Automação Predial e Residencial = keywords: predial, residencial
+SubCategoria: Automação Comercial - Assistência Técnica = keywords: assistencia, tecnica
+<!-- inicio categoria -->
+Automóveis e Veículos = keywords: automoveis, veiculos, carro, moto
+SubCategoria: Automóveis e Veículos = keywords:
+SubCategoria: Peças e Serviços = keywords: pecas, serviços
+SubCategoria: Revendedores e Concessionárias = keywords: concessionaria, revendedor, revendedores
+SubCategoria: Pneus = keywords: pneus, rodas
+SubCategoria: Motocicletas - Conserto e Peças = keywords: conserto, peça
+SubCategoria: Acessórios = keywords: acessorio
+SubCategoria: Veículos Especiais = keywords: especiais
+SubCategoria: Despachantes = keywords: despachantes
+SubCategoria: Borracheiros = keywords: borracheiro, pneu
+SubCategoria: Retificação de Motores e Peças = keywords: retifica, retificacao, motor, peca
+SubCategoria: Chapeação e Pintura = keywords: pintura, chapeacao
+SubCategoria: Funilaria e Pintura = keywords: funilaria, pintura
+SubCategoria: Motocicletas = keywords: motocicletas 
+SubCategoria: Ferro-Velho = keywords: ferro, velho
+SubCategoria: Estofadores = keywords: estofado, banco
+SubCategoria: Tratores - Conserto e Peças = keywords: tratores, conserto, peca
+SubCategoria: Despachantes Aduaneiros = keywords: despachante, aduaneiro
+SubCategoria: Lubrificantes = keywords: lubrificantes, oleo
+SubCategoria: Lanternagem e Pintura = keywords: lanternagem, pintura
+SubCategoria: Guinchos = keywords: guincho
+SubCategoria: Caminhões - Conserto e Peças = keywords: caminhao, carreta
+SubCategoria: Baterias - Atac e Fab = keywords: bateria, atacado, fabricacao
+SubCategoria: Carrocerias = keywords: carroceria
+SubCategoria: Freios = keywords: freio
+SubCategoria: Pneus Usados e Recauchutados = keywords: pneu, recauchutado
+SubCategoria: Alinhamento e Balanceamento = keywords: alinhamento, balanceamento
+SubCategoria: Peças Usadas e Recondicionadas = keywords: pecas, usadas, recondicionadas
+SubCategoria: Direção Hidráulica = keywords: direcao, hidraulica
+SubCategoria: Ar-Condicionado Para Veículos = keywords: ar, condicionado
+SubCategoria: Placas Para Veículos = keywords: placas
+SubCategoria: Automóveis Importados - Revendedores e Peças = keywords: importados, revendedores
+SubCategoria: Tratores = keywords: tratores
+SubCategoria: Carros - Pipa = keywords: pipa, agua
+SubCategoria: Conversão Para Gás Natural Veicular = keywords: gas, instalacao, gnv, modificaçao
+SubCategoria: Reboques e Oficinas 24h (Internet) = keywords: reboque, guincho, 24h
+SubCategoria: Caminhões - Acessórios e Equip = keywords: caminhao, acessorio, equipamento
+SubCategoria: Inspeção Veicular = keywords: inspecao, veicular
+SubCategoria: Blindagem = keywords: blindado, blindagem
+SubCategoria: Bancos, Capas e Estofados = keywords: banco, capa, estofado
+SubCategoria: Motores Diesel - Conserto e Peças = keywords: diesel, conserto, pecas
+SubCategoria: Velocímetros = keywords: velocimetro
+SubCategoria: Tintas Automotivas = keywords: pintura, tinta
+SubCategoria: Caminhões - Aluguel = keywords: caminhao, aluguel
+SubCategoria: Pára-Choques = keywords: para, choque
+SubCategoria: Dispositivos Anti-Roubo = keywords: seguranca, veicular, anti, roubo
+SubCategoria: Redutores de Velocidade = keywords: velocidade, limitador
+SubCategoria: Adaptação Para Deficientes Físicos = keywords: adaptacao, deficiente, fisico
+SubCategoria: Câmbio Automático = keywords: cambio, automatico
+SubCategoria: Financiamento = keywords: financiamento, veiculo
+SubCategoria: Carroças e Charretes = keywords: carroça, carroceiro
+SubCategoria: Sirenes = keywords: sirene
+SubCategoria: Trailer = keywords: trailer
+SubCategoria: Transporte de Veículos = keywords: transporte, veiculo, cegonha
+SubCategoria: Aluguel = keywords: aluguel
+<!-- inicio categoria -->
+Açougues e Peixarias = keywords: açougue, peixaria, peixe
+SubCategoria: Açougues e Peixarias = keywords: 
+SubCategoria: Frigoríficos = keywords: frigorifico
+SubCategoria: Peixarias = keywords:
+SubCategoria: Peixes e Frutos do Mar = keywords: frutos, mar
+<!-- inicio categoria -->
+Bancos = keywords: banco
+SubCategoria: Bancos = keywords: 
+SubCategoria: Instituição Financeira = keywords: instituiçao, financeira
+SubCategoria: Financeiras = keywords: financeira
+SubCategoria: Consórcios = keywords: consocio
+SubCategoria: Previdência Privada = keywords: previdencia, privada
+SubCategoria: Investimentos = keywords: investimento
+SubCategoria: Capitalização = keywords: capitalizacao
+SubCategoria: Casas de Câmbio = keywords: casa, cambio
+SubCategoria: Seguros = keywords: seguro
+SubCategoria: Caixas Registradoras = keywords: caixa, registradora
+<!-- inicio categoria -->
+Bares e Casas Noturnas = keywords: bar, barzinho, boate, noturna
+SubCategoria: Casas Noturnas = keywords:
+SubCategoria: Bares e Choperias = keywords: choperia, chopp, cerveja, bebida
+SubCategoria: Boates = keywords: balada, musica
+SubCategoria: Danceterias = keywords: dança, pub, musica
+<!-- inicio categoria -->
+Bebidas = keywords: bebida, refrigerante, alcoolica, vinho
+SubCategoria: Bebidas = keywords:
+SubCategoria: Distribuidoras de Bebidas = keywords: distribuidora, distribuidor
+SubCategoria: Bebidas - Depósitos = keywords: deposito
+SubCategoria: Adegas = keywords: adega
+SubCategoria: Bebidas - Atac e Fabricação = keywords: atacado, fabricacao
+SubCategoria: Bebidas - Importadores = keywords: importacao, importador, importadores
+SubCategoria: Cachaças = keywords: cachaca
+SubCategoria: Bebidas - Art e Equip Para Fabricar = keywords: artesanal, equipamento
+<!-- inicio categoria -->
+Beleza e Estética  = keywords: beleza, estetica
+SubCategoria: Beleza
+SubCategoria: Cabeleireiros e Institutos de Beleza  = keywords: cabeleleiro, salao
+SubCategoria: Produtos de Beleza  = keywords: produtos
+SubCategoria: Implantes de Cabelos  = keywords: implante
+SubCategoria: Esteticistas  = keywords: esteticista
+SubCategoria: Depilação  = keywords: depilacao, cera
+SubCategoria: Cabeleireiros e Institutos de Beleza - Art e Equip  = keywords: equipamento, artigos
+SubCategoria: Tatuagens e Body Piercing  = keywords: tatuagem, body, piercing
+SubCategoria: Spa - Clínicas  = keywords: spa, clinica
+SubCategoria: Barbeiros  = keywords: barbearia
+SubCategoria: Alfaiates  = keywords: alfaiate
+SubCategoria: Roupa Intima  = keywords: roupa, intima, lingerie
+SubCategoria: Maquiagem Definitiva  = keywords: maquiagem, definitiva
+SubCategoria: Assessoria de Moda  = keywords: assessoria, moda
+SubCategoria: Escovas  = keywords: escova
+SubCategoria: Acessórios  = keywords: acessorio
+SubCategoria: Estilistas  = keywords: estilista, estilo
+SubCategoria: Cabeleireiros Infantil  = keywords: infantil
+SubCategoria: Móveis e Equipamentos Para Cabelereiros e Estética  = keywords: moveis, equipamentos
+SubCategoria: Perucas  = keywords: peruca
+SubCategoria: Cosméticos  = keywords: cosmetico
+SubCategoria: Lingerie  = keywords: intima, lingerie
+SubCategoria: Médicos - Cirurgia Plástica  = keywords: cirurgia, plastica, medico
+<!-- inicio categoria -->
+Bibliotecas e Museus = keywords: biblioteca, museu
+SubCategoria: Bibliotecas = keywords:
+SubCategoria: Museus  = keywords:
+SubCategoria: Bibliotecas e Museus = keywords:
+<!-- inicio categoria -->
+Bombeiros = keywords: bombeiro
+SubCategoria: Corpo de Bombeiros = keywords: corpo
+SubCategoria: Bombeiros Hidráulicos = keywords: hidraulica, encanador, encamento
+SubCategoria: Bombeiros = keywords:
+<!-- inicio categoria -->
+Brinquedos = keywords: brinquedo, criança
+SubCategoria: Loja de Brinquedos = keywords: loja
+SubCategoria: Conserto de Brinquedos = keywords: conserto
+SubCategoria: Atacado e Fabricação de Brinquedos = keywords: atacado, fabricaçao
+SubCategoria: Brinquedos Educativos = keywords: educativo, escola, ensino
+SubCategoria: Brinquedoteca = keywords: brinquedoteca
+<!-- inicio categoria -->
+Buffets = keywords: buffet, comida, festa
+SubCategoria: Buffets = keywords:
+SubCategoria: Buffet Infantil = keywords: infantil, festa
+SubCategoria: Salão de Festas = keywords: salao, aluguel
+SubCategoria: Buffets e Recepções = keywords: recepçao
+<!-- inicio categoria -->
+Caixas Eletrônicos = keywords: caixa, eletronico
+SubCategoria: Caixas Eletrônicos = keywords:
+<!-- inicio categoria -->
+Casas Lotéricas = keywords: casa, loterica, loteria
+SubCategoria: Lotéricas = keywords:
+SubCategoria: Lotéricas e Casas de Aposta = keywords:
+<!-- inicio categoria -->
+Cinemas = keywords: cinema, filme
+SubCategoria: Salas de Cinema = keywords: sala
+SubCategoria: Cinemas = keywords:
+<!-- inicio categoria -->
+Clubes = keywords: clube
+SubCategoria: Clubes = keywords:
+SubCategoria: Associações e Clubes = keywords: associacoes
+SubCategoria: Clubes Esportivos = keywords: esporte, esportivo
+<!-- inicio categoria -->
+Clínicas e Diagnósticos = keywords: clinica, medico, tratamento, diagnostico, exame
+SubCategoria: Clínicas e Centros de Diagnóstico = keywords:
+SubCategoria: Clínicas Especializadas = keywords: especializada
+SubCategoria: Clínicas Médicas = keywords: medica
+SubCategoria: Clínicas de Fisioterapia = keywords: fisioterapia, recuperaçao, fisioterapeuta
+SubCategoria: Clínicas de Estética = keywords: estetica, beleza, plastica
+SubCategoria: Clínicas de Olhos = keywords: olho, oftamologista, oftamologia, visao
+SubCategoria: Clínicas de Psicologia = keywords: psicologia, psicologo
+SubCategoria: Clínicas Psiquiátricas = keywords: psiquiatrica, psiquiatria, psiquiatra
+SubCategoria: Clínicas de Ultra-Sonografia e Ecografia = keywords: ultra, sonografia, ecografia
+SubCategoria: Clínicas de Cardiologia = keywords: cardiologia, cardiologista, coraçao
+SubCategoria: Clínicas Ginecológicas = keywords: ginecologica, ginecologia, mulher
+SubCategoria: Clínicas Ortopédicas = keywords: ortopedica, ortopedia, ortopedista, ossos
+SubCategoria: Clínicas de Reabilitação = keywords: reabilitacao
+SubCategoria: Clínicas de Dermatologia = keywords: dermatologia, dermatologica
+SubCategoria: Clínicas de Radiologia = keywords: radiologia, radiologica, radiologista, raio, radiografia
+SubCategoria: Clínicas Pediátricas = keywords: pediatrica, pediatra, criança
+SubCategoria: Clínicas de Repouso = keywords: repouso, idoso
+SubCategoria: Clínicas de Hemodiálise = keywords: hemodialise
+SubCategoria: Clínicas Geriátricas = keywords: geriatrica, geriatria, idoso
+SubCategoria: Clínicas Urológicas = keywords: urologicas, urologia, rim
+SubCategoria: Clínicas de Reprodução Humana = keywords: reproduçao, inseminaçao, artificial
+SubCategoria: Clínicas de Check-Up = keywords: check
+SubCategoria: Clínicas de Radioterapia = keywords: radioterapia, radioterapeuta
+SubCategoria: Clínicas de Densitometria Óssea = keywords: densiometria, ossea
+SubCategoria: Clínicas de Alergia e Imunologia = keywords: alergia, alergista, imunologia
+SubCategoria: Clínicas Odontológicas = keywords: ondontologia, ondonto, dente, dentista
+SubCategoria: Laboratórios de Análises Clínicas = keywords: laboratorio
+SubCategoria: Médicos - Clínica Geral = keywords: clinico, geral
+<!-- inicio categoria -->
+Confeccões e Vestuário = keywords: roupa, vestuario, confecçao, confecçoes
+SubCategoria: Confeccões e Vestuário = keywords:
+SubCategoria: Roupas Femininas - Lojas = keywords: feminino, loja, mulher
+SubCategoria: Tecidos - Lojas = keywords: tecido, pano
+SubCategoria: Uniformes = keywords: uniforme
+SubCategoria: Noivas - Vestidos e Artigos = keywords: noiva, casamento, vestido
+SubCategoria: Confecções Para Cama, Mesa e Banho = keywords: cama, mesa, banho
+SubCategoria: Tecidos - Atac e Fab = keywords: tecido, atacado, fabricaçao
+SubCategoria: Bolsas = keywords: bolsa
+SubCategoria: Roupas Para Gestantes - Lojas = keywords: gestante, gravida, gravidez
+SubCategoria: Couro - Conservação e Limpeza = keywords: couro, limpeza, conservaçao
+SubCategoria: Roupas Masculinas - Lojas = keywords: masculina, loja, homem
+<!-- inicio categoria -->
+Construção = keywords: construcao, reforma
+SubCategoria: Construção = keywords:
+SubCategoria: Materiais de Construção = keywords: material, materiais, ferramenta
+SubCategoria: Madeiras = keywords: madeira
+SubCategoria: Construção Civil = keywords: civil
+SubCategoria: Metais = keywords: metal, metais
+SubCategoria: Construtoras = keywords: construtora
+SubCategoria: Empreiteiros = keywords: empreiteiro
+SubCategoria: Gesso = keywords: gesso, laje
+SubCategoria: Ferragens - Lojas = keywords: ferragem, ferragens, loja
+SubCategoria: Esquadrias = keywords: esquadria
+SubCategoria: Pisos = keywords: piso, acentamento, porcelanato
+SubCategoria: Pedras = keywords: pedra
+SubCategoria: Demolições = keywords: demoliçao
+SubCategoria: Terraplenagem = keywords: terraplenagem
+SubCategoria: Calhas e Rufos = keywords: calha, rufo
+SubCategoria: Cimento - Artefatos = keywords: cimento, artefato
+SubCategoria: Portas de Aço = keywords: porta, aço
+SubCategoria: Lajes = keywords: laje, gesso
+SubCategoria: Areia e Pedregulho = keywords: areia
+SubCategoria: Estruturas Metálicas e de Madeira = keywords: estrutura, metalica, madeira
+SubCategoria: Divisórias = keywords: divisoria
+SubCategoria: Ferro = keywords: ferro
+SubCategoria: Materiais Elétricos - Lojas = keywords: eletrica
+SubCategoria: Elevadores = keywords: elevador, elevadores, manutençao
+SubCategoria: Extintores de Incêndio = keywords: extintor, incendio
+SubCategoria: Irrigação - Sistemas = keywords: irrigacao, sistema
+SubCategoria: Cimento e Concreto = keywords: cimento, concreto
+SubCategoria: Fossas Sépticas = keywords: fossa, septica
+SubCategoria: Construção - Máq e Equip = keywords: maquina, equipamento, aluguel
+SubCategoria: Pintores = keywords: pintor, pintura
+SubCategoria: Tijolos = keywords: tijolo
+SubCategoria: Ornamentação = keywords: ornamento, ornamentaçao
+SubCategoria: Andaimes = keywords: andaime
+SubCategoria: Solda = keywords: solda
+SubCategoria: Piscinas - Art, Equip e Manutenção = keywords: piscina, artigo, equipamento, manutençao
+SubCategoria: Telhas = keywords: telha, telhado
+SubCategoria: Poços Artesianos - Construtores = keywords: poço, artesiano
+SubCategoria: Forros = keywords: forros
+SubCategoria: Compensados e Laminados = keywords: compensado, laminado
+SubCategoria: Caçambas = keywords: caçamba, entulho, aluguel
+SubCategoria: Pinturas - Revestimentos e Texturas = keywords: pintura, revestimento, textura
+SubCategoria: Impermeabilizações = keywords: impermeabilizaçao, impermeavel
+SubCategoria: Empilhadeiras = keywords: empilhadeira
+SubCategoria: Carpintarias = keywords: carpintaria, madeira
+SubCategoria: Pré-Moldados = keywords: pre, moldado
+SubCategoria: Mármore e Granito - Polimento = keywords: marmore, granito
+SubCategoria: Coberturas = keywords: coberturas
+SubCategoria: Guindastes = keywords: guindastes
+SubCategoria: Escadas = keywords: escadas
+SubCategoria: Azulejos = keywords: azulejos
+SubCategoria: Argamassa = keywords: argamassa
+SubCategoria: Exaustores = keywords: exaustor, exaustores
+SubCategoria: Calcário = keywords: calcario
+SubCategoria: Plantas e Projetos = keywords: planta, projeto
+SubCategoria: Fundações Para Construções = keywords: fundaçao
+SubCategoria: Perfurações = keywords: perfuraçao
+SubCategoria: Tintas = keywords: tinta, pintura
+SubCategoria: Estudos do Solo = keywords: estudo, solo
+<!-- inicio categoria -->
+Consulados e Embaixadas = keywords: consulado, embaixada
+SubCategoria: Consulados e Embaixadas = keywords:
+<!-- inicio categoria -->
+Consultoria = keywords: consultoria
+SubCategoria: Consultoria = keywords:
+SubCategoria: Consultores de Empresas = keywords: empresa
+SubCategoria: Consultores Em Recursos Humanos = keywords: recursos, humanos
+SubCategoria: Consultores de Marketing = keywords: marketing
+SubCategoria: Detetives Particulares = keywords: detetive, particular
+SubCategoria: Consultoria Educacional = keywords: educacional, educação, escola
+SubCategoria: Auditores = keywords: autores, auditor
+SubCategoria: Consultoria Em Pesquisas de Mercado = keywords: pesquisa, mercado, consumidor
+SubCategoria: Consultores Econômico-Financeiros = keywords: economico, financeiro
+SubCategoria: Treinamento e Desenvolvimento = keywords: treinamento, desenvolvimento
+SubCategoria: Consultores Em Gestão de Qualidade = keywords: gestao, qualidade
+SubCategoria: Consultoria Em Seguros e Atuária = keywords: seguro, atuaria
+SubCategoria: Paisagismo e Urbanismo = keywords: paisagismo, urbanismo
+SubCategoria: Consultores Hospitalares = keywords: hospital, clinica
+SubCategoria: Consultoria Pessoal = keywords: pessoal
+SubCategoria: Consultores Em Segurança = keywords: segurança
+SubCategoria: Contabilidade - Escritórios = keywords: contabilidade, escritorio
+SubCategoria: Cálculos Estruturais = keywords: calculo, estrutural
+SubCategoria: Geólogos = keywords: geologos, geologia
+SubCategoria: Consultoria Em Música = keywords: musica
+SubCategoria: Design Industrial = keywords: design
+SubCategoria: Ambiental = keywords: ambiental
+SubCategoria: Consultoria Em Redação e Revisão = keywords: redaçao, revisao
+SubCategoria: Seleção de Pessoal = keywords: seleçao, pessoal, entrevista
+SubCategoria: Consultoria Em Imposto de Renda = keywords: imposto, renda, receita, federal
+SubCategoria: Advogados - Geral = keywords: advogado, advocacia
+SubCategoria: Corretores de Imóveis = keywords: corretor, imovel 
+SubCategoria: Consultoria Em Engenharia = keywords: engenharia
+<!-- inicio categoria -->
+Contabilidades = keywords: contabilidade, contador
+SubCategoria: Contabilidades = keywords:
+SubCategoria: Contabilidade - Escritórios = keywords: escritorio
+SubCategoria: Máquinas de Contar, Separar e Empacotar Moedas = keywords: maquinas, contar, separar, empacotar
+<!-- inicio categoria -->
+Conveniências = keywords: conveniencia
+SubCategoria: Conveniências = keywords:
+<!-- inicio categoria -->
+Cooperativas = keywords: cooperativa
+SubCategoria: Cooperativas = keywords:
+SubCategoria: Cooperativas de Crédito = keywords: credito
+SubCategoria: Cooperativas de Produtores = keywords: produtores
+SubCategoria: Cooperativas de Serviços = keywords: servicos
+SubCategoria: Cooperativas de Habitação = keywords: habitaçao
+
+<!-- inicio categoria -->
+Correios = keywords: agencia, correios
+SubCategoria: Agências dos Correios = keywords:
+SubCategoria: Cdd - Centro de Distribuição Domiciliar = keywords: centro, distribuiçao
+SubCategoria: Correios e Telégrafos = keywords: telegrafo
+SubCategoria: CEE - Centro de Entrega de Encomendas = keywords: entrega, encomenda
+<!-- inicio categoria -->
+Corretores = keywords: corretor, corretores
+SubCategoria: Seguros - Corretores = keywords: seguros
+SubCategoria: Corretores = keywords:
+SubCategoria: Corretoras de Câmbio e Valores Mobiliários = keywords: cambio, imobiliario, imovel
+SubCategoria: Corretores de Mercadorias = keywords: mercadoria
+<!-- inicio categoria -->
+Cursos e Aulas Particulares = keywords: curso, aula, particular
+SubCategoria: Cursos e Treinamento = keywords: treinamento
+SubCategoria: Cursos e Aulas Particulares = keywords:
+SubCategoria: Cursos Pré-Vestibulares = keywords: pre, vestibular, cursinho
+SubCategoria: Cursos de Inglês = keywords: ingles, idioma
+SubCategoria: Aulas Particulares = keywords:
+SubCategoria: Cursos Supletivos = keywords: supletivo, ensino, medio, fundamental
+SubCategoria: Cursos de Pós-Graduação = keywords: pos, graduaçao
+SubCategoria: Cursos de Fotografia e Vídeo = keywords: fotografia, foto, video
+SubCategoria: Cursos À Distância = keywords: distancia, online
+SubCategoria: Cursos de Culinária = keywords: culinaria, cozinhar
+SubCategoria: Cursos de Matemática = keywords: matematica
+SubCategoria: Cursos de Jardinagem e Paisagismo = keywords: jardinagem, paisagismo
+SubCategoria: Cursos de Pintura = keywords: pintura, quadro
+SubCategoria: Cursos Para Degustação de Bebidas = keywords: degustaçao, bebida, cerveja, vinho
+<!-- inicio categoria -->
+Dedetizadoras = keywords: detetizaçao, detetizadora
+SubCategoria: Dedetização = keywords:
+SubCategoria: Controle de Pragas = keywords: controle, pragas
+<!-- inicio categoria -->
+Dentistas = keywords: dentista, odontologia, dente
+SubCategoria: Dentistas = keywords:
+SubCategoria: Clínicas Odontológicas = keywords: clinica
+SubCategoria: Dentistas - Endodontia = keywords: endodontia
+SubCategoria: Dentistas - Dentística Restauradora = keywords: restauradora, restauraçao
+SubCategoria: Dentistas - Ortodontia = keywords: ortodontia
+SubCategoria: Dentistas - Art e Equip - Conserto e Vendas = keywords: artigo, equipamento, conserto, venda
+SubCategoria: Dentistas - Radiologia = keywords: radiologia, raio, radiografia
+SubCategoria: Dentistas - Implantodontia = keywords: implante
+SubCategoria: Dentistas - Cirurgia e Traumatologia Bucomaxilofacial = keywords: cirurgia, traumatologia, bucomaxilofacial
+SubCategoria: Dentistas - Prótese = keywords: protese, implante
+SubCategoria: Dentistas - Periodontia = keywords: periodontia
+SubCategoria: Dentistas - Urgências = keywords: urgencia, emergencia
+SubCategoria: Dentistas - Patologia Bucal = keywords: patologia, bucal
+SubCategoria: Dentistas - Tratamento do Hálito = keywords: halito, tratamento
+SubCategoria: Dentistas - Ortopedia Funcional dos Maxilares = keywords: ortopedia, maxilar, maxilares
+<!-- inicio categoria -->
+Detran = keywords: detran, renovaçao, habilitaçao, revisao, veicular
+SubCategoria: Detran = keywords:
+<!-- inicio categoria -->
+Eletricidade e Energia = keywords: eletricidade, energia, eletricista
+SubCategoria: Eletricidade e Energia = keywords:
+SubCategoria: Eletricidade - Empresas = keywords: empresa
+SubCategoria: Instalações Elétricas = keywords: instalaçao, intalacoes
+SubCategoria: Eletricistas = keywords: serviço
+SubCategoria: Motores Elétricos - Conserto e Peças = keywords: motor, motores, peças, conserto
+SubCategoria: Energia Solar - Equip = keywords: solar, painel, aquecimento
+SubCategoria: Transformadores Elétricos = keywords: transformador
+SubCategoria: Geradores Elétricos e Dínamos = keywords: gerador, compra
+SubCategoria: Aterramento Elétrico = keywords: aterramento
+SubCategoria: Cercas Elétricas = keywords: cerca, eletrica
+<!-- inicio categoria -->
+Eletroeletrônicos = keywords: eletronico, eletroeletronico
+SubCategoria: Eletroeletrônicos = keywords: 
+SubCategoria: Eletrodomésticos = keywords: eletrodomestico
+SubCategoria: Eletrodomésticos - Conserto e Peças = keywords: conserto, eletrodomestico, peças
+SubCategoria: Televisões - Conserto e Peças = keywords: televisao, conserto, peças
+SubCategoria: Celulares Assistência Técnica e Vendas = keywords: celular, assistencia, tecnica, conserto, venda
+SubCategoria: Intercomunicação - Sistemas = keywords: sistemas, comunicaçao
+SubCategoria: Interfones - Assistência Técnica e Vendas = keywords: interfone, assistencia, tecnica, venda
+SubCategoria: Instrumentos Elétricos e Eletrônicos = keywords: instrumentos
+<!-- inicio categoria -->
+Embalagens = keywords: embalagem
+SubCategoria: Embalagens = keywords:
+SubCategoria: Embalagens Plásticas = keywords: plasticas, plastico
+SubCategoria: Embalagens Para Presentes = keywords: presente
+SubCategoria: Papel Para Embalagem = keywords: papel
+<!-- inicio categoria -->
+Engenharia e Arquitetura = keywords: engenharia, arquitetura
+SubCategoria: Engenharia e Arquitetura = keywords:
+SubCategoria: Engenharia - Empresas = keywords: empresa
+SubCategoria: Arquitetos = keywords: arquitetos
+SubCategoria: Consultoria Em Engenharia = keywords: consultoria
+SubCategoria: Engenheiros Civis = keywords: civil
+SubCategoria: Engenharia Ambiental = keywords: ambiental
+SubCategoria: Engenheiros Eletricistas = keywords: eletrico, eletricista
+SubCategoria: Engenharia - Art e Equip = keywords: equipamentos, artigo
+SubCategoria: Engenheiros Agrônomos = keywords: agronomia, agronomo
+SubCategoria: Engenheiros Agrimensores = keywords: agrimensor, agrimensores
+SubCategoria: Engenheiros Mecânicos = keywords: mecanico
+SubCategoria: Engenharia - Perícia = keywords: pericia
+SubCategoria: Engenheiros Florestais = keywords: florestal
+SubCategoria: Engenheiros Químicos = keywords: quimico
+SubCategoria: Engenheiros Navais = keywords: naval
+SubCategoria: Engenheiros Metalúrgicos = keywords: metalurgico
+<!-- inicio categoria -->
+Escolas = keywords: escola, ensino, aula
+SubCategoria: Escolas Públicas = keywords: publica
+SubCategoria: Escolas = keywords:
+SubCategoria: Escolas Particulares = keywords: particular
+SubCategoria: Escolas de Educação Infantil = keywords: infantil
+SubCategoria: Escolas de Artes = keywords: arte
+SubCategoria: Creches = keywords: creche
+SubCategoria: Escolas de Línguas = keywords: lingua, idioma
+SubCategoria: Escolas Técnicas e Profissionalizantes = keywords: tecnica, profissionalizante
+SubCategoria: Escolas de Ballet = keywords: ballet, dança
+SubCategoria: Escolas de Dança = keywords: dança
+SubCategoria: Escolas Esportivas = keywords: esporte, esportiva
+SubCategoria: Pesquisas Tecnológicas = keywords: tecnologia, tecnologica, tecnologo
+SubCategoria: Escola de Inglês = keywords: ingles, idioma, lingua
+SubCategoria: Escolas Preparatórias = keywords: preparatoria
+SubCategoria: Escolas de Música = keywords: musica, instrumento
+SubCategoria: Blocos Carnavalescos e Escolas de Samba = keywords: samba, carnaval, carnavalesco
+SubCategoria: Pedagogia e Orientação Vocacional = keywords: orientaçao, educacional
+SubCategoria: Escolas de Natação = keywords: nataçao
+SubCategoria: Escolas de Desenho = keywords: desenho, arte
+SubCategoria: Escolas de Aviação = keywords: aviaçao, aviao
+SubCategoria: Escolas de Enfermagem = keywords: enfermagem
+SubCategoria: Escolas Para Crianças Especiais = keywords: especial, especiais, deficiente
+SubCategoria: Escolas de Mergulho = keywords: mergulho
+SubCategoria: Escolas Jurídicas = keywords: direito, juridica
+SubCategoria: Escolas de Dicção e Oratória = keywords: dicçao, oratoria
+SubCategoria: Livros - Distribuidores = keywords: livros, distribuidores
+SubCategoria: Faculdades e Universidades = keywords: faculdade, universidade, superior
+<!-- inicio categoria -->
+Esportes = keywords: esporte, esportivo
+SubCategoria: Esportes = keywords:
+SubCategoria: Bicicletas - Peças e Acessórios = keywords: bicicleta, peça, acessorio
+SubCategoria: Bicicletas = keywords:
+SubCategoria: Bilhar e Sinuca - Art e Equip = keywords: bilhar, sinuca, artigo, equipamento
+SubCategoria: Campos e Quadras Esportivas - Aluguel = keywords: quadra, campo, soçaite, aluguel
+SubCategoria: Distribuidora de Artigos Esportivos = keywords: artigos
+SubCategoria: Surf - Art e Equip = keywords: surf
+SubCategoria: Yoga = keywords: yoga
+SubCategoria: Armas e Munições = keywords: arma, muniçao
+SubCategoria: Troféus e Taças = keywords: trofeu, taça
+SubCategoria: Boliche = keywords: boliche
+SubCategoria: Salões de Bilhar e Sinuca = keywords: bilhar, sinuca
+SubCategoria: Artes Marciais = keywords: luta, artes, marciais
+SubCategoria: Lojas de Artigos Esportivos = keywords: loja, artigos
+SubCategoria: Autódromos e Kartódromos = keywords: autodromo, kartodromo
+SubCategoria: Barracas = keywords: barraca, camping
+SubCategoria: Medicina Esportiva = keywords: medicina
+SubCategoria: Ultra-Leves = keywords: aviao, ultra, leve
+SubCategoria: Balonismo = keywords: balonismo
+SubCategoria: Academias Desportivas = keywords: academia, despotiva
+SubCategoria: Clubes = keywords: clube
+
+<!-- inicio categoria -->
+Estacionamentos = keywords: estacionamento
+SubCategoria: Estacionamentos e Garagens Particulares = keywords: particular, particulares
+SubCategoria: Estacionamentos e Garagens = keywords: 
+SubCategoria: Estacionamentos e Garagens (Administração) = keywords: administraçao
+SubCategoria: Estacionamentos e Garagens (Equipamentos) = keywords: equipamento
+
+<!-- inicio categoria -->
+Faculdades e Universidades = keywords: faculdade, universidade, superior
+SubCategoria: Faculdades e Universidades = keywords:
+
+<!-- inicio categoria -->
+Farmácias e Drogarias = keywords: farmacia, drogaria, remedio, medicamento
+SubCategoria: Farmácias e Drogarias = keywords:
+SubCategoria: Farmácias de Manipulação = keywords: manipulacao
+SubCategoria: Produtos Farmacêuticos - Atacado e Fabricação = keywords: produto, farmaceutico, atacado, fabricaçao
+SubCategoria: Medicamentos - Distribuidores = keywords: distribuidor, distribuidores
+SubCategoria: Comércio de Fraldas = keywords: fralda
+SubCategoria: Farmácias Homeopáticas = keywords: homeopatia, homeopaticas
+SubCategoria: Farmacias e Drogarias 24h = keywords: horas
+
+<!-- inicio categoria -->
+Festas e Eventos = keywords: festa, evento
+SubCategoria: Festas e Eventos = keywords:
+SubCategoria: Eventos - Organização e Promoção = keywords: organizaçao, promoçao
+SubCategoria: Geradores = keywords: gerador, energia
+SubCategoria: Festas - Artigos = keywords: artigo
+SubCategoria: Festas - Organização = keywords: organizaçao
+SubCategoria: Toldos e Tendas - Aluguel = keywords: toldo, tenda, aluguel
+SubCategoria: Músicos = keywords: musica, musicos, banda
+SubCategoria: Festas - Animação = keywords: animaçao
+SubCategoria: Luminosos = keywords: iluminaçao, luminosos
+SubCategoria: Festas - Casas Para Aluguel = keywords: casa, mansao, espaço, aluguel
+SubCategoria: Fogos de Artifício = keywords: fogo, artificio, foguete
+SubCategoria: Mágicos = keywords: magico
+SubCategoria: Shows - Produção = keywords: show, produçao
+SubCategoria: Painéis = keywords: painel
+SubCategoria: Arquibancadas e Palcos - Montagens = keywords: arquibancada, palco, montagem
+SubCategoria: Filmagem = keywords: filme, filmagem
+SubCategoria: Letreiros e Outdoor = keywords: letreiro, faixa, outdoor
+SubCategoria: Fantasias = keywords: fantasia, aluguel
+SubCategoria: Cerimonial = keywords: cerimonial, organizaçao
+SubCategoria: Projetores = keywords: projetor, projetores, retroprojetor
+SubCategoria: Formaturas - Organização = keywords: formatura, empresa
+SubCategoria: Bartender e Coqueteis = keywords: bartender, coqueteis, bebida
+SubCategoria: Convites = keywords: convite
+SubCategoria: Salões Para Banquetes e Festas = keywords: salões
+SubCategoria: Telão - Venda e Locação = keywords: telão, venda, aluguel, locaçao
+SubCategoria: Centros de Convenções = keywords: centro, convençoes
+SubCategoria: Decoração = keywords: decoraçao
+SubCategoria: Banheiros Químicos = keywords: banheiro, sanitario, quimico
+SubCategoria: Trios Elétricos = keywords: trio, eletrico
+SubCategoria: Cenografia - Empresas = keywords: cenografia
+SubCategoria: Ingressos = keywords: ingresso
+
+<!-- inicio categoria -->
+Flores = keywords: flor, buque, flores, floricultura, plantas
+SubCategoria: Flores = keywords:
+SubCategoria: Floriculturas = keywords: 
+SubCategoria: Floriculturas - Fornecedores = keywords: forncedor, fornecedores
+SubCategoria: Flores Artificiais e Desidratadas = keywords: artificial, artificiais, desidratada
+SubCategoria: Flores - Ornamentação = keywords: ornamentaçao, ornamental
+
+<!-- inicio categoria -->
+Fotografia = keywords: foto, fotografia, fotografos, fotografica
+SubCategoria: Fotografia = keywords:
+SubCategoria: Fotografias - Ampliações, Cópias e Revelações = keywords: ampliaçao, copia, revelaçao
+SubCategoria: Fotografias - Estúdios = keywords: estudio
+SubCategoria: Fotógrafos = keywords:
+SubCategoria: Fotografias - Equipamentos = keywords: equipamento
+SubCategoria: Máquinas Fotográficas - Conserto = keywords: maquinas, digital
+SubCategoria: Fotografias Aéreas = keywords: aerea
+SubCategoria: Fotografias - Restaurações = keywords: restauraçao
+
+<!-- inicio categoria -->
+Funerárias e Cemitérios = keywords: funeraria, cemiterio, crematorio
+SubCategoria: Funerárias e Cemitérios = keywords:
+SubCategoria: Funerárias = keywords:
+SubCategoria: Cemitérios = keywords:
+SubCategoria: Urnas Funerárias - Atac e Fab = keywords: urna, fabricacao, atacado
+
+<!-- inicio categoria -->
+Gráficas e Cópias = keywords: grafica, copia, xerox
+SubCategoria: Gráficas = keywords:
+SubCategoria: Papelarias = keywords:
+SubCategoria: Cópias Xerográficas e Heliográficas = keywords: xerograficas, heliograficas
+SubCategoria: Papel = keywords: papel
+SubCategoria: Etiquetas = keywords: atiqueta
+SubCategoria: Adesivos = keywords: adesivo
+SubCategoria: Encadernadores = keywords: encadernaçao, encadernadores
+SubCategoria: Papelarias - Atac = keywords: papelaria, atacado
+SubCategoria: Gráficas e Cópias = keywords:
+SubCategoria: Materiais Didáticos e Pedagógicos = keywords: material, materias, didatico
+SubCategoria: Plastificação = keywords: plastificaçao
+SubCategoria: Envelopes - Atacado e Fabricação = keywords: envelope
+SubCategoria: Gravação Pantográfica = keywords: gravaçao, pantografica
+
+<!-- inicio categoria -->
+Hospitais e Postos de Saúde = keywords: hospital, hospitais, posto, saude
+SubCategoria: Postos de Saúde = keywords:
+SubCategoria: Hospitais = keywords:
+SubCategoria: Unidade de Terapia = keywords: terapia
+SubCategoria: Hospitais Particulares = keywords: particular, privado
+SubCategoria: Dentistas = keywords: dentista, odontologia
+SubCategoria: Equipamentos Para Hospitais = keywords: equipamento, artigos
+SubCategoria: Hospitais Públicos = keywords: publico
+SubCategoria: Maternidades = keywords: maternidade
+SubCategoria: Coleta e Tratamento de Resíduos Hospitalares = keywords: coleta, lixo, hospitalar
+SubCategoria: Pronto-Socorro Particular = keywords: pronto, socorro, particular
+
+<!-- inicio categoria -->
+Hotéis e Pousadas = keywords: hotel, hoteis, hospedagem, pousada, estadia
+SubCategoria: Hospedagem = keywords:
+SubCategoria: Hotéis = keywords:
+SubCategoria: Pousadas = keywords:
+SubCategoria: Apart-Hotéis = keywords: apart, apartamento
+SubCategoria: Albergues = keywords: albergue
+SubCategoria: Equipamentos Para Hotéis = keywords: equipamento, venda
+
+<!-- inicio categoria -->
+Imobiliárias = keywords: imobiliaria, corretora, imovel, imoveis
+SubCategoria: Imobiliárias = keywords:
+SubCategoria: Administração de Bens e Imóveis = keywords: administraçao, bens
+SubCategoria: Corretores de Imóveis = keywords: corretor, vendedor
+
+<!-- inicio categoria -->
+Imóveis = keywords: imovel, imoveis
+SubCategoria: Imóveis (Geral) = keywords: 
+SubCategoria: Empreendimentos Imobiliários = keywords: empresa, empreendimento
+
+<!-- inicio categoria -->
+Indústrias = keywords: industria
+SubCategoria: Indústrias Em Geral = keywords:
+
+<!-- inicio categoria -->
+Informática = keywords: informatica, computador, tecnologia
+SubCategoria: Informática Em Geral = keywords:
+SubCategoria: Lan Houses = keywords: lan, house
+SubCategoria: Venda Equipamentos de Informática = keywords: venda, peça, equipamento
+SubCategoria: Assistência Técnica Informática = keywords: assistencia, tecnica, conserto, formataçao
+SubCategoria: Software - Desenvolvimento = keywords: software, programa, desenvolvimento
+SubCategoria: Consultores Em Informática = keywords: consultoria, consultor
+SubCategoria: Impressora em Geral = keywords: impressora, cartucho, tinta, assistencia, tecnica
+SubCategoria: Internet - Construção de Sites = keywords: site
+SubCategoria: Software - Aplicativos e Sistemas = keywords: aplicativo, sistema
+SubCategoria: Recarga de Toner = keywords: recarga, toner
+SubCategoria: Internet - Comércio Eletrônico = keywords: commerce, eletronico
+SubCategoria: Computação  Gráfica = keywords: grafico
+SubCategoria: Digitalização de Documentos = keywords: digitalizaçao, documento
+SubCategoria: Cursos e Treinamento = keywords: curso, treinamento
+SubCategoria: Periféricos = keywords: perifericos, mouse, teclado, monitor
+SubCategoria: Internet - Hospedagem de Sites e Registro de Domínio = keywords: internet, hospedagem, site
+SubCategoria: Projetos e Instalações = keywords: projeto, instalaçao, instalaçoes
+SubCategoria: Relógios de Ponto = keywords: relogio, ponto, eletronico
+SubCategoria: Recarga de Cartuchos = keywords: recarga, cartucho, tinta
+SubCategoria: Aluguel e Leasing Equipamentos de Informática = keywords: aluguel, locaçao
+SubCategoria: Fax - Conserto e Vendas = keywords: fax, conserto, venda
+SubCategoria: Voip - Serviços de Telecomunicação = keywords: voip, telecomunicaçao
+SubCategoria: Controles e Sistemas de Controle = keywords: controle, sistema
+SubCategoria: Impressão Eletrônica e Digital = keywords: impressao, eletronica, digital
+SubCategoria: Estabilizadores e No-Break = keywords: estabilizador, estabilizadores, break
+SubCategoria: Internet - Infra-Estrutura, Redes e Conexões Dedicadas = keywords: infra, estrutura, rede, conexao
+SubCategoria: Arquivos - Sistemas de Organização = keywords: arquivo, organizaçao
+SubCategoria: Auditoria = keywords: auditoria
+SubCategoria: Circuitos Impressos = keywords: circuitos, impressao, impresso
+SubCategoria: Internet - Segurança da Informação = keywords: segurança, informaçao
+SubCategoria: Fibra Óptica = keywords: fibra, optica
+SubCategoria: Digitação de Dados = keywords: digitaçao
+SubCategoria: Cabeamento Estruturado - Óptico e Metálico = keywords: cabeamento, estruturado, estrutura, cabo
+SubCategoria: Impressoras Fiscais = keywords: impressora, fiscal
+SubCategoria: Radioamadores - Equipamentos = keywords: radio, amadores, radioamadores
+
+<!-- inicio categoria -->
+Jornais e Revistas = keywords: jornal, jornais, revista
+SubCategoria: Jornais e Revistas = keywords:
+SubCategoria: Bancas de Jornais = keywords: banca
+SubCategoria: Jornais - Editores e Representantes = keywords: editor, editores, representantes
+SubCategoria: Revistas - Editores e Distribuidores = keywords: distribuidor, distribuidores
+SubCategoria: Jornais - Assinaturas = keywords: assinatura
+SubCategoria: Jornais - Distribuidores = keywords: distribuidor, distribuidores
+SubCategoria: Revistas - Assinaturas = keywords: assinatura
+
+<!-- inicio categoria -->
+Laboratórios = keywords: laboratorio, exame
+SubCategoria: Laboratórios de Análises Clínicas = keywords: analise, clinica
+SubCategoria: Laboratórios = keywords: sangue
+SubCategoria: Laboratórios de Anatomia Patológica e Citopatologia = keywords: anatomia, patologica, cipatologia
+SubCategoria: Laboratórios - Art e Equip = keywords: equipamento, artigo
+SubCategoria: Laboratórios de Análise de Dna = keywords: dna, analise
+SubCategoria: Laboratórios de Análises Físico-Químicas = keywords: fisico, quimica
+SubCategoria: Laboratórios Veterinários = keywords: veterinario, animal
+
+<!-- inicio categoria -->
+Lanchonetes = keywords: lanchonete
+SubCategoria: Lanchonetes = keywords:
+SubCategoria: Fast Food = keywords: fast, food, sanduiche
+SubCategoria: Cafés / Cafeterias = keywords: cafe, cafeteria
+SubCategoria: Docerias = keywords: doce, doceria
+
+<!-- inicio categoria -->
+Lava-Rápido = keywords: lava, rapido, jato
+SubCategoria: Lava-Rápido = keywords: 
+SubCategoria: Lava-Jato = keywords:
+
+<!-- inicio categoria -->
+Lavanderias = keywords: lavanderia
+SubCategoria: Lavanderias = keywords:
+SubCategoria: Máquinas de Lavar - Conserto e Peças = keywords: maquina, lavar, conserto, peça
+SubCategoria: Máquinas de Lavar = keywords: maquina, lavar
+SubCategoria: Lavadoras de Alta Pressão = keywords: lavadora, alta, pressao
+
+<!-- inicio categoria -->
+Livrarias e Papelarias = keywords: livraria, livro, papelaria
+SubCategoria: Livrarias e Papelarias = keywords:
+SubCategoria: Livrarias = keywords:
+SubCategoria: Livros - Distribuidores = keywords: distribuidor, distribuidores
+SubCategoria: Livros Usados = keywords: usado, sebo
+SubCategoria: Livrarias e Publicações = keywords: publicaçao, publicaçoes
+
+<!-- inicio categoria -->
+Locadoras de Veículos
+SubCategoria: Locadoras de Veículos
+
+<!-- inicio categoria -->
+Lojas Diversas
+SubCategoria: Lojas Diversas (Geral)
+SubCategoria: Telefones Celulares - Aparelhos e Acessórios (Lojas)
+SubCategoria: Óticas
+SubCategoria: Calçados - Lojas
+SubCategoria: Presentes
+SubCategoria: Bazares
+SubCategoria: Jóias
+SubCategoria: Bijuterias
+SubCategoria: Água Mineral
+SubCategoria: Perfumarias
+SubCategoria: Boutiques
+SubCategoria: Móveis - Lojas
+SubCategoria: Colchões - Lojas
+SubCategoria: Roupas Infantis - Lojas
+SubCategoria: Lingerie
+SubCategoria: Bolsas
+SubCategoria: Magazines
+SubCategoria: Lojas de Artigos Esportivos
+SubCategoria: Utensílios e Utilidades Domésticas - Lojas
+SubCategoria: Relojoarias
+SubCategoria: Roupas de Cama, Mesa e Banho - Lojas
+SubCategoria: Lojas de Conveniência
+SubCategoria: Caça e Pesca - Lojas
+SubCategoria: Sapatarias
+SubCategoria: Instrumentos Musicais - Lojas
+SubCategoria: Tabacarias
+SubCategoria: Cds, Dvds e Discos(Lojas)
+SubCategoria: Roupas Masculinas - Lojas
+SubCategoria: Balanças
+SubCategoria: Moda Praia
+SubCategoria: Vinhos
+SubCategoria: Sucos - Lojas
+SubCategoria: Meias
+SubCategoria: Brechós
+SubCategoria: Pedras Preciosas e Semi-Preciosas
+SubCategoria: Antiquários
+SubCategoria: Louças
+SubCategoria: Jogos e Art Para Jogos
+SubCategoria: Galerias de Arte
+SubCategoria: Produtos Esotéricos e Místicos
+SubCategoria: Malas
+SubCategoria: Chapéus
+SubCategoria: Artigos Para Bebês
+SubCategoria: Enxovais Para Bebês
+SubCategoria: Suplementos Naturais
+SubCategoria: Perfumes - Art e Mat-Primas
+SubCategoria: Metais Preciosos
+SubCategoria: Sacolas e Brindes Personalizados
+SubCategoria: Prata
+SubCategoria: Cristais
+SubCategoria: Canetas e Lapiseiras
+SubCategoria: Peles
+SubCategoria: Aeromodelismo
+SubCategoria: Mapas e Globos
+SubCategoria: Enfeites
+SubCategoria: Camping - Art e Equip (Lojas)
+SubCategoria: Vitrais
+SubCategoria: Mergulho - Art e Equip
+SubCategoria: Medalhas
+SubCategoria: Charutos
+SubCategoria: Prataria
+SubCategoria: Galerias
+SubCategoria: Agendas
+SubCategoria: Natal - Art
+SubCategoria: Numismática
+SubCategoria: Álbuns
+SubCategoria: Pallets
+SubCategoria: Roupas Femininas - Lojas
+
+<!-- inicio categoria -->
+Mecânicas e Oficinas = keywords: mecanica, oficina
+SubCategoria: Oficinas Mecânicas = keywords: carro, conserto, peça
+SubCategoria: Mecânicas e Oficinas = keywords: carro, conserto, peça
+SubCategoria: Macacos Hidráulicos e Mecânicos = keywords: macaco, hidraulico
+
+<!-- inicio categoria -->
+Metrô e Trem = keywords: metro, trem
+SubCategoria: Estação de Metrô = keywords: 
+SubCategoria: Estação de Trem = keywords: 
+
+<!-- inicio categoria -->
+Motéis = keywords: motel, moteis
+SubCategoria: Motéis = keywords:
+
+<!-- inicio categoria -->
+Máquinas e Ferramentas = keywords: maquina, ferramenta
+SubCategoria: Ferramentas = keywords:
+SubCategoria: Máquinas Agrícolas = keywords: agricultura, agricoloca
+SubCategoria: Máquinas de Costura = keywords: constura
+SubCategoria: Máquinas e Equipamentos - Aluguel e Arrendamento = keywords: aluguel, arrendamento
+SubCategoria: Ferramentas Elétricas = keywords: eletrica
+SubCategoria: Máquinas Operatrizes = keywords: operatriz, operatrizes
+SubCategoria: Máquinas Têxteis = keywords: textil, texteis
+SubCategoria: Máquinas Para Terraplenagem = keywords: terraplenagem
+SubCategoria: Ferramentas de Corte = keywords: corte
+SubCategoria: Máquinas e Ferramentas Pneumáticas = keywords: pneumatica
+SubCategoria: Máquinas e Equipamentos - Aluguel e Venda = keywords: aluguel, venda
+SubCategoria: Máquinas de Ensacar e Empacotar = keywords: ensacar, empacotar
+SubCategoria: Máquinas Para Cortar Grama = keywords: cortar, cortador, grama
+SubCategoria: Máquinas Usadas = keywords: usada
+SubCategoria: Máquinas Para Fragmentar Papel = keywords: fragmentar, fragmentador, papel
+SubCategoria: Máquinas Para Bordar = keywords: bordar
+SubCategoria: Máquinas Para Protocolar = keywords: protocolar
+SubCategoria: Lojas de Ferramentas e Utensílios Domésticos = keywords: loja, utensilio, domestico
+
+<!-- inicio categoria -->
+Médicos e Consultórios = keywords: medico, consultorio, saude, clinica, exame
+SubCategoria: Medicina e Saúde = keywords: medicina, saude
+SubCategoria: Consultório Médico = keywords:
+SubCategoria: Clínicas Médicas = keywords: 
+SubCategoria: Médicos - Ginecologia e Obstetrícia = keywords: ginecologia, ginecologista, obstetra, obstetricia
+SubCategoria: Médicos - Cirurgiões = keywords: cirurgia, cirurgiao
+SubCategoria: Psicólogos = keywords: psicologia, psicologo
+SubCategoria: Médicos - Pediatria = keywords: pediatria, pediatra, criança
+SubCategoria: Médicos - Cardiologia = keywords: cardiologia, cardiologista, coraçao
+SubCategoria: Médicos - Cirurgia Cardiovascular = keywords: cardiologia, cardiologista, coraçao, cirurgia, cardiovascular
+SubCategoria: Médicos - Clínica Geral = keywords: geral
+SubCategoria: Médicos - Oftalmologia = keywords: oftamologia, oftamologista, olho, visao
+SubCategoria: Médicos - Dermatologia = keywords: dermatologia, dermatologista, pele
+SubCategoria: Médicos - Anestesiologia = keywords: anestesia, anestologia
+SubCategoria: Médicos - Cirurgia Bariátrica (Redução de Estômago) = keywords: cirurgia, bariatria, bariatrica, reduçao, estomago
+SubCategoria: Médicos - Cirurgia Plástica = keywords: cirurgia, plastica
+SubCategoria: Medicina do Trabalho = keywords: medicina, trabalho
+SubCategoria: Médicos - Neurocirurgia e Neurologia = keywords: neurologia, neurologista, neuro, neurocirurgia
+SubCategoria: Médicos - Otorrinolaringologia = keywords: otorrino, Otorrinolaringologia , Otorrinolaringologista
+SubCategoria: Médicos - Ortopedia e Traumatologia = keywords: ortopedia, ortopedista, ortopedica, trauma, traumatologia
+SubCategoria: Médicos - Cirurgia Torácica = keywords: cirurgia, toracica
+SubCategoria: Médicos - Angiologia = keywords: angiologia, cardiologia, cardiologista
+SubCategoria: Aparelhos Auditivos = keywords: aparelho, auditivo, audiçao
+SubCategoria: Médicos - Endocrinologia = keywords: endocrinologia, endrocrino
+SubCategoria: Planos de Saúde - Representantes = keywords: plano, saude, representante
+SubCategoria: Médicos - Psiquiatria = keywords: psiquiatria, psiquiatra, psicologo
+SubCategoria: Ortopedia - Aparelho = keywords: ortopedia, ortopedista, aparelho, gesso
+SubCategoria: Fisioterapeutas = keywords: fisioterapia, fisioterapeuta, fisio
+SubCategoria: Médicos - Urologia = keywords: urologia, urologista, rim
+SubCategoria: Médicos - Gastroenterologia = keywords: gastro, gastrite
+SubCategoria: Próteses = keywords: protese, equipamento
+SubCategoria: Planos de Saúde = keywords: plano, saude
+SubCategoria: Médicos - Homeopatia = keywords: homeopatia, natural
+SubCategoria: Acupuntura = keywords: acupuntura
+SubCategoria: Médicos - Oncologia = keywords: oncologia, oncologista, cancer 
+SubCategoria: Lentes de Contato = keywords: oftamologista, lentes, contato
+SubCategoria: Médicos - Alergia e Imunologia = keywords: alergia, alergista, imunologia
+SubCategoria: Fonoaudiólogos = keywords: fonoaudiologia, fonaudiologo
+SubCategoria: Médicos - Pneumologia = keywords: pneumologia, pneumologista, pulmao
+SubCategoria: Médicos - Endoscopia = keywords: endoscopia
+SubCategoria: Cirurgia - Art,  Equip e Instrumental = keywords: equipamento, instrumento, ferramenta
+SubCategoria: Psicanalistas = keywords: psicanalista, psicanalise, psiquiatra, psicologo
+SubCategoria: Nutricionistas = keywords: nutriçao, nutricionista, dieta
+SubCategoria: Médicos - Nefrologia = keywords: nefrologia, nefrologista, rim
+SubCategoria: Médicos - Reumatologia = keywords: reumatologia, reumatologista
+SubCategoria: Casa de Massagens = keywords: massagem
+SubCategoria: Podólogos = keywords: podologo, podologia
+SubCategoria: Médicos - Geriatria = keywords: geriatria, geriatrico
+SubCategoria: Médicos - Hematologia = keywords: hematologia, hematologista
+SubCategoria: Médicos - Mastologia = keywords: mastologia, mastologista
+SubCategoria: Oxigênio = keywords: gas, oxigenio
+SubCategoria: Médicos - Infectologia = keywords: infectologia, infectologista
+SubCategoria: Ultra-Som = keywords: ultra, som, ultrasonografia, sonografia
+SubCategoria: Médicos - Proctologia = keywords: proctologia, proctologista
+SubCategoria: Tomografia e Ressonância Magnética = keywords: tomografia, ressonancia, magnetica, imagem
+SubCategoria: Fisioterapia - Equip = keywords: fisioterapia, fisioterapeuta, equipamento
+SubCategoria: Enfermagem = keywords: enfermagem, enfermeira
+SubCategoria: Medicina Nuclear = keywords: medicina, nuclear
+SubCategoria: Quiropraxia = keywords: quiropraxia, quiropratico
+SubCategoria: Médicos - Radiodiagnóstico e Radiologia = keywords: radiologia, radiologista, diagnostico
+SubCategoria: Cadeiras de Rodas = keywords: cadeira, rodas
+SubCategoria: Raios X - Operação, Manutenção e Conserto = keywords: raio, radiologia, radiografia, manutençao, conserto
+SubCategoria: Médicos - Sexologia = keywords: sexologia, sexologista, sexologo
+SubCategoria: Medicina Preventiva = keywords: preventiva, prevencao
+SubCategoria: Internação Domiciliar = keywords: internaçao, domicilio, domiciliar, casa
+SubCategoria: Médicos - Citopatologia = keywords: cipatologia
+SubCategoria: Calçados Ortopédicos = keywords: calçado, ortopedico
+SubCategoria: Esterilização - Aparelhos = keywords: esterilizaçao, aparelho, equipamento
+SubCategoria: Terapeutas Ocupacionais = keywords: terapia, ocupacional, terapeuta
+SubCategoria: Medicina do Sono = keywords: sono
+SubCategoria: Esterilização - Serviços = keywords: esterilizaçao, serviço
+SubCategoria: Médicos (Associações) = keywords: associaçao, conselho
+
+<!-- inicio categoria -->
+Móveis e Decoração = keywords: moveis, decoraçao, sofa, mesa, cadeira
+SubCategoria: Móveis e Decoração = keywords:
+SubCategoria: Indústria de Móveis = keywords: industria, confecçao
+SubCategoria: Serralheiros = keywords: serralheiro
+SubCategoria: Marcenarias = keywords: marcenaria, marceneiro
+SubCategoria: Decoração - Art e Serviços = keywords: serviço
+SubCategoria: Mármore = keywords: marmore, pedra
+SubCategoria: Produtos Para Limpeza = keywords: produto, limpeza
+SubCategoria: Tintas - Lojas = keywords: linta, loja
+SubCategoria: Tapeçarias = keywords: tapeçaria
+SubCategoria: Casa e Jardim: Iluminação e Serviços de Iluminação = keywords: jardim, iluminaçao
+SubCategoria: Movéis de Escritório = keywords: escritorio, trabalho
+SubCategoria: Móveis Usados = keywords: usados, novo
+SubCategoria: Telas = keywords: tela
+SubCategoria: Cortinas e Acessórios = keywords: cortina, persiana, acessorio
+SubCategoria: Móveis Sob Medida = keywords: sob, medida
+SubCategoria: Madeiras - Artefatos = madeira
+SubCategoria: Móveis Planejados = keywords: planejamento, planejado
+SubCategoria: Revestimentos = keywords: revestimento
+SubCategoria: Móveis - Conserto, Reforma e Restauração = keywords: conserto, reforma, restauraçao
+SubCategoria: Cozinhas Planejadas = keywords: conzinha, planejada
+SubCategoria: Molduras e Gravuras = keywords: moldura, gravura
+SubCategoria: Capachos = keywords: capacho
+SubCategoria: Jardins - Art e Projetos = keywords: jardim, projeto, artigo
+SubCategoria: Box Para Banheiros = keywords: box, blindex, banheiro
+SubCategoria: Armários = keywords: armario
+SubCategoria: Forros Acústicos e Decorativos = keywords: forro, acustico
+SubCategoria: Mudas = keywords: muda, planta
+SubCategoria: Assoalhos = keywords: assoalho
+SubCategoria: Móveis Estofados - Limpeza e Impermeabilização = keywords: limpeza, impermeabilizaçao, impermeavel
+SubCategoria: Grama = keywords: planta, grama, jardim
+SubCategoria: Plantas = keywords: planta, jardim
+SubCategoria: Móveis Estofados - Lojas = keywords: estofado
+SubCategoria: Fogões - Vendas e Instalações = keywords: fogao, fogoes, venda, instalaçao
+SubCategoria: Luminárias = keywords: iluminaçao, luminaria
+SubCategoria: Móveis de Metal = keywords: metal, ferro
+SubCategoria: Móveis - Aluguel = keywords: aluguel, locaçao
+SubCategoria: Carpetes = keywords: carpete, tapete
+SubCategoria: Portas e Janelas = keywords: porta, janela
+SubCategoria: Paisagismo = keywords: paisagismo, paisagem
+SubCategoria: Móveis - Montagem e Desmontagem = keywords: monstagem, desmontagem
+SubCategoria: Papel de Parede - Lojas = keywords: papel, parede, loja
+SubCategoria: Banheiros - Artigos e Projetos = keywords: banheiro, artigo, projeto
+SubCategoria: Varais de Roupa = keywords: varal, roupa
+SubCategoria: Móveis Para Hospitais = keywords: hospital
+SubCategoria: Estantes = keywords: estante
+SubCategoria: Móveis Infantis e Juvenis = keywords: infantil, criança
+SubCategoria: Móveis Para Escolas = keywords: escola
+SubCategoria: Móveis Para Jardins, Piscinas e Terraços = keywords: jardim, piscina, terraço
+SubCategoria: Banheiras e Acessórios = keywords: banheira, acessorio
+SubCategoria: Tapetes e Passadeiras - Conserto e Limpeza = keywords: tapete, passadeira
+SubCategoria: Carpetes - Limpeza = keywords: limpeza, carpete
+SubCategoria: Prateleiras = keywords: prateleira
+SubCategoria: Cortinas - Limpeza = keywords: cortina, limpeza
+SubCategoria: Grama Sintética = keywords: grama, sintetica
+SubCategoria: Empreendimentos Imobiliários = keywords: empresa
+
+<!-- inicio categoria -->
+Padarias e Confeitarias = keywords: padaria, confeitaria, salgado
+SubCategoria: Padarias e Confeitarias = keywords:
+SubCategoria: Docerias = keywords: doce
+
+<!-- inicio categoria -->
+Parques = keywords: parque, park, haras
+SubCategoria: Parques = keywords: 
+SubCategoria: Haras = keywords: haras
+
+<!-- inicio categoria -->
+Postos de Combustível = keywords: posto, combustivel, gasolina, etanol
+SubCategoria: Postos de Combustível = keywords:
+SubCategoria: Postos de Combustíveis e Serviços = keywords: serviço
+SubCategoria: Distribuidoras de Combustível = keywords: distribuidor
+SubCategoria: Postos de Combustíveis - Equip = keywords: equipamento
+
+<!-- inicio categoria -->
+Prédios Públicos = keywords: cartorio, tabeliao, secretaria,  forum, tribunal
+SubCategoria: Cartórios e Tabeliães = keywords:
+SubCategoria: Secretarias Públicas = keywords:
+SubCategoria: Fóruns e Tribunais = keywords:
+SubCategoria: Partidos Políticos = keywords: partido, politico
+SubCategoria: Órgãos Públicos = keywords: orgao, publico
+SubCategoria: Receita Federal = keywords: receita, federal
+SubCategoria: Vigilância Sanitária = keywords: vigilancia, sanitaria
+
+<!-- inicio categoria -->
+Religião = keywords: igreja, templo, religiao, religioso
+SubCategoria: Igrejas, Templos e Instituições Religiosas = keywords:
+SubCategoria: Artigos Religiosos = keywords: artigo
+
+<!-- inicio categoria -->
+Restaurantes = keywords: restaurante, culinaria, alimentaçao, comida, refeiçao
+SubCategoria: Lanchonetes = keywords: lanche, lanchonete, sanduiche, fast, food
+SubCategoria: Restaurantes Em Geral = keywords:
+SubCategoria: Pizzarias = keywords: pizza, pizzaria
+SubCategoria: Cozinha Variada = keywords: variada
+SubCategoria: Churrascarias = keywords: churrasco, churrascaria, carne
+SubCategoria: Sorveterias = keywords: sorvete, sorveteria
+SubCategoria: Buffets = keywords: buffet
+SubCategoria: Culinária Argentina = keywords: argentina
+SubCategoria: Self-Service = keywords: self, service, quilo
+SubCategoria: Culinária Italiana = keywords: italiana, massa, pizza, lasanha, pizzaria
+SubCategoria: Pastelarias = keywords: pastel, pastelaria
+SubCategoria: Frutos do Mar = keywords: frutos, mar, peixe, crustaceo
+SubCategoria: Culinária Japonesa = keywords: japao, japonesa, sushi, yakisoba
+SubCategoria: Culinária Mineira = keywords: minas, mineira
+SubCategoria: Culinária Chinesa = keywords: china, chinesa
+SubCategoria: Galeterias = keywords: galeteria, frango
+SubCategoria: Naturais = keywords: natural
+SubCategoria: Equipamentos Para Restaurantes = keywords: equipamento, venda
+SubCategoria: Culinária Baiana = keywords: bahia, baiana
+SubCategoria: Comida Caseira = keywords: caseira
+SubCategoria: Culinária Nordestina = keywords: nordeste, nordestina
+SubCategoria: Bistrôs = keywords: bistro
+SubCategoria: Culinária Árabe = keywords: arabe
+SubCategoria: Culinária Brasileira = keywords: brasil, brasileira
+SubCategoria: Steak House = keywords: americana, steak, house, costela, costelinha
+SubCategoria: Culinária Portuguesa = keywords: portuguesa
+SubCategoria: Culinária Goiana = keywords: goias, goiana
+SubCategoria: Creperias = keywords: crepe, creperia
+SubCategoria: Saladas = keywords: salada, vegetariano
+SubCategoria: Culinária Indiana = keywords: india, indiana
+SubCategoria: Grelhados = keywords: grelhado
+SubCategoria: Casas de Chá = keywords: cha
+SubCategoria: Culinária Mexicana = keywords: mexico, mexicana
+SubCategoria: Culinária Contemporânea = keywords: contemporanea
+SubCategoria: Culinária Espanhola = keywords: espanha, espanhola
+SubCategoria: Culinária Tailandesa = keywords: tailandia, tailandea
+SubCategoria: Docerias = keywords: doce, doceria
+SubCategoria: Vegetarianos = keywords: vegetariano
+SubCategoria: Culinária Grega = keywords: grecia, grega
+SubCategoria: Bares e Choperias = keywords: bar, bares, chop, choperia, cerveja
+SubCategoria: Culinária Libanesa = keywords: libano, libanesa
+SubCategoria: Culinária Marroquina = keywords: marrocos, marroquina
+SubCategoria: Culinária Nortista = keywords: norte, nortista
+SubCategoria: Culinária Australiana = keywords: australia, australiana
+SubCategoria: Casas Noturnas = keywords: casa, noturna
+SubCategoria: Culinária Persa = keywords: pesa
+SubCategoria: Sopas = keywords: sopa
+SubCategoria: Culinária Coreana = keywords: coreana
+SubCategoria: Culinária Armênia = keywords: armenia
+SubCategoria: Culinária Judaica = keywords: judeu, judaica
+SubCategoria: Culinária Egípcia = keywords: egito, egipcia
+SubCategoria: Culinária Inglesa = keywords: inglesa
+SubCategoria: Culinária Irlandesa = keywords: irlanda, irlandesa
+SubCategoria: Padarias e Confeitarias = keywords:
+SubCategoria: Cafés / Cafeterias = keywords: cafe, cafeteria 
+SubCategoria: Restaurantes Industriais = keywords: industria, industrial
+
+<!-- inicio categoria -->
+Seguros = keywords: seguro
+SubCategoria: Seguros = keywords:
+SubCategoria: Vistoriadores = keywords: vistoria, vistoriadores
+SubCategoria: Consórcios = keywords: consorcio
+SubCategoria: Seguros de Cargas = keywords: carga
+SubCategoria: Bancos = keywords: banco
+
+<!-- inicio categoria -->
+Serviços Gerais = keywords: servicos
+SubCategoria: Serviços Gerais = keywords:
+SubCategoria: Videolocadoras = keywords: locadora, videolocadora, video, filme
+SubCategoria: Gás - Fornecedores = keywords: gas, forncedor
+SubCategoria: Chaveiros = keywords: chaveiro
+SubCategoria: Encanador e Desentupidoras = keywords: desentupidor, encanador
+SubCategoria: Serviços Sociais = keywords: social
+SubCategoria: Limpeza e Conservação = keywords: limpeza, conservaçao
+SubCategoria: Reciclagem de Materiais = keywords: reciclagem
+SubCategoria: Mão-De-Obra Temporária = keywords: mao, obra
+SubCategoria: Costureiras = keywords: costureira
+SubCategoria: Roupas - Aluguel = keywords: roupa, aluguel
+SubCategoria: Televisão Por Assinatura = keywords: televisao, assinatura, cabo
+SubCategoria: Mala Direta - Empresas = keywords: mala, direta
+SubCategoria: Instrumentos Musicais - Conserto = keywords: instrumento, conserto, luthier
+SubCategoria: Datilografia - Serviços = keywords: datilografia
+SubCategoria: Intérpretes = keywords: tradutor, interprete
+SubCategoria: Crematórios = keywords: crematorio
+SubCategoria: Manobristas = keywords: manobrista
+
+<!-- inicio categoria -->
+Sex Shop = keywords: sex, shop, lingerie, sensual, sexy
+SubCategoria: Sex Shops = keywords:
+
+<!-- inicio categoria -->
+Shoppings = keywords: shopping, loja, center
+SubCategoria: Shopping Centers = keywords:
+SubCategoria: Shoppings = keywords:
+
+<!-- inicio categoria -->
+Socorro e Resgate = keywords: socorro, resgate
+SubCategoria: Socorro e Resgate = keywords:
+SubCategoria: Pronto-Socorro Público = keywords: pronto, publico
+SubCategoria: Ambulâncias - Serviços de Remoção = keywords: ambulancia, remoçao, serviço
+SubCategoria: Ambulatórios = keywords: ambulatorio
+SubCategoria: Pronto-Socorro Particular = keywords: particular
+SubCategoria: Incêndio - Prevenção - Projetos e Instalações = keywords: incendio, prevençao, projeto, instalaçao
+SubCategoria: Mangueiras de Incêndio = keywords: mangueira
+SubCategoria: Brigadas de Incêndio = keywords: brigada
+SubCategoria: Uti Móvel = keywords: uti, movel
+SubCategoria: Uti Aérea = keywords: uti, area
+SubCategoria: Salva-Vidas = keywords: salva, vidas
+
+<!-- inicio categoria -->
+Som e Vídeo = keywords: som, video
+SubCategoria: Som e Vídeo = keywords:
+SubCategoria: Videogames e Acessórios = keywords: videogame, console, jogo, venda
+SubCategoria: Som - Projetos e Instalações = keywords: projeto, instalacao
+SubCategoria: Vídeo - Produções = keywords: produçao
+SubCategoria: Som - Estúdios = keywords: estudio
+SubCategoria: Som - Aparelhos = keywords: aparelho, aparelhagem
+SubCategoria: Home-Theater = keywords: home, theater
+SubCategoria: Som - Ap - Conserto e Peças = keywords: conserto, peças 
+SubCategoria: Datashow = keywords: datashow, projetor, retroprojetor
+SubCategoria: Dvd - Ap, Acessórios e Conserto = keywords: dvd, conserto
+SubCategoria: Isolação Acústica = keywords: isolaçao, acustica
+SubCategoria: Videokê - Aluguel e Vendas = keywords: videoke, aluguel, venda
+
+<!-- inicio categoria -->
+Teatro e Cultura = keywords: teatro, cultura, arte
+SubCategoria: Cultura = keywords:
+SubCategoria: Artes = keywords:
+SubCategoria: Teatros = keywords:
+SubCategoria: Centros Culturais = keywords: centro
+
+<!-- inicio categoria -->
+Telefonia e Telecomunicações = keywords: telefonia, telecomicaçao, telefone, celular
+SubCategoria: Telecomunicações - Artigos e Equipamentos = keywords: artigos, equipamento
+SubCategoria: Conserto e Venda de Aparelhos = keywords: conserto, venda, acessorio, aparelho
+
+<!-- inicio categoria -->
+Transporte = keywords: transporte
+SubCategoria: Transporte (Geral) = keywords:
+SubCategoria: Transporte Rodoviário = keywords: rodoviario
+SubCategoria: Moto Boys = keywords: moto, boy
+SubCategoria: Cargas e Encomendas = keywords: carga, encomenda
+SubCategoria: Mudanças = keywords: mudança
+SubCategoria: Logística = keywords: logistica
+SubCategoria: Entulho - Coleta = keywords: entulho, coleta, caçamba
+SubCategoria: Transporte Escolar = keywords: escolar, aluno
+SubCategoria: Ônibus - Aluguel = keywords: onibus, aluguel
+SubCategoria: Vans - Aluguel = keywords: vans, aluguel
+SubCategoria: Fretes = keywords: frete
+SubCategoria: Rastreamento Por Satélite = keywords: rastreamento
+SubCategoria: Barcos = keywords: barco
+SubCategoria: Transporte Frigorífico = keywords: frigorifico
+SubCategoria: Helicópteros = keywords: helicoptero
+SubCategoria: Lanchas - Aluguel = keywords: lancha, aluguel
+
+<!-- inicio categoria -->
+Táxi = keywords: taxi
+SubCategoria: Ponto de Táxi = keywords: ponto
+SubCategoria: Rádio Táxi / Serviço de Táxi = keywords: serviço
+SubCategoria: Moto-Táxi = keywords: moto
+SubCategoria: Táxi-Aéreo = keywords: aereo
+SubCategoria: Taxímetros = keywords: taximetro
+
+<!-- inicio categoria -->
+Veterinarios Canis e Petshops = keywords: veterinario, canil, petshop, pet, shop
+SubCategoria: Veterinarios Canis e Petshops = keywords: 
+SubCategoria: Rações = keywords: raçoes, raçao
+SubCategoria: Clínicas Veterinárias = keywords: clinica, veterinaria
+SubCategoria: Pet Shops = keywords: 
+SubCategoria: Veterinários = keywords:
+SubCategoria: Canis = keywords:
+SubCategoria: Hotéis Para Animais = keywords: hotel, animal
+SubCategoria: Produtos Veterinários = keywords:
+SubCategoria: Vacinas - Aplicações = keywords: vacina
+SubCategoria: Cães - Adestramento = keywords: adestramento, caes
+
+<!-- inicio categoria -->
+Viagem e Turismo = keywords: viagem, turismo
+SubCategoria: Viagem e Turismo = keywords: 
+SubCategoria: Barracas de Praia = keywords: barraca, praia
+SubCategoria: Camping - Clubes = keywords: camping, clube
+SubCategoria: Aluguel = keywords: aluguel
+SubCategoria: Cachoeiras = keywords: cachoeira
+SubCategoria: Ecoturismo = keywords: ecoturismo
+SubCategoria: Turismo - Passeios de Barco = keywords: passeio, barco
+SubCategoria: Excursões = keywords: excursao
+SubCategoria: Turismo - Agências = keywords: agencia, turismo
+SubCategoria: Resorts = keywords: resort
+SubCategoria: Turismo Rural = fazendo, rural
+SubCategoria: Passagem Aérea = keywords: passagem, aerea
+SubCategoria: Termas = keywords: termas
+SubCategoria: Seguros Para Viagem = keywords: seguro
+SubCategoria: Jet Ski = keywords: jet, ski
+
+<!-- inicio categoria -->
+Vidraçarias = keywords: vidraçaria, vidro, janela
+SubCategoria: Vidraçarias = keywords:
+SubCategoria: Vidro Temperado = keywords: temperado
+SubCategoria: Vidro - Atacado e Fabricação = keywords: atacado, fabricaçao
+SubCategoria: Peliculas = keywords: pelicula
+SubCategoria: Portas de Vidro = keywords: porta
+SubCategoria: Vidro de Segurança = keywords: segurança
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

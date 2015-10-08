@@ -79,7 +79,12 @@ public class UsuarioValidator implements Validator {
 		}
 
 		// cnpj e cpf
-		if (usuario.getCpf() != null) {
+		if ((usuario.getCpf() != null) && (!usuario.getCpf().isEmpty())) {
+			if (!stringLenghtBetween(usuario.getCpf(), 7, 20)) {
+				errors.rejectValue("cpf", "", messageSource.getMessage("usuario.cpf.size", null, locale));
+			}
+		}
+		if ((usuario.getCnpj() != null) && (!usuario.getCnpj().isEmpty())) {
 			if (!stringLenghtBetween(usuario.getCpf(), 7, 20)) {
 				errors.rejectValue("cpf", "", messageSource.getMessage("usuario.cpf.size", null, locale));
 			}
@@ -96,7 +101,7 @@ public class UsuarioValidator implements Validator {
 
 		// telefone2
 		if ((usuario.getTelefone2() != null) && (!usuario.getTelefone2().isEmpty())) {
-			if (!stringLenghtBetween(usuario.getTelefone1(), 10, 15)) {
+			if (!stringLenghtBetween(usuario.getTelefone2(), 10, 15)) {
 				errors.rejectValue("telefone2", "", messageSource.getMessage("anuncio.telefone.size", null, locale));
 			}
 		}

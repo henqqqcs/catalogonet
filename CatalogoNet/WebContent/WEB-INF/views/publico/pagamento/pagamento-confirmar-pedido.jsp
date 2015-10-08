@@ -48,7 +48,7 @@
               <p>
                 ${usuario.nome}<br>
                 ${usuario.cpf}<br>
-                ${usuario.telefone}<br>
+                ${usuario.telefone1}<br>
                 ${usuario.email}<br>
               </p>
 

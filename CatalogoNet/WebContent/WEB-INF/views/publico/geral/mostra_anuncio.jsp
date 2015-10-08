@@ -15,10 +15,10 @@
 <body>
 
 	<!-- Topo da pagina -->
-	<c:import url="/WEB-INF/views/template/publico/topo_pagina.jsp" />
-
+	<c:import url="/WEB-INF/views/template/publico/cabecalho-principal.jsp" />
+	
 	<!-- Cabeçalho principal -->
-	<c:import url="/WEB-INF/views/template/publico/cabecalho_principal.jsp" />
+	<c:import url="/WEB-INF/views/template/publico/form-busca.jsp" />
 
 
 

@@ -13,10 +13,10 @@
 <body>
 
 	<!-- Topo da pagina -->
-	<c:import url="/WEB-INF/views/template/restrito/cabecalho-restrito.jsp" />
+	<c:import url="/WEB-INF/views/template/publico/cabecalho-principal.jsp" />
 	
 	<!-- Cabeçalho principal -->
-	<c:import url="/WEB-INF/views/template/publico/cabecalho_principal.jsp" />
+	<c:import url="/WEB-INF/views/template/publico/form-busca.jsp" />
 	
 	<!-- container -->
 	<div class="container">
