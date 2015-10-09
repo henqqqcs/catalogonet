@@ -1441,130 +1441,144 @@
 /*----------------------------------- fim anuncio ----------------------------------------*/
 /*----------------------------------------------------------------------------------------*/
 
-}/* ---------------- cabecalho-principal -----------------------*/
-#cabecalho-principal {
+}
 
+.wrapper-form-busca {
   background-color: #face0e;
-  padding: 10px 0px 10px 0px;
-  height: auto;
-  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
-.cabecalho-form {
-  overflow: hidden;
-}
-
-#cabecalho-principal .form-control {
-  font-size: 0.8em;
-  height: 40px;
+.form-busca-local-wrapper {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
 }
 
-.cabecalho-form-busca, .cabecalho-form-local{
-  margin-bottom: 10px;
-  color: #4D4D4D;
+.form-busca-local-wrapper input {
+  font-size: 18px;
 }
-.cabecalho-label-busca, .cabecalho-label-local {
+.form-busca-label, .form-local-label {
   display: none;
 }
+
+.form-busca, .form-local {
+  margin-bottom: 10px;
+}
+
 .btn-busca {
   display: block;
   width: 100%;
-  height: 40px;
-  color: #face0e;
+  padding: 10px 16px;
 }
 
-.btn-busca:hover {
-  color: #face0e;
-  background-color: #484300;
+/*hidden effect*/
+.wrapper-form-busca-hidden.active {
+  background-color: #face0e;
+  cursor: pointer;
+  height: 50px;
+  font-size: 23px;
+  text-align: center;
+}
+.wrapper-form-busca-hidden:active {
+  background-color: #AF900A;
+}
+.busca-hidden-mensagem-clique.active {
+  margin-top: 5px;
 }
 
-/*---------------------------------- fim cabecalho ---------------------------------------*/
-/*----------------------------------------------------------------------------------------*/
+
+.wrapper-fixed {
+    top:0;
+    left:0;
+    right:0;
+    position: fixed;
+    border-top: 1px solid #000;
+    z-index: 1;
+    display:block;
+    opacity: 0;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+.wrapper-fixed.active {
+     opacity:1   
+}
+.wrapper-form-busca-hidden {
+    top:0;
+    left:0;
+    right:0;
+    position: fixed;
+    border-top: 1px solid #000;
+    z-index: 1;
+    
+    display:block;
+    opacity: 0;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+.wrapper-form-busca-hidden.active {
+     opacity:1   
+}
 
 
-/*========================================================================================*/
-/*======================================= 780px ==========================================*/
-/*========================================================================================*/
 @media screen and (min-width:780px)  {
 
-  /* ------------------- cabecalho ---------------------------------------*/
-  .cabecalho-form {
-
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
-    width: 100%;
-  }
-
-  .cabecalho-form-busca, .cabecalho-form-local, .cabecalho-form-botao {
+  .form-busca, .form-local {
     display: inline;
   }
 
-  .cabecalho-form-busca *, .cabecalho-form-local *, .cabecalho-form-botao * {
+  .form-busca-label, .form-local-label {
     display: inline;
   }
 
-  .cabecalho-label-busca, .cabecalho-label-local {
-    font-size: 0.9em;
-  }
-
-  .form-busca {
-    width: 250px;
-  }
-
-  .form-local {
-    width: 170px;
-  }
-
-  .btn-busca {
-    width: auto;
-    height: auto;
-  }
-  /* ----------------------------- fim cabecalho --------------------- */
-
-}
-
-
-/*========================================================================================*/
-/*======================================= 981px ==========================================*/
-/*========================================================================================*/
-@media screen and (min-width:981px){
-
-
-  /*----------------------------------------------------------------------------------------*/
-  /*---------------------------------- cabecalho -------------------------------------------*/
-
-  .cabecalho-form {
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
-    width: 95%;
-  }
-
-  .cabecalho-form-busca, .cabecalho-form-local, .cabecalho-form-botao {
+  .form-busca-local-wrapper .form-busca .form-control {
+    width: 300px; 
+    height: 40px;
     display: inline;
   }
-
-  .cabecalho-form-busca *, .cabecalho-form-local *, .cabecalho-form-botao * {
-    display: inline;
-  }
-
-  .cabecalho-label-busca, .cabecalho-label-local {
-    font-size: 1.0em;
-  }
-
-  .form-busca {
-    width: 300px;
-  }
-
-  .form-local {
+  .form-busca-local-wrapper .form-local .form-control {
     width: 220px;
+    height: 40px;
+    display: inline;
   }
 
-  .btn-busca {
+  .form-botao {
+    display: inline;
+  }
+
+  .form-botao .btn-busca {
+    display: inline;
     width: auto;
     height: auto;
+    padding: 8px 12px;
   }
 
-  /*---------------------------------- fim cabecalho ---------------------------------------*/
+  .form-busca-local-wrapper {
+    padding-top: 20px;
+  }
+
+  .form-busca-local-wrapper label {
+    font-size: 20px;
+  }
+
+  .wrapper-fixed {
+      top:0;
+      left:0;
+      right:0;
+      position: fixed;
+      padding-top: 0px;
+    padding-bottom: 10px;
+      border-top: 1px solid #000;
+      z-index: 1;
+      display:block;
+      opacity: 0;
+     transition: opacity .25s ease-in-out;
+     -moz-transition: opacity .25s ease-in-out;
+     -webkit-transition: opacity .25s ease-in-out;
+  }
+
 
 }
+
