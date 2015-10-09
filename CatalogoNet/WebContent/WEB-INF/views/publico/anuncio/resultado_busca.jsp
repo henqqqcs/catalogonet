@@ -6,8 +6,10 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <meta name="description" content="XXXXXXXX DESCRIPTION XXXXXXXX">
   <meta name="keywords" content="YYYYYYY KEYWORDS YYYYYYYYYY">
-  <link rel="stylesheet" type="text/css" href="<c:url value="/resources/publico/css/style.css" /> ">
-  <link rel="stylesheet" type="text/css" href="<c:url value="/resources/publico/css/style_global_responsive.css" /> ">
+<!-- dependencias -->
+<c:import url="/WEB-INF/views/template/publico/arquivos-css-js-publico.jsp" />
+
+
 </head>
 <body>
 
