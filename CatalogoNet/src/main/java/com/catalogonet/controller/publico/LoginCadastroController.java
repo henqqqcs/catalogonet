@@ -1,6 +1,7 @@
 package com.catalogonet.controller.publico;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.catalogonet.email.MandadorEmail;
@@ -89,25 +91,6 @@ public class LoginCadastroController {
 		if (emailJaCadastrado != null) {
 			map.put("emailJaCadastrado", emailJaCadastrado);
 		}
-
-//		// recuperar usuario
-//		Object obj = map.get("usuario");
-//		Usuario usuario = null;
-//		if ((obj != null)) {
-//			System.out.println("Usuario nao eh null");
-//			usuario = (Usuario) obj;
-//		} else {
-//			System.out.println("usuario h null");
-//			usuario = new Usuario();
-//		}
-//		map.put("usuario", usuario);
-//
-//		if (errors == null) {
-//			System.out.println("Errors eh null");
-//		} else {
-//			System.out.println("errors nao eh null");
-//		}
-//		map.put("errors", errors);
 		
 		if (!map.containsAttribute("usuario")) {
 			map.put("usuario", new Usuario());
@@ -156,5 +139,23 @@ public class LoginCadastroController {
 
 		// caso o login nao de certo redireciona para pagina de login?
 		return "publico/login_register_form";
+	}
+	
+	@RequestMapping("/esqueci-senha-handle")
+	public @ResponseBody String esqueciSenhaHandle(@RequestParam(value = "emailEsqueciSenha", required = false) String email, HttpServletResponse response, ModelMap map) {
+		if (email != null) {
+			Usuario usuario = usuarioRN.buscarPorEmail(email);
+			if (usuario != null) {
+				//envia a senha por email
+				mandadorEmail.mandarEmailRecuperacaoSenha(usuario);
+				
+				//http 200
+				response.setStatus(200);
+				return "sucess";
+			}
+		}
+		//http 400
+		response.setStatus(400);
+		return "erro";
 	}
 }

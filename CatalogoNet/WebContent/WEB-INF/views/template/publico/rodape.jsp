@@ -1,6 +1,32 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 	
-	
+<script type="text/javascript">
+    $(document).ready(function() {
+    $('#emailSubscribeBtn').click(function(e) {
+    e.preventDefault();
+    var ajaxdata = $("#emailSubscribe").val();
+    var value ='emailSubscribe='+ajaxdata;
+ 
+   $.ajax({
+   url: "newsletter-subscribe-handle",
+   type: "post",
+   data: value,
+   cache: false,
+   success: function(data) {
+	   $("#country").val('');
+	   $("#messageSubscribe").html('Pronto! Seu email foi cadastrado').slideDown('slow');
+	   $("#messageSubscribe").addClass("alert alert-success" );
+   },
+   error: function(data) {
+	   $("#country").val('');
+	   $("#messageSubscribe").html('Ops! Este email está correto?').slideDown('slow');
+	   $("#messageSubscribe").addClass( "alert alert-danger" );
+   }
+   });
+});
+});
+</script>
+
 <div class="clearfix"></div>
 
       <footer id="footer">
@@ -53,9 +79,11 @@
           <div class="footer-payment">
             <p class="rodape-titulo">Receba novidades e promoções</p>
             <div class="footer-content">
-              <form>
-                <input class="form-control" placeholder="seu@email.com" />
-                <button type="submit" class="btn btn-primary btn-block">Quero Receber!</button>
+              <div id="messageSubscribe"></div>
+              <c:url var="subscribeUrl" value="/newsletter-subscribe-handle" />
+              <form action="${subscribeUrl}" method="POST">
+                <input class="form-control"  id="emailSubscribe" name="emailSubscribe" placeholder="seu@email.com" />
+                <button type="submit" id="emailSubscribeBtn" class="btn btn-primary btn-block">Quero Receber!</button>
               </form>
             </div>
 
