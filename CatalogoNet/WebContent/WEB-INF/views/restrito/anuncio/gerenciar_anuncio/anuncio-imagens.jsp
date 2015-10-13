@@ -120,7 +120,7 @@
 																			<span class="input-container-msg">Adicionar...</span>
 																		</div>
 																		<div class="img-container">
-																			<c:url var="logotipo" value="/servicos/imagens/logotipo/${anuncio.id}"/>
+																			<c:url var="logotipo" value="/servicos/imagens/logotipo/${anuncio.tituloNaUrl}/${anuncio.id}"/>
 																			<img src="${logotipo}.jpg" />
 																		</div>
 																		<input type="file" name="logotipo" onchange="handleFiles(this)" accept="image/*">
@@ -179,7 +179,7 @@
 																<span class="input-container-msg">Adicionar...</span>
 															</div>
 															<div class="img-container">
-																<c:url var="logotipo" value="/servicos/imagens/thumbnail/${imagem.id}"/>
+																<c:url var="logotipo" value="/servicos/imagens/thumbnail/${anuncio.tituloNaUrl}/${imagem.id}"/>
 																<img id="img-${index.index}" src="${logotipo}" />
 															</div>
 															<input style="display: none;" type="file" name="file"

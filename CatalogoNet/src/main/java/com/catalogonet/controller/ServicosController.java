@@ -37,21 +37,21 @@ public class ServicosController {
 	@Autowired
 	private ImagemRN imagemRN;
 
-	@RequestMapping(value = "/imagens/{imageId}")
+	@RequestMapping(value = "/imagens/{anuncioTitulo}/{imageId}")
 	@ResponseBody
-	public byte[] buscarImagensImagem(@PathVariable Long imageId)  {
+	public byte[] buscarImagensImagem(@PathVariable String anuncioTitulo, @PathVariable Long imageId)  {
 		return imagemRN.buscarImagem(imageId);
 	}
 	
-	@RequestMapping(value = "/imagens/thumbnail/{imageId}")
+	@RequestMapping(value = "/imagens/thumbnail/{anuncioTitulo}/{imageId}.jpg")
 	@ResponseBody
-	public byte[] buscarImagens(@PathVariable Long imageId)  {
+	public byte[] buscarImagens(@PathVariable String anuncioTitulo, @PathVariable Long imageId)  {
 		return imagemRN.buscarThumbnail(imageId);
 	}
 	
-	@RequestMapping(value = "/imagens/logotipo/{idAnuncio}")
+	@RequestMapping(value = "/imagens/logotipo/{anuncioTitulo}/{idAnuncio}.jpg")
 	@ResponseBody
-	public byte[] buscarLogotipo(@PathVariable Long idAnuncio)  {
+	public byte[] buscarLogotipo(@PathVariable String anuncioTitulo, @PathVariable Long idAnuncio)  {
 		return imagemRN.buscarLogotipo(idAnuncio);
 	}
 

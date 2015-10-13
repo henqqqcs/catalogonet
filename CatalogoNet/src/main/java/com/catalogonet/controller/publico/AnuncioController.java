@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.catalogonet.anuncio.Anuncio;
 import com.catalogonet.anuncio.AnuncioRN;
+import com.catalogonet.imagem.FileMeta;
+import com.catalogonet.imagem.ImagemRN;
 
 @Controller
 @RequestMapping("/anuncio")
@@ -17,6 +19,9 @@ public class AnuncioController {
 	
 	@Autowired
 	private AnuncioRN anuncioRN;
+	
+	@Autowired
+	private ImagemRN imagemRN;
 	
 	@RequestMapping(value = {"", "/"})
 	public String anuncioPagInicial() {
@@ -65,6 +70,11 @@ public class AnuncioController {
 		map.put("tittle", tittle);
 		map.put("termoBusca", anuncio.getTitulo());
 		map.put("termoLocal", anuncio.getBairro().getNome());
+		
+		
+		//imagens
+		List<FileMeta> listaImagens = imagemRN.listarImagensDoAnuncio(anuncio.getId());
+		map.put("listaImagens", listaImagens);
 
 		return "publico/anuncio/mostra_anuncio";
 
@@ -111,6 +121,10 @@ public class AnuncioController {
 		map.put("termoBusca", anuncio.getTitulo());
 		map.put("termoLocal", anuncio.getBairro().getNome());
 		
+		
+		//imagens
+		List<FileMeta> listaImagens = imagemRN.listarImagensDoAnuncio(anuncio.getId());
+		map.put("listaImagens", listaImagens);
 		return "publico/anuncio/mostra_anuncio";
 		
 	}

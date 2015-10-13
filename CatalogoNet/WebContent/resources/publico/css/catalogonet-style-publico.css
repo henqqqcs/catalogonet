@@ -1,4 +1,85 @@
+/*========================================================================================*/
+/*======================================= 300px ==========================================*/
+/*========================================================================================*/
 
+
+/*----------------------------------------------------------------------------------------*/
+/*------------------------------------ contato -------------------------------------------*/
+
+
+/*------------------------------------ fim contato ---------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+
+/*========================================================================================*/
+/*======================================= 480px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:480px)  {
+
+
+/*----------------------------------------------------------------------------------------*/
+/*------------------------------------ contato -------------------------------------------*/
+
+
+/*------------------------------------ fim contato ---------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+}
+
+/*========================================================================================*/
+/*======================================= 680px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:680px)  { 
+
+
+/*----------------------------------------------------------------------------------------*/
+/*------------------------------------ contato -------------------------------------------*/
+
+/*------------------------------------ fim contato ---------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+}
+
+/*========================================================================================*/
+/*======================================= 780px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:780px)  {
+
+
+/*----------------------------------------------------------------------------------------*/
+/*------------------------------------ contato -------------------------------------------*/
+
+.contato-page-form {
+  float: left;
+  width: 49%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.contato-page-texto {
+  float: right;
+  width: 49%;
+  margin-right: auto;
+  margin-left: auto;
+  
+}
+/*------------------------------------ fim contato ---------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+}
+
+/*========================================================================================*/
+/*======================================= 981px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:981px){
+
+/*----------------------------------------------------------------------------------------*/
+/*------------------------------------ contato -------------------------------------------*/
+
+
+/*------------------------------------ fim contato ---------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+}
 .row-gray-divulgue {
   background-color: #f9f9f9;
   border-top: 1px solid #f5f5f5;
@@ -429,10 +510,10 @@
 
 }
 .pagamento-container {
-	padding: 10px 20px;
+  padding: 10px 20px;
 }
 .pagamento-container .table {
-	margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 .pagamento-container .table th {
   /*height: 10px;*/
@@ -445,13 +526,13 @@
 }
 
 .pagamento-container .table td {
-	padding-left: 10px;
-	text-align: left;
-	font-size: 16px;
+  padding-left: 10px;
+  text-align: left;
+  font-size: 16px;
 }
 
 .form-pagamento-botao {
-	text-align: center;
+  text-align: center;
 }
 
 /* -- ambiente-seguro --*/
@@ -468,21 +549,21 @@
 }
 
 .pagamento-pagamento h3 {
-	margin-top: 1px;
+  margin-top: 1px;
 }
 
 .pagamento-resumo .list-group .list-group-item {
-	background-color: inherit;
+  background-color: inherit;
 }
 
 .pagamento-resumo-tittle {
-	font-size: 22px;
-	margin-bottom: 15px;
-	/*font-weight: bold;*/
+  font-size: 22px;
+  margin-bottom: 15px;
+  /*font-weight: bold;*/
 }
 
 .pagamento-resumo .pull-left {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 .form-pagamento-metodo .list-group .img {
@@ -517,6 +598,7 @@
 
 
 
+
 #resultado-busca-wrapper {
   margin-top: 10px;
 }
@@ -526,6 +608,22 @@
   padding: 0;
 }
 
+#resultado-busca-wrapper h1 {
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+  display: inline;
+}
+
+.logotipo {
+  float: right;
+  margin-right: 5px;
+  width: 25%;
+}
+.logotipo .img-thumbnail {
+  border: 0;
+  padding: 0;
+}
 
 #resultado-busca-wrapper .col-md-10 {
   /*margin-left: 0;*/
@@ -543,6 +641,15 @@
   margin: 0;
 }
 
+.categoria {
+  display: none;
+}
+
+/*list*/
+  #resultado-busca-wrapper li:not(:first-child) {
+    margin-top: 12px;
+  }
+
 /*botoes*/
 .phone-wrapper, .map-wrapper {
   display: inline-block;
@@ -551,37 +658,81 @@
 
 /* ------------------- anuncio gratuito ---------------------------*/
 .anuncio-gratuito {
- border-left: 5px solid #FFF;
+  border-left: 5px solid #FFF;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+  border-right: 1px solid #FFF;
 }
 /*---------------------------- anuncio profissional --------------------*/
 .anuncio-profissional {
   border-left: 5px solid #33CC33;
+  border-top: 1px solid #33CC33;
+  border-bottom: 1px solid #33CC33;
+  border-right: 1px solid #33CC33;
   background-color: #EBFAEB;
 }
 /*---------------------------- anuncio ultimate --------------------*/
 .anuncio-ultimate {
   border-left: 5px solid #FF9900;
+  border-top: 1px solid #FF9900;
+  border-bottom: 1px solid #FF9900;
+  border-right: 1px solid #FF9900;
   background-color: #FFF5E6;
+}
+/*-------------- anuncio hover ----------*/
+ 
+.anuncio-wrapper:hover, 
+.anuncio-wrapper:focus {
+  background-color: #E6F0F8;
+  border-left: 5px solid #0064b4;
+  border-bottom: 1px solid #0064b4;
+  border-right: 1px solid #0064b4;
+  border-top: 1px solid #0064b4;
+  cursor: pointer;
+}
+
+.anuncio-wrapper:active {
+  background-color: #CFD8DF;
+  border-left: 5px solid #00467E;
+  border-bottom: 1px solid #00467E;
+  border-right: 1px solid #00467E;
+  border-top: 1px solid #00467E;
 }
 
 #pagination-wrapper {
   text-align: center;
   font-weight: bold;
 }
+
 .pagination li:not(:last-child):not(:first-child){
   display: none;
 }
 
-.logotipo {
-  float: right;
-}
+/*anuncie-aqui*/
+#resultado-anuncie-aqui {
 
+  text-align: center;
+}
 
 @media screen and (min-width:520px)  {
 
+
   .resultado-container-left {
-    width: 90%;
-    max-width: 520px;
+    width: 522px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #resultado-busca-wrapper .alert {
+    width: 522px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .logotipo {
+  float: right;
+  margin-right: 5px;
+  width: auto;
   }
 
 }
@@ -595,27 +746,30 @@
 
 @media screen and (min-width:768px)  {
 
-
-  #resultado-busca-wrapper li:not(:first-child) {
-    margin-top: 12px;
+  .resultado-container-left {
+    width: 100%;
   }
+
+  #resultado-busca-wrapper .alert {
+    width: auto;
+  }
+
 
   .anuncio-wrapper h2{
     font-size: 1.6em;
+  }
+
+  .categoria {
+    display: inline-block;
   }
 
   .pagination li:not(:last-child):not(:first-child){
     display: inline;
   }
 
-
-  .resultado-container-left {
-    width: auto;
-    max-width: auto;
+  #botao-anuncie {
+    margin-top: 8px;
   }
-
-
-
 
 }
 
@@ -626,385 +780,203 @@
     margin-top: 20px;
   }
 
-}/*========================================================================================*/
-/*======================================= 300px ==========================================*/
-/*========================================================================================*/
-
-/*----------------------------------------------------------------------------------------*/
-/*----------------------------------- anuncio --------------------------------------------*/
-
-/*------------- estrutura ---------------------*/
-.container-anuncio {
-  width: 100%;
-  max-width: 940px;
-}  
-
-.anuncio-box-left {
-  float: left;
-  height: 400px;
-  width: 100%;
-}
-.anuncio-content-left {
-  max-width: 610px;
-  height: 380px;
-}
-.anuncio-box-right {
-  display: none;
 }
 
-/*----------------- fim estrutura ---------------------*/
-
-
-/* ------------------------------------ anuncio-view -----------------------------------*/
-/* ------------------ anuncio-wrapper -------------------------*/
-.anuncio-header {
-  padding: 7px 0px 7px 5px;
-  border-left: 5px solid #808080;
-  border-right: 1px solid #FFF;
-  border-top: 1px solid #FFF;
-}
-
-.anuncio-header h1 {
-  margin: 0;
-  font-size: 22px;
-  font-weight: bold;
-}
-
-/*social bar*/
-.anuncio-social-bar {
-  height: 50px;
-  width: 100%;
-  background-color: #808080;
-}
-
-/*anuncio-info*/
-.anuncio-info {
-  border-left: 5px solid #808080;
-  padding: 0px 0px 7px 5px;
-  height: auto;
-  width: 100%;
-}
-.anuncio-info .glyphicon {
- /* color: #face0e;
-  color: #FF9900;*/
-}
-.anuncio-info-item {
-  /*background-color: red;*/
+#anuncio-view-pagina {
   margin-top: 20px;
 }
-.anuncio-info-item h3,hr {
-  margin-top: 0px;
-}
-.anuncio-info-map-wrapper {
-  width: 100%;
-  height: 180px;
-  background-color: gray;
-}
-.anuncio-info-item div label {
-  margin-right: 5px;
-  margin-bottom: 10px;
-}
-.anuncio-info-comments {
-  width: 100%;
-  height: 100px;
-  background-color: blue;
-  margin-top: 5px;
-}
 
-#thumb {
-  width: 50%;
-  max-width: 120px;
-  height: 50%;
-  max-height: 120px;
-  float: left;
-  margin-left: 10px;
-}
-/* ------------------- anuncio gratuito ---------------------------*/
 
-.anuncio-gratuito {
- border-left: 5px solid #FFF;
-}
-/*-- anuncio-view --*/
-.anuncio-view-gratuito .anuncio-header {
-  border-left: 5px solid #808080;
-}
-.anuncio-view-gratuito .anuncio-social-bar {
-  background-color: #808080;
-}
-.anuncio-view-gratuito .anuncio-info {
-  border-left: 5px solid #808080;
-}
-/*---------------------------- anuncio profissional --------------------*/
-.anuncio-profissional {
-  border-left: 5px solid #33CC33;
-  background-color: #EBFAEB;
-}
-/*-- anuncio-view --*/
-.anuncio-view-profissional .anuncio-header {
-  border-left: 5px solid #33CC33;
-  background-color: #EBFAEB;
-}
-.anuncio-view-profissional .anuncio-social-bar {
-  background-color: #33CC33;
-}
-.anuncio-view-profissional .anuncio-info {
-  border-left: 5px solid #33CC33;
-}
-/*---------------------------- anuncio ultimate --------------------*/
-.anuncio-ultimate {
-  border-left: 5px solid #FF9900;
-  background-color: #FFF5E6;
-}
-#phone-dois {
-  display: none;
-}
-/*anuncio-ultimate-bar*/
-.anuncio-ultimate-bar {
-  display: none;
-}
-/*-- anuncio-view --*/
-.anuncio-view-ultimate .anuncio-header {
-  border-left: 5px solid #FF9900;
-  background-color: #FFF5E6;
-}
-.anuncio-view-ultimate .anuncio-social-bar {
-  background-color: #FF9900;
-}
-.anuncio-view-ultimate .anuncio-info {
-  border-left: 5px solid #FF9900;
-}
-/*----------------------------- fim anuncios ---------------------*/
-.logotipo {
-  float: right;
-  margin-right: 5px;
-  width: 25%;
-}
-.logotipo .img-thumbnail {
-  border: 0;
+#anuncio-view-pagina .col-md-10 {
   padding: 0;
 }
-.categoria {
-  margin-top: 2px;
-  margin-bottom: 2px;
-  font-size: 12px;
-}
-.anuncio-header .address {
-  line-height: 150%;
+.anuncio-header-left {
+  
+  background-color: #f8f7f1;
+  border: 1px solid #CCC;
+  /*height: 250px;*/
 }
 
-.buttons-wrapper {
-  margin-top: 7px;
+.anuncio-body-left {
+  background-color: #FFF;
+  border: 1px solid #CCC;
+  height: auto;
 }
-.phone-wrapper, .map-wrapper {
+
+.anuncio-body-right {
+  background-color: #eee;
+  height: auto;
+}
+
+.anuncio-view-wrapper {
+  padding: 15px 15px;
+}
+
+
+.links-bar-wrapper a {
+  font-size: 0.8em;
+}
+
+
+/*anuncio-header-style*/
+
+.anuncio-view-wrapper h1 {
+  font-size: 1.4em;
+}
+.links-bar-wrapper {
+  margin-top: 15px;
+  border-top: 1px solid #333;
+}
+.links-bar-wrapper ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+.links-bar-wrapper ul li{
   display: inline-block;
+  margin-top: 15px;
+  margin-right: 10px;
+}
+
+/*imagens*/
+
+.anuncio-figure-wrapper {
+  float: left;
+  margin-bottom: 10px;
   width: 50%;
 }
-.map-wrapper { 
-  float: right;
-}
-.btn-phone {
-  width: 100%;
 
-}
-.btn-none {
-  width: 100%;
+.anuncio-figure-wrapper figure {
+  max-width: 120px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+.anuncio-img-thumbnail {
+    padding: 4px;
+    line-height: 1.42857143;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    width: 124px;
+    height: 104px;
+
+}
+
+.anuncio-add-photo {
+  border: 2px dashed #999;
+  height: 100%;
+  text-align: center;
+  color: #333;
+}
+.anuncio-add-photo:hover {
+  border: 2px dashed #0064b4;
+}
 
 
-/*----------------------------------- fim anuncio ----------------------------------------*/
-/*----------------------------------------------------------------------------------------*/
+/*map*/
+  .anuncio-header-right {
+    height: 242px;
+    border: 1px solid #CCC;
+  }
 
+  .anuncio-info-item {
+    margin-top: 0px;
+  }
 
-/*========================================================================================*/
-/*======================================= 480px ==========================================*/
-/*========================================================================================*/
+  .anuncio-info-comments {
+    overflow: hidden;
+  }
+
 @media screen and (min-width:480px)  {
 
 
-/*----------------------------------------------------------------------------------------*/
-/*----------------------------------- anuncio --------------------------------------------*/
 
-  /*-------------- estrutura -------------------*/
-  .container-anuncio {
-    padding-right: 0px;
-  }
-  .anuncio-content-left {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  /*-------------- fim estrutura ---------------*/
-
-  /*-- anuncio--*/
-  .phone-wrapper, .map-wrapper {
-    display: inline;
-  }
-  .map-wrapper { 
-    float: none;
-  }
-  .btn-phone, .btn-none {
-    width: auto;
-    font-size: 17px;
-  }
-  .logotipo {
-    width: auto;
-  }
-
-/*----------------------------------- fim anuncio ----------------------------------------*/
-/*----------------------------------------------------------------------------------------*/
 
 }
 
-/*========================================================================================*/
-/*======================================= 680px ==========================================*/
-/*========================================================================================*/
+
 @media screen and (min-width:680px)  { 
 
 
-/*----------------------------------------------------------------------------------------*/
-/*----------------------------------- anuncio --------------------------------------------*/
-  
-  .anuncio-box-left {
-    width: 66.65%;
-  }
-  .anuncio-box-right {
-    display: inline-block;
-    float: right;
-    width: 33.32%;
-    height: 400px;
-    /*background-color: #FF66CC;*/
-    border-top: 1px solid #FFF;
-  }
-  .anuncio-content-right {
-    background-color: red;
-    margin-left: 10px;
-    height: 200px;
-  }
-  /* --------------- fim estrutura -------------------*/
-
-  .anuncio-header {
-    padding-left: 15px;
-  }
-
-  .anuncio-info {
-    padding: 10px 0px 10px 20px;
-  }
-
-
-/*----------------------------------- fim anuncio ----------------------------------------*/
-/*----------------------------------------------------------------------------------------*/
 
 }
 
-/*========================================================================================*/
-/*======================================= 780px ==========================================*/
-/*========================================================================================*/
-@media screen and (min-width:780px)  {
+
+@media screen and (min-width:768px)  {
 
 
-/*----------------------------------------------------------------------------------------*/
-/*----------------------------------- anuncio --------------------------------------------*/
+    .nopadding-right {
+      padding-right: 0 !important;
+      margin-right: 0 !important; 
+    }
 
-/* ---- anuncio style ---*/
-  .btn-phone:hover,
-  .btn-phone:focus,
-  .btn-phone.focus,
-  .btn-phone:active,
-  .btn-phone.active,
-  .open > .dropdown-toggle.btn-phone {
-    background-color: auto;
-    border: 1px solid #ccc;
-    cursor: default;
-  }
-
-  /*--- show deatails anuncio ultimate ---*/
-  #phone-dois {
-    display: inline;
-  }
-  .anuncio-ultimate-bar {
-    display: block;
-    margin: 10px 25px 5px 10px;
-    border-top: 1px solid #999;
-  }
-  .bar-content {
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-  .bar-item {
-    display: inline-block;
-    font-weight: bold;
-    margin-right: 10px;
-  }
-  .bar-item a{
-    color: #000;
-  }
+    .nopadding-left {
+      padding-left: 0 !important;
+      margin-left: 0 !important; 
+    }
 
 
-/*----------------------------------- fim anuncio ----------------------------------------*/
-/*----------------------------------------------------------------------------------------*/
+    .links-bar-wrapper a {
+      font-size: 1em;
+    }
+
+  .anuncio-figure-wrapper {
+    float: left;
+    width: 32%;
+  }
+
 
 }
 
-/*========================================================================================*/
-/*======================================= 981px ==========================================*/
-/*========================================================================================*/
-@media screen and (min-width:981px){
 
-/*----------------------------------------------------------------------------------------*/
-/*----------------------------------- anuncio --------------------------------------------*/
-
-/*----------------------------------- fim anuncio ----------------------------------------*/
-/*----------------------------------------------------------------------------------------*/
-
-}
 
 .wrapper-form-busca {
-	background-color: #face0e;
-	padding-top: 10px;
-	padding-bottom: 20px;
+  background-color: #face0e;
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
 .form-busca-local-wrapper {
-	width: 100%;
-	margin-right: auto;
-	margin-left: auto;
-	text-align: center;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
 }
 
 .form-busca-local-wrapper input {
-	font-size: 18px;
+  font-size: 18px;
 }
 .form-busca-label, .form-local-label {
-	display: none;
+  display: none;
 }
 
 .form-busca, .form-local {
-	margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .btn-busca {
-	display: block;
-	width: 100%;
-	padding: 10px 16px;
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
 }
 
 /*hidden effect*/
 
 .busca-hidden-mensagem-clique {
-	margin-top: 5px;
+  margin-top: 5px;
 }
 .wrapper-form-busca-hidden.active {
-	background-color: #face0e;
-	cursor: pointer;
-	height: 50px;
-	font-size: 23px;
-	text-align: center;
+  background-color: #face0e;
+  cursor: pointer;
+  height: 50px;
+  font-size: 23px;
+  text-align: center;
 }
 .wrapper-form-busca-hidden:active {
-	background-color: #AF900A;
+  background-color: #AF900A;
 }
 .busca-hidden-mensagem-clique.active {
-	margin-top: 5px;
+  margin-top: 5px;
 }
 
 
@@ -1045,59 +1017,59 @@
 
 @media screen and (min-width:780px)  {
 
-	.form-busca, .form-local {
-		display: inline;
-	}
+  .form-busca, .form-local {
+    display: inline;
+  }
 
-	.form-busca-label, .form-local-label {
-		display: inline;
-	}
+  .form-busca-label, .form-local-label {
+    display: inline;
+  }
 
-	.form-busca-local-wrapper .form-busca .form-control {
-		width: 300px;	
-		height: 40px;
-		display: inline;
-	}
-	.form-busca-local-wrapper .form-local .form-control {
-		width: 220px;
-		height: 40px;
-		display: inline;
-	}
+  .form-busca-local-wrapper .form-busca .form-control {
+    width: 300px; 
+    height: 40px;
+    display: inline;
+  }
+  .form-busca-local-wrapper .form-local .form-control {
+    width: 220px;
+    height: 40px;
+    display: inline;
+  }
 
-	.form-botao {
-		display: inline;
-	}
+  .form-botao {
+    display: inline;
+  }
 
-	.form-botao .btn-busca {
-		display: inline;
-		width: auto;
-		height: auto;
-		padding: 8px 12px;
-	}
+  .form-botao .btn-busca {
+    display: inline;
+    width: auto;
+    height: auto;
+    padding: 8px 12px;
+  }
 
-	.form-busca-local-wrapper {
-		padding-top: 20px;
-	}
+  .form-busca-local-wrapper {
+    padding-top: 20px;
+  }
 
-	.form-busca-local-wrapper label {
-		font-size: 20px;
-	}
+  .form-busca-local-wrapper label {
+    font-size: 20px;
+  }
 
-	.wrapper-fixed {
-	    top:0;
-	    left:0;
-	    right:0;
-	    position: fixed;
-	   	padding-top: 0px;
-		padding-bottom: 10px;
-	    border-top: 1px solid #000;
-	    z-index: 1;
-	    display:block;
-	    opacity: 0;
-	   transition: opacity .25s ease-in-out;
-	   -moz-transition: opacity .25s ease-in-out;
-	   -webkit-transition: opacity .25s ease-in-out;
-	}
+  .wrapper-fixed {
+      top:0;
+      left:0;
+      right:0;
+      position: fixed;
+      padding-top: 0px;
+    padding-bottom: 10px;
+      border-top: 1px solid #000;
+      z-index: 1;
+      display:block;
+      opacity: 0;
+     transition: opacity .25s ease-in-out;
+     -moz-transition: opacity .25s ease-in-out;
+     -webkit-transition: opacity .25s ease-in-out;
+  }
 
 
 }
@@ -1272,87 +1244,6 @@
 
 
 /*----------------------------------- fim categoras --------------------------------------*/
-/*----------------------------------------------------------------------------------------*/
-
-}/*========================================================================================*/
-/*======================================= 300px ==========================================*/
-/*========================================================================================*/
-
-
-/*----------------------------------------------------------------------------------------*/
-/*------------------------------------ contato -------------------------------------------*/
-
-
-/*------------------------------------ fim contato ---------------------------------------*/
-/*----------------------------------------------------------------------------------------*/
-
-
-/*========================================================================================*/
-/*======================================= 480px ==========================================*/
-/*========================================================================================*/
-@media screen and (min-width:480px)  {
-
-
-/*----------------------------------------------------------------------------------------*/
-/*------------------------------------ contato -------------------------------------------*/
-
-
-/*------------------------------------ fim contato ---------------------------------------*/
-/*----------------------------------------------------------------------------------------*/
-
-}
-
-/*========================================================================================*/
-/*======================================= 680px ==========================================*/
-/*========================================================================================*/
-@media screen and (min-width:680px)  { 
-
-
-/*----------------------------------------------------------------------------------------*/
-/*------------------------------------ contato -------------------------------------------*/
-
-/*------------------------------------ fim contato ---------------------------------------*/
-/*----------------------------------------------------------------------------------------*/
-
-}
-
-/*========================================================================================*/
-/*======================================= 780px ==========================================*/
-/*========================================================================================*/
-@media screen and (min-width:780px)  {
-
-
-/*----------------------------------------------------------------------------------------*/
-/*------------------------------------ contato -------------------------------------------*/
-
-.contato-page-form {
-  float: left;
-  width: 49%;
-  margin-right: auto;
-  margin-left: auto;
-}
-.contato-page-texto {
-  float: right;
-  width: 49%;
-  margin-right: auto;
-  margin-left: auto;
-  
-}
-/*------------------------------------ fim contato ---------------------------------------*/
-/*----------------------------------------------------------------------------------------*/
-
-}
-
-/*========================================================================================*/
-/*======================================= 981px ==========================================*/
-/*========================================================================================*/
-@media screen and (min-width:981px){
-
-/*----------------------------------------------------------------------------------------*/
-/*------------------------------------ contato -------------------------------------------*/
-
-
-/*------------------------------------ fim contato ---------------------------------------*/
 /*----------------------------------------------------------------------------------------*/
 
 }

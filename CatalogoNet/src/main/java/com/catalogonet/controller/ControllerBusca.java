@@ -149,7 +149,7 @@ public class ControllerBusca {
 			map.put("mensagem", "Sua busca não retornou nenhum resultado");
 
 		} else {
-			map.put("cssId", "alert alert-default");
+			map.put("cssId", "alert alert-info");
 			map.put("mensagem", "Retornou " + resultadoBusca.getListaAnuncios().size() + " resultado(s)");
 		}
 

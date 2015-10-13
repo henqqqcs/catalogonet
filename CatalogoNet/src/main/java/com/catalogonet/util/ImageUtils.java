@@ -24,6 +24,8 @@ public class ImageUtils {
 
 	private static final int LOGOTIPO_LARGURA = 100; //100X80
 	private static final int LOGOTIPO_ALTURA = 80;
+	private static final int THUMBNAIL_LARGURA_MAX = 120;
+	private static final int THUMBNAIL_ALTURA_MAX = 100;
 	private static final int FOTO_LARGURA_MAX = 600;
 	private static final int FOTO_ALTURA_MAX = 500; //600X500
 	
@@ -83,7 +85,7 @@ public class ImageUtils {
 	public byte[] transformarEmThumbnail(BufferedImage bufferedImage)
 			throws Exception {
 		
-		Dimension dimesion = pegarDimensaoImagem(bufferedImage.getWidth(), bufferedImage.getHeight(), LOGOTIPO_LARGURA, LOGOTIPO_ALTURA);
+		Dimension dimesion = pegarDimensaoImagem(bufferedImage.getWidth(), bufferedImage.getHeight(), THUMBNAIL_LARGURA_MAX, THUMBNAIL_ALTURA_MAX);
 		Double width = dimesion.getWidth();
 		Double height = dimesion.getHeight();
 		
