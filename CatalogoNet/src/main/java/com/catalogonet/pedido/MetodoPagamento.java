@@ -4,6 +4,7 @@ public enum MetodoPagamento {
 
 	PAG_SEGURO("PagSeguro"),
 	PAYPAL("PayPal"),
+	GRATUITO("Gratuito"),
 	BOLETO("Boleto");
 	
 	private String metodoPagamento;

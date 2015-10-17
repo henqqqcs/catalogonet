@@ -31,14 +31,14 @@
     <div class="row">
 
       <div class="col-md-8">
-      	
-      	<!-- progress bar -->
+      
+        <!-- progress bar -->
         <div class="progress-tracker">
           <div class="text-center hidden-sm hidden-xs">
             <ol class="progtrckr" data-progtrckr-steps="5">
               <li class="progtrckr-done">Carrinho</li><!--
               --><li class="progtrckr-done">Identificação</li><!--
-              --><li class="progtrckr-todo">Pagamento</li><!--
+              --><li class="progtrckr-todo">Confirmação</li><!--
               --><li class="progtrckr-todo">Finalização</li>
             </ol>
           </div>
@@ -56,7 +56,7 @@
             </div>
             <div class="panel-body">
               
-              <h3> <span class="glyphicon glyphicon-credit-card"></span> Pagamento</h3>
+              <h3> <span class="glyphicon glyphicon-ok"></span> Confirmar plano gratuito </h3>
               <hr>
 
               <label>Informaçãoes do cliente</label>
@@ -66,31 +66,12 @@
               <label>Telefone: </label>${usuario.telefone1}<br>
               <label>email: </label>${usuario.email}<br>
               </p>
-
-              <h4><strong>Formas de pagamento</strong></h4>
-              <hr>
-
-              <!-- form-pagamento-metodo -->
-              <div class="form-pagamento-metodo">
-                
-                <!-- form -->
-                <c:url var="action"  value="/pagamento/confirmar-pagamento-handle" />
-			  	<form:form method="post" action="${action}">
-
-                    <div class="form-pagamento-botao">
-                      <button id="pagamento-botao-pagar" class="btn btn-primary btn-lg"type="submit">Pagar <span class="glyphicon glyphicon-play"></span></button>
-                      <p>(Você será redirecionado para<br/> a página de pagamento)</p>
-                    </div>
-                    
-                    
-                    <input type="hidden" name="paymentId" value="${paymentId}" />
-                    <input type="hidden" name="token" value="${token}" />
-                    <input type="hidden" name="PayerID" value="${PayerID}" />
-                    
-                </form:form>
-                <!-- fim form -->
-              </div>
-              <!-- form-pagamento-metodo -->
+				<br>
+			  <div class="text-center">
+			  	<p>Clique para confirmar a<br> contratação do plano gratuito</p>
+			  	<c:url var="confirmarUrl" value="/pagamento/confirmar-plano-gratuito-handle" />
+			  	<a href="${confirmarUrl}" class="btn btn-primary btn-lg">Confirmar <span class="glyphicon glyphicon-play"></span></a>
+			  </div>
 
 
             </div>

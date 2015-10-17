@@ -26,6 +26,20 @@
 
   <!-- row -->
   <div class="row login-register-row">
+  
+        	 <!-- progress bar -->
+        <div class="progress-tracker">
+          <div class="text-center hidden-sm hidden-xs">
+            <ol class="progtrckr" data-progtrckr-steps="5">
+              <li class="progtrckr-done">Carrinho</li><!--
+              --><li class="progtrckr-todo">Identificação</li><!--
+              --><li class="progtrckr-todo">Pagamento</li><!--
+              --><li class="progtrckr-todo">Finalização</li>
+            </ol>
+          </div>
+        </div>
+        <br/>
+        <!-- /progress bar --> 
 
     <!-- alerts -->
     <div class="col-md-12">

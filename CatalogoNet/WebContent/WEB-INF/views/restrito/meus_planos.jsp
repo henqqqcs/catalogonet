@@ -1,133 +1,139 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="description" content="Aqui na página Minha Conta, você cria e gerencia anúncios, contrata planos, altera dados cadastrais">
+<meta name="description"
+	content="Aqui na página Minha Conta, você cria e gerencia anúncios, contrata planos, altera dados cadastrais">
 <meta name="keywords" content="criar anuncios, gerenciar, alterar dados">
-<title>Minha Conta - CatálogoNet | Guia Comercial Online do Distrito Federal</title>
+<title>Meus planos - CatálogoNet | Guia Comercial Online do Distrito Federal</title>
+
 <!-- dependencias -->
 <c:import url="/WEB-INF/views/template/restrito/arquivos-css-js.jsp" />
+
 </head>
 <body>
 
-	<!-- Topo da pagina -->
-	<c:import url="/WEB-INF/views/template/restrito/cabecalho-restrito.jsp" />
-	
-	<!-- container -->
-<div class="container">
-  <div class="row">
-    <div class="col-md-3">
-    
-	   	<!-- menu-esquerda -->
-		<c:import url="/WEB-INF/views/template/restrito/menu-esquerda.jsp" />
-		<!-- /menu-esquerda -->
-      
-    </div>
-    
-    <!-- conteudo -->
-    <div class="col-md-9"> 
-      
-      <!--Breadcrumb -->
-      <ol class="breadcrumb">
-        <li><a href="#">Home</a></li>
-        <li class="active">Meus Planos</li>
-      </ol>
-      <!-- /breadcrumb --> 
-      
-      <!-- meus-planos -->
-      <div class="meus-planos"> 
-        <!-- page header -->
-        <div class="page-header">
-          <h1>Meus Planos <small>Planos contratados</small></h1>
-        </div>
-        <!-- /page-header --> 
-        
-        <c:if test="${empty listaPlanos}">
-        <!-- erro -->
-        <div class="alert alert-danger" role="alert">
-          <p><strong class="textoMeioMedio">Você não ainda não contratou nenhum plano!</strong></p>
-          <p>Caso você já tenha feito o pedido e o pagamento do plano, assim que nós confirmarmos o pagamento, ele estará disponível para criação do anúncio.</p>
-          <p><span class="textoMeioMedio">Ainda não contratou um plano?</span><br/>
-            <a class="btn btn-success" href="<c:url value='/areaDaEmpresa/contratarPlano' />">Contratar Plano</a></p>
-        </div>
-        <!-- /erro --> 
-        </c:if>
-        
-        <c:if test="${not empty listaPlanos}">
-        <!-- tabela planos -->
-        <table class="table table-hover">
-          <thead>
-            <tr>
-              <th>Plano Contratado</th>
-              <th>N° do pedido</th>
-              <th>Status</th>
-              <th>Data de Ínicio</th>
-              <th>Data de Finalização</th>
-              <th>Aplicado ao Anúncio</th>
-            </tr>
-          </thead>
-          <tbody>
-          	<c:forEach items="${listaPlanos}" var="plano">
-            <tr>
-              <td>${plano.produto.nome}</td>
-              <td>??</td>
-              <td>
-              
-              <c:if test="${plano.ativo}">
-              <strong>Ativado <span class="glyphicon glyphicon-ok" style="color:#00CC00"></span></strong>
-              </c:if>
-              <c:if test="${!plano.ativo}">
-              <strong>Desativado <span class="glyphicon glyphicon-remove" style="color:#FF0000"></span></strong>
-              </c:if>
-              
-              </td>
-              <td>
-             	<c:choose>
-             		<c:when test="${not empty plano.dataInicio}">
-             			<fmt:parseDate value="${plano.dataInicio}" pattern="yyyy-MM-dd" var="parsedDate" type="date" />
-		             	<fmt:formatDate value="${parsedDate}" pattern="dd/MM/yyyy" />
-             		</c:when>
-             		<c:otherwise>Nunca foi ativado</c:otherwise>
-             	</c:choose>
-              <td>
-	              <c:choose>
-             		<c:when test="${not empty plano.dataFinalizacao}">
-             			<fmt:parseDate value="${plano.dataFinalizacao}" pattern="yyyy-MM-dd" var="parsedDate" type="date" />
-		             	<fmt:formatDate value="${parsedDateFinal}" pattern="dd/MM/yyyy" />
-             		</c:when>
-             		<c:otherwise>N/A</c:otherwise>
-             	</c:choose>
-              <td>
-              	<c:if test="${plano.anuncio != null}">
-              		<a href="<c:url value="/areaDaEmpresa/home"/>">${plano.anuncio.titulo}</a>
-              	</c:if>
-              </td>
-            </tr>
-            </c:forEach>
-          </tbody>
-        </table>
-        <!-- /tabela plano --> 
-        </c:if>
-        
-      </div>
-      <!-- /meus-planos --> 
-     
-      
-    </div>
-    <!-- /conteudo --> 
-    
-  </div>
-  <!-- /row --> 
-  
-</div>
-<!-- /container -->
 
-	<!-- Rodape -->
-	<c:import url="/WEB-INF/views/template/publico/rodape.jsp" />
+
+	<!-- wrapper -->
+	<div id="wrapper">
+
+		<!-- cabecalho -->
+		<c:import url="/WEB-INF/views/template/restrito/cabecalho-restrito.jsp" />
+		<!-- cabecalho -->
+
+		<!-- content-wrapper -->
+		<div id="content-restrito-wrapper">
+
+			<div id="pagina-restrito-conteudo">
+
+				<div class="container">
+					<div class="menu-responsivo">
+						<div class="toggle-menu">
+							<span class="menu-mensagem">Menu</span>
+							<div class="pull-right">
+								<span class="glyphicon glyphicon-menu-hamburger"></span>
+							</div>
+						</div>
+						<ul class="nav-responsivo nav-responsivo-horizontal">
+							<li class="active"><a href="<c:url value="/area-da-empresa"/>">Resumo</a></li>
+							<li><a href="<c:url value="/area-da-empresa/criar-anuncio/informacoes"/>">Criar
+									anúncio</a></li>
+							<li><a href="<c:url value="/area-da-empresa/meus-anuncios"/>">Meus anúncios</a></li>
+							<li><a href="<c:url value="/area-da-empresa/meus-planos"/>">Meus planos</a></li>
+							<li><a href="<c:url value="/area-da-empresa/meus-pedidos"/>">Meus pedidos</a></li>
+						</ul>
+						<div class="clear"></div>
+					</div>
+				</div>
+
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$(".toggle-menu").click(function() {
+							$(".nav-responsivo").toggle(500);
+						});
+					});
+				</script>
+
+
+				<div class="container">
+
+					<div class="row">
+						<div class="col-md-12">
+							<ol class="breadcrumb breadcrumb-white">
+								<li><a href="#">Home</a></li>
+								<li class="active">Meus planos</li>
+							</ol>
+						</div>
+						<div class="col-md-12">
+							<div class="painel-restrito-item item-anuncio-header">
+
+								<div class="row">
+
+									<div class="col-md-12">
+
+										<div class="page-header">
+											<h2>Meus planos</h2>
+										</div>
+
+
+										<table class="table table-hover">
+											<tr>
+												<th>Produto</th>
+												<th>Status</th>
+												<th>Ação</th>
+											</tr>
+											<c:forEach items="${listaPlanos}" var="plano">
+												<tr>
+													<td>${plano.produto.nomeCompleto}</td>
+													<td><c:if test="${plano.ativo}">
+															<strong>Ativado <span class="glyphicon glyphicon-ok" style="color: #00CC00"></span></strong>
+														</c:if> <c:if test="${!plano.ativo}">
+															<strong>Desativado <span class="glyphicon glyphicon-remove"
+																style="color: #FF0000"></span></strong>
+														</c:if></td>
+													<td>
+													<c:if test="${plano.anuncio != null}">
+	              										<a href="<c:url value="/area-da-empresa"/>">${plano.anuncio.titulo}</a>
+	              									</c:if>
+	              									<c:if test="${plano.anuncio == null}">
+	              										<a href="<c:url value="/area-da-empresa"/>">Comece agora!</a>
+	              									</c:if>
+													</td>													
+														
+												</tr>
+											</c:forEach>
+										</table>
+
+
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+
+			</div>
+			<!-- fim pagina restrito conteudo -->
+
+
+
+		</div>
+		<!-- fim content-wrapper -->
+
+		<div class="clear"></div>
+		<!-- Rodape -->
+		<c:import url="/WEB-INF/views/template/publico/rodape.jsp" />
+
+	</div>
+	<!-- fim wrapper -->
+
+
 
 </body>
 </html>

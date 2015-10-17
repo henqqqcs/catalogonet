@@ -24,6 +24,7 @@ public class PopularProdutoService {
 		//criar produto - plano gratuito
 		Produto gratuito = new Produto();
 		gratuito.setNome("Plano Gratuito");
+		gratuito.setNomeCompleto("Guia Comercial - Anúncio - Plano Gratuito");
 		gratuito.setValor(new BigDecimal("0.00"));
 		gratuito.setPrioridadeProduto(PrioridadeProduto.PRODUTO_GRATUITO);
 		gratuito.setDuracaoMeses(12);
@@ -32,6 +33,7 @@ public class PopularProdutoService {
 		//criar produto - plano profissional
 		Produto profissional = new Produto();
 		profissional.setNome("Plano Profissional");
+		profissional.setNomeCompleto("Guia Comercial - Anúncio - Plano Profissional");
 		profissional.setValor(new BigDecimal("99.90"));
 		profissional.setPrioridadeProduto(PrioridadeProduto.PRODUTO_PROFISSIONAL);
 		profissional.setDuracaoMeses(12);
@@ -40,6 +42,7 @@ public class PopularProdutoService {
 		//criar produto - plano ultimate
 		Produto ultimate = new Produto();
 		ultimate.setNome("Plano Ultimate");
+		ultimate.setNomeCompleto("Guia Comercial - Anúncio - Plano Ultimate");
 		ultimate.setValor(new BigDecimal("149.90"));
 		ultimate.setPrioridadeProduto(PrioridadeProduto.PRODUTO_ULTIMATE);
 		ultimate.setDuracaoMeses(12);

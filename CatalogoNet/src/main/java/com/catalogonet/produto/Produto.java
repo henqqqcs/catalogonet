@@ -24,6 +24,8 @@ public class Produto {
 	private PrioridadeProduto prioridadeProduto;
 	
 	private String nome;
+	private String nomeCompleto;
+	
 	private BigDecimal valor;
 	private int duracaoMeses;
 
@@ -41,6 +43,14 @@ public class Produto {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+	
+	public String getNomeCompleto() {
+		return nomeCompleto;
+	}
+
+	public void setNomeCompleto(String nomeCompleto) {
+		this.nomeCompleto = nomeCompleto;
 	}
 
 	public BigDecimal getValor() {

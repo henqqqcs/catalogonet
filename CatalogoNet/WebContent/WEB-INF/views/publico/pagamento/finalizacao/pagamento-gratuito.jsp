@@ -32,13 +32,13 @@
 			<!-- col-md-8 -->
 			<div class="col-md-8">
 			
-				     <!-- progress bar -->
+							     <!-- progress bar -->
 			        <div class="progress-tracker">
 			          <div class="text-center hidden-sm hidden-xs">
 			            <ol class="progtrckr" data-progtrckr-steps="5">
 			              <li class="progtrckr-done">Carrinho</li><!--
 			              --><li class="progtrckr-done">Identificação</li><!--
-			              --><li class="progtrckr-done">Pagamento</li><!--
+			              --><li class="progtrckr-done">Confirmação</li><!--
 			              --><li class="progtrckr-done">Finalização</li>
 			            </ol>
 			          </div>
@@ -46,7 +46,7 @@
 			        <br/>
 			        <!-- /progress bar --> 
 
-				<h3><strong>Obrigado! Estamos aguardando a confirmação do pagamento!</strong></h3>
+				<h3><strong>Pronto! O seu plano gratuito já pode ser utlizado!</strong></h3>
 				<hr/>
 
 				<div class="anuncio-criado-text">

@@ -1,224 +1,62 @@
-/*========================= progress tracker ====================*/
-.progress-tracker{
-  padding-bottom: 20px;
-}
 
-.progress-tracker {
-  text-align: center;
-}
-ol.progtrckr {
-    margin: 0;
-    padding: 0;
-    list-style-type none;
-}
-
-ol.progtrckr li {
-    display: inline-block;
-    text-align: center;
-    line-height: 3em;
-}
-
-ol.progtrckr[data-progtrckr-steps="2"] li { width: 49%; }
-ol.progtrckr[data-progtrckr-steps="3"] li { width: 33%; }
-ol.progtrckr[data-progtrckr-steps="4"] li { width: 24%; }
-ol.progtrckr[data-progtrckr-steps="5"] li { width: 19%; }
-ol.progtrckr[data-progtrckr-steps="6"] li { width: 16%; }
-ol.progtrckr[data-progtrckr-steps="7"] li { width: 14%; }
-ol.progtrckr[data-progtrckr-steps="8"] li { width: 12%; }
-ol.progtrckr[data-progtrckr-steps="9"] li { width: 11%; }
-
-ol.progtrckr li.progtrckr-done {
-    color: black;
-    border-bottom: 4px solid #face0e;
-}
-ol.progtrckr li.progtrckr-todo {
-    color: silver; 
-    border-bottom: 4px solid silver;
-}
-
-ol.progtrckr li:after {
-    content: "\00a0\00a0";
-}
-ol.progtrckr li:before {
-    position: relative;
-    bottom: -2.5em;
-    float: left;
-    left: 50%;
-    line-height: 1em;
-}
-ol.progtrckr li.progtrckr-done:before {
-    content: "\2713";
-    color: black;
-    background-color: #face0e;
-    height: 1.2em;
-    width: 1.2em;
-    line-height: 1.2em;
-    border: none;
-    border-radius: 1.2em;
-}
-ol.progtrckr li.progtrckr-todo:before {
-    content: "\039F";
-    color: silver;
-    background-color: white;
-    font-size: 1.5em;
-    bottom: -1.6em;
-}
-/*===================================== fim progress tracker ===================*/
-
-
-#footer {
-	position:absolute;
-	bottom:0;
-	left:0;
-  clear: both;
-  padding-bottom: 40px;
-  height: auto;
-  width: 100%;
-  background-color: #000;
+.form-group .glyphicon-asterisk{
+	font-size: 0.5em;
+	position: absolute;
+	top: 10px;
+	color: red;
 }
 
 
-#footer a {
-  color: #FFF;
-  font-size: 1em;
-  text-decoration: underline;
-}
-#footer a:hover {
-  text-decoration: none;
-}
-
-.rodape-content {
-  padding-top: 25px;
+@media ( max-width :768px) {
+	.form-group .glyphicon-asterisk{
+		font-size: 0.5em;
+		position: inherit;
+		top: -7px;
+		color: red;
+	}
 }
 
-.footer-contato, .footer-info, .footer-payment {
-    clear: left;
-    margin: 0;
-    padding: 0 14%;
-    width: 75%;
+.categoria-box-select {
+	height: 350px;
+	width: 100%;
+	border: 3px solid black;
+	margin-bottom: 5px;
+	padding: 10px;
 }
-.footer-content {
-  margin-left: 10%;
-}
-.rodape-titulo {
-  color: #face0e;
-  font-weight: bold;
-  font-size: 18px;
-  margin-bottom: 30px;
-  padding-top: 20px;
-}
-.rodape-item {
-  color: #FFF;
+.categoria-box-select select {
+	width: 100%;
+	height: 100%;
+	border: 0;
+	font-weight: bold;
 }
 
-.footer-payment .footer-content {
-   margin-right: 10%;
+.categoria-box-select option {
+	margin-bottom: 2px;
+	font-size: 1.1em;
+	color: #337ab7;
 }
 
-.footer-payment .form-control {
-  margin-bottom: 10px;
-}
-.footer-payment-box {
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.2);
-  width: 14em;
-  padding: 5px;
-}
-.footer-payment-box img {
-  margin-top: 10px;
-  margin-left: 5px;
+.box-categoria {
+	border-color: #337ab7;
 }
 
-.footer-social-icons {
-  text-align: center;
+.box-sub {
+	border-color: #337ab7;
 }
-.footer-social-item {
-  margin: 10px 20px 5px 20px;
+
+.cria-anuncio-map-wrapper {
+	height: 320px;
+	margin-bottom: 18px;
 }
 
 
-@media screen and (min-width:480px)  {
-
-
-  .footer-contato, .footer-info, .footer-payment {
-    float: left;
-    margin-right: 10px;
-  }
-
-  .footer-contato, .footer-info {
-    clear: none;
-    margin: 0;
-    padding: 0 0%;
-    width: 50%;
-  }
-
-  .footer-payment {
-    clear: left;
-    padding: 0;
-    float: none;
-    width: 100%;
-  }
-
-}
-
-
-@media screen and (min-width:780px)  {
-
-  .footer-contato, .footer-info, .footer-payment {
-    float: left;
-    width: 32%;
-    clear: none;
-  }
-
-}
-
-
-#footer-checkout {
-  clear: both;
-  margin-top:  30px;
-  border-top: #bfbfbf 1px solid;
-  padding-bottom: 40px;
-  height: auto;
-  background-color: #FFF;
-  text-align: center;
-}
-
-
-#footer-checkout .footer-checkout-tittle {
-  font-size: 22px;
-  font-weight: bold;
-  margin-top: 30px;
-}
-
-#footer-checkout .footer-checkout-item {
-   margin-top: 20px;
-}
-
-.sub-rodape-checkout {
-  font-size: 11px;
-  color: #8c8c8c;
-  margin-top: 30px;
-}
-
-@media screen and (min-width:992px)  {
-
-  #footer-checkout .footer-checkout-tittle {
-    margin-top: 30px;
-  }
-  #footer-checkout .footer-checkout-item {
-     margin-top: 30px;
-     font-size: 16px;
-     line-height: 3.5;
-  }
-
-}
-
-@media screen and (min-width:1200px)  {
-
-  #footer-checkout .footer-checkout-item {
-     font-size: 18px;
-  }
-
+#categoria-loading {
+	position: absolute;
+    margin: auto;
+    top: 300px;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 /*==== price table ===== */
@@ -269,7 +107,7 @@ list-style: none;
 	width: 96%;
 	margin: 0 auto;
 	max-width: 1200px;
-	padding: 0em 0 3.5em;
+	padding: 2em 0 3.5em;
 	position: relative;
 	text-align: center
 }
@@ -626,62 +464,272 @@ div.payment-card-responsive .certification, div.payment-card-responsive .full-ac
 .paypal-logo {
 	margin: .5em 0
 }
-#header-alternativo {
-  height: 110px;
-  border-top: 7px solid #face0e;
-  background-color: #000;
-  margin-bottom: 20px;
+
+/*============= pagina de confirmacao ======================*/
+
+.anuncio-criado-text {
+	font-size: 1.2em;
 }
 
-.cabecalho-alternativo-wrapper {
-  height: 103px;
-  background-color: #000;
-  color: #face0e;
-  width: 200px;
-  position: relative;
-  float: left;
+.anuncio-criado-link {
+	text-align: center;
+	margin-bottom: 20px;
 }
 
-.cabecalho-alternativo-logotipo-wrapper { 
-  position: absolute; 
-  left: 3px; 
-  top: 6px; 
-  width: 135px; 
-  height: 84px; 
-  display: table; 
-  line-height: 1;
+
+/*====================== upload de imagens =================*/
+
+
+.file-container-wrapper {
+	width: 164px;
+	height: 164px;
+	/*padding-bottom: 20px;*/
 }
 
-.cabecalho-alternativo-logotipo-wrapper p {
-  display: table-cell; 
-  vertical-align: middle; 
+.file-container {
+	width: 164px;
+	height: 164px;
+	border: 2px dashed black;
+	padding: 10px;
+	text-align: center;
+	position: relative;
+	cursor: pointer;
+}
+
+.file-container:hover {
+	border: 2px solid #face0e;
+}
+
+.file-container input {
+	filter: alpha(opacity=0);
+   opacity: 0;
+   overflow: hidden;
+   cursor: pointer;
+}
+
+.input-container {
+	width: 100%;
+	height: 100%;
+	/*background-color: #bbb;*/
+		background: url(https://secure.mlstatic.com/sell/assets/img_camera_ico_retina.png) no-repeat center 65%;
+}
+
+.input-container-msg {
+	font-size: 22px;
+	color: #bbb;
+}
+
+/* lista file input */
+.file-input-list ul {
+	height: 230px;
+}
+.file-input-list ul li {
+	list-style-type: none;
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
+	height: 200px;
+	float: left;
+}
+
+.img-container {
+	background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.img-controls {
+	width: 100%;
+	margin-top: 5px;
+	/*background-color: black;*/
+	text-align: center;
+}
+
+
+/*========================= progress tracker ====================*/
+.progress-tracker{
+	padding-bottom: 20px;
+}
+
+.progress-tracker {
   text-align: center;
-  font-size: 22px;
+}
+ol.progtrckr {
+    margin: 0;
+    padding: 0;
+    list-style-type none;
 }
 
-.cabecalho-alternativo-logotipo {
-  font-size: 34px;
-  font-family: 'Franklin Gothic';
-}
-.cabecalho-alternativo-logotipo-net {
-
-  font-weight: bolder;
-  font-style: italic;
+ol.progtrckr li {
+    display: inline-block;
+    text-align: center;
+    line-height: 3em;
 }
 
-.cabecalho-alternativo-info {
-  float: right;
-  color: #face0e;
-  text-align: right;
-  margin-top: 18px;
-  font-size: 14px;
+ol.progtrckr[data-progtrckr-steps="2"] li { width: 49%; }
+ol.progtrckr[data-progtrckr-steps="3"] li { width: 33%; }
+ol.progtrckr[data-progtrckr-steps="4"] li { width: 24%; }
+ol.progtrckr[data-progtrckr-steps="5"] li { width: 19%; }
+ol.progtrckr[data-progtrckr-steps="6"] li { width: 16%; }
+ol.progtrckr[data-progtrckr-steps="7"] li { width: 14%; }
+ol.progtrckr[data-progtrckr-steps="8"] li { width: 12%; }
+ol.progtrckr[data-progtrckr-steps="9"] li { width: 11%; }
+
+ol.progtrckr li.progtrckr-done {
+    color: black;
+    border-bottom: 4px solid #face0e;
+}
+ol.progtrckr li.progtrckr-todo {
+    color: silver; 
+    border-bottom: 4px solid silver;
 }
 
-.cabecalho-alternativo-info p {
-  margin: 0;
+ol.progtrckr li:after {
+    content: "\00a0\00a0";
+}
+ol.progtrckr li:before {
+    position: relative;
+    bottom: -2.5em;
+    float: left;
+    left: 50%;
+    line-height: 1em;
+}
+ol.progtrckr li.progtrckr-done:before {
+    content: "\2713";
+    color: black;
+    background-color: #face0e;
+    height: 1.2em;
+    width: 1.2em;
+    line-height: 1.2em;
+    border: none;
+    border-radius: 1.2em;
+}
+ol.progtrckr li.progtrckr-todo:before {
+    content: "\039F";
+    color: silver;
+    background-color: white;
+    font-size: 1.5em;
+    bottom: -1.6em;
+}
+/*===================================== fim progress tracker ===================*/
+.conteudo-pagina-restrito {
+	height: 100%;
 }
 
-.cabecalho-alternativo-info label {
+.conteudo-meus-anuncios > .page-header, h2  {
+	margin-top: 0px;
+}
+
+.conteudo-pagina-restrito .page-header {
+	    margin: 20px 0 20px;
+}
+
+.meus-anucios-header {
+  background-color: #f5f5f5;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 8px 15px;
+}
+
+.meus-anucios-header-links {
+  margin-top: 22px;
+}
+
+.meus-anuncios-body {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 20px;
+
+}
+
+
+.panel-heading .accordion-toggle:after {
+    /* symbol for "opening" panels */
+    font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
+    content: "\e114";    /* adjust as needed, taken from bootstrap.css */
+    float: right;        /* adjust as needed */
+    color: grey;         /* adjust as needed */
+}
+.panel-heading .accordion-toggle.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\e080";    /* adjust as needed, taken from bootstrap.css */
+}
+
+
+/*========= estattisticas ==========*/
+
+.meus-anuncios-body-estats {
+  margin-top: 20px;
+  margin-left: 15px;
+}
+.stats-visualizacoes {
+  /*background-color: pink;*/
+  margin-top: 40px;
+  width: 250px;
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+    /*background: red;*/
+    border:3px solid #0066FF;
+    -moz-border-radius: 125px;
+    -webkit-border-radius: 125px;
+    border-radius: 125px;
+ 
+}
+
+.stats-visualizacoes-titulo {
+  display: block;
+  text-align: center;
+  text-decoration: underline;
+  color: #bbb;
   font-size: 18px;
-  margin-bottom: 0;
 }
+
+.stats-visualizacoes-numero {
+  margin-top: 50px;
+  display: block;
+  text-align: center;
+  font-size: 50px;
+  color: #0066FF;
+}
+
+.stats-numero {
+  font-size: 68px;
+  margin-left: 10px;
+}
+
+
+/*===== fim estatisticas ====*/
+
+/*====== informacoes ==========*/
+
+
+
+
+
+
+/*===== fim informacoes ==========*/
+
+/*=========== plano ==============*/
+
+.meus-anuncios-info {
+  margin-top: 50px;
+  display: block;
+  text-align: center;
+  font-size: 38px;
+  color: #0066FF;
+}
+
+.meus-anuncios-info-legend {
+  display: block;
+  text-align: center;
+  text-decoration: underline;
+  color: #bbb;
+  font-size: 18px;
+}
+/*========== fim plano =================*/
+
+
+

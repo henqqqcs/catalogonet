@@ -33,7 +33,7 @@ public class Pedido {
 	private MetodoPagamento metodoPagamento;
 
 	@Enumerated(EnumType.STRING)
-	private PedidoStatus status;
+	private PedidoStatus pedidoStatus;
 
 	private boolean pago;
 
@@ -64,7 +64,7 @@ public class Pedido {
 	public Pedido(MetodoPagamento metodoPagamento, PedidoStatus status,
 			boolean renovacao, Usuario usuario, Produto produto) {
 		this.metodoPagamento = metodoPagamento;
-		this.status = status;
+		this.pedidoStatus = status;
 		this.renovacao = renovacao;
 		this.usuario = usuario;
 		this.produto = produto;
@@ -145,12 +145,13 @@ public class Pedido {
 		this.pago = pago;
 	}
 
-	public PedidoStatus getStatus() {
-		return status;
+	public PedidoStatus getPedidoStatus() {
+		return pedidoStatus;
 	}
 
-	public void setStatus(PedidoStatus status) {
-		this.status = status;
+	public void setPedidoStatus(PedidoStatus pedidoStatus) {
+		this.pedidoStatus = pedidoStatus;
 	}
+
 
 }

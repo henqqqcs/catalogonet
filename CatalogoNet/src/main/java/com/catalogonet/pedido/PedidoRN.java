@@ -19,7 +19,10 @@ public class PedidoRN  {
 
 		if (pedido.getId() == null) {
 			pedido.setPago(false);
-			pedido.setStatus(PedidoStatus.AGUARDANDO_PAGAMENTO);
+			
+			if (pedido.getPedidoStatus() == null) {
+				pedido.setPedidoStatus(PedidoStatus.AGUARDANDO_PAGAMENTO);
+			}
 			// coloca data de criacao
 			if (pedido.getDataInicio() == null) {
 				//data de inicio e data final

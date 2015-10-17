@@ -38,4 +38,12 @@ public class ProdutoRN {
 		return dao.listarProdutos();
 	}
 
+	public boolean isProdutoGratuito(Produto produto) {
+		// eh um produto gratuito - valor 0
+		if (produto.getPrioridadeProduto() == PrioridadeProduto.PRODUTO_GRATUITO) {
+			return true;
+		}
+		return false;
+	}
+
 }

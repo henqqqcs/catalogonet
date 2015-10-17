@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,14 +31,28 @@
     <div class="row">
 
       <div class="col-md-8">
+      
+      	      	 <!-- progress bar -->
+        <div class="progress-tracker">
+          <div class="text-center hidden-sm hidden-xs">
+            <ol class="progtrckr" data-progtrckr-steps="5">
+              <li class="progtrckr-done">Carrinho</li><!--
+              --><li class="progtrckr-done">Identificação</li><!--
+              --><li class="progtrckr-todo">Pagamento</li><!--
+              --><li class="progtrckr-todo">Finalização</li>
+            </ol>
+          </div>
+        </div>
+        <br/>
+        <!-- /progress bar --> 
 
         <!-- pagamento-pagamento -->
         <div class="pagamento-pagamento">
 
           <div class="panel panel-default">
             <div class="panel-heading">
-              <span class="carrinho-item">Anuncio - Guia Comercial - Plano Profissional / Anual</span>
-              <span class="carrinho-valor-total">TOTAL: R$ 399,90</span>
+              <span class="carrinho-item">${produto.nomeCompleto} / Anual - </span>
+              <span class="carrinho-valor-total">TOTAL: <fmt:formatNumber type="currency" value="${produto.valor}"/></span>
             </div>
             <div class="panel-body">
               
@@ -46,13 +61,13 @@
 
               <label>Informaçãoes do cliente</label>
               <p>
-                ${usuario.nome}<br>
-                ${usuario.cpf}<br>
-                ${usuario.telefone1}<br>
-                ${usuario.email}<br>
+              <label>Nome: </label>${usuario.nome}<br>
+              <label>CPF ou CNPJ: </label>${usuario.cpf}<br>
+              <label>Telefone: </label>${usuario.telefone1}<br>
+              <label>email: </label>${usuario.email}<br>
               </p>
 
-              <h4>Formas de pagamento</h4>
+              <h4><strong>Formas de pagamento</strong></h4>
               <hr>
 
               <!-- form-pagamento-metodo -->
@@ -110,18 +125,14 @@
           <div class="pagamento-resumo-tittle">Resumo do pedido</div>
           <ul class="list-group">
             <li class="list-group-item">
-              Anúncio - Guia Comercial - Plano Profissional
+              ${produto.nomeCompleto}
             </li>
             <li class="list-group-item">
               <span class="pull-left">Período: </span> <span class="pull-right">Anual</span>
               <div class="clearfix"></div>
             </li>
             <li class="list-group-item">
-              <span class="pull-left">Valor em 12x: </span> <span class="pull-right">R$ 8,50</span>
-              <div class="clearfix"></div>
-            </li>
-            <li class="list-group-item">
-              <span class="pull-left">Valor: </span> <span class="pull-right">R$ 149,90</span>
+              <span class="pull-left">Valor: </span> <span class="pull-right"><fmt:formatNumber type="currency" value="${produto.valor}"/></span>
               <div class="clearfix"></div>
             </li>
 <!--             <li class="list-group-item">

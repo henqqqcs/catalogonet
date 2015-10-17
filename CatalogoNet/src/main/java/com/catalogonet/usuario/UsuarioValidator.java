@@ -30,48 +30,43 @@ public class UsuarioValidator implements Validator {
 
 		Usuario usuario = (Usuario) target;
 
-
-		//email not null
+		// email not null
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "email", "",
-				messageSource
-						.getMessage("usuario.email.notnull", null, locale));
-		
+				messageSource.getMessage("usuario.email.notnull", null, locale));
+
 		// verifica se o email eh valido
 		if (!emailValidator.isValid(usuario.getEmail())) {
 			errors.rejectValue("email", "", messageSource.getMessage("usuario.email.invalido", null, locale));
 		}
-		
+
 		// verifica se eh igual ao campo confirmar email
 		if (!usuario.getEmail().equals(usuario.getConfirmarEmail())) {
 			errors.rejectValue("confirmarEmail", "",
 					messageSource.getMessage("usuario.email.confirmarEmail", null, locale));
 		}
 
-		//senha not null
+		// senha not null
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "senha", "",
-				messageSource
-						.getMessage("usuario.senha.notnull", null, locale));
-		
+				messageSource.getMessage("usuario.senha.notnull", null, locale));
+
 		// senha
 		if (!stringMaiorQue(usuario.getSenha(), 5)) {
 			errors.rejectValue("senha", "", messageSource.getMessage("usuario.senha.size", null, locale));
 		}
-		
-		//confirmar senha not null
+
+		// confirmar senha not null
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "confirmarSenha", "",
-				messageSource
-						.getMessage("usuario.confirmarSenha.notnull", null, locale));
+				messageSource.getMessage("usuario.confirmarSenha.notnull", null, locale));
 
 		// verifica se confirmar eh igual
 		if (!usuario.getSenha().equals(usuario.getConfirmarSenha())) {
 			errors.rejectValue("confirmarSenha", "",
 					messageSource.getMessage("usuario.confirmarSenha.confirmarSenha", null, locale));
 		}
-		
-		//confirmar nome not null
+
+		// confirmar nome not null
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "nome", "",
-				messageSource
-						.getMessage("usuario.nome.notnull", null, locale));
+				messageSource.getMessage("usuario.nome.notnull", null, locale));
 
 		// nome
 		if (!stringLenghtBetween(usuario.getNome(), 4, 55)) {

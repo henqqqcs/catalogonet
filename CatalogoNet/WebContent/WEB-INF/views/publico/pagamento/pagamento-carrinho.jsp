@@ -14,6 +14,8 @@
 
 <!-- dependencias -->
 <c:import url="/WEB-INF/views/template/publico/arquivos-css-js-publico.jsp" />
+
+
 </head>
 
 <body>
@@ -32,6 +34,20 @@
 
       <!-- col-md-8 -->
       <div class="col-md-10">
+      
+      	 <!-- progress bar -->
+        <div class="progress-tracker">
+          <div class="text-center hidden-sm hidden-xs">
+            <ol class="progtrckr" data-progtrckr-steps="5">
+              <li class="progtrckr-todo">Carrinho</li><!--
+              --><li class="progtrckr-todo">Identificação</li><!--
+              --><li class="progtrckr-todo">Pagamento</li><!--
+              --><li class="progtrckr-todo">Finalização</li>
+            </ol>
+          </div>
+        </div>
+        <br/>
+        <!-- /progress bar --> 
 
         <!-- content-wrapper -->
         <div class="panel panel-default"> 
@@ -53,9 +69,9 @@
               </tr>
               <tr>
                 <tr>
-                  <td>${produto.nome}</td>
+                  <td>${produto.nomeCompleto}</td>
                   <td>${produto.duracaoMeses} meses</td>
-                  <td>R$ <fmt:formatNumber type="currency" value="${produto.valor}"/></td>
+                  <td><fmt:formatNumber type="currency" value="${produto.valor}"/></td>
                 </tr>
               </tbody>
             </table>
