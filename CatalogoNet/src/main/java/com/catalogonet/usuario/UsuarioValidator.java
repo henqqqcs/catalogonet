@@ -25,6 +25,90 @@ public class UsuarioValidator implements Validator {
 
 	private Locale locale = new Locale("pt", "BR");
 
+	public void validatePerfilUpdate(Object target, Errors errors) {
+
+		Usuario usuario = (Usuario) target;
+
+		// confirmar nome not null
+		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "nome", "",
+				messageSource.getMessage("usuario.nome.notnull", null, locale));
+
+		// nome
+		if (!stringLenghtBetween(usuario.getNome(), 4, 55)) {
+			errors.rejectValue("nome", "", messageSource.getMessage("usuario.nome.size", null, locale));
+		}
+
+		// cnpj e cpf
+		if ((usuario.getCpf() != null) && (!usuario.getCpf().isEmpty())) {
+			if (!stringLenghtBetween(usuario.getCpf(), 7, 20)) {
+				errors.rejectValue("cpf", "", messageSource.getMessage("usuario.cpf.size", null, locale));
+			}
+		}
+		if ((usuario.getCnpj() != null) && (!usuario.getCnpj().isEmpty())) {
+			if (!stringLenghtBetween(usuario.getCpf(), 7, 20)) {
+				errors.rejectValue("cpf", "", messageSource.getMessage("usuario.cpf.size", null, locale));
+			}
+		}
+
+		// telefone1
+		ValidationUtils.rejectIfEmpty(errors, "telefone1", "",
+				messageSource.getMessage("usuario.telefone.notnull", null, locale));
+
+		// telefone lenght
+		if (!stringLenghtBetween(usuario.getTelefone1(), 10, 15)) {
+			errors.rejectValue("telefone1", "", messageSource.getMessage("usuario.telefone.size", null, locale));
+		}
+
+		// telefone2
+		if ((usuario.getTelefone2() != null) && (!usuario.getTelefone2().isEmpty())) {
+			if (!stringLenghtBetween(usuario.getTelefone2(), 10, 15)) {
+				errors.rejectValue("telefone2", "", messageSource.getMessage("usuario.telefone.size", null, locale));
+			}
+		}
+		
+		//usuario.endereco.size
+		
+		//endereco
+		//estado
+		String str = usuario.getEndereco().getEstado();
+		if ((str != null) && (!str.isEmpty())) {
+			if (!stringLenghtBetween(str, 4, 55)) {
+				errors.rejectValue("endereco.estado", "", messageSource.getMessage("usuario.endereco.size", null, locale));
+			}
+		}
+		str = usuario.getEndereco().getCidade();
+		if ((str != null) && (!str.isEmpty())) {
+			if (!stringLenghtBetween(str, 4, 55)) {
+				errors.rejectValue("endereco.cidade", "", messageSource.getMessage("usuario.endereco.size", null, locale));
+			}
+		}
+		str = usuario.getEndereco().getBairro();
+		if ((str != null) && (!str.isEmpty())) {
+			if (!stringLenghtBetween(str, 4, 55)) {
+				errors.rejectValue("endereco.bairro", "", messageSource.getMessage("usuario.endereco.size", null, locale));
+			}
+		}
+		str = usuario.getEndereco().getEndereco();
+		if ((str != null) && (!str.isEmpty())) {
+			if (!stringLenghtBetween(str, 4, 55)) {
+				errors.rejectValue("endereco.endereco", "", messageSource.getMessage("usuario.endereco.size", null, locale));
+			}
+		}
+		str = usuario.getEndereco().getComplemento();
+		if ((str != null) && (!str.isEmpty())) {
+			if (!stringLenghtBetween(str, 4, 55)) {
+				errors.rejectValue("endereco.complemento", "", messageSource.getMessage("usuario.endereco.size", null, locale));
+			}
+		}
+		str = usuario.getEndereco().getCep();
+		if ((str != null) && (!str.isEmpty())) {
+			if (!stringLenghtBetween(str, 4, 55)) {
+				errors.rejectValue("endereco.cep", "", messageSource.getMessage("usuario.endereco.size", null, locale));
+			}
+		}
+
+	}
+
 	@Override
 	public void validate(Object target, Errors errors) {
 

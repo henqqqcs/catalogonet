@@ -186,7 +186,7 @@
 							</div>
 							<div class="painel-restrito-item item-meus-dados">
 								<div class="pull-right">
-									<a href="<c:url value="/area-da-empresa/meus-dados/perfil"/>">Editar</a>
+									<a href="<c:url value="/area-da-empresa/meus-dados/alterar-perfil"/>">Editar</a>
 								</div>
 								<h2>Perfil</h2>
 								<p>Atualize seus dados de cadastro</p>
@@ -221,7 +221,7 @@
 							</div>
 							<div class="painel-restrito-item item-endereco">
 								<div class="pull-right">
-									<a href="<c:url value="/area-da-empresa/meus-dados/endereco"/>">Editar</a>
+									<a href="<c:url value="/area-da-empresa/meus-dados/alterar-perfil"/>">Editar</a>
 								</div>
 								<h2>Endereço</h2>
 								<p>Atualize seu endereço</p>
@@ -233,7 +233,7 @@
 										<br/>${usuario.endereco.cidade}
 									</c:if>
 									<c:if test="${not empty usuario.endereco.bairro}">
-										<br/>${usuario.endereco.cidade}
+										<br/>${usuario.endereco.bairro}
 									</c:if>
 									<c:if test="${not empty usuario.endereco.endereco}">
 										<br/>${usuario.endereco.endereco}
