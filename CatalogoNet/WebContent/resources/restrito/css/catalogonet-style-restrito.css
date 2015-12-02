@@ -269,6 +269,16 @@ html, body {
 }
 
 
+.item-imagens li {
+	display: inline;
+}
+
+.item-imagens img {
+	display: inline;
+	margin-right: 12px;
+	max-width: 70px;
+	max-height: 70px;
+}
 /*======================================================= criacao de anuncios ===============================================*/
 
 .form-group .glyphicon-asterisk{

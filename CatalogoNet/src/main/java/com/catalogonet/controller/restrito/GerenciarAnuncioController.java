@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -31,6 +32,7 @@ import com.catalogonet.util.ImageUtils;
 
 @Controller
 @RequestMapping("/area-da-empresa/meus-anuncios")
+@SessionAttributes("anuncio")
 public class GerenciarAnuncioController {
 
 	@Autowired
@@ -73,22 +75,23 @@ public class GerenciarAnuncioController {
 		binder.setValidator(anuncioValidator);
 	}
 
-	@RequestMapping(value = { "/{tituloNaUrl}/{idAnuncio}",
-			"/{tituloNaUrl}/{idAnuncio}/estatisticas" })
-	public String paginaEstatisticas(
-			@PathVariable("tituloNaUrl") String tituloNaUrl,
+	@RequestMapping(value = { "/{tituloNaUrl}/{idAnuncio}", "/{tituloNaUrl}/{idAnuncio}/estatisticas" })
+	public String paginaEstatisticas(@PathVariable("tituloNaUrl") String tituloNaUrl,
 			@PathVariable("idAnuncio") Long idAnuncio, ModelMap map) {
 
 		Usuario usuario = usuarioRN.pegaUsuarioNaSessao(map);
-		Anuncio anuncio = anuncioRN.buscarAnuncioDoUsuario(usuario.getId(),
-				idAnuncio);
+		Anuncio anuncio = anuncioRN.buscarAnuncioDoUsuario(usuario.getId(), idAnuncio);
 		if (anuncio == null) {
 			return "redirect:/area-da-empresa/meus-anuncios";
 		}
 
+		// imagens
+		List<FileMeta> listaImagens = imagemRN.listarImagensDoAnuncio(anuncio.getId());
+		map.put("listaImagens", listaImagens);
+
 		map.put("anuncio", anuncio);
 
-		return "/restrito/anuncio/gerenciar_anuncio/anuncio-estatisticas";
+		return "/restrito/anuncio/gerenciar_anuncio/resumo";
 	}
 
 	@RequestMapping("/{tituloNaUrl}/{idAnuncio}/plano")
@@ -96,8 +99,7 @@ public class GerenciarAnuncioController {
 			@PathVariable("idAnuncio") Long idAnuncio, ModelMap map) {
 
 		Usuario usuario = usuarioRN.pegaUsuarioNaSessao(map);
-		Anuncio anuncio = anuncioRN.buscarAnuncioDoUsuario(usuario.getId(),
-				idAnuncio);
+		Anuncio anuncio = anuncioRN.buscarAnuncioDoUsuario(usuario.getId(), idAnuncio);
 		PlanoAnuncio plano = planoRN.buscarPlanoAtivoDoAnuncio(idAnuncio);
 
 		if (anuncio == null) {
@@ -111,19 +113,19 @@ public class GerenciarAnuncioController {
 	}
 
 	@RequestMapping("/{tituloNaUrl}/{idAnuncio}/informacoes")
-	public String paginaInformacoes(
-			@PathVariable("tituloNaUrl") String tituloNaUrl,
+	public String paginaInformacoes(@PathVariable("tituloNaUrl") String tituloNaUrl,
 			@PathVariable("idAnuncio") Long idAnuncio, ModelMap map) {
 
-		Usuario usuario = usuarioRN.pegaUsuarioNaSessao(map);
-		Anuncio anuncio = anuncioRN.buscarAnuncioDoUsuario(usuario.getId(),
-				idAnuncio);
-		if (anuncio == null) {
-			return "redirect:/area-da-empresa/meus-anuncios";
+		if (map.get("anuncioUpdate") == null) {
+			Usuario usuario = usuarioRN.pegaUsuarioNaSessao(map);
+			Anuncio anuncio = anuncioRN.buscarAnuncioDoUsuario(usuario.getId(), idAnuncio);
+			if (anuncio == null) {
+				return "redirect:/area-da-empresa/meus-anuncios";
+			}
+			map.put("anuncioUpdate", anuncio);
 		}
 
-		map.put("anuncio", anuncio);
-		return "/restrito/anuncio/gerenciar_anuncio/anuncio-informacoes";
+		return "/restrito/anuncio/gerenciar_anuncio/informacoes";
 	}
 
 	/**
@@ -138,202 +140,195 @@ public class GerenciarAnuncioController {
 	 * @return
 	 */
 	@RequestMapping("/{tituloNaUrl}/{idAnuncio}/informacoes-handle")
-	public String paginaInformacoesHandle(
-			@PathVariable("tituloNaUrl") String tituloNaUrl,
-			@PathVariable("idAnuncio") Long idAnuncio,
-			@ModelAttribute("anuncio") Anuncio anuncio, Errors errors,
-			RedirectAttributes redirectAttrs, BindingResult result, ModelMap map) {
+	public String paginaInformacoesHandle(@PathVariable("tituloNaUrl") String tituloNaUrl,
+			@PathVariable("idAnuncio") Long idAnuncio, @ModelAttribute("anuncioUpdate") Anuncio anuncioUpdate,
+			Errors errors, RedirectAttributes redirectAttrs, BindingResult result, ModelMap map) {
 
 		// buscar anuncio original
 		Anuncio anuncioOriginal = anuncioRN.buscarPorId(idAnuncio);
-		anuncio.setId(anuncioOriginal.getId());
+		anuncioUpdate.setId(anuncioOriginal.getId());
 
 		// validar
-		anuncioValidator.validateInformacoes(anuncio, errors);
+		anuncioValidator.validateInformacoes(anuncioUpdate, errors);
 
 		if (errors.hasErrors()) {
-			map.put("anuncio", anuncio);
-			map.put("errors", "errors");
-			return "/restrito/anuncio/gerenciar_anuncio/anuncio-informacoes";
+			redirectAttrs.addFlashAttribute("errors", "errors");
+			redirectAttrs.addFlashAttribute("anuncioUpdate", anuncioUpdate);
+			redirectAttrs.addFlashAttribute("org.springframework.validation.BindingResult.anuncioUpdate", result);
+			return "redirect:/area-da-empresa/meus-anuncios/" + anuncioUpdate.getTituloNaUrl() + "/"
+					+ anuncioUpdate.getId() + "/informacoes";
 		}
 
 		// titulo
-		anuncioOriginal.setTitulo(anuncio.getTitulo());
+		anuncioOriginal.setTitulo(anuncioUpdate.getTitulo());
 
 		// descricao
-		anuncioOriginal.setDescricao(anuncio.getDescricao());
+		anuncioOriginal.setDescricao(anuncioUpdate.getDescricao());
 
 		// telefone
-		anuncioOriginal.setTelefone1(anuncio.getTelefone1());
-		anuncioOriginal.setTelefone2(anuncio.getTelefone2());
+		anuncioOriginal.setTelefone1(anuncioUpdate.getTelefone1());
+		anuncioOriginal.setTelefone2(anuncioUpdate.getTelefone2());
 
 		// site
-		anuncioOriginal.setSite(anuncio.getSite());
+		anuncioOriginal.setSite(anuncioUpdate.getSite());
 		// email
-		anuncioOriginal.setEmail(anuncio.getEmail());
+		anuncioOriginal.setEmail(anuncioUpdate.getEmail());
 		// facebook
-		anuncioOriginal.setFacebook(anuncio.getFacebook());
+		anuncioOriginal.setFacebook(anuncioUpdate.getFacebook());
 
 		// atualizar
 		anuncioRN.atualizar(anuncioOriginal);
 
 		map.put("success", "success");
+		map.put("anuncio", anuncioOriginal);
 		redirectAttrs.addFlashAttribute("success", "success");
-		return "redirect:/area-da-empresa/meus-anuncios/"
-				+ anuncioOriginal.getTituloNaUrl() + "/"
+		return "redirect:/area-da-empresa/meus-anuncios/" + anuncioOriginal.getTituloNaUrl() + "/"
 				+ anuncioOriginal.getId() + "/informacoes";
 	}
 
+	// ======================================================================
+	// =========================== Localizazao ==============================
+	// ======================================================================
+
 	@RequestMapping("/{tituloNaUrl}/{idAnuncio}/localizacao")
-	public String paginaLocalizacao(
-			@PathVariable("tituloNaUrl") String tituloNaUrl,
+	public String paginaLocalizacao(@PathVariable("tituloNaUrl") String tituloNaUrl,
 			@PathVariable("idAnuncio") Long idAnuncio, ModelMap map) {
 
-		Usuario usuario = usuarioRN.pegaUsuarioNaSessao(map);
-		Anuncio anuncio = anuncioRN.buscarAnuncioDoUsuario(usuario.getId(),
-				idAnuncio);
-		if (anuncio == null) {
-			return "redirect:/area-da-empresa/meus-anuncios";
-		}
+		if (map.get("anuncioUpdate") == null) {
+			Usuario usuario = usuarioRN.pegaUsuarioNaSessao(map);
+			Anuncio anuncio = anuncioRN.buscarAnuncioDoUsuario(usuario.getId(), idAnuncio);
+			if (anuncio == null) {
+				return "redirect:/area-da-empresa/meus-anuncios";
+			}
 
-		map.put("anuncio", anuncio);
-		return "/restrito/anuncio/gerenciar_anuncio/anuncio-localizacao";
+			map.put("anuncioUpdate", anuncio);
+
+		}
+		return "/restrito/anuncio/gerenciar_anuncio/localizacao";
 	}
 
 	@RequestMapping("/{tituloNaUrl}/{idAnuncio}/localizacao-handle")
-	public String paginaLocalizacaoHandle(
-			@PathVariable("tituloNaUrl") String tituloNaUrl,
-			@PathVariable("idAnuncio") Long idAnuncio,
-			@ModelAttribute("anuncio") Anuncio anuncio, Errors errors,
-			RedirectAttributes redirectAttrs, BindingResult result, ModelMap map) {
+	public String paginaLocalizacaoHandle(@PathVariable("tituloNaUrl") String tituloNaUrl,
+			@PathVariable("idAnuncio") Long idAnuncio, @ModelAttribute("anuncioUpdate") Anuncio anuncioUpdate,
+			Errors errors, RedirectAttributes redirectAttrs, BindingResult result, ModelMap map) {
 
 		// buscar anuncio original
 		Anuncio anuncioOriginal = anuncioRN.buscarPorId(idAnuncio);
-		anuncio.setId(anuncioOriginal.getId());
+		anuncioUpdate.setId(anuncioOriginal.getId());
 
 		// validar
-		anuncioValidator.validateLocalizacao(anuncio, errors);
+		anuncioValidator.validateLocalizacao(anuncioUpdate, errors);
 
 		if (errors.hasErrors()) {
-			map.put("anuncio", anuncio);
-			map.put("errors", "errors");
-			return "/restrito/anuncio/gerenciar_anuncio/anuncio-informacoes";
+			redirectAttrs.addFlashAttribute("errors", "errors");
+			redirectAttrs.addFlashAttribute("anuncioUpdate", anuncioUpdate);
+			redirectAttrs.addFlashAttribute("org.springframework.validation.BindingResult.anuncioUpdate", result);
+			return "redirect:/area-da-empresa/meus-anuncios/" + anuncioOriginal.getTituloNaUrl() + "/"
+					+ anuncioOriginal.getId() + "/localizacao";
 		}
 
 		// estado
-		anuncioOriginal.setEstado(anuncio.getEstado());
+		anuncioOriginal.setEstado(anuncioUpdate.getEstado());
 
 		// cidade
-		anuncioOriginal.setCidade(anuncio.getCidade());
+		anuncioOriginal.setCidade(anuncioUpdate.getCidade());
 
 		// bairro
-		anuncioOriginal.setBairro(anuncio.getBairro());
+		anuncioOriginal.setBairro(anuncioUpdate.getBairro());
 
 		// endereco
-		anuncioOriginal.setEndereco(anuncio.getEndereco());
+		anuncioOriginal.setEndereco(anuncioUpdate.getEndereco());
 
 		// cep
-		anuncioOriginal.setCep(anuncio.getCep());
+		anuncioOriginal.setCep(anuncioUpdate.getCep());
 
 		// lat e long
-		anuncioOriginal.setMapLatitude(anuncio.getMapLatitude());
-		anuncioOriginal.setMapLongitude(anuncio.getMapLongitude());
+		anuncioOriginal.setMapLatitude(anuncioUpdate.getMapLatitude());
+		anuncioOriginal.setMapLongitude(anuncioUpdate.getMapLongitude());
 
 		// atualizar
 		anuncioRN.atualizar(anuncioOriginal);
 
-		map.put("success", "success");
 		redirectAttrs.addFlashAttribute("success", "success");
-		return "redirect:/area-da-empresa/meus-anuncios/"
-				+ anuncioOriginal.getTituloNaUrl() + "/"
+		return "redirect:/area-da-empresa/meus-anuncios/" + anuncioOriginal.getTituloNaUrl() + "/"
 				+ anuncioOriginal.getId() + "/localizacao";
 	}
 
+	// ======================================================================
+	// ========================= Palavras-chave =============================
+	// ======================================================================
+
 	@RequestMapping("/{tituloNaUrl}/{idAnuncio}/palavras-chave")
-	public String paginaPalavrasChave(
-			@PathVariable("tituloNaUrl") String tituloNaUrl,
+	public String paginaPalavrasChave(@PathVariable("tituloNaUrl") String tituloNaUrl,
 			@PathVariable("idAnuncio") Long idAnuncio, ModelMap map) {
 
-		Usuario usuario = usuarioRN.pegaUsuarioNaSessao(map);
-		Anuncio anuncio = anuncioRN.buscarAnuncioDoUsuario(usuario.getId(),
-				idAnuncio);
-		if (anuncio == null) {
-			return "redirect:/area-da-empresa/meus-anuncios";
+		if (map.get("anuncioUpdate") == null) {
+			Usuario usuario = usuarioRN.pegaUsuarioNaSessao(map);
+			Anuncio anuncio = anuncioRN.buscarAnuncioDoUsuario(usuario.getId(), idAnuncio);
+			if (anuncio == null) {
+				return "redirect:/area-da-empresa/meus-anuncios";
+			}
+			map.put("anuncioUpdate", anuncio);
 		}
 
-		map.put("anuncio", anuncio);
-		return "/restrito/anuncio/gerenciar_anuncio/anuncio-palavras-chave";
+		return "/restrito/anuncio/gerenciar_anuncio/palavras-chave";
 	}
 
 	@RequestMapping("/{tituloNaUrl}/{idAnuncio}/palavras-chave-handle")
-	public String paginaPalavrasChaveHandle(
-			@PathVariable("tituloNaUrl") String tituloNaUrl,
-			@PathVariable("idAnuncio") Long idAnuncio,
-			@ModelAttribute("anuncio") Anuncio anuncio, Errors errors,
-			RedirectAttributes redirectAttrs, BindingResult result, ModelMap map) {
-
-		// validate tags
-		anuncioValidator.validateTags(anuncio, errors);
-
-		if (result.hasErrors()) {
-			map.put("anuncio", anuncio);
-			map.put("errors", "errors");
-			return "/restrito/anuncio/gerenciar_anuncio/anuncio-palavras-chave";
-		}
+	public String paginaPalavrasChaveHandle(@PathVariable("tituloNaUrl") String tituloNaUrl,
+			@PathVariable("idAnuncio") Long idAnuncio, @ModelAttribute("anuncioUpdate") Anuncio anuncioUpdate,
+			Errors errors, RedirectAttributes redirectAttrs, BindingResult result, ModelMap map) {
 
 		Anuncio anuncioOriginal = anuncioRN.buscarPorId(idAnuncio);
 
-		anuncioOriginal.setTags(anuncio.getTags());
+		// validate tags
+		anuncioValidator.validateTags(anuncioUpdate, errors);
+
+		if (result.hasErrors()) {
+			redirectAttrs.addFlashAttribute("errors", "errors");
+			redirectAttrs.addFlashAttribute("anuncioUpdate", anuncioUpdate);
+			redirectAttrs.addFlashAttribute("org.springframework.validation.BindingResult.anuncioUpdate", result);
+			return "redirect:/area-da-empresa/meus-anuncios/" + anuncioOriginal.getTituloNaUrl() + "/"
+					+ anuncioOriginal.getId() + "/palavras-chave";
+		}
+
+		anuncioOriginal.setTags(anuncioUpdate.getTags());
 
 		// atualizar
 		anuncioRN.atualizar(anuncioOriginal);
 
-		map.put("success", "success");
 		redirectAttrs.addFlashAttribute("success", "success");
-		return "redirect:/area-da-empresa/meus-anuncios/"
-				+ anuncioOriginal.getTituloNaUrl() + "/"
+		return "redirect:/area-da-empresa/meus-anuncios/" + anuncioOriginal.getTituloNaUrl() + "/"
 				+ anuncioOriginal.getId() + "/palavras-chave";
 	}
 
 	@RequestMapping("/{tituloNaUrl}/{idAnuncio}/imagens")
-	public String paginaImagens(
-			@PathVariable("tituloNaUrl") String tituloNaUrl,
+	public String paginaImagens(@PathVariable("tituloNaUrl") String tituloNaUrl,
 			@PathVariable("idAnuncio") Long idAnuncio, ModelMap map) {
 
 		Usuario usuario = usuarioRN.pegaUsuarioNaSessao(map);
-		Anuncio anuncio = anuncioRN.buscarAnuncioDoUsuario(usuario.getId(),
-				idAnuncio);
+		Anuncio anuncio = anuncioRN.buscarAnuncioDoUsuario(usuario.getId(), idAnuncio);
 
 		if (anuncio == null) {
 			return "redirect:/area-da-empresa/meus-anuncios";
 		}
 
-		//Anuncio anuncioComImagens = anuncioRN.buscarAnuncioComImagens(anuncio.getId());
+		// Anuncio anuncioComImagens =
+		// anuncioRN.buscarAnuncioComImagens(anuncio.getId());
 		List<FileMeta> lista = imagemRN.listarImagensDoAnuncio(idAnuncio);
-
-//		List<FileMeta> lista = new ArrayList<FileMeta>();
-//		if (anuncioComImagens != null) {
-//			lista = anuncioComImagens.getListaImagens();
-//		}
-
-		for (FileMeta file : lista) {
-			System.out.println("ID da imagem: " + file.getId());
-		}
 
 		map.put("listaImagens", lista);
 		map.put("anuncio", anuncio);
-		return "/restrito/anuncio/gerenciar_anuncio/anuncio-imagens";
+		return "/restrito/anuncio/gerenciar_anuncio/imagens";
 	}
 
 	@RequestMapping("/{tituloNaUrl}/{idAnuncio}/remover-imagem/{idImagem}")
 	public void removerImagem(@PathVariable("tituloNaUrl") String tituloNaUrl,
-			@PathVariable("idAnuncio") Long idAnuncio,
-			@PathVariable("idImagem") Long idImagem,
+			@PathVariable("idAnuncio") Long idAnuncio, @PathVariable("idImagem") Long idImagem,
 			HttpServletResponse response, ModelMap map) {
 
 		Usuario usuario = usuarioRN.pegaUsuarioNaSessao(map);
-		Anuncio anuncio = anuncioRN.buscarAnuncioDoUsuario(usuario.getId(),
-				idAnuncio);
+		Anuncio anuncio = anuncioRN.buscarAnuncioDoUsuario(usuario.getId(), idAnuncio);
 
 		// anuncio nao pertence ao usuario
 		if (anuncio == null) {
@@ -346,42 +341,36 @@ public class GerenciarAnuncioController {
 
 		response.setStatus(200);
 	}
-	
+
 	@RequestMapping("/{tituloNaUrl}/{idAnuncio}/remover-logotipo")
 	public void removerLogotipo(@PathVariable("tituloNaUrl") String tituloNaUrl,
-			@PathVariable("idAnuncio") Long idAnuncio,
-			HttpServletResponse response, ModelMap map) {
-		
+			@PathVariable("idAnuncio") Long idAnuncio, HttpServletResponse response, ModelMap map) {
+
 		Usuario usuario = usuarioRN.pegaUsuarioNaSessao(map);
-		Anuncio anuncio = anuncioRN.buscarAnuncioDoUsuario(usuario.getId(),
-				idAnuncio);
-		
+		Anuncio anuncio = anuncioRN.buscarAnuncioDoUsuario(usuario.getId(), idAnuncio);
+
 		// anuncio nao pertence ao usuario
 		if (anuncio == null) {
 			response.setStatus(403);
 		}
-		
-		
-		//remover logotipo
+
+		// remover logotipo
 		anuncio.setLogotipo(null);
-		
-		//atualizar
+
+		// atualizar
 		anuncioRN.atualizar(anuncio);
-		
+
 		response.setStatus(200);
 	}
 
 	@RequestMapping(value = "/{tituloNaUrl}/{idAnuncio}/imagens-handle")
-	public String anuncioImagensHandle(
-			@PathVariable("tituloNaUrl") String tituloNaUrl,
+	public String anuncioImagensHandle(@PathVariable("tituloNaUrl") String tituloNaUrl,
 			@PathVariable("idAnuncio") Long idAnuncio,
 			@RequestParam(value = "logotipo", required = false) MultipartFile logotipo,
-			@RequestParam("file") MultipartFile[] files,
-			RedirectAttributes redirectAttrs, ModelMap map) {
+			@RequestParam("file") MultipartFile[] files, RedirectAttributes redirectAttrs, ModelMap map) {
 
 		Usuario usuario = usuarioRN.pegaUsuarioNaSessao(map);
-		Anuncio anuncio = anuncioRN.buscarAnuncioDoUsuario(usuario.getId(),
-				idAnuncio);
+		Anuncio anuncio = anuncioRN.buscarAnuncioDoUsuario(usuario.getId(), idAnuncio);
 
 		if (anuncio == null) {
 			return "redirect:/area-da-empresa/meus-anuncios";
@@ -393,10 +382,9 @@ public class GerenciarAnuncioController {
 			System.out.println("Salvando logotipo ...");
 			anuncio.setLogotipo(logotipoByteArray);
 		} else {
-			
-			//input esta vazio
+
+			// input esta vazio
 		}
-		
 
 		// buscar anuncio com imagens
 		List<FileMeta> listaImagensDoAnuncio = imagemRN.listarImagensDoAnuncio(idAnuncio);
@@ -405,11 +393,11 @@ public class GerenciarAnuncioController {
 		List<FileMeta> listaImagens = imageUtils.tratarImagens(files);
 
 		int maxImgs = 5;
-		if ((listaImagensDoAnuncio.size() + listaImagens.size()) > maxImgs)  {
+		if ((listaImagensDoAnuncio.size() + listaImagens.size()) > maxImgs) {
 			map.put("errors", "errors");
 			redirectAttrs.addFlashAttribute("errors", "errors");
-			return "redirect:/area-da-empresa/meus-anuncios/"
-					+ anuncio.getTituloNaUrl() + "/" + anuncio.getId() + "/imagens";	
+			return "redirect:/area-da-empresa/meus-anuncios/" + anuncio.getTituloNaUrl() + "/" + anuncio.getId()
+					+ "/imagens";
 		}
 
 		// adicionar no banco
@@ -427,8 +415,8 @@ public class GerenciarAnuncioController {
 
 		map.put("success", "success");
 		redirectAttrs.addFlashAttribute("success", "success");
-		return "redirect:/area-da-empresa/meus-anuncios/"
-				+ anuncio.getTituloNaUrl() + "/" + anuncio.getId() + "/imagens";
+		return "redirect:/area-da-empresa/meus-anuncios/" + anuncio.getTituloNaUrl() + "/" + anuncio.getId()
+				+ "/imagens";
 	}
 
 }

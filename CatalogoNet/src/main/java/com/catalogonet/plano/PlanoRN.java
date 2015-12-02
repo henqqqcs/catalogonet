@@ -8,7 +8,6 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.catalogonet.anuncio.Anuncio;
 import com.catalogonet.produto.PrioridadeProduto;
 import com.catalogonet.produto.Produto;
 import com.catalogonet.usuario.Usuario;
@@ -25,11 +24,11 @@ public class PlanoRN {
 
 		planoAnuncio.setUsuario(usuario);
 		planoAnuncio.setProduto(produto);
-		planoAnuncio.setStatusPlanoAnuncio(StatusPlanoAnuncio.PLANO_TEMPORARIO);
+		planoAnuncio.setStatusPlanoAnuncio(StatusPlanoAnuncio.PLANO_PAGO_AGUARDANDO_APLICACAO);
 
 		planoAnuncio = this.adicionarPlanoAnuncio(planoAnuncio);
 		try {
-			System.out.println("| -- Craindo o Plano anuncio " + " produto: "
+			System.out.println("| -- Criando o Plano anuncio -" + " produto: "
 					+ produto.getNome() + " ID do plano: "
 					+ planoAnuncio.getId());
 			return this.buscarPlanoAnuncioPorId(planoAnuncio.getId());
@@ -40,27 +39,6 @@ public class PlanoRN {
 		return null;
 	}
 
-	public PlanoAnuncio criarPlanoAnuncio(Usuario usuario, Produto produto,
-			Anuncio anuncio) {
-		PlanoAnuncio planoAnuncio = new PlanoAnuncio();
-
-		planoAnuncio.setUsuario(usuario);
-		planoAnuncio.setAnuncio(anuncio);
-		planoAnuncio.setProduto(produto);
-
-		planoAnuncio.setStatusPlanoAnuncio(StatusPlanoAnuncio.PLANO_TEMPORARIO);
-		this.adicionarPlanoAnuncio(planoAnuncio);
-		try {
-			System.out.println("| -- Craindo o Plano anuncio " + " produto: "
-					+ produto.getNome() + " ID do plano: "
-					+ planoAnuncio.getId());
-			return this.buscarPlanoAnuncioPorId(planoAnuncio.getId());
-		} catch (Exception e) {
-			System.out.println("Erro ao salvar PlanoAnuncio: ");
-			e.printStackTrace();
-		}
-		return null;
-	}
 
 	public void atualizarPlanoStatus(PlanoAnuncio planoAnuncio,
 			StatusPlanoAnuncio status) {

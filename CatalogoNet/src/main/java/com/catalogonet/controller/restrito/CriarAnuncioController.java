@@ -350,8 +350,8 @@ public class CriarAnuncioController {
 		Usuario usuario = usuarioRN.pegaUsuarioNaSessao(map);
 
 		// criar plano, salva no banco
-		PlanoAnuncio plano = planoRN.criarPlanoAnuncio(usuario, produto,
-				anuncio);
+		//PlanoAnuncio plano = planoRN.criarPlanoAnuncio(usuario, produto,
+		//		anuncio);
 
 		// prioridade
 		anuncio.setPrioridadeProduto(produto.getPrioridadeProduto()
@@ -361,7 +361,7 @@ public class CriarAnuncioController {
 		anuncioRN.atualizar(anuncio);
 
 		// atribuir plano
-		atribuidorDePlanos.atribuir(plano, anuncio);
+		//atribuidorDePlanos.atribuir(plano, anuncio);
 
 		// eh gratuito?
 		if (produto.getPrioridadeProduto() == PrioridadeProduto.PRODUTO_GRATUITO) {

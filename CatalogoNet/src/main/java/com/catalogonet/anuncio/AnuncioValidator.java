@@ -51,7 +51,7 @@ public class AnuncioValidator implements Validator {
 						.getMessage("anuncio.titulo.notnull", null, locale));
 
 		// titulo size
-		if (!stringLenghtBetween(anuncio.getTitulo(), 5, 55)) {
+		if (!stringLenghtBetween(anuncio.getTitulo(), 5, 50)) {
 			errors.rejectValue("titulo", "", messageSource.getMessage(
 					"anuncio.titulo.size", null, locale));
 		}

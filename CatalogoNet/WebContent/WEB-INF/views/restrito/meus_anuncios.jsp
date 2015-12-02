@@ -83,8 +83,8 @@
 											<ul>
 												<c:forEach var="anuncio" items="${listaAnuncios}" varStatus="index">
 
-													<li>
-														<c:url var="urlAnuncio" value="/area-da-empresa/meus-anuncios/${anuncio.tituloNaUrl}/${anuncio.id}" />
+													<li><c:url var="urlAnuncio"
+															value="/area-da-empresa/meus-anuncios/${anuncio.tituloNaUrl}/${anuncio.id}" />
 														<div class="meus-anuncios-wrapper" onclick="javascript:location.href='${urlAnuncio}'">
 
 															<div itemscope itemtype="http://schema.org/LocalBusiness">
@@ -102,9 +102,7 @@
 																	<span itemprop="name"><a href="${urlAnuncio}">${anuncio.titulo}</a></span>
 																</h2>
 
-																<div class="categoria">
-																	Em ${anuncio.subCategoria.nome}
-																</div>
+																<div class="categoria">Em ${anuncio.subCategoria.nome}</div>
 																<div class="address" itemprop="address" itemscope
 																	itemtype="http://schema.org/PostalAddress">
 																	<span itemprop="addressLocality">${anuncio.cidade.nome}</span>, <span
@@ -137,8 +135,7 @@
 
 															<div class="clear"></div>
 
-														</div>
-													</li>
+														</div></li>
 
 												</c:forEach>
 											</ul>
