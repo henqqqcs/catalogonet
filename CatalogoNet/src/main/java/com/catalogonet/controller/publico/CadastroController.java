@@ -19,7 +19,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.catalogonet.email.MandadorEmail;
 import com.catalogonet.usuario.Usuario;
 import com.catalogonet.usuario.UsuarioRN;
-import com.catalogonet.usuario.UsuarioValidator;
+import com.catalogonet.validators.UsuarioValidator;
 
 @Controller
 public class CadastroController {

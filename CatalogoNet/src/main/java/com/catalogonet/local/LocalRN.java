@@ -2,7 +2,6 @@ package com.catalogonet.local;
 
 import java.util.List;
 
-import javax.annotation.PostConstruct;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -124,11 +123,6 @@ public class LocalRN {
 		return dao.buscarNomeEstado(idEstado);
 	}
 
-	/**
-	 * Esse metodo faz o uso de cache
-	 * @return lista de estados com todas as cidades e bairros
-	 */
-	@PostConstruct
 	public List<Estado> listarLocais() {
 		return dao.listarLocais();
 	}

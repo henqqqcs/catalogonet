@@ -153,7 +153,6 @@ public class JpaLocalDAO implements LocalDAO {
 	@Cacheable(value = "cacheLocais")
 	public List<Estado> listarLocais() {
 		
-		System.out.println("|-- Construindo lista de locais");
 		List<Estado> listaEstados = this.listarEstados();
 
 		for (Estado estado : listaEstados) {

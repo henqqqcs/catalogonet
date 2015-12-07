@@ -1,8 +1,11 @@
 package com.catalogonet.email;
 
+import java.util.List;
+
 public interface EmailProvider {
 	
-	// manda o email
-	public void mandar(String emailTo, String mensagem, String subject);
+	public void send(String emailTo, String mensagem, String subject);
+	
+	public void send(List<String> listEmails, String mensagem, String subject);
 	
 }

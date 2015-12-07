@@ -1,4 +1,4 @@
-package com.catalogonet.anuncio;
+package com.catalogonet.validators;
 
 import java.util.List;
 import java.util.Locale;
@@ -12,6 +12,8 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
+import com.catalogonet.anuncio.Anuncio;
+import com.catalogonet.anuncio.AnuncioRN;
 import com.catalogonet.local.Bairro;
 import com.catalogonet.local.Cidade;
 import com.catalogonet.local.Estado;

@@ -1,4 +1,4 @@
-package com.catalogonet.usuario;
+package com.catalogonet.validators;
 
 import java.util.HashMap;
 import java.util.Locale;

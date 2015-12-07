@@ -23,8 +23,8 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.catalogonet.usuario.Usuario;
 import com.catalogonet.usuario.UsuarioRN;
-import com.catalogonet.usuario.UsuarioValidator;
-import com.catalogonet.usuario.UsuarioValidatorUpdate;
+import com.catalogonet.validators.UsuarioValidator;
+import com.catalogonet.validators.UsuarioValidatorUpdate;
 
 @Controller
 @RequestMapping("/area-da-empresa/meus-dados")

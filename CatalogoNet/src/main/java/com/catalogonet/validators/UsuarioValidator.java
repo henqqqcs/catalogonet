@@ -1,4 +1,4 @@
-package com.catalogonet.usuario;
+package com.catalogonet.validators;
 
 import java.util.Locale;
 
@@ -9,6 +9,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
+
+import com.catalogonet.usuario.Usuario;
 
 @Component
 public class UsuarioValidator implements Validator {

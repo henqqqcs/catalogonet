@@ -1,7 +1,6 @@
 package com.catalogonet.controller.admin;
 
 import java.util.List;
-import java.util.Properties;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.catalogonet.backup.Backup;
 import com.catalogonet.backup.BackupRN;
 import com.catalogonet.email.EmailProperties;
-import com.catalogonet.util.FileUtils;
 
 @Controller
 @RequestMapping("/adminadmin/configuracoes")
@@ -77,42 +75,42 @@ public class AdminConfiguracoesController {
 	@RequestMapping("/atualizar-email")
 	public String configuracoesAtualizarEmail(@ModelAttribute EmailProperties emailProperties, ModelMap map) {
 		
-		try {
-			Properties props = new Properties();
-			props = FileUtils.loadProperties();
-			
-			System.out.println("No controller:");
-			if (props == null) {
-				System.out.println("No controller props eh null");
-			} else {
-				System.out.println("Props no controller nao eh null");
-			}
-			
-			if (emailProperties == null) {
-				System.out.println("email properties eh null");
-			} else {
-				System.out.println("email properties nao eh null");
-			}
-			
-			//atualiza as properties
-			props.setProperty("hostName", emailProperties.getHostName());
-			props.setProperty("fromAdrr", emailProperties.getFromAdrr());
-			props.setProperty("fromName", emailProperties.getFromName());
-			props.setProperty("autheticatorLogin", emailProperties.getAutheticatorLogin());
-			props.setProperty("autheticatorPassword", emailProperties.getAutheticatorPassword());
-			props.setProperty("smtpPort", String.valueOf(emailProperties.getSmtpPort()));
-			props.setProperty("charset", emailProperties.getCharset());
-			
-			//salva a props
-			FileUtils.salvarProperties(props);
+//		try {
+//			Properties props = new Properties();
+//			props = FileUtils.loadProperties();
+//			
+//			System.out.println("No controller:");
+//			if (props == null) {
+//				System.out.println("No controller props eh null");
+//			} else {
+//				System.out.println("Props no controller nao eh null");
+//			}
+//			
+//			if (emailProperties == null) {
+//				System.out.println("email properties eh null");
+//			} else {
+//				System.out.println("email properties nao eh null");
+//			}
+//			
+//			//atualiza as properties
+//			props.setProperty("hostName", emailProperties.getHostName());
+//			props.setProperty("fromAdrr", emailProperties.getFromAdrr());
+//			props.setProperty("fromName", emailProperties.getFromName());
+//			props.setProperty("autheticatorLogin", emailProperties.getAutheticatorLogin());
+//			props.setProperty("autheticatorPassword", emailProperties.getAutheticatorPassword());
+//			props.setProperty("smtpPort", String.valueOf(emailProperties.getSmtpPort()));
+//			props.setProperty("charset", emailProperties.getCharset());
+//			
+//			//salva a props
+//			FileUtils.salvarProperties(props);
 
 			//map.put("mensagem", "As configuraçoes foram salvas com sucesso! Para que as alterações tenham efeito e necessario um server reset.");
 	
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			//map.put("mensagem", "Aconteceu algum erro ao tentar salvar as configurações de email.");
-			e.printStackTrace();
-		}
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			//map.put("mensagem", "Aconteceu algum erro ao tentar salvar as configurações de email.");
+//			e.printStackTrace();
+//		}
 		
 		return "redirect:/adminadmin/configuracoes/email";
 	}

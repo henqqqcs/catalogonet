@@ -21,7 +21,6 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.catalogonet.anuncio.Anuncio;
 import com.catalogonet.anuncio.AnuncioRN;
-import com.catalogonet.anuncio.AnuncioValidator;
 import com.catalogonet.imagem.FileMeta;
 import com.catalogonet.imagem.ImagemRN;
 import com.catalogonet.plano.PlanoAnuncio;
@@ -29,6 +28,7 @@ import com.catalogonet.plano.PlanoRN;
 import com.catalogonet.usuario.Usuario;
 import com.catalogonet.usuario.UsuarioRN;
 import com.catalogonet.util.ImageUtils;
+import com.catalogonet.validators.AnuncioValidator;
 
 @Controller
 @RequestMapping("/area-da-empresa/meus-anuncios")

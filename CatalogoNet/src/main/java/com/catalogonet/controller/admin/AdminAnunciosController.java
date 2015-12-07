@@ -13,7 +13,6 @@ import com.catalogonet.anuncio.Anuncio;
 import com.catalogonet.anuncio.AnuncioRN;
 import com.catalogonet.email.MandadorEmail;
 import com.catalogonet.usuario.Usuario;
-import com.catalogonet.usuario.UsuarioRN;
 
 @Controller
 @RequestMapping("/adminadmin/anuncios")
@@ -22,8 +21,8 @@ public class AdminAnunciosController {
 	@Autowired
 	private AnuncioRN anuncioRN;
 
-	@Autowired
-	private UsuarioRN usuarioRN;
+//	@Autowired
+//	private UsuarioRN usuarioRN;
 
 	@Autowired
 	private MandadorEmail mandadorEmail;
