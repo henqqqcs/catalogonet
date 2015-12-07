@@ -1,4 +1,4 @@
-package com.catalogonet.produto;
+package com.catalogonet.model;
 
 public enum PrioridadeProduto {
 	

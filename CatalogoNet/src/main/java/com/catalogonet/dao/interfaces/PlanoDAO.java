@@ -1,6 +1,8 @@
-package com.catalogonet.plano;
+package com.catalogonet.dao.interfaces;
 
 import java.util.List;
+
+import com.catalogonet.model.PlanoAnuncio;
 
 
 public interface PlanoDAO {

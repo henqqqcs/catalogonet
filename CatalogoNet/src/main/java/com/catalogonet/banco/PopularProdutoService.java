@@ -5,9 +5,9 @@ import java.math.BigDecimal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.catalogonet.produto.PrioridadeProduto;
-import com.catalogonet.produto.Produto;
-import com.catalogonet.produto.ProdutoRN;
+import com.catalogonet.model.PrioridadeProduto;
+import com.catalogonet.model.Produto;
+import com.catalogonet.negocio.ProdutoRN;
 
 
 @Service

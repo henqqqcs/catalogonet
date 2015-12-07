@@ -11,7 +11,7 @@ import br.com.uol.pagseguro.domain.Transaction;
 import br.com.uol.pagseguro.properties.PagSeguroConfig;
 import br.com.uol.pagseguro.service.NotificationService;
 
-import com.catalogonet.pedido.Pedido;
+import com.catalogonet.model.Pedido;
 import com.catalogonet.plano.AtribuidorDePlanos;
 
 

@@ -1,4 +1,4 @@
-package com.catalogonet.categoria;
+package com.catalogonet.model;
 
 
 /** Por algum motivo, quando vou passar a classe Cateogira o java script da 

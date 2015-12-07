@@ -11,9 +11,9 @@ import br.com.uol.pagseguro.exception.PagSeguroServiceException;
 import br.com.uol.pagseguro.properties.PagSeguroConfig;
 import br.com.uol.pagseguro.service.NotificationService;
 
-import com.catalogonet.pedido.Pedido;
-import com.catalogonet.produto.Produto;
-import com.catalogonet.usuario.Usuario;
+import com.catalogonet.model.Pedido;
+import com.catalogonet.model.Produto;
+import com.catalogonet.model.Usuario;
 
 public class PagSeguroCheckoutHelper {
 

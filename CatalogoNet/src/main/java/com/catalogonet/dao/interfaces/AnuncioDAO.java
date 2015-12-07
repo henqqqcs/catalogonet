@@ -1,8 +1,9 @@
-package com.catalogonet.anuncio;
+package com.catalogonet.dao.interfaces;
 
 import java.util.List;
 
-import com.catalogonet.usuario.Usuario;
+import com.catalogonet.model.Anuncio;
+import com.catalogonet.model.Usuario;
 
 
 

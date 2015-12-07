@@ -1,6 +1,8 @@
-package com.catalogonet.usuario;
+package com.catalogonet.dao.interfaces;
 
 import java.util.List;
+
+import com.catalogonet.model.Usuario;
 
 
 

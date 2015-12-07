@@ -1,6 +1,8 @@
-package com.catalogonet.backup;
+package com.catalogonet.dao.interfaces;
 
 import java.util.List;
+
+import com.catalogonet.model.Backup;
 
 public interface BackupDAO {
 

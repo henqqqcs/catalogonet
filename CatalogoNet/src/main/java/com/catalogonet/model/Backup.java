@@ -1,4 +1,4 @@
-package com.catalogonet.backup;
+package com.catalogonet.model;
 
 import java.util.Calendar;
 

@@ -1,4 +1,4 @@
-package com.catalogonet.local;
+package com.catalogonet.model;
 
 import java.text.Collator;
 import java.util.Locale;

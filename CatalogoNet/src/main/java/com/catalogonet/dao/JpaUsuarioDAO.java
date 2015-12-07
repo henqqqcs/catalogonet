@@ -1,4 +1,4 @@
-package com.catalogonet.usuario;
+package com.catalogonet.dao;
 
 import java.util.List;
 
@@ -8,6 +8,9 @@ import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
 import org.springframework.stereotype.Repository;
+
+import com.catalogonet.dao.interfaces.UsuarioDAO;
+import com.catalogonet.model.Usuario;
 
 @Repository
 public class JpaUsuarioDAO implements UsuarioDAO {

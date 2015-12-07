@@ -1,4 +1,4 @@
-package com.catalogonet.anuncio;
+package com.catalogonet.model;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -23,14 +23,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-import com.catalogonet.categoria.Categoria;
-import com.catalogonet.categoria.SubCategoria;
 import com.catalogonet.converter.LocalDatePersistenceConverter;
-import com.catalogonet.imagem.FileMeta;
-import com.catalogonet.local.Bairro;
-import com.catalogonet.local.Cidade;
-import com.catalogonet.local.Estado;
-import com.catalogonet.usuario.Usuario;
 import com.catalogonet.util.StringFormat;
 
 @Entity

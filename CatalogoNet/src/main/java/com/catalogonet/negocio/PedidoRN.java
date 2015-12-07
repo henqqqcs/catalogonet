@@ -1,4 +1,4 @@
-package com.catalogonet.pedido;
+package com.catalogonet.negocio;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -7,6 +7,11 @@ import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import com.catalogonet.dao.interfaces.PedidoDAO;
+import com.catalogonet.model.MetodoPagamento;
+import com.catalogonet.model.Pedido;
+import com.catalogonet.model.PedidoStatus;
 
 @Component
 @Transactional

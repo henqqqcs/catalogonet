@@ -1,4 +1,4 @@
-package com.catalogonet.pedido;
+package com.catalogonet.model;
 
 public enum PedidoStatus {
 

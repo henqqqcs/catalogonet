@@ -1,7 +1,7 @@
 package com.catalogonet.teste.plano;
 
-import com.catalogonet.produto.PrioridadeProduto;
-import com.catalogonet.produto.Produto;
+import com.catalogonet.model.PrioridadeProduto;
+import com.catalogonet.model.Produto;
 
 public class TesteAtribuicaoDePlanos {
 

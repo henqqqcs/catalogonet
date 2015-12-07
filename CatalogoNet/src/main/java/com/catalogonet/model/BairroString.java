@@ -1,4 +1,4 @@
-package com.catalogonet.local;
+package com.catalogonet.model;
 
 /** Por algum motivo, quando vou passar a classe Cidade o java script da 
  * pagina novo_anuncio_form não aceita os atributos que n�o s�o strings

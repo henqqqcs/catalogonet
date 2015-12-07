@@ -9,14 +9,14 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-import com.catalogonet.anuncio.Anuncio;
-import com.catalogonet.anuncio.AnuncioRN;
-import com.catalogonet.pedido.Pedido;
-import com.catalogonet.pedido.PedidoRN;
-import com.catalogonet.plano.PlanoAnuncio;
-import com.catalogonet.plano.PlanoRN;
-import com.catalogonet.usuario.Usuario;
-import com.catalogonet.usuario.UsuarioRN;
+import com.catalogonet.model.Anuncio;
+import com.catalogonet.model.Pedido;
+import com.catalogonet.model.PlanoAnuncio;
+import com.catalogonet.model.Usuario;
+import com.catalogonet.negocio.AnuncioRN;
+import com.catalogonet.negocio.PedidoRN;
+import com.catalogonet.negocio.PlanoRN;
+import com.catalogonet.negocio.UsuarioRN;
 
 @Controller
 @RequestMapping("/area-da-empresa")

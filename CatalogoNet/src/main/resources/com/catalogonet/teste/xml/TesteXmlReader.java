@@ -12,8 +12,8 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import com.catalogonet.categoria.Categoria;
-import com.catalogonet.categoria.SubCategoria;
+import com.catalogonet.model.Categoria;
+import com.catalogonet.model.SubCategoria;
 import com.catalogonet.util.FileUtils;
 
 public class TesteXmlReader {

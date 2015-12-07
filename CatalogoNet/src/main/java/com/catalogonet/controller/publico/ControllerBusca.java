@@ -1,4 +1,4 @@
-package com.catalogonet.controller;
+package com.catalogonet.controller.publico;
 
 import java.util.List;
 
@@ -12,11 +12,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.catalogonet.anuncio.Anuncio;
-import com.catalogonet.busca.Busca;
 import com.catalogonet.busca.Buscador;
-import com.catalogonet.busca.ResultadoBusca;
 import com.catalogonet.busca.ServicoResultadoPagination;
+import com.catalogonet.model.Anuncio;
+import com.catalogonet.model.Busca;
+import com.catalogonet.model.ResultadoBusca;
 
 @Controller
 @RequestMapping("/busca")

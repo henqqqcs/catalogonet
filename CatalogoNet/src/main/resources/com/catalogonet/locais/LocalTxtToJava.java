@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import com.catalogonet.local.Bairro;
-import com.catalogonet.local.Cidade;
-import com.catalogonet.local.Estado;
+import com.catalogonet.model.Bairro;
+import com.catalogonet.model.Cidade;
+import com.catalogonet.model.Estado;
 
 public class LocalTxtToJava {
 

@@ -9,9 +9,9 @@ import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.catalogonet.categoria.CategoriaRN;
 import com.catalogonet.email.EmailProperties;
-import com.catalogonet.local.LocalRN;
+import com.catalogonet.negocio.CategoriaRN;
+import com.catalogonet.negocio.LocalRN;
 import com.catalogonet.util.FileUtils;
 
 @Service

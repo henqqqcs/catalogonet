@@ -1,4 +1,4 @@
-package com.catalogonet.plano;
+package com.catalogonet.dao;
 
 import java.util.List;
 
@@ -7,6 +7,9 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
 import org.springframework.stereotype.Repository;
+
+import com.catalogonet.dao.interfaces.PlanoDAO;
+import com.catalogonet.model.PlanoAnuncio;
 
 @Repository
 public class JpaPlanoDAO implements PlanoDAO {

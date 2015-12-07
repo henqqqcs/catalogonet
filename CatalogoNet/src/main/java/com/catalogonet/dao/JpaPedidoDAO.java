@@ -1,4 +1,4 @@
-package com.catalogonet.pedido;
+package com.catalogonet.dao;
 
 import java.util.List;
 
@@ -7,6 +7,9 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
 import org.springframework.stereotype.Repository;
+
+import com.catalogonet.dao.interfaces.PedidoDAO;
+import com.catalogonet.model.Pedido;
 
 @Repository
 public class JpaPedidoDAO implements PedidoDAO {

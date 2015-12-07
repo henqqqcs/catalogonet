@@ -1,6 +1,8 @@
-package com.catalogonet.imagem;
+package com.catalogonet.dao.interfaces;
 
 import java.util.List;
+
+import com.catalogonet.model.FileMeta;
 
 
 public interface ImagemDAO {

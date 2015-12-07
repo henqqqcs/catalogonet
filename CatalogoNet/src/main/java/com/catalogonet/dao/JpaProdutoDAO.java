@@ -1,4 +1,4 @@
-package com.catalogonet.produto;
+package com.catalogonet.dao;
 
 import java.util.Collections;
 import java.util.List;
@@ -8,6 +8,9 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
 import org.springframework.stereotype.Repository;
+
+import com.catalogonet.dao.interfaces.ProdutoDAO;
+import com.catalogonet.model.Produto;
 
 @Repository
 public class JpaProdutoDAO implements ProdutoDAO {

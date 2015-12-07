@@ -1,4 +1,4 @@
-package com.catalogonet.usuario;
+package com.catalogonet.model;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;

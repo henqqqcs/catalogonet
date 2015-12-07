@@ -1,8 +1,8 @@
-package com.catalogonet.busca;
+package com.catalogonet.dao.interfaces;
 
 import java.util.List;
 
-import com.catalogonet.anuncio.Anuncio;
+import com.catalogonet.model.Anuncio;
 
 public interface BuscaDAO {
 	

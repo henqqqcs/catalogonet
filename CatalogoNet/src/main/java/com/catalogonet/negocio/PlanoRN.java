@@ -1,4 +1,4 @@
-package com.catalogonet.plano;
+package com.catalogonet.negocio;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -8,9 +8,12 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.catalogonet.produto.PrioridadeProduto;
-import com.catalogonet.produto.Produto;
-import com.catalogonet.usuario.Usuario;
+import com.catalogonet.dao.interfaces.PlanoDAO;
+import com.catalogonet.model.PlanoAnuncio;
+import com.catalogonet.model.PrioridadeProduto;
+import com.catalogonet.model.Produto;
+import com.catalogonet.model.StatusPlanoAnuncio;
+import com.catalogonet.model.Usuario;
 
 @Component
 @Transactional
@@ -54,7 +57,7 @@ public class PlanoRN {
 	 * Apenas o Atribuidor de Planos pode usar este metodo
 	 * @param planoAnuncio
 	 */
-	protected void ativarPlano(PlanoAnuncio planoAnuncio) {
+	public void ativarPlano(PlanoAnuncio planoAnuncio) {
 		// setar ativo
 		planoAnuncio.setAtivo(true);
 
@@ -70,11 +73,7 @@ public class PlanoRN {
 		this.atualizarPlanoAnuncio(planoAnuncio);
 	}
 
-	/**
-	 * Apenas o Atribuidor de Planos pode usar este metodo
-	 * @param planoAnuncio
-	 */
-	protected void suspenderPlano(PlanoAnuncio plano) {
+	public void suspenderPlano(PlanoAnuncio plano) {
 
 		// desativar plano atual
 		plano.setAtivo(false);

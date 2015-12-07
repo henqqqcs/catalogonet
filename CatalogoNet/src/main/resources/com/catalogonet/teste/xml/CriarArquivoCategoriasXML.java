@@ -16,8 +16,8 @@ import org.w3c.dom.Comment;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
-import com.catalogonet.categoria.Categoria;
-import com.catalogonet.categoria.SubCategoria;
+import com.catalogonet.model.Categoria;
+import com.catalogonet.model.SubCategoria;
 
 public class CriarArquivoCategoriasXML {
 

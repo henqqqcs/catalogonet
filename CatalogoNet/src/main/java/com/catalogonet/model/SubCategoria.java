@@ -1,4 +1,4 @@
-package com.catalogonet.categoria;
+package com.catalogonet.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;

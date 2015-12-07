@@ -1,4 +1,4 @@
-package com.catalogonet.busca;
+package com.catalogonet.model;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import com.catalogonet.anuncio.Anuncio;
 import com.catalogonet.util.MapUtil;
 import com.catalogonet.util.StringFormat;
 

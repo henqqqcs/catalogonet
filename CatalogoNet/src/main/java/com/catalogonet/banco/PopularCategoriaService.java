@@ -5,9 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.catalogonet.categoria.Categoria;
-import com.catalogonet.categoria.CategoriaRN;
-import com.catalogonet.categoria.SubCategoria;
+import com.catalogonet.model.Categoria;
+import com.catalogonet.model.SubCategoria;
+import com.catalogonet.negocio.CategoriaRN;
 import com.catalogonet.xml.CategoriaXmlReader;
 
 @Component

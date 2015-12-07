@@ -1,6 +1,9 @@
-package com.catalogonet.categoria;
+package com.catalogonet.dao.interfaces;
 
 import java.util.List;
+
+import com.catalogonet.model.Categoria;
+import com.catalogonet.model.SubCategoria;
 
 public interface CategoriaDAO {
 

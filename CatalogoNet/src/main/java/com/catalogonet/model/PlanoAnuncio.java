@@ -1,4 +1,4 @@
-package com.catalogonet.plano;
+package com.catalogonet.model;
 
 import java.time.LocalDate;
 import java.time.Period;
@@ -17,10 +17,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
-import com.catalogonet.anuncio.Anuncio;
 import com.catalogonet.converter.LocalDatePersistenceConverter;
-import com.catalogonet.produto.Produto;
-import com.catalogonet.usuario.Usuario;
 
 @Entity
 @Table(name = "plano_anuncio")

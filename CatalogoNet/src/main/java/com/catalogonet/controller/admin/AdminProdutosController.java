@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.catalogonet.produto.PrioridadeProduto;
-import com.catalogonet.produto.Produto;
-import com.catalogonet.produto.ProdutoRN;
+import com.catalogonet.model.PrioridadeProduto;
+import com.catalogonet.model.Produto;
+import com.catalogonet.negocio.ProdutoRN;
 
 @Controller
 @RequestMapping("/adminadmin/produtos")

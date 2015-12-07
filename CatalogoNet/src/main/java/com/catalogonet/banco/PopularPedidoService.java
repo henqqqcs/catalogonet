@@ -3,14 +3,14 @@ package com.catalogonet.banco;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.catalogonet.pedido.MetodoPagamento;
-import com.catalogonet.pedido.Pedido;
-import com.catalogonet.pedido.PedidoRN;
-import com.catalogonet.pedido.PedidoStatus;
-import com.catalogonet.produto.Produto;
-import com.catalogonet.produto.ProdutoRN;
-import com.catalogonet.usuario.Usuario;
-import com.catalogonet.usuario.UsuarioRN;
+import com.catalogonet.model.MetodoPagamento;
+import com.catalogonet.model.Pedido;
+import com.catalogonet.model.PedidoStatus;
+import com.catalogonet.model.Produto;
+import com.catalogonet.model.Usuario;
+import com.catalogonet.negocio.PedidoRN;
+import com.catalogonet.negocio.ProdutoRN;
+import com.catalogonet.negocio.UsuarioRN;
 
 
 @Service

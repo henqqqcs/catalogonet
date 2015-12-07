@@ -1,4 +1,4 @@
-package com.catalogonet.backup;
+package com.catalogonet.dao;
 
 import java.util.List;
 
@@ -8,6 +8,9 @@ import javax.persistence.StoredProcedureQuery;
 import javax.persistence.TypedQuery;
 
 import org.springframework.stereotype.Repository;
+
+import com.catalogonet.dao.interfaces.BackupDAO;
+import com.catalogonet.model.Backup;
 
 
 @Repository

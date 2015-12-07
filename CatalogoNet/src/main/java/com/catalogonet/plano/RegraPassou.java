@@ -1,6 +1,6 @@
-package com.catalogonet.plano.regra;
+package com.catalogonet.plano;
 
-import com.catalogonet.plano.PlanoAnuncio;
+import com.catalogonet.model.PlanoAnuncio;
 
 public class RegraPassou implements RegraAtribuicaoPlanoAnuncio {
 

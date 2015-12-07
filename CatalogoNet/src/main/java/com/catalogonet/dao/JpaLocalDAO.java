@@ -1,4 +1,4 @@
-package com.catalogonet.local;
+package com.catalogonet.dao;
 
 import java.util.Collections;
 import java.util.List;
@@ -9,6 +9,11 @@ import javax.persistence.TypedQuery;
 
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Repository;
+
+import com.catalogonet.dao.interfaces.LocalDAO;
+import com.catalogonet.model.Bairro;
+import com.catalogonet.model.Cidade;
+import com.catalogonet.model.Estado;
 
 @Repository
 public class JpaLocalDAO implements LocalDAO {

@@ -3,18 +3,18 @@ package com.catalogonet.banco;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.catalogonet.anuncio.Anuncio;
-import com.catalogonet.anuncio.AnuncioRN;
-import com.catalogonet.categoria.Categoria;
-import com.catalogonet.categoria.CategoriaRN;
-import com.catalogonet.categoria.SubCategoria;
-import com.catalogonet.local.Bairro;
-import com.catalogonet.local.Cidade;
-import com.catalogonet.local.Estado;
-import com.catalogonet.local.LocalRN;
-import com.catalogonet.produto.PrioridadeProduto;
-import com.catalogonet.usuario.Usuario;
-import com.catalogonet.usuario.UsuarioRN;
+import com.catalogonet.model.Anuncio;
+import com.catalogonet.model.Bairro;
+import com.catalogonet.model.Categoria;
+import com.catalogonet.model.Cidade;
+import com.catalogonet.model.Estado;
+import com.catalogonet.model.PrioridadeProduto;
+import com.catalogonet.model.SubCategoria;
+import com.catalogonet.model.Usuario;
+import com.catalogonet.negocio.AnuncioRN;
+import com.catalogonet.negocio.CategoriaRN;
+import com.catalogonet.negocio.LocalRN;
+import com.catalogonet.negocio.UsuarioRN;
 
 @Service
 public class PopularAnunciosTesteService {

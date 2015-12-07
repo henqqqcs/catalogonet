@@ -1,4 +1,4 @@
-package com.catalogonet.categoria;
+package com.catalogonet.dao;
 
 import java.util.List;
 
@@ -8,6 +8,10 @@ import javax.persistence.TypedQuery;
 
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Repository;
+
+import com.catalogonet.dao.interfaces.CategoriaDAO;
+import com.catalogonet.model.Categoria;
+import com.catalogonet.model.SubCategoria;
 
 @Repository
 public class JpaCategoriaDAO implements CategoriaDAO {

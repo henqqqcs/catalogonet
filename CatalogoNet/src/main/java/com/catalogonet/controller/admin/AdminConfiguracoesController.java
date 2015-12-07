@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.catalogonet.backup.Backup;
-import com.catalogonet.backup.BackupRN;
 import com.catalogonet.email.EmailProperties;
+import com.catalogonet.model.Backup;
+import com.catalogonet.negocio.BackupRN;
 
 @Controller
 @RequestMapping("/adminadmin/configuracoes")

@@ -1,6 +1,8 @@
-package com.catalogonet.pedido;
+package com.catalogonet.dao.interfaces;
 
 import java.util.List;
+
+import com.catalogonet.model.Pedido;
 
 
 public interface PedidoDAO {

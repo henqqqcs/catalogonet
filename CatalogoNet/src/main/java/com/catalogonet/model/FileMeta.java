@@ -1,4 +1,4 @@
-package com.catalogonet.imagem;
+package com.catalogonet.model;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;

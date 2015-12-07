@@ -1,6 +1,8 @@
-package com.catalogonet.produto;
+package com.catalogonet.dao.interfaces;
 
 import java.util.List;
+
+import com.catalogonet.model.Produto;
 
 
 public interface ProdutoDAO {

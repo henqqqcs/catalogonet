@@ -3,9 +3,10 @@ package com.catalogonet.plano;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.catalogonet.anuncio.Anuncio;
-import com.catalogonet.anuncio.AnuncioRN;
-import com.catalogonet.plano.regra.ResultadoVerificacaoDeRegras;
+import com.catalogonet.model.Anuncio;
+import com.catalogonet.model.PlanoAnuncio;
+import com.catalogonet.negocio.AnuncioRN;
+import com.catalogonet.negocio.PlanoRN;
 
 @Component
 public class AtribuidorDePlanos {

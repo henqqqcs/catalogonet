@@ -15,7 +15,7 @@ import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
-import com.catalogonet.local.Bairro;
+import com.catalogonet.model.Bairro;
 
 public class LocaisXMLCreate {
 

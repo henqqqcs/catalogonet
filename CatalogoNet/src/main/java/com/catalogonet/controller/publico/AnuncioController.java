@@ -8,10 +8,10 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.catalogonet.anuncio.Anuncio;
-import com.catalogonet.anuncio.AnuncioRN;
-import com.catalogonet.imagem.FileMeta;
-import com.catalogonet.imagem.ImagemRN;
+import com.catalogonet.model.Anuncio;
+import com.catalogonet.model.FileMeta;
+import com.catalogonet.negocio.AnuncioRN;
+import com.catalogonet.negocio.ImagemRN;
 
 @Controller
 @RequestMapping("/anuncio")

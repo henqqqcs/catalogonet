@@ -12,17 +12,17 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.catalogonet.model.MetodoPagamento;
+import com.catalogonet.model.Pedido;
+import com.catalogonet.model.PedidoStatus;
+import com.catalogonet.model.Produto;
+import com.catalogonet.model.Usuario;
+import com.catalogonet.negocio.PedidoRN;
+import com.catalogonet.negocio.ProdutoRN;
+import com.catalogonet.negocio.UsuarioRN;
 import com.catalogonet.pagamento.PagSeguroCheckoutHelper;
 import com.catalogonet.pagamento.PaypalCheckoutHelper;
 import com.catalogonet.pagamento.ResultadoPagamento;
-import com.catalogonet.pedido.MetodoPagamento;
-import com.catalogonet.pedido.Pedido;
-import com.catalogonet.pedido.PedidoRN;
-import com.catalogonet.pedido.PedidoStatus;
-import com.catalogonet.produto.Produto;
-import com.catalogonet.produto.ProdutoRN;
-import com.catalogonet.usuario.Usuario;
-import com.catalogonet.usuario.UsuarioRN;
 
 @Controller
 @RequestMapping("/pagamento")

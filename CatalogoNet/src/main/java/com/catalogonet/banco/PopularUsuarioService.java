@@ -3,9 +3,9 @@ package com.catalogonet.banco;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.catalogonet.usuario.Permissao;
-import com.catalogonet.usuario.Usuario;
-import com.catalogonet.usuario.UsuarioRN;
+import com.catalogonet.model.Permissao;
+import com.catalogonet.model.Usuario;
+import com.catalogonet.negocio.UsuarioRN;
 
 @Service
 public class PopularUsuarioService {

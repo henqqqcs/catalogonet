@@ -6,12 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
-import com.catalogonet.anuncio.Anuncio;
 import com.catalogonet.email.template.EmailTemplate;
 import com.catalogonet.email.template.EmailTemplateBuilder;
-import com.catalogonet.pedido.Pedido;
-import com.catalogonet.plano.PlanoAnuncio;
-import com.catalogonet.usuario.Usuario;
+import com.catalogonet.model.Anuncio;
+import com.catalogonet.model.Pedido;
+import com.catalogonet.model.PlanoAnuncio;
+import com.catalogonet.model.Usuario;
 
 @Service
 public class MandadorEmail {

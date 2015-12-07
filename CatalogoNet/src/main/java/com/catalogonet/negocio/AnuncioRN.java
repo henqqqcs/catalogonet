@@ -1,4 +1,4 @@
-package com.catalogonet.anuncio;
+package com.catalogonet.negocio;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -8,8 +8,10 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.catalogonet.plano.PlanoAnuncio;
-import com.catalogonet.usuario.Usuario;
+import com.catalogonet.dao.interfaces.AnuncioDAO;
+import com.catalogonet.model.Anuncio;
+import com.catalogonet.model.PlanoAnuncio;
+import com.catalogonet.model.Usuario;
 
 @Component
 @Transactional

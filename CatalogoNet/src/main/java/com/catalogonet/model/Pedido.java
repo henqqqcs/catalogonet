@@ -1,4 +1,4 @@
-package com.catalogonet.pedido;
+package com.catalogonet.model;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -16,8 +16,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 import com.catalogonet.converter.LocalDatePersistenceConverter;
-import com.catalogonet.produto.Produto;
-import com.catalogonet.usuario.Usuario;
 
 @Entity
 public class Pedido {

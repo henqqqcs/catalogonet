@@ -1,4 +1,4 @@
-package com.catalogonet.usuario;
+package com.catalogonet.negocio;
 
 import java.util.List;
 import java.util.Map;
@@ -13,6 +13,10 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.WebAuthenticationDetails;
 import org.springframework.stereotype.Component;
+
+import com.catalogonet.dao.interfaces.UsuarioDAO;
+import com.catalogonet.model.Permissao;
+import com.catalogonet.model.Usuario;
 
 @Component
 @Transactional

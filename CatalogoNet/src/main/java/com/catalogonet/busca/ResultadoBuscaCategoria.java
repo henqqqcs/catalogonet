@@ -3,7 +3,7 @@ package com.catalogonet.busca;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.catalogonet.anuncio.Anuncio;
+import com.catalogonet.model.Anuncio;
 
 public class ResultadoBuscaCategoria {
 

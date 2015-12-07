@@ -10,7 +10,7 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
-import com.catalogonet.usuario.Usuario;
+import com.catalogonet.model.Usuario;
 
 @Component
 public class UsuarioValidator implements Validator {

@@ -1,4 +1,4 @@
-package com.catalogonet.anuncio;
+package com.catalogonet.dao;
 
 import java.util.Collections;
 import java.util.List;
@@ -9,7 +9,9 @@ import javax.persistence.TypedQuery;
 
 import org.springframework.stereotype.Repository;
 
-import com.catalogonet.usuario.Usuario;
+import com.catalogonet.dao.interfaces.AnuncioDAO;
+import com.catalogonet.model.Anuncio;
+import com.catalogonet.model.Usuario;
 
 @Repository
 public class JpaAnuncioDAO implements AnuncioDAO {

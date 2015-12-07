@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.catalogonet.categoria.Categoria;
-import com.catalogonet.categoria.CategoriaRN;
-import com.catalogonet.categoria.SubCategoria;
+import com.catalogonet.model.Categoria;
+import com.catalogonet.model.SubCategoria;
+import com.catalogonet.negocio.CategoriaRN;
 
 @Controller
 @RequestMapping("/adminadmin/categorias")

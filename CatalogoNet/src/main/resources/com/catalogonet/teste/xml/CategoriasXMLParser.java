@@ -5,8 +5,8 @@ import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.catalogonet.categoria.Categoria;
-import com.catalogonet.categoria.SubCategoria;
+import com.catalogonet.model.Categoria;
+import com.catalogonet.model.SubCategoria;
 
 public class CategoriasXMLParser {
 	

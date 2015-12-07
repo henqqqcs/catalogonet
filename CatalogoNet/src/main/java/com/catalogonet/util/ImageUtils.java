@@ -17,7 +17,7 @@ import javax.imageio.ImageIO;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.catalogonet.imagem.FileMeta;
+import com.catalogonet.model.FileMeta;
 
 @Component
 public class ImageUtils {

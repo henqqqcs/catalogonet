@@ -5,9 +5,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.catalogonet.pedido.Pedido;
-import com.catalogonet.produto.Produto;
-import com.catalogonet.usuario.Usuario;
+import com.catalogonet.model.Pedido;
+import com.catalogonet.model.Produto;
+import com.catalogonet.model.Usuario;
 import com.paypal.api.payments.Amount;
 import com.paypal.api.payments.Links;
 import com.paypal.api.payments.Payer;

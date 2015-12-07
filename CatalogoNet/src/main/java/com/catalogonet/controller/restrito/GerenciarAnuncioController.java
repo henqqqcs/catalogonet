@@ -19,14 +19,14 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.catalogonet.anuncio.Anuncio;
-import com.catalogonet.anuncio.AnuncioRN;
-import com.catalogonet.imagem.FileMeta;
-import com.catalogonet.imagem.ImagemRN;
-import com.catalogonet.plano.PlanoAnuncio;
-import com.catalogonet.plano.PlanoRN;
-import com.catalogonet.usuario.Usuario;
-import com.catalogonet.usuario.UsuarioRN;
+import com.catalogonet.model.Anuncio;
+import com.catalogonet.model.FileMeta;
+import com.catalogonet.model.PlanoAnuncio;
+import com.catalogonet.model.Usuario;
+import com.catalogonet.negocio.AnuncioRN;
+import com.catalogonet.negocio.ImagemRN;
+import com.catalogonet.negocio.PlanoRN;
+import com.catalogonet.negocio.UsuarioRN;
 import com.catalogonet.util.ImageUtils;
 import com.catalogonet.validators.AnuncioValidator;
 

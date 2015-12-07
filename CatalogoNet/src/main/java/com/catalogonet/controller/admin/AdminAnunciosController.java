@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.catalogonet.anuncio.Anuncio;
-import com.catalogonet.anuncio.AnuncioRN;
 import com.catalogonet.email.MandadorEmail;
-import com.catalogonet.usuario.Usuario;
+import com.catalogonet.model.Anuncio;
+import com.catalogonet.model.Usuario;
+import com.catalogonet.negocio.AnuncioRN;
 
 @Controller
 @RequestMapping("/adminadmin/anuncios")

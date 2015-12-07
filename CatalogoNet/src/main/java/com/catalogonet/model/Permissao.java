@@ -1,4 +1,4 @@
-package com.catalogonet.usuario;
+package com.catalogonet.model;
 
 public enum Permissao {
 	ROLE_USUARIO,

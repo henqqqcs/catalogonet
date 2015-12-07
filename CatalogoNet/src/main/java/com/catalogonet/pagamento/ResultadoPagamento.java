@@ -1,6 +1,6 @@
 package com.catalogonet.pagamento;
 
-import com.catalogonet.pedido.Pedido;
+import com.catalogonet.model.Pedido;
 
 public class ResultadoPagamento {
 	

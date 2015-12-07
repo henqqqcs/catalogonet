@@ -1,11 +1,9 @@
-package com.catalogonet.busca;
+package com.catalogonet.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
-
-import com.catalogonet.anuncio.Anuncio;
 
 public class ResultadoBusca implements Serializable {
 

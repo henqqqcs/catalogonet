@@ -1,4 +1,4 @@
-package com.catalogonet.produto;
+package com.catalogonet.negocio;
 
 import java.util.List;
 
@@ -6,6 +6,10 @@ import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import com.catalogonet.dao.interfaces.ProdutoDAO;
+import com.catalogonet.model.PrioridadeProduto;
+import com.catalogonet.model.Produto;
 
 @Component
 @Transactional

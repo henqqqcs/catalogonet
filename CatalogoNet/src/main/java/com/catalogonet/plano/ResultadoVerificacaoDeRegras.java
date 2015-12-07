@@ -1,4 +1,4 @@
-package com.catalogonet.plano.regra;
+package com.catalogonet.plano;
 
 public enum ResultadoVerificacaoDeRegras {
 	

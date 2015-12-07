@@ -1,4 +1,4 @@
-package com.catalogonet.local;
+package com.catalogonet.negocio;
 
 import java.util.List;
 
@@ -6,6 +6,11 @@ import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import com.catalogonet.dao.interfaces.LocalDAO;
+import com.catalogonet.model.Bairro;
+import com.catalogonet.model.Cidade;
+import com.catalogonet.model.Estado;
 
 @Component
 @Transactional

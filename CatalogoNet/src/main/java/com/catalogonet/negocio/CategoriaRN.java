@@ -1,4 +1,4 @@
-package com.catalogonet.categoria;
+package com.catalogonet.negocio;
 
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -10,9 +10,12 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.catalogonet.anuncio.Anuncio;
-import com.catalogonet.busca.BuscaDAO;
 import com.catalogonet.busca.ResultadoBuscaCategoria;
+import com.catalogonet.dao.interfaces.BuscaDAO;
+import com.catalogonet.dao.interfaces.CategoriaDAO;
+import com.catalogonet.model.Anuncio;
+import com.catalogonet.model.Categoria;
+import com.catalogonet.model.SubCategoria;
 
 @Component
 @Transactional

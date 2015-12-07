@@ -1,4 +1,4 @@
-package com.catalogonet.local;
+package com.catalogonet.model;
 
 import java.util.List;
 

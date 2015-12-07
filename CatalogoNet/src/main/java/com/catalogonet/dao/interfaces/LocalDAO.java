@@ -1,6 +1,10 @@
-package com.catalogonet.local;
+package com.catalogonet.dao.interfaces;
 
 import java.util.List;
+
+import com.catalogonet.model.Bairro;
+import com.catalogonet.model.Cidade;
+import com.catalogonet.model.Estado;
 
 public interface LocalDAO {
 

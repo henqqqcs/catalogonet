@@ -1,4 +1,4 @@
-package com.catalogonet.imagem;
+package com.catalogonet.dao;
 
 import java.util.Collections;
 import java.util.List;
@@ -8,6 +8,9 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
 import org.springframework.stereotype.Repository;
+
+import com.catalogonet.dao.interfaces.ImagemDAO;
+import com.catalogonet.model.FileMeta;
 
 @Repository
 public class JpaImagemDAO implements ImagemDAO {

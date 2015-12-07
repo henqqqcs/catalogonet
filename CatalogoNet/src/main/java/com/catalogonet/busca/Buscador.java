@@ -10,10 +10,13 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.catalogonet.anuncio.Anuncio;
-import com.catalogonet.categoria.CategoriaRN;
-import com.catalogonet.local.Bairro;
-import com.catalogonet.local.LocalRN;
+import com.catalogonet.dao.interfaces.BuscaDAO;
+import com.catalogonet.model.Anuncio;
+import com.catalogonet.model.Bairro;
+import com.catalogonet.model.Busca;
+import com.catalogonet.model.ResultadoBusca;
+import com.catalogonet.negocio.CategoriaRN;
+import com.catalogonet.negocio.LocalRN;
 
 @Component
 @Transactional

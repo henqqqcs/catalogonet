@@ -1,4 +1,4 @@
-package com.catalogonet.anuncio;
+package com.catalogonet.model;
 
 public class AnuncioString {
 	

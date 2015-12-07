@@ -1,4 +1,4 @@
-package com.catalogonet.backup;
+package com.catalogonet.negocio;
 
 import java.util.List;
 
@@ -6,6 +6,9 @@ import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import com.catalogonet.dao.interfaces.BackupDAO;
+import com.catalogonet.model.Backup;
 
 @Component
 @Transactional

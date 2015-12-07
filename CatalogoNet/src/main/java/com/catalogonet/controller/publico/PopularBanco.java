@@ -1,4 +1,4 @@
-package com.catalogonet.controller;
+package com.catalogonet.controller.publico;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

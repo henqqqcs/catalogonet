@@ -15,9 +15,9 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import com.catalogonet.local.Bairro;
-import com.catalogonet.local.Cidade;
-import com.catalogonet.local.Estado;
+import com.catalogonet.model.Bairro;
+import com.catalogonet.model.Cidade;
+import com.catalogonet.model.Estado;
 import com.catalogonet.util.FileUtils;
 
 public class LocalXmlReader {

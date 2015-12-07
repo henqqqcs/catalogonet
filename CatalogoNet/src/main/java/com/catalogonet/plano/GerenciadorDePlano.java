@@ -1,7 +1,9 @@
 package com.catalogonet.plano;
 
-import com.catalogonet.produto.Produto;
-import com.catalogonet.usuario.Usuario;
+import com.catalogonet.model.PlanoAnuncio;
+import com.catalogonet.model.Produto;
+import com.catalogonet.model.StatusPlanoAnuncio;
+import com.catalogonet.model.Usuario;
 
 public class GerenciadorDePlano {
 	

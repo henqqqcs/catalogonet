@@ -1,4 +1,4 @@
-package com.catalogonet.usuario;
+package com.catalogonet.model;
 
 import java.util.List;
 
@@ -13,10 +13,6 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
-
-import com.catalogonet.anuncio.Anuncio;
-import com.catalogonet.pedido.Pedido;
-import com.catalogonet.plano.PlanoAnuncio;
 
 @Entity
 @Table(name = "usuario")

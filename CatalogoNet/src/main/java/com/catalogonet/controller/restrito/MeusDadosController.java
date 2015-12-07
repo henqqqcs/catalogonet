@@ -21,8 +21,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.catalogonet.usuario.Usuario;
-import com.catalogonet.usuario.UsuarioRN;
+import com.catalogonet.model.Usuario;
+import com.catalogonet.negocio.UsuarioRN;
 import com.catalogonet.validators.UsuarioValidator;
 import com.catalogonet.validators.UsuarioValidatorUpdate;
 

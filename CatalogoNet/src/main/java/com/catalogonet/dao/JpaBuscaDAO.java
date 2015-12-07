@@ -1,4 +1,4 @@
-package com.catalogonet.busca;
+package com.catalogonet.dao;
 
 import java.util.Collections;
 import java.util.List;
@@ -9,7 +9,8 @@ import javax.persistence.TypedQuery;
 
 import org.springframework.stereotype.Repository;
 
-import com.catalogonet.anuncio.Anuncio;
+import com.catalogonet.dao.interfaces.BuscaDAO;
+import com.catalogonet.model.Anuncio;
 
 @Repository
 public class JpaBuscaDAO implements BuscaDAO {
