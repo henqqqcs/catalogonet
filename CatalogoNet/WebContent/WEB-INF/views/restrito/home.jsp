@@ -84,7 +84,7 @@
 													<td class="text-right"><c:if test="${plano.anuncio != null}">
 															<a href="<c:url value="/area-da-empresa/meus-anuncios/${plano.anuncio.tituloNaUrl}/${plano.anuncio.id}"/>">${plano.anuncio.titulo}</a>
 														</c:if> <c:if test="${plano.anuncio == null}">
-															<a class="btn btn-success btn-sm" href="<c:url value="/area-da-empresa"/>">Comece
+															<a class="btn btn-success btn-sm" href="<c:url value="/area-da-empresa/meus-planos/comecar-plano/${plano.id}"/>">Comece
 																agora!</a>
 														</c:if></td>
 												</tr>

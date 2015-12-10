@@ -1,5 +1,10 @@
 package com.catalogonet.controller.publico;
 
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AuthenticationProvider;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,12 +16,33 @@ import com.catalogonet.model.Usuario;
 @Controller
 public class LoginController {
 
+	@Autowired
+	private AuthenticationProvider auth;
+
 	@RequestMapping("/login")
 	public String loginRegisterForm(ModelMap map) {
 		if (map.get("usuarioRegistro") == null) {
 			map.put("usuarioRegistro", new Usuario());
 		}
 		return "publico/geral/login_register_form";
+	}
+
+	@RequestMapping(value = "/login", method = RequestMethod.POST)
+	public String customLogin(@RequestParam(value = "username") String username,
+			@RequestParam(value = "password") String password,
+			@RequestParam(value = "error", required = false) String error,
+			@RequestParam(value = "logout", required = false) String logout, HttpServletRequest request, ModelMap map) {
+		
+		
+		String referrer = request.getHeader("Referer");
+		System.out.println("Url que veio antes: " + referrer);
+
+		System.out.println("Chamou o post!!");
+
+		UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(username, password);
+		auth.authenticate(token);
+
+		return "redirect:/";
 	}
 
 	// Spring Security see this:

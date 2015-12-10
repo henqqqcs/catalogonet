@@ -99,5 +99,9 @@ public class AnuncioRN {
 		return dao.buscarPorParteTitulo(titulo);
 	}
 
+	public Anuncio buscarAnuncioDoPlano(PlanoAnuncio plano) {
+		return dao.buscarAnuncioDoPlano(plano);
+	}
+
 
 }

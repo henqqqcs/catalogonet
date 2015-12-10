@@ -2,23 +2,25 @@ package com.catalogonet.controller.publico;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.catalogonet.gerenciador.GerenciadorPedido;
+import com.catalogonet.model.PedidoStatus;
+
 import br.com.uol.pagseguro.domain.Transaction;
 import br.com.uol.pagseguro.properties.PagSeguroConfig;
 import br.com.uol.pagseguro.service.NotificationService;
-
-import com.catalogonet.model.Pedido;
-import com.catalogonet.plano.AtribuidorDePlanos;
-
 
 @Controller
 @RequestMapping("/pagamento/notificacoes")
 public class PagamentoNotificacaoController {
 
+	@Autowired
+	private GerenciadorPedido gerenciadorDePedidos;
 	
 	@RequestMapping(value = "/notificacoesPagSeguro", method = RequestMethod.POST)
 	@ResponseBody
@@ -34,34 +36,20 @@ public class PagamentoNotificacaoController {
 
 		try {
 
-			transaction = NotificationService.checkTransaction(PagSeguroConfig.getAccountCredentials(), notificationCode);
+			transaction = NotificationService.checkTransaction(PagSeguroConfig.getAccountCredentials(),
+					notificationCode);
 
 			printTransaction(transaction);
-			String statusCatalogonet = verificarStatus(transaction);
-
-//			if (transaction != null) {
-//
-//				// pega refencia da transacao(id do pedido no meu sistema)
-//				String reference = transaction.getReference();
-//				Pedido pedido = pedidoRN.buscarPorId(Long.valueOf(reference));
-//
-//				if (statusCatalogonet.equals(AtribuidorDePlanos.CATALOGONET_PEDIDO_STATUS_PAGO)) {
-//					// chama o atribuidor de planos
-//					pedido.setStatus(AtribuidorDePlanos.CATALOGONET_PEDIDO_STATUS_PAGO);
-//					atribuidorDePlanos.atribuirPlano(pedido);
-//					pedidoRN.atualizar(pedido);
-//					mandrillMandadorEmail.mandarEmailPedidoPagamentoConfirmado(pedido);
-//				} else if (statusCatalogonet.equals(AtribuidorDePlanos.CATALOGONET_PEDIDO_STATUS_AGUARDANDO_PAGAMENTO)) {
-//					pedido.setStatus(AtribuidorDePlanos.CATALOGONET_PEDIDO_STATUS_AGUARDANDO_PAGAMENTO);
-//					pedidoRN.atualizar(pedido);
-//				} else if (statusCatalogonet.equals(AtribuidorDePlanos.CATALOGONET_PEDIDO_STATUS_CANCELADO)) {
-//					pedido.setStatus(AtribuidorDePlanos.CATALOGONET_PEDIDO_STATUS_CANCELADO);
-//					atribuidorDePlanos.cancelarPedido(pedido);
-//					pedidoRN.atualizar(pedido);
-//					mandrillMandadorEmail.mandarEmailPedidoCancelado(pedido);
-//				}
-//			}
-
+			
+			//catalogonet status
+			PedidoStatus statusCatalogonet = converterStatusPagseguro(transaction);
+			
+			//if do pedido
+			Long idPedido = Long.valueOf(transaction.getReference());
+			
+			//atualizar o pedido
+			gerenciadorDePedidos.atualizarStatus(idPedido, statusCatalogonet);
+			
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
 		}
@@ -72,26 +60,30 @@ public class PagamentoNotificacaoController {
 	 * Converte o status da transação do pagseguro, para o status de pedido do
 	 * Catalgonet
 	 */
-	private String verificarStatus(Transaction transaction) {
+	private PedidoStatus converterStatusPagseguro(Transaction transaction) {
 		try {
-//			Integer valor = transaction.getStatus().getValue();
-//			if (valor == 1) {
-//				return AtribuidorDePlanos.CATALOGONET_PEDIDO_STATUS_AGUARDANDO_PAGAMENTO;
-//			} else if (valor == 3) {
-//				return AtribuidorDePlanos.CATALOGONET_PEDIDO_STATUS_PAGO;
-//			} else if (valor == 4) { // disponivel?
-//				return AtribuidorDePlanos.CATALOGONET_PEDIDO_STATUS_PAGO;
-//			} else if (valor == 7) {
-//				return AtribuidorDePlanos.CATALOGONET_PEDIDO_STATUS_CANCELADO;
-//			}
+			Integer valor = transaction.getStatus().getValue();
+			if (valor == 1) {
+				return PedidoStatus.AGUARDANDO_PAGAMENTO;
+			} else if (valor == 3) {
+				return PedidoStatus.PAGO;
+			} else if (valor == 4) { // disponivel?
+				return PedidoStatus.PAGO;
+			} else if (valor == 7) {
+				return PedidoStatus.CANCELADO;
+			}
 		} catch (Exception e) {
 			throw new IllegalArgumentException(
-					"O metodo que converte o status da transacao do pagseguro para o status do pedido catalgonet, nao deveria cehgar ate aqui");
+					"O metodo que converte o status da transacao do pagseguro para o status do pedido catalgonet, nao deveria chegar ate aqui");
 		}
-
+		
 		return null;
 
 	}
+
+	// private String converterStatusPaypal(Transaction transaction) {
+	// return null;
+	// }
 
 	private static void printTransaction(Transaction transaction) {
 
@@ -140,19 +132,19 @@ public class PagamentoNotificacaoController {
 			if (transaction.getShipping().getAddress() != null) {
 				System.out.println("shippingAddressStreet: " + transaction.getShipping().getAddress().getStreet());
 				System.out.println("shippingAddressNumber: " + transaction.getShipping().getAddress().getNumber());
-				System.out.println("shippingAddressComplement: " + transaction.getShipping().getAddress().getComplement());
+				System.out.println(
+						"shippingAddressComplement: " + transaction.getShipping().getAddress().getComplement());
 				System.out.println("shippingAddressDistrict: " + transaction.getShipping().getAddress().getDistrict());
 				System.out.println("shippingAddressCity: " + transaction.getShipping().getAddress().getCity());
 				System.out.println("shippingAddressState: " + transaction.getShipping().getAddress().getState());
 				System.out.println("shippingAddressCountry: " + transaction.getShipping().getAddress().getCountry());
-				System.out.println("shippingAddressPostalCode: " + transaction.getShipping().getAddress().getPostalCode());
+				System.out.println(
+						"shippingAddressPostalCode: " + transaction.getShipping().getAddress().getPostalCode());
 			}
 			System.out.println("shippingType: " + transaction.getShipping().getType());
 			System.out.println("shippingCost: " + transaction.getShipping().getCost());
 		}
 
 	}
-	
-	
-	
+
 }

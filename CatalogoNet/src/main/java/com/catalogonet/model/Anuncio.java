@@ -20,7 +20,6 @@ import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import com.catalogonet.converter.LocalDatePersistenceConverter;
@@ -29,6 +28,14 @@ import com.catalogonet.util.StringFormat;
 @Entity
 @Table(name = "anuncio")
 public class Anuncio implements Serializable {
+
+	@Deprecated
+	public Anuncio() {
+	}
+
+	public Anuncio(String plano) {
+		this.setTitulo("Anúncio" + " - " + plano);
+	}
 
 	private static final long serialVersionUID = 1L;
 
@@ -45,11 +52,9 @@ public class Anuncio implements Serializable {
 	private boolean aprovado;
 
 	@Column(unique = true)
-	@NotNull
 	@Size(min = 5, max = 50)
 	private String titulo;
 
-	@NotNull
 	@Size(min = 5, max = 55)
 	private String tituloNaUrl;
 
@@ -66,7 +71,6 @@ public class Anuncio implements Serializable {
 	private String descricaoHtml;
 
 	/** Contato **/
-	@NotNull
 	@Size(min = 10, max = 16)
 	private String telefone1;
 	private String telefone2;
@@ -79,11 +83,11 @@ public class Anuncio implements Serializable {
 	private String googleplus;
 
 	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "estado_id", nullable = false)
+	@JoinColumn(name = "estado_id")
 	private Estado estado;
 
 	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "cidade_id", nullable = false)
+	@JoinColumn(name = "cidade_id")
 	private Cidade cidade;
 
 	@ManyToOne(fetch = FetchType.EAGER)
@@ -114,11 +118,11 @@ public class Anuncio implements Serializable {
 	private Usuario usuario;
 
 	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "categoria_id", nullable = false)
+	@JoinColumn(name = "categoria_id")
 	private Categoria categoria;
 
 	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "sub_categoria_id", nullable = false)
+	@JoinColumn(name = "sub_categoria_id")
 	private SubCategoria subCategoria;
 
 	@Basic(fetch = FetchType.LAZY)

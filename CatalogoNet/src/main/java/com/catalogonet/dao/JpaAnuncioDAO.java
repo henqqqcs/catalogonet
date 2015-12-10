@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 
 import com.catalogonet.dao.interfaces.AnuncioDAO;
 import com.catalogonet.model.Anuncio;
+import com.catalogonet.model.PlanoAnuncio;
 import com.catalogonet.model.Usuario;
 
 @Repository
@@ -22,6 +23,7 @@ public class JpaAnuncioDAO implements AnuncioDAO {
 	@Override
 	public void adicionar(Anuncio anuncio) {
 		em.persist(anuncio);
+		em.flush();
 	}
 
 	@Override
@@ -68,10 +70,17 @@ public class JpaAnuncioDAO implements AnuncioDAO {
 
 	@Override
 	public List<Anuncio> listarAnunciosUsuario(Long idUsuario) {
-		String consulta = "select a from Anuncio a join fetch a.categoria ca where a.usuario.id = :idUsuario";
-		TypedQuery<Anuncio> query = em.createQuery(consulta, Anuncio.class);
-		query.setParameter("idUsuario", idUsuario);
-		return query.getResultList();
+
+		try {
+			//String consulta = "select a from Anuncio a join fetch a.categoria ca where a.usuario.id = :idUsuario";
+			String consulta = "select a from Anuncio a where a.usuario.id = :idUsuario";
+			TypedQuery<Anuncio> query = em.createQuery(consulta, Anuncio.class);
+			query.setParameter("idUsuario", idUsuario);
+			return query.getResultList();
+		} catch (Exception e) {
+			return Collections.emptyList();
+		}
+
 	}
 
 	@Override
@@ -99,6 +108,19 @@ public class JpaAnuncioDAO implements AnuncioDAO {
 		TypedQuery<Anuncio> query = em.createQuery(consulta, Anuncio.class);
 		query.setParameter("titulo", "%" + titulo + "%");
 		return query.getResultList();
+	}
+
+	@Override
+	public Anuncio buscarAnuncioDoPlano(PlanoAnuncio plano) {
+		try {
+			String consulta = "SELECT p.anuncio FROM PlanoAnuncio p WHERE p.id = :idPlano";
+			TypedQuery<Anuncio> query = em.createQuery(consulta, Anuncio.class);
+			query.setParameter("idPlano", plano.getId());
+			return query.getResultList().get(0);
+		} catch (Exception e) {
+			System.out.println("Erro ao buscar anuncio do plano: " + plano.getId());
+			return null;
+		}
 	}
 
 }

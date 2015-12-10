@@ -31,15 +31,21 @@ public class MyAuthenticationSucessHandler implements AuthenticationSuccessHandl
 
 	protected void handle(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException {
 		
+		
+		System.out.println("Chamando MyAuthenticationSucessHandler");
 		String targetUrl = determineTargetUrl(authentication);
 
 		/**
 		 * Verifica se o usuario fez login no carrinho de compras ou  normalmente
 		 */
 		String previusUrl = request.getHeader("referer");
+		System.out.println("previusUrl: " + previusUrl);
+		
+		String requestURI = request.getRequestURI();
+		System.out.println("Reuqest URI: " + requestURI);
 		if (previusUrl.contains("/pagamento")) {
 			targetUrl = "/pagamento/identificacao-handle";
-		} 		
+		} 	
 		if (response.isCommitted()) {
 			System.out.println("Response has already been committed. Unable to redirect to " + targetUrl);
 			return;

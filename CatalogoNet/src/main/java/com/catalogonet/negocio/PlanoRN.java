@@ -162,4 +162,8 @@ public class PlanoRN {
 
 		return null;
 	}
+
+	public PlanoAnuncio buscarPlanoDoAnuncio(Long id) {
+		return dao.buscarPlanoDoAnuncio(id);
+	}
 }

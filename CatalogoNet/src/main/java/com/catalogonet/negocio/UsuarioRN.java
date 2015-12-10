@@ -7,7 +7,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -25,8 +27,11 @@ public class UsuarioRN {
 	@Autowired
 	private UsuarioDAO dao;
 	
+//	@Autowired
+//	private AuthenticationManager authenticationManager;
+	
 	@Autowired
-	private AuthenticationManager authenticationManager;
+	private AuthenticationProvider authenticationManager;
 	
 	public void adicionar(Usuario usuario) {
 		if ((usuario.getPermissao() == null) || (!usuario.isAtivo())) {

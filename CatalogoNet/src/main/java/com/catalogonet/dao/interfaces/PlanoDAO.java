@@ -19,6 +19,7 @@ public interface PlanoDAO {
 	
 	//anuncio
 	public PlanoAnuncio buscarPlanoAtivoDoAnuncio(Long idAnuncio);
+	public PlanoAnuncio buscarPlanoDoAnuncio(Long idAnuncio);
 //	public List<PlanoAnuncio> listarTodosPlanosDoAnuncio(Long idAnuncio);
 	
 	//plano marketing digital

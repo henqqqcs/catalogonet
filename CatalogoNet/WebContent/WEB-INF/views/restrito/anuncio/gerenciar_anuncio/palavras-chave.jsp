@@ -82,7 +82,7 @@
 								palavras-chave devem ter no minimo 3 e no máximo 20 caracteres.</div>
 						</c:if>
 						<c:if test="${not empty success}">
-							<div class="alert alert-success">Pornto! As informações foram atualizadas com sucesso!</div>
+							<div class="alert alert-success">Pronto! As informações foram atualizadas com sucesso!</div>
 						</c:if>
 
 						<h2>

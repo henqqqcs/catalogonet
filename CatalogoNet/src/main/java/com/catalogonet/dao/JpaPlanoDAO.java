@@ -73,10 +73,23 @@ public class JpaPlanoDAO implements PlanoDAO {
 			query.setParameter("idAnuncio", idAnuncio);
 			return query.getSingleResult();
 		} catch (Exception e) {
-			System.out.println("O metodo buscarPlanoDoAnuncio da classe JpaPlanoDAO lacou uma exception: " + e.getMessage());
+			System.out.println("O metodo buscarPlanoAtivoDoAnuncio da classe JpaPlanoDAO lancou uma exception: " + e.getMessage());
 			return null;
 		}
 
+	}
+
+	@Override
+	public PlanoAnuncio buscarPlanoDoAnuncio(Long idAnuncio) {
+		try {
+			String consulta = "select p from PlanoAnuncio p where p.anuncio.id = :idAnuncio";
+			TypedQuery<PlanoAnuncio> query = em.createQuery(consulta, PlanoAnuncio.class);
+			query.setParameter("idAnuncio", idAnuncio);
+			return query.getResultList().get(0);
+		} catch (Exception e) {
+			System.out.println("O metodo buscarPlanoDoAnuncio da classe JpaPlanoDAO lnacou uma exception: " + e.getMessage());
+			return null;
+		}
 	}
 
 //	/**

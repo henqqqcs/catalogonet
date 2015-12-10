@@ -150,7 +150,7 @@
 																</c:choose></td>
 															<td><c:choose>
 																	<c:when test="${pedido.pedidoStatus == 'AGUARDANDO_PAGAMENTO'}">
-																		<a class="btn btn-primary" href="#">Pagar <span
+																		<a class="btn btn-primary" href="<c:url value ="/pagamento-teste/${pedido.id}" />">Pagar <span
 																			class="glyphicon glyphicon-forward"></span></a>
 																	</c:when>
 																</c:choose></td>

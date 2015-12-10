@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -81,7 +82,17 @@
 										<c:if test="${not empty anuncio.titulo}">
 											<h2>${anuncio.titulo}</h2>
 										</c:if>
-										<p>${anuncio.cidade.nome},${anuncio.estado.nome}</p>
+
+										<c:if test="${not empty anuncio.cidade && not empty anuncio.estado}">
+											<p>${anuncio.cidade.nome}, ${anuncio.estado.nome}</p>
+										</c:if>
+										<c:if test="${not empty anuncio.cidade && empty anuncio.estado}">
+											<p>${anuncio.cidade.nome}</p>
+										</c:if>
+										<c:if test="${empty anuncio.cidade && not empty anuncio.estado}">
+											<p>${anuncio.estado.nome}</p>
+										</c:if>
+
 										<c:if test="${empty anuncio.endereco}">
 											<p>SEM ENDEREÇO</p>
 										</c:if>
@@ -101,30 +112,72 @@
 
 											<div class="col-md-6">
 												<p>
-													<a href="#" class="btn btn-success btn-lg">Publicar</a>
+													<c:url var="publicarUrl" value="/area-da-empresa/meus-anuncios/${anuncio.tituloNaUrl}/${anuncio.id}/publicar" />
+													<form:form id="anuncioForm" modelAttribute="anuncio" action="${publicarUrl}" method="POST">
+														<button class="btn btn-success btn-lg" type="submit" title="Publicar seu anúncio">Publicar</button>
+													</form:form>
 												</p>
-												<br />
 												<p>
-													<a href="#" class="btn btn-warning btn-lg">Visualizar</a>
+													<a href="#" class="btn btn-warning btn-lg" title="Visualizar anúncio">Visualizar</a>
 												</p>
+												<p>
+													<a href="#" class="btn btn-info btn-lg" title="Clique aqui para editar seu anúncio passo a passo">Passo a passo</a>
+												</p>
+
 
 
 
 											</div>
 											<div class="col-md-6">
-												<div class="alert alert-danger">
-													<p>
-														<strong>Status</strong> <br /> Desativado <span class="glyphicon glyphicon-remove"></span>
-													</p>
-
-													<p>
-														<strong>Plano</strong> <br /> Plano Gratuito
-													</p>
-
-													<p>
-														<strong>Data finalização</strong> <br /> 10/10/2015
-													</p>
-												</div>
+															    <c:choose>
+																	<c:when test="${plano.statusPlanoAnuncio == 'PLANO_ATIVO'}">
+																		<div class="alert alert-success">
+																			<p>
+																				<strong>Status</strong> <br /> Ativado <span class="glyphicon glyphicon glyphicon-ok"></span>
+																			</p>
+						
+																			<p>
+																				<strong>Plano</strong> <br /> ${plano.produto.nome}
+																			</p>
+																			
+																			<c:if test="${not empty plano.dataFinalizacao}">
+																				<fmt:parseDate value="${plano.dataFinalizacao}" pattern="yyyy-MM-dd" var="parsedDate" type="date" />
+																				<p>
+																					<strong>Data finalização</strong> <br /> <fmt:formatDate value="${parsedDate}" pattern="dd/MM/yyyy" />
+																				</p>
+																			</c:if>
+																			<c:if test="${empty plano.dataFinalizacao}">
+																				<p>
+																					<strong>Data finalização</strong> <br /> N/A
+																				</p>
+																			</c:if>
+																			
+																		</div>
+																	</c:when>
+																	<c:otherwise>
+																		<div class="alert alert-danger">
+																			<p>
+																				<strong>Status</strong> <br /> Desativado <span class="glyphicon glyphicon glyphicon-remove"></span>
+																			</p>
+						
+																			<p>
+																				<strong>Plano</strong> <br /> ${plano.produto.nome}
+																			</p>
+																			
+																			<c:if test="${not empty plano.dataFinalizacao}">
+																				<fmt:parseDate value="${plano.dataFinalizacao}" pattern="yyyy-MM-dd" var="parsedDate" type="date" />
+																				<p>
+																					<strong>Data finalização</strong> <br /> <fmt:formatDate value="${parsedDate}" pattern="dd/MM/yyyy" />
+																				</p>
+																			</c:if>
+																			<c:if test="${empty plano.dataFinalizacao}">
+																				<p>
+																					<strong>Data finalização</strong> <br /> Não ativado
+																				</p>
+																			</c:if>
+																		</div>					
+																	</c:otherwise>
+																</c:choose>
 											</div>
 										</div>
 
@@ -143,7 +196,8 @@
 						</div> -->
 							<div class="painel-restrito-item item-informacoes">
 								<div class="pull-right">
-									<a href="<c:url value="/area-da-empresa/meus-anuncios/${anuncio.tituloNaUrl}/${anuncio.id}/informacoes" />">Editar</a>
+									<a
+										href="<c:url value="/area-da-empresa/meus-anuncios/${anuncio.tituloNaUrl}/${anuncio.id}/informacoes" />">Editar</a>
 								</div>
 
 								<h2>Informações</h2>
@@ -187,12 +241,12 @@
 								<br />
 								<ul>
 									<li class="row">
-										<p class="col-sm-4 painel-item-label">Categoria</p>
-										<p class="col-sm-8">${anuncio.categoria.nome }</p>
+										<p class="col-sm-5 painel-item-label">Categoria</p>
+										<p class="col-sm-7">${anuncio.categoria.nome }</p>
 									</li>
 									<li class="row">
-										<p class="col-sm-4 painel-item-label">Sub-categoria</p>
-										<p class="col-sm-8">${anuncio.subCategoria.nome }</p>
+										<p class="col-sm-5 painel-item-label">Subcategoria</p>
+										<p class="col-sm-7">${anuncio.subCategoria.nome }</p>
 									</li>
 								</ul>
 

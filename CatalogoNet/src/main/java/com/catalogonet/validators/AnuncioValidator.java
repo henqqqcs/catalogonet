@@ -3,13 +3,12 @@ package com.catalogonet.validators;
 import java.util.List;
 import java.util.Locale;
 
-import org.apache.commons.validator.routines.EmailValidator;
+import org.apache.commons.validator.GenericValidator;
 import org.apache.commons.validator.routines.UrlValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
-import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
 import com.catalogonet.model.Anuncio;
@@ -21,12 +20,26 @@ import com.catalogonet.negocio.AnuncioRN;
 @Component
 public class AnuncioValidator implements Validator {
 
+	public static final int TITULO_MIN_LENGTH = 5;
+	public static final int TITULO_MAX_LENGTH = 55;
+	public static final int DESCRICAO_MIN_LENGTH = 5;
+	public static final int DESCRICAO_MAX_LENGTH = 1024;
+	public static final int TELEFONE_MIN_LENGTH = 14;
+	public static final int TELEFONE_MAX_LENGTH = 15;
+	public static final int ENDERECO_MIN_LENGTH = 5;
+	public static final int ENDERECO_MAX_LENGTH = 50;
+	public static final int COMPLEMENTO_MIN_LENGTH = 5;
+	public static final int COMPLEMENTO_MAX_LENGTH = 25;
+	public static final int CEP_MIN_LENGTH = 8;
+	public static final int CEP_MAX_LENGTH = 9;
+	public static final int TAG_MIN_LENGTH = 3;
+	public static final int TAG_MAX_LENGTH = 25;
+
 	@Override
 	public boolean supports(Class<?> clazz) {
 		return Anuncio.class.equals(clazz);
 	}
 
-	private EmailValidator emailValidator = EmailValidator.getInstance();
 	private UrlValidator urlValidator = UrlValidator.getInstance();
 
 	@Autowired
@@ -37,119 +50,69 @@ public class AnuncioValidator implements Validator {
 
 	private Locale locale = new Locale("pt", "BR");
 
-	/**
-	 * Valida apenas as informacoes ...
-	 * 
-	 * @param target
-	 * @param errors
-	 */
 	public void validateInformacoes(Object target, Errors errors) {
 
 		Anuncio anuncio = (Anuncio) target;
 
-		// Titulo
-		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "titulo", "",
-				messageSource
-						.getMessage("anuncio.titulo.notnull", null, locale));
+		// ------------------------ titulo ------------------
+		if (!validarCampoObrigatorio(anuncio.getTitulo()))
+			errors.rejectValue("titulo", "", messageSource.getMessage("anuncio.titulo.notnull", null, locale));
+		
+		if (anuncio.getTituloNaUrl().contains("sem-titulo"))
+			errors.rejectValue("titulo", "", messageSource.getMessage("anuncio.titulo.notnull", null, locale));
 
-		// titulo size
-		if (!stringLenghtBetween(anuncio.getTitulo(), 5, 50)) {
-			errors.rejectValue("titulo", "", messageSource.getMessage(
-					"anuncio.titulo.size", null, locale));
-		}
+		if (!validarCampoSize(anuncio.getTitulo(), TITULO_MIN_LENGTH, TITULO_MAX_LENGTH))
+			errors.rejectValue("titulo", "", messageSource.getMessage("anuncio.titulo.size", null, locale));
 
 		// verifica se ja existe um titulo igual
-		List<Anuncio> listaTitulos = anuncioRN.buscarPorTituloInteiro(anuncio
-				.getTitulo());
-
+		List<Anuncio> listaTitulos = anuncioRN.buscarPorTituloInteiro(anuncio.getTitulo());
 		if (!listaTitulos.isEmpty()) {
-
 			// verifica se eh o mesmo anuncio
-			if (anuncio.getId() != listaTitulos.get(0).getId()) {
-				errors.rejectValue("titulo", "", messageSource.getMessage(
-						"anuncio.titulo.unique", null, locale));
-			}
-
+			if (anuncio.getId() != listaTitulos.get(0).getId())
+				errors.rejectValue("titulo", "", messageSource.getMessage("anuncio.titulo.unique", null, locale));
 		}
 
-		// descricao
-		if ((anuncio.getDescricao() != null)
-				&& (!anuncio.getDescricao().isEmpty())) {
-			if (!stringLenghtMax(anuncio.getDescricao(), 1024)) {
-				errors.rejectValue("descricao", "", messageSource.getMessage(
-						"anuncio.descricao.size", null, locale));
-			}
-		}
+		// ------------------------ descricao ------------------
+		if (!GenericValidator.isBlankOrNull(anuncio.getDescricao())
+				&& !validarCampoSize(anuncio.getDescricao(), DESCRICAO_MIN_LENGTH, DESCRICAO_MAX_LENGTH))
+			errors.rejectValue("descricao", "", messageSource.getMessage("anuncio.descricao.size", null, locale));
 
-		// telefone1
-		ValidationUtils.rejectIfEmpty(errors, "telefone1", "", messageSource
-				.getMessage("anuncio.telefone1.notnull", null, locale));
+		// ------------------------ telefone1 ------------------
 
-		// telefone lenght
-		if (!stringLenghtBetween(anuncio.getTelefone1(), 10, 15)) {
-			errors.rejectValue("telefone1", "", messageSource.getMessage(
-					"anuncio.telefone1.size", null, locale));
-		}
+		if (!validarCampoObrigatorio(anuncio.getTelefone1()))
+			errors.rejectValue("telefone1", "", messageSource.getMessage("anuncio.telefone1.notnull", null, locale));
 
-		// telefone2
-		if ((anuncio.getTelefone2() != null)
-				&& (!anuncio.getTelefone2().isEmpty())) {
-			if (!stringLenghtBetween(anuncio.getTelefone2(), 10, 15)) {
-				errors.rejectValue("telefone2", "", messageSource.getMessage(
-						"anuncio.telefone2.size", null, locale));
-			}
-		}
+		if (!validarCampoSize(anuncio.getTelefone1(), TELEFONE_MIN_LENGTH, TELEFONE_MAX_LENGTH))
+			errors.rejectValue("telefone1", "", messageSource.getMessage("anuncio.telefone1.size", null, locale));
 
-		// email
-		if ((anuncio.getEmail() != null) && (!anuncio.getEmail().isEmpty())) {
-			if (!emailValidator.isValid(anuncio.getEmail())) {
-				errors.rejectValue("email", "", messageSource.getMessage(
-						"anuncio.email.email", null, locale));
-			}
-		}
+		// ------------------------ telefone2 ------------------
+		if (!GenericValidator.isBlankOrNull(anuncio.getTelefone2())
+				&& !validarCampoSize(anuncio.getTelefone2(), TELEFONE_MIN_LENGTH, TELEFONE_MAX_LENGTH))
+			errors.rejectValue("telefone2", "", messageSource.getMessage("anuncio.telefone2.size", null, locale));
 
-		// site
-		if ((anuncio.getSite() != null) && (!anuncio.getSite().isEmpty())) {
-			if (!urlValidator.isValid(anuncio.getSite())) {
-				errors.rejectValue("site", "", messageSource.getMessage(
-						"anuncio.site.url", null, locale));
-			}
-		}
+		// ------------------------ email ------------------
+		if (!GenericValidator.isBlankOrNull(anuncio.getEmail()) && !GenericValidator.isEmail(anuncio.getEmail()))
+			errors.rejectValue("email", "", messageSource.getMessage("anuncio.email.email", null, locale));
 
-		// facebook
-		if ((anuncio.getFacebook() != null)
-				&& (!anuncio.getFacebook().isEmpty())) {
-			if (!urlValidator.isValid(anuncio.getFacebook())) {
-				errors.rejectValue("facebook", "", messageSource.getMessage(
-						"anuncio.facebook.url", null, locale));
-			}
-		}
+		// ------------------------ site ------------------
+		if (!GenericValidator.isBlankOrNull(anuncio.getSite()) && !urlValidator.isValid(anuncio.getSite()))
+			errors.rejectValue("site", "", messageSource.getMessage("anuncio.site.url", null, locale));
 
-		// twitter
-		if ((anuncio.getTwitter() != null) && (!anuncio.getTwitter().isEmpty())) {
-			if (!urlValidator.isValid(anuncio.getTwitter())) {
-				errors.rejectValue("twitter", "", messageSource.getMessage(
-						"anuncio.twitter.url", null, locale));
-			}
-		}
+		// ------------------------ facebook ------------------
+		if (!GenericValidator.isBlankOrNull(anuncio.getFacebook()) && !urlValidator.isValid(anuncio.getFacebook()))
+			errors.rejectValue("facebook", "", messageSource.getMessage("anuncio.facebook.url", null, locale));
 
-		// instagram
-		if ((anuncio.getInstagram() != null)
-				&& (!anuncio.getInstagram().isEmpty())) {
-			if (!urlValidator.isValid(anuncio.getInstagram())) {
-				errors.rejectValue("instagram", "", messageSource.getMessage(
-						"anuncio.instagram.url", null, locale));
-			}
-		}
+		// ------------------------ twitter ------------------
+		if (!GenericValidator.isBlankOrNull(anuncio.getTwitter()) && !urlValidator.isValid(anuncio.getTwitter()))
+			errors.rejectValue("twitter", "", messageSource.getMessage("anuncio.twitter.url", null, locale));
 
-		// google plus
-		if ((anuncio.getGoogleplus() != null)
-				&& (anuncio.getGoogleplus().isEmpty())) {
-			if (!urlValidator.isValid(anuncio.getGoogleplus())) {
-				errors.rejectValue("googleplus", "", messageSource.getMessage(
-						"anuncio.google.url", null, locale));
-			}
-		}
+		// ------------------------ instagram ------------------
+		if (!GenericValidator.isBlankOrNull(anuncio.getInstagram()) && !urlValidator.isValid(anuncio.getInstagram()))
+			errors.rejectValue("instagram", "", messageSource.getMessage("anuncio.instagram.url", null, locale));
+
+		// ------------------------ google plus ------------------
+		if (!GenericValidator.isBlankOrNull(anuncio.getGoogleplus()) && !urlValidator.isValid(anuncio.getGoogleplus()))
+			errors.rejectValue("googleplus", "", messageSource.getMessage("anuncio.google.url", null, locale));
 
 	}
 
@@ -157,127 +120,95 @@ public class AnuncioValidator implements Validator {
 
 		Anuncio anuncio = (Anuncio) target;
 
-		// estado
+		// --------------- estado ----------------
 		Estado estado = anuncio.getEstado();
-		if (estado != null) {
-			if (estado.getId() == null) {
-				errors.rejectValue("estado", "", messageSource.getMessage(
-						"anuncio.estado.notnull", null, locale));
-			}
-		} else {
-			errors.rejectValue("estado", "", messageSource.getMessage(
-					"anuncio.estado.notnull", null, locale));
-		}
+		if (estado == null || estado.getId() == null)
+			errors.rejectValue("estado", "", messageSource.getMessage("anuncio.estado.notnull", null, locale));
 
-		// cidade
+		// --------------- cidade ----------------
 		Cidade cidade = anuncio.getCidade();
-		if (cidade != null) {
-			if (cidade.getId() == null) {
-				errors.rejectValue("cidade", "", messageSource.getMessage(
-						"anuncio.cidade.notnull", null, locale));
-			}
-		} else {
-			errors.rejectValue("cidade", "", messageSource.getMessage(
-					"anuncio.cidade.notnull", null, locale));
-		}
+		if (cidade == null || cidade.getId() == null)
+			errors.rejectValue("cidade", "", messageSource.getMessage("anuncio.cidade.notnull", null, locale));
 
-		// bairro
+		// --------------- bairro ----------------
 		Bairro bairro = anuncio.getBairro();
-		if (bairro != null) {
-			if (bairro.getId() == null) {
-				errors.rejectValue("bairro", "", messageSource.getMessage(
-						"anuncio.bairro.notnull", null, locale));
-			}
-		} else {
-			errors.rejectValue("bairro", "", messageSource.getMessage(
-					"anuncio.bairro.notnull", null, locale));
-		}
+		if (bairro == null || bairro.getId() == null)
+			errors.rejectValue("bairro", "", messageSource.getMessage("anuncio.bairro.notnull", null, locale));
 
-		// endereco
-		if ((anuncio.getEndereco() != null)
-				&& (!anuncio.getEndereco().isEmpty())) {
-			if (!stringLenghtBetween(anuncio.getEndereco(), 5, 50)) {
-				errors.rejectValue("endereco", "", messageSource.getMessage(
-						"anuncio.endereco.size", null, locale));
-			}
-		}
+		// --------------- endereco ----------------
+		if (!GenericValidator.isBlankOrNull(anuncio.getEndereco())
+				&& !validarCampoSize(anuncio.getEndereco(), ENDERECO_MIN_LENGTH, ENDERECO_MAX_LENGTH))
+			errors.rejectValue("endereco", "", messageSource.getMessage("anuncio.endereco.size", null, locale));
 
-		// complemento
-		if ((anuncio.getComplemento() != null)
-				&& (!anuncio.getComplemento().isEmpty())) {
-			if (!stringLenghtBetween(anuncio.getComplemento(), 5, 25)) {
-				errors.rejectValue("complemento", "", messageSource.getMessage(
-						"anuncio.complemento.size", null, locale));
-			}
-		}
+		// --------------- complemento ----------------
+		if (!GenericValidator.isBlankOrNull(anuncio.getComplemento())
+				&& !validarCampoSize(anuncio.getComplemento(), COMPLEMENTO_MIN_LENGTH, COMPLEMENTO_MAX_LENGTH))
+			errors.rejectValue("complemento", "", messageSource.getMessage("anuncio.complemento.size", null, locale));
 
-		// cep
-		if ((anuncio.getCep() != null) && (!anuncio.getCep().isEmpty())) {
-			if (!stringLenghtBetween(anuncio.getCep(), 8, 9)) {
-				errors.rejectValue("cep", "", messageSource.getMessage(
-						"anuncio.cep.size", null, locale));
-			}
-		}
+		// --------------- CEP ----------------
+		if (!GenericValidator.isBlankOrNull(anuncio.getCep())
+				&& !validarCampoSize(anuncio.getCep(), COMPLEMENTO_MIN_LENGTH, COMPLEMENTO_MAX_LENGTH))
+			errors.rejectValue("cep", "", messageSource.getMessage("anuncio.cep.size", null, locale));
 
 	}
 
-	public void validateTags(Anuncio anuncio, Errors errors) {
+	public void validateTags(Object target, Errors errors) {
+		Anuncio anuncio = (Anuncio) target;
 		// tags
 		List<String> tags = anuncio.getTags();
 		if (tags != null) {
 			for (int i = 0; i < tags.size(); i++) {
-
 				String tag = tags.get(i);
-
 				// remove tags vazias
 				if (tag == null || tag.isEmpty()) {
 					tags.remove(i);
 					i--;
 					continue;
 				}
-
-				// remove palavras chave com menos de tres letras
-				if ((tag.isEmpty()) || (tag.length() < 3)) {
-					errors.rejectValue("tags[" + i + "]", "", messageSource
-							.getMessage("anuncio.tag.size", null, locale));
+				if (!GenericValidator.isBlankOrNull(tag)
+						&& !validarCampoSize(tag, TAG_MIN_LENGTH, TAG_MAX_LENGTH)) {
+					errors.rejectValue("tags[" + i + "]", "",
+							messageSource.getMessage("anuncio.tag.size", null, locale));
 				}
-
-				// rejeita palavras chave com mais de 20
-				if (tag.length() > 20) {
-					errors.rejectValue("tags[" + i + "]", "", messageSource
-							.getMessage("anuncio.tag.size", null, locale));
-				}
-
 			}
 		}
 	}
 
-	@Override
+	public void validateCategorias(Object target, Errors errors) {
+		Anuncio anuncio = (Anuncio) target;
+
+		// categoria
+		if (anuncio.getCategoria() == null) 
+			errors.rejectValue("categoria", "", messageSource.getMessage("anuncio.categoria.null", null, locale));
+		
+		//subcategoria
+		if (anuncio.getSubCategoria() == null) 
+			errors.rejectValue("subCategoria", "", messageSource.getMessage("anuncio.subcategoria.null", null, locale));
+
+	}
+
 	public void validate(Object target, Errors errors) {
 
 		validateInformacoes(target, errors);
 		validateLocalizacao(target, errors);
+		validateTags(target, errors);
+		validateCategorias(target, errors);
 
 	}
 
-	private boolean stringLenghtBetween(String str, int min, int max) {
-
-		if (str != null) {
-			if ((str.length() >= min) && (str.length() <= max)) {
-				return true;
-			}
+	private boolean validarCampoSize(String campo, int minLenght, int maxLenght) {
+		if (campo != null) {
+			if (!(GenericValidator.minLength(campo, minLenght) && GenericValidator.maxLength(campo, maxLenght)))
+				return false;
 		}
-		return false;
+		return true;
 	}
 
-	private boolean stringLenghtMax(String str, int max) {
-
-		if (str != null) {
-			if (str.length() <= max) {
-				return true;
-			}
+	private boolean validarCampoObrigatorio(String campo) {
+		if (GenericValidator.isBlankOrNull(campo)) {
+			return false;
 		}
-		return false;
+		return true;
 	}
 
 }
