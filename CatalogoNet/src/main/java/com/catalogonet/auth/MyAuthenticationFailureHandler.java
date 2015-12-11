@@ -1,4 +1,4 @@
-package com.catalogonet.conf;
+package com.catalogonet.auth;
 
 import java.io.IOException;
 
@@ -7,53 +7,46 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import org.springframework.context.annotation.Configuration;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.DefaultRedirectStrategy;
 import org.springframework.security.web.RedirectStrategy;
 import org.springframework.security.web.WebAttributes;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
+import org.springframework.stereotype.Component;
 
-@Configuration
-public class MyAuthenticationFailureHandler implements
-		AuthenticationFailureHandler {
+@Component
+public class MyAuthenticationFailureHandler implements AuthenticationFailureHandler{
 
 	private RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
-
+	
+	private static final String DEFAULT_FAILURE_URL = "/login?error";
+	private static final String CART_FAILURE_URL = "/pagamento/identificacao?error";
+	
 	@Override
-	public void onAuthenticationFailure(HttpServletRequest request,
-			HttpServletResponse response, AuthenticationException auth)
-			throws IOException, ServletException {
-		
+	public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response,
+			AuthenticationException exception) throws IOException, ServletException {
 		handle(request, response);
 		clearAuthenticationAttributes(request);
-
+		
 	}
 
-	protected void handle(HttpServletRequest request,
-			HttpServletResponse response)
-			throws IOException {
-
-		String targetUrl = "/login?error";
-
-		/**
-		 * Verifica se o usuario fez login no carrinho de compras ou normalmente
-		 */
-		String previusUrl = request.getHeader("referer");
-		System.out.println("Previus URL: " + previusUrl);
-		
-		if (previusUrl.contains("/pagamento")) {
-			System.out.println("Contem a string pagamento");
-			targetUrl = "/pagamento/identificacao?error";
-		}
-		if (response.isCommitted()) {
-			System.out
-					.println("Response has already been committed. Unable to redirect to "
-							+ targetUrl);
+	private void handle(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		if (fromPaymentLogin(request)) {
+			redirectStrategy.sendRedirect(request, response, CART_FAILURE_URL);
 			return;
 		}
+		
+		redirectStrategy.sendRedirect(request, response, DEFAULT_FAILURE_URL);
+	}
+	
+	private boolean fromPaymentLogin(HttpServletRequest request) {
 
-		redirectStrategy.sendRedirect(request, response, targetUrl);
+		String previusUrl = request.getHeader("referer");
+		if (previusUrl.contains("pagamento") || previusUrl.contains("carrinho")) {
+			return true;
+		}
+		
+		return false;
 	}
 
 	protected void clearAuthenticationAttributes(HttpServletRequest request) {
@@ -63,7 +56,7 @@ public class MyAuthenticationFailureHandler implements
 		}
 		session.removeAttribute(WebAttributes.AUTHENTICATION_EXCEPTION);
 	}
-
+	
 	public void setRedirectStrategy(RedirectStrategy redirectStrategy) {
 		this.redirectStrategy = redirectStrategy;
 	}
@@ -71,5 +64,5 @@ public class MyAuthenticationFailureHandler implements
 	protected RedirectStrategy getRedirectStrategy() {
 		return redirectStrategy;
 	}
-
+	
 }

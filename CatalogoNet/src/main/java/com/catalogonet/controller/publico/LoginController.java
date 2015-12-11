@@ -1,10 +1,5 @@
 package com.catalogonet.controller.publico;
 
-import javax.servlet.http.HttpServletRequest;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.authentication.AuthenticationProvider;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,8 +11,6 @@ import com.catalogonet.model.Usuario;
 @Controller
 public class LoginController {
 
-	@Autowired
-	private AuthenticationProvider auth;
 
 	@RequestMapping("/login")
 	public String loginRegisterForm(ModelMap map) {
@@ -27,28 +20,11 @@ public class LoginController {
 		return "publico/geral/login_register_form";
 	}
 
-	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String customLogin(@RequestParam(value = "username") String username,
-			@RequestParam(value = "password") String password,
-			@RequestParam(value = "error", required = false) String error,
-			@RequestParam(value = "logout", required = false) String logout, HttpServletRequest request, ModelMap map) {
-		
-		
-		String referrer = request.getHeader("Referer");
-		System.out.println("Url que veio antes: " + referrer);
-
-		System.out.println("Chamou o post!!");
-
-		UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(username, password);
-		auth.authenticate(token);
-
-		return "redirect:/";
-	}
-
 	// Spring Security see this:
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login(@RequestParam(value = "error", required = false) String error,
 			@RequestParam(value = "logout", required = false) String logout,
+			@RequestParam(value = "denied", required = false) String denied,
 			@RequestParam(value = "emailJaCadastrado", required = false) String emailJaCadastrado, ModelMap map) {
 
 		if (error != null) {
@@ -57,6 +33,10 @@ public class LoginController {
 
 		if (logout != null) {
 			map.put("msg", "Você fez logout.");
+		}
+		
+		if (denied != null) {
+			map.put("denied", "Acesso negado.");
 		}
 
 		if (emailJaCadastrado != null) {

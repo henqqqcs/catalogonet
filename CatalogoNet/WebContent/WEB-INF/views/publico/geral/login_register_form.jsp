@@ -31,6 +31,9 @@
 	    <c:if test="${not empty error}">
 			 <div class="alert alert-danger">Ops! Usuário não encontrado. Verifique seu e-mail e sua senha.</div>
 		</c:if>
+		<c:if test="${not empty denied}">
+			 <div class="alert alert-danger">Acesso negado.</div>
+		</c:if>
 		<c:if test="${not empty emailJaCadastrado}">
 			<div class="alert alert-danger">Este email já está sendo utilizado.</div>
 		</c:if>
