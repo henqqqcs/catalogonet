@@ -60,6 +60,9 @@ public class AnuncioValidator implements Validator {
 		
 		if (anuncio.getTituloNaUrl().contains("sem-titulo"))
 			errors.rejectValue("titulo", "", messageSource.getMessage("anuncio.titulo.notnull", null, locale));
+		
+		if (anuncio.getTituloNaUrl().startsWith("anuncio-"))
+			errors.rejectValue("titulo", "", messageSource.getMessage("anuncio.titulo.notnull", null, locale));
 
 		if (!validarCampoSize(anuncio.getTitulo(), TITULO_MIN_LENGTH, TITULO_MAX_LENGTH))
 			errors.rejectValue("titulo", "", messageSource.getMessage("anuncio.titulo.size", null, locale));

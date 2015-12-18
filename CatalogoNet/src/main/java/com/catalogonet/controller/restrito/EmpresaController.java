@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.catalogonet.model.Anuncio;
 import com.catalogonet.model.Pedido;
-import com.catalogonet.model.PlanoAnuncio;
+import com.catalogonet.model.Plano;
 import com.catalogonet.model.Usuario;
 import com.catalogonet.negocio.AnuncioRN;
 import com.catalogonet.negocio.PedidoRN;
@@ -44,15 +44,15 @@ public class EmpresaController {
 		int numMax = 5;
 
 		// lista de planos
-		List<PlanoAnuncio> listaPlanoAnuncio = planoRN.listarPlanoAnuncioUsuario(usuario.getId());
-		if (!listaPlanoAnuncio.isEmpty()) {
-			if (listaPlanoAnuncio.size() >= numMax)
-				listaPlanoAnuncio = listaPlanoAnuncio.subList(0, (numMax - 1));
+		List<Plano> listaPlano = planoRN.listarPlanosDoUsuario(usuario.getId());
+		if (!listaPlano.isEmpty()) {
+			if (listaPlano.size() >= numMax)
+				listaPlano = listaPlano.subList(0, (numMax - 1));
 		}
-		map.put("listaPlanoAnuncio", listaPlanoAnuncio);
+		map.put("listaPlano", listaPlano);
 
 		// lista de anuncios
-		List<Anuncio> listaAnuncios = anuncioRN.listarAnunciosUsuario(usuario.getId());
+		List<Anuncio> listaAnuncios = anuncioRN.listarAnunciosDoUsuario(usuario.getId());
 		if (!listaAnuncios.isEmpty()) {
 			if (listaAnuncios.size() >= numMax)
 				listaAnuncios = listaAnuncios.subList(0, (numMax - 1));
@@ -75,7 +75,7 @@ public class EmpresaController {
 
 		Usuario usuario = usuarioRN.pegaUsuarioNaSessao(map);
 		if (usuario != null) {
-			List<Anuncio> lista = anuncioRN.listarAnunciosUsuario(usuario.getId());
+			List<Anuncio> lista = anuncioRN.listarAnunciosDoUsuario(usuario.getId());
 			map.put("listaAnuncios", lista);
 		} else {
 			return "redirect:/login";
@@ -99,7 +99,7 @@ public class EmpresaController {
 	@RequestMapping("/meus-planos")
 	public String areaDaEmpresaMeusPlanos(ModelMap map) {
 		Usuario usuario = usuarioRN.pegaUsuarioNaSessao(map);
-		List<PlanoAnuncio> listaPlanos = planoRN.listarPlanoAnuncioUsuario(usuario.getId());
+		List<Plano> listaPlanos = planoRN.listarPlanosDoUsuario(usuario.getId());
 
 		map.put("listaPlanos", listaPlanos);
 		return "restrito/meus_planos";

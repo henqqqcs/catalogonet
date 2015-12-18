@@ -118,10 +118,10 @@
 													</form:form>
 												</p>
 												<p>
-													<a href="#" class="btn btn-warning btn-lg" title="Visualizar anúncio">Visualizar</a>
+													<a href="#" class="btn btn-info btn-lg" title="Clique aqui para editar seu anúncio passo a passo">Editar anúncio</a>
 												</p>
 												<p>
-													<a href="#" class="btn btn-info btn-lg" title="Clique aqui para editar seu anúncio passo a passo">Passo a passo</a>
+													<a href="#" class="btn btn-warning btn-lg" title="Visualizar anúncio">Visualizar</a>
 												</p>
 
 
@@ -130,23 +130,23 @@
 											</div>
 											<div class="col-md-6">
 															    <c:choose>
-																	<c:when test="${plano.statusPlanoAnuncio == 'PLANO_ATIVO'}">
+																	<c:when test="${anuncio.plano.status == 'ATIVO'}">
 																		<div class="alert alert-success">
 																			<p>
 																				<strong>Status</strong> <br /> Ativado <span class="glyphicon glyphicon glyphicon-ok"></span>
 																			</p>
 						
 																			<p>
-																				<strong>Plano</strong> <br /> ${plano.produto.nome}
+																				<strong>Plano</strong> <br /> ${anuncio.plano.nomePlano}
 																			</p>
 																			
-																			<c:if test="${not empty plano.dataFinalizacao}">
-																				<fmt:parseDate value="${plano.dataFinalizacao}" pattern="yyyy-MM-dd" var="parsedDate" type="date" />
+																			<c:if test="${not empty anuncio.plano.dataFinalizacao}">
+																				<fmt:parseDate value="${anuncio.plano.dataFinalizacao}" pattern="yyyy-MM-dd" var="parsedDate" type="date" />
 																				<p>
 																					<strong>Data finalização</strong> <br /> <fmt:formatDate value="${parsedDate}" pattern="dd/MM/yyyy" />
 																				</p>
 																			</c:if>
-																			<c:if test="${empty plano.dataFinalizacao}">
+																			<c:if test="${empty anuncio.plano.dataFinalizacao}">
 																				<p>
 																					<strong>Data finalização</strong> <br /> N/A
 																				</p>
@@ -161,16 +161,16 @@
 																			</p>
 						
 																			<p>
-																				<strong>Plano</strong> <br /> ${plano.produto.nome}
+																				<strong>Plano</strong> <br /> ${anuncio.plano.nomePlano}
 																			</p>
 																			
-																			<c:if test="${not empty plano.dataFinalizacao}">
-																				<fmt:parseDate value="${plano.dataFinalizacao}" pattern="yyyy-MM-dd" var="parsedDate" type="date" />
+																			<c:if test="${not empty anuncio.plano.dataFinalizacao}">
+																				<fmt:parseDate value="${anuncio.plano.dataFinalizacao}" pattern="yyyy-MM-dd" var="parsedDate" type="date" />
 																				<p>
 																					<strong>Data finalização</strong> <br /> <fmt:formatDate value="${parsedDate}" pattern="dd/MM/yyyy" />
 																				</p>
 																			</c:if>
-																			<c:if test="${empty plano.dataFinalizacao}">
+																			<c:if test="${empty anuncio.plano.dataFinalizacao}">
 																				<p>
 																					<strong>Data finalização</strong> <br /> Não ativado
 																				</p>

@@ -21,13 +21,11 @@ import com.catalogonet.converter.LocalDatePersistenceConverter;
 
 @Entity
 @Table(name = "plano_anuncio")
-public class PlanoAnuncio {
+public class Plano {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-
-	private boolean ativo;
 
 	@ManyToOne
 	@JoinColumn(name = "usuario_id", nullable = false)
@@ -36,59 +34,85 @@ public class PlanoAnuncio {
 	@OneToOne
 	@JoinColumn(name = "anuncio_id")
 	private Anuncio anuncio;
-	
+
 	@Enumerated(EnumType.STRING)
-	@Column(name ="status_plano_anuncio")
-	private StatusPlanoAnuncio statusPlanoAnuncio;
+	@Column(name = "status_plano")
+	private StatusPlano status;
 
 	@OneToOne
 	@JoinColumn(name = "produto_id", nullable = false)
 	private Produto produto;
-	
+
 	@Transient
 	private int diasRestantes;
 
 	@Convert(converter = LocalDatePersistenceConverter.class)
 	@Column(name = "data_criacao")
 	private LocalDate dataCriacao;
-	
+
 	@Convert(converter = LocalDatePersistenceConverter.class)
 	@Column(name = "data_inicio")
 	private LocalDate dataInicio;
-	
+
 	@Convert(converter = LocalDatePersistenceConverter.class)
 	@Column(name = "data_finalizacao")
 	private LocalDate dataFinalizacao;
 
-	public Long getId() {
-		return id;
+	@Deprecated
+	public Plano() {
 	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public Usuario getUsuario() {
-		return usuario;
-	}
-
-	public void setUsuario(Usuario usuario) {
+	
+	public Plano(Usuario  usuario, Produto produto) {
 		this.usuario = usuario;
+		this.produto = produto;
+		this.dataCriacao = LocalDate.now();
+		this.status = StatusPlano.AGUARDANDO_CRIACAO_ANUNCIO;
 	}
 
-	public Produto getProduto() {
-		return produto;
+	public boolean isAtivo() {
+		if (status == StatusPlano.ATIVO) {
+			return true;
+		}
+		return false;
+	}
+
+	public int getDiasRestantes() {
+
+		if ((dataInicio != null) && (dataFinalizacao != null)) {
+			int diasRestantes = Period.between(dataInicio, dataFinalizacao).getDays();
+			return diasRestantes;
+		}
+
+		return 0;
+	}
+
+	public void atualizarStatus(StatusPlano status) {
+		this.status = status;
 	}
 
 
-	public LocalDate getDataCriacao() {
-		return dataCriacao;
+//	================== getters and setter
+
+	public StatusPlano getStatus() {
+		return this.status;
+	}
+	
+	public int getPrioridadeProduto() {
+		return this.produto.getPrioridadeProduto().getPrioridadeProduto();
+	}
+	
+	public String getNomePlano() {
+		return this.produto.getNome();
 	}
 
-	public void setDataCriacao(LocalDate dataCriacao) {
-		this.dataCriacao = dataCriacao;
+	public String getNomeCompletoPlano() {
+		return this.produto.getNomeCompleto();
 	}
-
+	
+	public int getDuracaoProdutoEmMeses() {
+		return this.produto.getDuracaoMeses();
+	}
+	
 	public LocalDate getDataInicio() {
 		return dataInicio;
 	}
@@ -105,43 +129,32 @@ public class PlanoAnuncio {
 		this.dataFinalizacao = dataFinalizacao;
 	}
 
-	public boolean isAtivo() {
-		return ativo;
+	public Long getId() {
+		return id;
 	}
-
-	public void setAtivo(boolean ativo) {
-		this.ativo = ativo;
+	
+	public void setId(Long id) {
+		this.id = id;
 	}
-
-	public int getDiasRestantes() {
-		
-		if ((dataInicio != null) && (dataFinalizacao != null )) {
-			int diasRestantes = Period.between(dataInicio, dataFinalizacao).getDays();
-			return diasRestantes;
-		}
-
-		return 0;
+	
+	public Usuario getUsuario() {
+		return usuario;
 	}
-
+	
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+	
 	public Anuncio getAnuncio() {
 		return anuncio;
 	}
-
+	
 	public void setAnuncio(Anuncio anuncio) {
 		this.anuncio = anuncio;
 	}
-
-	public void setProduto(Produto produto) {
-		this.produto = produto;
-	}
-
-	public StatusPlanoAnuncio getStatusPlanoAnuncio() {
-		return statusPlanoAnuncio;
-	}
-
-	public void setStatusPlanoAnuncio(StatusPlanoAnuncio statusPlanoAnuncio) {
-		this.statusPlanoAnuncio = statusPlanoAnuncio;
+	
+	public LocalDate getDataCriacao() {
+		return dataCriacao;
 	}
 	
-
 }

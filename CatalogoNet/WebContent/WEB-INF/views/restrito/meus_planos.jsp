@@ -87,7 +87,7 @@
 											</tr>
 											<c:forEach items="${listaPlanos}" var="plano">
 												<tr>
-													<td>${plano.produto.nomeCompleto}</td>
+													<td>${plano.nomeCompletoPlano}</td>
 													<td><c:if test="${plano.ativo}">
 															<strong>Ativado <span class="glyphicon glyphicon-ok" style="color: #00CC00"></span></strong>
 														</c:if> <c:if test="${!plano.ativo}">

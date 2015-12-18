@@ -16,7 +16,6 @@ import com.catalogonet.model.Bairro;
 import com.catalogonet.model.Busca;
 import com.catalogonet.model.ResultadoBusca;
 import com.catalogonet.negocio.CategoriaRN;
-import com.catalogonet.negocio.LocalRN;
 
 @Component
 @Transactional
@@ -25,8 +24,8 @@ public class Buscador {
 	@Autowired
 	private BuscaDAO dao;
 
-	@Autowired
-	private LocalRN localRN;
+	// @Autowired
+	// private LocalRN localRN;
 
 	@Autowired
 	private CategoriaRN categoriaRN;

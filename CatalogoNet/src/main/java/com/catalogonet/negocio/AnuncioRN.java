@@ -10,7 +10,6 @@ import org.springframework.stereotype.Component;
 
 import com.catalogonet.dao.interfaces.AnuncioDAO;
 import com.catalogonet.model.Anuncio;
-import com.catalogonet.model.PlanoAnuncio;
 import com.catalogonet.model.Usuario;
 
 @Component
@@ -20,13 +19,13 @@ public class AnuncioRN {
 	@Autowired
 	private AnuncioDAO dao;
 
-	public void adicionar(Anuncio anuncio) {
+	public void salvar(Anuncio anuncio) {
 
 		// coloca data de criacao
 		if (anuncio.getDataCriacao() == null) {
 			anuncio.setDataCriacao(LocalDate.now());
 		}
-		dao.adicionar(anuncio);
+		dao.salvar(anuncio);
 	}
 
 	public void atualizar(Anuncio anuncio) {
@@ -39,25 +38,6 @@ public class AnuncioRN {
 		}
 	}
 	
-	public void ativar(Anuncio anuncio,
-			PlanoAnuncio plano) {
-		
-		//prioridade do anuncio
-		anuncio.setPrioridadeProduto(plano.getProduto()
-				.getPrioridadeProduto().getPrioridadeProduto());
-		
-		//ativar
-		anuncio.setAtivo(true);
-		
-		this.atualizar(anuncio);
-		
-	}
-	
-	public void desativar(Anuncio anuncio) {
-		anuncio.setAtivo(false);
-		this.atualizar(anuncio);
-	}
-
 	public void remover(Long id) {
 		dao.remover(id);
 	}
@@ -79,8 +59,8 @@ public class AnuncioRN {
 		return null;
 	}
 
-	public List<Anuncio> listarAnunciosUsuario(Long idUsuario) {
-		return dao.listarAnunciosUsuario(idUsuario);
+	public List<Anuncio> listarAnunciosDoUsuario(Long idUsuario) {
+		return dao.listarAnunciosDoUsuario(idUsuario);
 	}
 
 	public Anuncio buscarAnuncioDoUsuario(Long idUsuario, Long idAnuncio) {
@@ -98,10 +78,5 @@ public class AnuncioRN {
 	public List<Anuncio> buscarPorParteTitulo(String titulo) {
 		return dao.buscarPorParteTitulo(titulo);
 	}
-
-	public Anuncio buscarAnuncioDoPlano(PlanoAnuncio plano) {
-		return dao.buscarAnuncioDoPlano(plano);
-	}
-
 
 }

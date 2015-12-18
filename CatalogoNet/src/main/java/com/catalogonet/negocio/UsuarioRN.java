@@ -28,9 +28,6 @@ public class UsuarioRN {
 	@Autowired
 	private AuthenticationManager authenticationManager;
 	
-//	@Autowired
-//	private AuthenticationProvider authenticationManager;
-	
 	public void adicionar(Usuario usuario) {
 		if ((usuario.getPermissao() == null) || (!usuario.isAtivo())) {
 			usuario.setPermissao(Permissao.ROLE_USUARIO);
@@ -93,7 +90,6 @@ public class UsuarioRN {
 		try {
 			UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(user.getEmail(), user.getSenha());
 
-			// generate session if one doesn't exist
 			request.getSession();
 
 			token.setDetails(new WebAuthenticationDetails(request));

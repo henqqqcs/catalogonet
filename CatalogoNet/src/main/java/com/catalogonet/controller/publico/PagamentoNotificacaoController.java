@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.catalogonet.gerenciador.GerenciadorPedido;
+import com.catalogonet.gerenciador.GerenciadorDePedido;
 import com.catalogonet.model.PedidoStatus;
 
 import br.com.uol.pagseguro.domain.Transaction;
@@ -20,7 +20,7 @@ import br.com.uol.pagseguro.service.NotificationService;
 public class PagamentoNotificacaoController {
 
 	@Autowired
-	private GerenciadorPedido gerenciadorDePedidos;
+	private GerenciadorDePedido gerenciadorDePedidos;
 	
 	@RequestMapping(value = "/notificacoesPagSeguro", method = RequestMethod.POST)
 	@ResponseBody

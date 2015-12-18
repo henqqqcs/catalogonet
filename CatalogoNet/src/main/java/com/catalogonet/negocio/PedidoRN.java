@@ -1,6 +1,5 @@
 package com.catalogonet.negocio;
 
-import java.time.LocalDate;
 import java.util.List;
 
 import javax.transaction.Transactional;
@@ -11,7 +10,6 @@ import org.springframework.stereotype.Component;
 import com.catalogonet.dao.interfaces.PedidoDAO;
 import com.catalogonet.model.MetodoPagamento;
 import com.catalogonet.model.Pedido;
-import com.catalogonet.model.PedidoStatus;
 
 @Component
 @Transactional
@@ -21,26 +19,7 @@ public class PedidoRN  {
 	private PedidoDAO dao;
 
 	public Pedido adicionar(Pedido pedido) {
-
-		if (pedido.getId() == null) {
-			pedido.setPago(false);
-			
-			if (pedido.getPedidoStatus() == null) {
-				pedido.setPedidoStatus(PedidoStatus.AGUARDANDO_PAGAMENTO);
-			}
-			// coloca data de criacao
-			if (pedido.getDataInicio() == null) {
-				//data de inicio e data final
-				LocalDate hoje = LocalDate.now();
-				pedido.setDataInicio(hoje);
-				LocalDate dataFinal = hoje.plusDays(10);
-				pedido.setDataFinalizacao(dataFinal);
-			}
-			// seta o valor
-			pedido.setValor(pedido.getProduto().getValor());
-		}
 		return dao.adicionar(pedido);
-		
 	}
 
 	public void atualizar(Pedido pedido) {

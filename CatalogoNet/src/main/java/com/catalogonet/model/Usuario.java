@@ -46,7 +46,7 @@ public class Usuario {
 	private List<Anuncio> anuncios;
 
 	@OneToMany(mappedBy = "usuario", orphanRemoval = true)
-	private List<PlanoAnuncio> planosAnuncio;
+	private List<Plano> listaPlanos;
 
 	@OneToMany(mappedBy = "usuario", orphanRemoval = true)
 	private List<Pedido> pedidos;
@@ -177,12 +177,12 @@ public class Usuario {
 		this.telefone2 = telefone2;
 	}
 
-	public List<PlanoAnuncio> getPlanosAnuncio() {
-		return planosAnuncio;
+	public List<Plano> getListaPlanos() {
+		return listaPlanos;
 	}
 
-	public void setPlanosAnuncio(List<PlanoAnuncio> planosAnuncio) {
-		this.planosAnuncio = planosAnuncio;
+	public void setListaPlanos(List<Plano> listaPlanos) {
+		this.listaPlanos = listaPlanos;
 	}
 
 	public String getConfirmarEmail() {

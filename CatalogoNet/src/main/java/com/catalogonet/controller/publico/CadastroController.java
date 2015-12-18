@@ -1,6 +1,7 @@
 package com.catalogonet.controller.publico;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,8 +41,10 @@ public class CadastroController {
 
 	@RequestMapping("/cadastro")
 	public String cadastroPagina(@RequestParam(value = "email-register", required = false) String email,
-			@RequestParam(value = "emailJaCadastrado", required = false) String emailJaCadastrado, ModelMap map) {
-
+			HttpServletRequest request,
+			@RequestParam(value = "emailJaCadastrado", required = false) String emailJaCadastrado,
+			ModelMap map) {
+		
 		if ((email != null) && (!email.isEmpty())) {
 			Usuario u = usuarioRN.buscarPorEmail(email);
 			// ja existe um usuario com este email
@@ -67,6 +70,13 @@ public class CadastroController {
 	public String adicionaUsuario(@ModelAttribute("usuario") @Valid Usuario usuario, Errors errors,
 			BindingResult result, HttpServletRequest request, RedirectAttributes redirectAttributes, ModelMap map) {
 
+		//verifica se o cadastro veio do carrinho
+		HttpSession session = request.getSession();
+		boolean cartLogin = false;
+		if (session.getAttribute("cartLogin") != null) {
+			cartLogin = true;
+		} 
+		
 		Usuario u = usuarioRN.buscarPorEmail(usuario.getEmail());
 		boolean usuarioJaExiste = false;
 		// ja existe um usuario com este email
@@ -98,7 +108,11 @@ public class CadastroController {
 		// faz a autenticacao desse usuario e redireciona para home!
 		boolean fezLogin = usuarioRN.autenticaUsuarioEColocaNaSessao(usuario, request);
 		if (fezLogin) {
-			return "redirect:/area-da-empresa";
+			if (!cartLogin)
+				return "redirect:/area-da-empresa";
+			else
+				session.removeAttribute("cartLogin");
+				return "redirect:/pagamento/identificacao-handle";
 		}
 
 		// caso o login nao de certo redireciona para pagina de login?

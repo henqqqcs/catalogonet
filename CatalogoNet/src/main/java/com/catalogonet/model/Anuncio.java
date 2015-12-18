@@ -19,6 +19,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
 
@@ -29,15 +30,18 @@ import com.catalogonet.util.StringFormat;
 @Table(name = "anuncio")
 public class Anuncio implements Serializable {
 
+	private static final long serialVersionUID = 1L;
+
 	@Deprecated
 	public Anuncio() {
 	}
 
-	public Anuncio(String plano) {
-		this.setTitulo("Anúncio" + " - " + plano);
+	public Anuncio(String titulo, Plano plano, Usuario usuario) {
+		this.setTitulo("Anúncio" + " - " + plano.getNomePlano());
+		this.plano = plano;
+		this.prioridadeProduto = plano.getPrioridadeProduto();
+		this.usuario = usuario;
 	}
-
-	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -51,7 +55,7 @@ public class Anuncio implements Serializable {
 	private boolean verificado;
 	private boolean aprovado;
 
-	@Column(unique = true)
+	// @Column(unique = true)
 	@Size(min = 5, max = 50)
 	private String titulo;
 
@@ -116,6 +120,9 @@ public class Anuncio implements Serializable {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "usuario_id", nullable = false)
 	private Usuario usuario;
+	
+	@OneToOne(fetch = FetchType.LAZY)
+	private Plano plano;
 
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "categoria_id")
@@ -235,6 +242,15 @@ public class Anuncio implements Serializable {
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
 	}
+	
+	public Plano getPlano() {
+		return plano;
+	}
+
+	public void setPlano(Plano plano) {
+		this.prioridadeProduto = plano.getPrioridadeProduto();
+		this.plano = plano;
+	}
 
 	public Categoria getCategoria() {
 		return categoria;
@@ -294,10 +310,6 @@ public class Anuncio implements Serializable {
 
 	public int getPrioridadeProduto() {
 		return prioridadeProduto;
-	}
-
-	public void setPrioridadeProduto(int prioridadeProduto) {
-		this.prioridadeProduto = prioridadeProduto;
 	}
 
 	public LocalDate getDataCriacao() {

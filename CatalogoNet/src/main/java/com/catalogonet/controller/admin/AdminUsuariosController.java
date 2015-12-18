@@ -11,9 +11,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.catalogonet.model.Usuario;
-import com.catalogonet.negocio.AnuncioRN;
-import com.catalogonet.negocio.PedidoRN;
-import com.catalogonet.negocio.PlanoRN;
 import com.catalogonet.negocio.UsuarioRN;
 
 @Controller
@@ -23,14 +20,14 @@ public class AdminUsuariosController {
 	@Autowired
 	private UsuarioRN usuarioRN;
 
-	@Autowired
-	private AnuncioRN anuncioRN;
-
-	@Autowired
-	private PedidoRN pedidoRN;
-
-	@Autowired
-	private PlanoRN planoRN;
+	// @Autowired
+	// private AnuncioRN anuncioRN;
+	//
+	// @Autowired
+	// private PedidoRN pedidoRN;
+	//
+	// @Autowired
+	// private PlanoRN planoRN;
 
 	// private final String PAG_BUSCA = "redirect:/adminadmin/usuarios/busca";
 

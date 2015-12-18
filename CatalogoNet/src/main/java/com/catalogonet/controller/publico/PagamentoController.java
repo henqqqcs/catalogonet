@@ -1,6 +1,7 @@
 package com.catalogonet.controller.publico;
 
-import java.time.LocalDate;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,9 +13,9 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.catalogonet.gerenciador.GerenciadorDePlano;
 import com.catalogonet.model.MetodoPagamento;
 import com.catalogonet.model.Pedido;
-import com.catalogonet.model.PedidoStatus;
 import com.catalogonet.model.Produto;
 import com.catalogonet.model.Usuario;
 import com.catalogonet.negocio.PedidoRN;
@@ -37,6 +38,9 @@ public class PagamentoController {
 
 	@Autowired
 	private PedidoRN pedidoRN;
+	
+	@Autowired
+	private GerenciadorDePlano gerenciadorDePlano;
 
 	@RequestMapping("/carrinho")
 	public String paginaCarrinho(@RequestParam(required = false) Long idProduto,
@@ -68,7 +72,11 @@ public class PagamentoController {
 	}
 
 	@RequestMapping(value = "/identificacao", method = RequestMethod.GET)
-	public String paginaIdentificacao(@RequestParam(value = "error", required = false) String error, ModelMap map) {
+	public String paginaIdentificacao(@RequestParam(value = "error", required = false) String error,
+			HttpServletRequest request, ModelMap map) {
+
+		HttpSession session = request.getSession();
+		session.setAttribute("cartLogin", true);		
 
 		// verifica se ha um usuario logado
 		Usuario usuario = usuarioRN.pegaUsuarioNaSessao(map);
@@ -105,7 +113,7 @@ public class PagamentoController {
 			return "redirect:/pagamento/identificacao";
 		}
 		map.put("usuario", usuario);
-		
+
 		Produto produto = (Produto) map.get("produto");
 		if (produtoRN.isProdutoGratuito(produto)) {
 			return "redirect:/pagamento/confirmar-plano-gratuito";
@@ -157,16 +165,10 @@ public class PagamentoController {
 
 		System.out.println("|== usuario: " + usuario.getEmail());
 
-		// criar um novo pedido
-		boolean renovacao = false;
-
 		MetodoPagamento metodoPagamentoEnum = pedidoRN.pegarMetodoDePagamento(metodoPagamento);
 
 		// set pedido
-		Pedido pedido = new Pedido(metodoPagamentoEnum, PedidoStatus.AGUARDANDO_PAGAMENTO, renovacao, usuario, produto);
-
-		// usuario
-		pedido.setUsuario(usuario);
+		Pedido pedido = new Pedido(metodoPagamentoEnum, usuario, produto);
 
 		// metodo de pagamento
 		String paginaDeRedirecionamento = "/";
@@ -216,50 +218,37 @@ public class PagamentoController {
 
 		map.put("usuario", usuario);
 		map.put("produto", produto);
-		
+
 		return "publico/pagamento/pagamento-confirmar-plano-gratuito";
-		
+
 	}
-	
+
 	@RequestMapping(value = "/confirmar-plano-gratuito-handle")
 	public String paginaConfirmarPlanoGratuitoHandle(RedirectAttributes redirectAttributes, ModelMap map) {
-		
+
 		Produto produto = (Produto) map.get("produto");
 		if (produto == null) {
 			System.err.println("|-ERRO: Produto null dentro do confirmar pedido");
 			return "redirect:/carrinho";
 		}
-		
+
 		Usuario usuario = usuarioRN.pegaUsuarioNaSessao(map);
 		if (usuario == null) {
 			return "redirect:/pagamento/identificacao";
 		}
+
 		
-		Pedido pedido = new Pedido();
-		pedido.setMetodoPagamento(MetodoPagamento.GRATUITO);
-		pedido.setPago(true);
-		pedido.setPedidoStatus(PedidoStatus.PAGO);
-		pedido.setProduto(produto);
-		pedido.setValor(produto.getValor());
-		
-		//seta as datas para nao ser feito automaticamente pelo pedidoRN
-		LocalDate hoje = LocalDate.now();
-		pedido.setDataInicio(hoje);
-		pedido.setDataFinalizacao(hoje);
-		
-		//setar usuario
-		pedido.setUsuario(usuario);
+		Pedido pedido = new Pedido(MetodoPagamento.GRATUITO, usuario, produto);
 
 		// salvar o pedido
 		pedidoRN.adicionar(pedido);
-
-		// atribuidor de planos
-		// ..
-		System.out.println("|-- pagamento controlle: plano gratuito contratado - Deve criar novo plano anuncio");
+		
+		//criar um plano gratuito
+		gerenciadorDePlano.criarPlano(pedido);
 
 		redirectAttributes.addFlashAttribute("gratuito", "gratuito");
 		return "redirect:/pagamento/obrigado";
-		
+
 	}
 
 	/*

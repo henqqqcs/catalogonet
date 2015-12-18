@@ -65,28 +65,67 @@
 								<h2>Meus planos</h2>
 								<p>Meus planos e produtos contratados</p>
 								<br />
-								<c:if test="${not empty listaPlanoAnuncio}">
+								<c:if test="${not empty listaPlano}">
 									<div class="table-responsive">
 										<table class="table table-condensed table-hover">
-											<!-- 											<tr> -->
-											<!-- 												<th>Produto</th> -->
-											<!-- 												<th>Status</th> -->
-											<!-- 												<th class="text-right">Detalhes</th> -->
-											<!-- 											</tr> -->
-											<c:forEach items="${listaPlanoAnuncio}" var="plano">
+																						<tr>
+																							<th>Produto</th>
+																							<th>Status</th>
+																							<th class="text-right">Detalhes</th>
+																						</tr>
+											<c:forEach items="${listaPlano}" var="plano">
 												<tr>
-													<td>${plano.produto.nome}</td>
-													<td><c:if test="${plano.ativo}">
-															Ativado <span class="glyphicon glyphicon-ok" style="color: #00CC00"></span>
-														</c:if> <c:if test="${!plano.ativo}">
-															Desativado <span class="glyphicon glyphicon-remove" style="color: #FF0000"></span>
-														</c:if></td>
-													<td class="text-right"><c:if test="${plano.anuncio != null}">
-															<a href="<c:url value="/area-da-empresa/meus-anuncios/${plano.anuncio.tituloNaUrl}/${plano.anuncio.id}"/>">${plano.anuncio.titulo}</a>
-														</c:if> <c:if test="${plano.anuncio == null}">
-															<a class="btn btn-success btn-sm" href="<c:url value="/area-da-empresa/meus-planos/comecar-plano/${plano.id}"/>">Comece
-																agora!</a>
-														</c:if></td>
+													<td>${plano.nomePlano}</td>
+														<c:choose>
+															<c:when test="${plano.status == 'AGUARDANDO_CRIACAO_ANUNCIO'}">
+																<td>
+																	Desativado <span class="glyphicon glyphicon-remove" style="color: #FF0000"></span>
+																</td>
+																<td class="text-right">
+																	<a class="btn btn-success btn-sm" href="<c:url value="/area-da-empresa/meus-planos/comecar-plano/${plano.id}"/>">Comece
+																	agora!</a>
+																</td>
+															</c:when>
+															<c:when test="${plano.status == 'AGUARDANDO_PUBLICACAO'}">
+																<td>
+																	Aguardando publicação do anúncio
+																</td>
+																<td class="text-right">
+																	<a href="<c:url value="/area-da-empresa/meus-anuncios/${plano.anuncio.tituloNaUrl}/${plano.anuncio.id}"/>">${plano.anuncio.titulo}</a>
+																</td>
+															</c:when>
+															<c:when test="${plano.status == 'ATIVO'}">
+																<td>
+																	Ativado <span class="glyphicon glyphicon-ok" style="color: #00CC00"></span>
+																</td>
+																<td class="text-right">
+																	<a href="<c:url value="/area-da-empresa/meus-anuncios/${plano.anuncio.tituloNaUrl}/${plano.anuncio.id}"/>">${plano.anuncio.titulo}</a>
+																</td>
+															</c:when>
+															<c:when test="${plano.status == 'AGREGADO'}">
+																<td>
+																	Renovação
+																</td>
+																<td class="text-right">
+																</td>
+															</c:when>
+															<c:when test="${plano.status == 'SUSPENSO'}">
+																<td>
+																	Desativado <span class="glyphicon glyphicon-remove" style="color: #FF0000"></span>
+																</td>
+																<td class="text-right">
+																	<a href="<c:url value="/area-da-empresa/meus-anuncios/${plano.anuncio.tituloNaUrl}/${plano.anuncio.id}"/>">${plano.anuncio.titulo}</a>
+																</td>
+															</c:when>
+															<c:when test="${plano.status == 'FINALIZADO'}">
+																<td>
+																	Finalizado <span class="glyphicon glyphicon-remove" style="color: #FF0000"></span>
+																</td>
+																<td class="text-right">
+																	<a href="<c:url value="/area-da-empresa/meus-anuncios/${plano.anuncio.tituloNaUrl}/${plano.anuncio.id}"/>">${plano.anuncio.titulo}</a>
+																</td>
+															</c:when>
+														</c:choose>
 												</tr>
 											</c:forEach>
 										</table>
@@ -95,7 +134,7 @@
 										<a href="<c:url value="/area-da-empresa/meus-planos"/>">Exibir todos</a>
 									</p>
 								</c:if>
-								<c:if test="${empty listaPlanoAnuncio}">
+								<c:if test="${empty listaPlano}">
 									<p>Você ainda não contratou nenhum plano</p>
 									<p>
 										<a href="<c:url value="/divulgue-seu-negocio"/>" class="btn btn-black btn-lg">Contratar plano</a>

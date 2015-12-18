@@ -33,13 +33,6 @@ public class Pedido {
 	@Enumerated(EnumType.STRING)
 	private PedidoStatus pedidoStatus;
 
-	private boolean pago;
-
-	/**
-	 * Para identificar se eh uma renovacao de plano
-	 */
-	private boolean renovacao;
-
 	@Convert(converter = LocalDatePersistenceConverter.class)
 	@Column(name = "data_inicio")
 	private LocalDate dataInicio;
@@ -56,19 +49,28 @@ public class Pedido {
 	@JoinColumn(name = "produto_id", nullable = false)
 	private Produto produto;
 
+	@Deprecated
 	public Pedido() {
 	}
 	
-	public Pedido(MetodoPagamento metodoPagamento, PedidoStatus status,
-			boolean renovacao, Usuario usuario, Produto produto) {
+	public Pedido(MetodoPagamento metodoPagamento, Usuario usuario, Produto produto) {
+		
 		this.metodoPagamento = metodoPagamento;
-		this.pedidoStatus = status;
-		this.renovacao = renovacao;
 		this.usuario = usuario;
 		this.produto = produto;
 		
+		if (metodoPagamento == MetodoPagamento.GRATUITO) 
+			this.pedidoStatus = PedidoStatus.PAGO;
+		else
+			this.pedidoStatus = PedidoStatus.AGUARDANDO_PAGAMENTO;
+		
 		//valor
 		this.valor = produto.getValor();
+		
+		//data inicio
+		this.dataInicio = LocalDate.now();
+		//o pedido vai expirar em 10 dias
+		this.dataFinalizacao = LocalDate.now().plusDays(10);
 	}
 
 	public Long getId() {
@@ -83,16 +85,8 @@ public class Pedido {
 		return valor;
 	}
 
-	public void setValor(BigDecimal valor) {
-		this.valor = valor;
-	}
-
 	public Usuario getUsuario() {
 		return usuario;
-	}
-
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
 	}
 
 	public MetodoPagamento getMetodoPagamento() {
@@ -107,47 +101,26 @@ public class Pedido {
 		return produto;
 	}
 
-	public void setProduto(Produto produto) {
-		this.produto = produto;
-	}
-
 	public LocalDate getDataInicio() {
 		return dataInicio;
-	}
-
-	public void setDataInicio(LocalDate dataInicio) {
-		this.dataInicio = dataInicio;
-	}
-
-	public boolean isRenovacao() {
-		return renovacao;
-	}
-
-	public void setRenovacao(boolean renovacao) {
-		this.renovacao = renovacao;
 	}
 
 	public LocalDate getDataFinalizacao() {
 		return dataFinalizacao;
 	}
 
-	public void setDataFinalizacao(LocalDate dataFinalizacao) {
-		this.dataFinalizacao = dataFinalizacao;
-	}
-
 	public boolean isPago() {
-		return pago;
-	}
-
-	public void setPago(boolean pago) {
-		this.pago = pago;
+		if (pedidoStatus == PedidoStatus.PAGO)
+			return true;
+		
+		return false;
 	}
 
 	public PedidoStatus getPedidoStatus() {
 		return pedidoStatus;
 	}
 
-	public void setPedidoStatus(PedidoStatus pedidoStatus) {
+	public void atualizarStatus(PedidoStatus pedidoStatus) {
 		this.pedidoStatus = pedidoStatus;
 	}
 

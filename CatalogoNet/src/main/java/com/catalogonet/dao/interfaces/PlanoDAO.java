@@ -2,25 +2,26 @@ package com.catalogonet.dao.interfaces;
 
 import java.util.List;
 
-import com.catalogonet.model.PlanoAnuncio;
+import com.catalogonet.model.Plano;
 
 
 public interface PlanoDAO {
 
-	//plano anuncios guia comercial
-	public PlanoAnuncio adicionarPlanoAnuncio(PlanoAnuncio planoAnuncio);
-	public void atualizarPlanoAnuncio(PlanoAnuncio planoAnuncio);
-	public void removerPlanoAnuncio(Long idPlanoAnuncio);
-	public PlanoAnuncio buscarPlanoAnuncioPorId(Long idPlanoAnuncio);
+	//plano s guia comercial
+	public Plano adicionarPlano(Plano plano);
+	public void atualizarPlano(Plano plano);
+	public void removerPlano(Long idPlano);
+	public Plano buscarPlanoPorId(Long idPlano);
 	
 	//usuario
-	public List<PlanoAnuncio> listarPlanoAnuncioUsuario(Long idUsuario);
-	public List<PlanoAnuncio> listarPlanoAnuncioNaoUtilizado(Long idUsuario);
+	public List<Plano> listarPlanosDoUsuario(Long idUsuario);
+	public List<Plano> listarPlanosNaoUtilizados(Long idUsuario);
 	
-	//anuncio
-	public PlanoAnuncio buscarPlanoAtivoDoAnuncio(Long idAnuncio);
-	public PlanoAnuncio buscarPlanoDoAnuncio(Long idAnuncio);
-//	public List<PlanoAnuncio> listarTodosPlanosDoAnuncio(Long idAnuncio);
+	//public Plano buscarPlanoAtivoDoAnuncio(Long id);
+	//public Plano buscarPlanoDoAnuncio(Long idAnuncio);
+//	public List<Plano> listarTodosPlanosDo(Long id);
+	
+	//public List<Plano> listarPlanosComAnuncioDoUsuario(Long idUsuario);
 	
 	//plano marketing digital
 	//plano sites

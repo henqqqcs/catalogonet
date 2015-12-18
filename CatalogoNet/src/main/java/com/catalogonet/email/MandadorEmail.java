@@ -10,7 +10,7 @@ import com.catalogonet.email.template.EmailTemplate;
 import com.catalogonet.email.template.EmailTemplateBuilder;
 import com.catalogonet.model.Anuncio;
 import com.catalogonet.model.Pedido;
-import com.catalogonet.model.PlanoAnuncio;
+import com.catalogonet.model.Plano;
 import com.catalogonet.model.Usuario;
 
 @Service
@@ -21,6 +21,10 @@ public class MandadorEmail {
 
 	private static final String PATH_CADASTRO_USUARIO = "/email/CADASTRO_USUARIO.ftl";
 	private static final String PATH_PEDIDO_RECEBIDO = "/email/PEDIDO_RECEBIDO.ftl";
+	private static final String PATH_PEDIDO_PAGO = "/email/PEDIDO_PAGO.ftl";
+	private static final String PATH_PEDIDO_CANCELADO = "/email/PEDIDO_CANCELADO.ftl";
+	private static final String PATH_ANUNCIO_CRIADO = "/email/ANUNCIO_CRIADO.ftl";
+	private static final String PATH_ANUNCIO_PUBLICADO = "/email/ANUNCIO_PUBLICADO.ftl";
 	// private static final String PATH_EMAIL_CADASTRO_ANUNCIO =
 	// "/email/CADASTRO_ANUNCIO.ftl";
 	// private static final String PATH_PEDIDO_APROVADO =
@@ -80,10 +84,87 @@ public class MandadorEmail {
 		emailProvider.send(usuario.getEmail(), email.getMessage(), email.getSubject());
 
 	}
-
+	
 	@Async
 	public void mandarEmailPedidoPagamentoConfirmado(Pedido pedido) {
+		
+		EmailTemplate email = new EmailTemplateBuilder().addVariable("%NUMERO-PEDIDO%", pedido.getId().toString())
+				.addVariable("%USUARIO-NOME%", pedido.getUsuario().getNome())
+				.addVariable("%PRODUTO-NOME%", pedido.getProduto().getNome())
+				.addVariable("%PEDIDO-VALOR%", pedido.getValor().toPlainString())
+				.addVariable("%PRODUTO-DURACAO%", String.valueOf(pedido.getProduto().getDuracaoMeses()))
+				.addVariable("%LINK-AREA-EMPRESA%", "http://www.catalogonet.com.br/area-da-empresa")
+				.setHeaderCharacters("##").setSubjectProperty("subject:").setSourceFileLocation(PATH_PEDIDO_PAGO)
+				.createHtmlEmail();
 
+		emailProvider.send(pedido.getUsuario().getEmail(), email.getMessage(), email.getSubject());
+
+	}
+	
+	@Async
+	public void mandarEmailPedidoPagamentoCancelado(Pedido pedido) {
+		
+		EmailTemplate email = new EmailTemplateBuilder().addVariable("%NUMERO-PEDIDO%", pedido.getId().toString())
+				.addVariable("%USUARIO-NOME%", pedido.getUsuario().getNome())
+				.addVariable("%PRODUTO-NOME%", pedido.getProduto().getNome())
+				.addVariable("%PEDIDO-VALOR%", pedido.getValor().toPlainString())
+				.addVariable("%PRODUTO-DURACAO%", String.valueOf(pedido.getProduto().getDuracaoMeses()))
+				.addVariable("%LINK-MEUS-PEDIDOS%", "http://www.catalogonet.com.br/area-da-empresa/meus-pedidos")
+				.setHeaderCharacters("##").setSubjectProperty("subject:").setSourceFileLocation(PATH_PEDIDO_CANCELADO)
+				.createHtmlEmail();
+
+		emailProvider.send(pedido.getUsuario().getEmail(), email.getMessage(), email.getSubject());
+
+	}
+	
+	@Async
+	public void mandarEmailAnuncioCriado(Plano plano) {
+		
+		EmailTemplate email = new EmailTemplateBuilder()
+				.addVariable("%USUARIO-NOME%", plano.getUsuario().getNome())
+				.addVariable("%LINK-AREA-EMPRESA%", "http://www.catalogonet.com.br/area-da-empresa")
+				.setHeaderCharacters("##").setSubjectProperty("subject:").setSourceFileLocation(PATH_ANUNCIO_CRIADO)
+				.createHtmlEmail();
+
+		emailProvider.send(plano.getUsuario().getEmail(), email.getMessage(), email.getSubject());
+
+	}
+	
+	@Async
+	public void mandarEmailAnuncioPublicado(Usuario usuario, Anuncio anuncio) {
+		
+		EmailTemplate email = new EmailTemplateBuilder()
+				.addVariable("%USUARIO-NOME%", usuario.getNome())
+				.addVariable("%ANUNCIO-TITULO%", anuncio.getTitulo())
+				.addVariable("%LINK-AREA-EMPRESA%", "http://www.catalogonet.com.br/area-da-empresa")
+				.setHeaderCharacters("##").setSubjectProperty("subject:").setSourceFileLocation(PATH_ANUNCIO_PUBLICADO)
+				.createHtmlEmail();
+
+		emailProvider.send(usuario.getEmail(), email.getMessage(), email.getSubject());
+
+	}
+	
+	@Async
+	public void mandarEmailRecuperacaoSenha(Usuario usuario) {
+		throw new RuntimeException("mandarEmailRecuperacaoSenha ainda nao implementado");
+	}
+	
+	
+	@Async
+	public void mandarEmailAprovacaoDeAnuncio(Usuario usuario, Anuncio anuncio) {
+		//System.out.println("mandarEmailAprovacaoDeAnuncio ainda nao implementado: " + PATH_EMAIL_ANUNCIO_APROVADO);
+		throw new RuntimeException("mandarEmailAprovacaoDeAnuncio ainda nao implementado");
+	}
+
+	@Async
+	public void mandarEmailReprovacaoDeAnuncio(Usuario usuario, Anuncio anuncio) {
+		//System.out.println("mandarEmailReprovacaoDeAnuncio" + PATH_EMAIL_ANUNCIO_REPROVADO);
+		throw new RuntimeException("mandarEmailReprovacaoDeAnuncio");
+	}
+
+//	@Async
+//	public void mandarEmailPedidoPagamentoConfirmado(Pedido pedido) {
+//
 //		Usuario usuario = pedido.getUsuario();
 //
 //		String emailTo = usuario.getEmail();
@@ -97,12 +178,12 @@ public class MandadorEmail {
 //		mensagem = StringUtils.replace(mensagem, "%PEDIDO-NUMERO%", String.valueOf(pedido.getId()));
 //
 //		emailProvider.send(emailTo, mensagem, subject);
+//
+//	}
 
-	}
-
-	@Async
-	public void mandarEmailPedidoCancelado(Pedido pedido) {
-
+//	@Async
+//	public void mandarEmailPedidoCancelado(Pedido pedido) {
+//
 //		Usuario usuario = pedido.getUsuario();
 //
 //		String emailTo = usuario.getEmail();
@@ -116,31 +197,11 @@ public class MandadorEmail {
 //		mensagem = StringUtils.replace(mensagem, "%PEDIDO-NUMERO%", String.valueOf(pedido.getId()));
 //
 //		emailProvider.send(emailTo, mensagem, subject);
-	}
+//	}
 
-	@Async
-	public void mandarEmailRecuperacaoSenha(Usuario usuario) {
-
-//		String emailTo = usuario.getEmail();
-//		String subject = "Cat&aacute;logoNet &ndash; Recupera&ccedil;&atilde;o de senha";
-//		String mensagem = FileUtils.pegarStringArquivo(PATH_EMAIL_RECUPERAR_SENHA);
+//	@Async
+//	public void mandarEmailAnuncioPresteAVencimento(Usuario usuario, Anuncio anuncio, Plano plano) {
 //
-//		// %USUARIO-NOME%
-//		mensagem = StringUtils.replace(mensagem, "%USUARIO-NOME%", usuario.getNome());
-//
-//		// %USUARIO-EMAIL%
-//		mensagem = StringUtils.replace(mensagem, "%USUARIO-EMAIL%", usuario.getEmail());
-//
-//		// %USUARIO-SENHA%
-//		mensagem = StringUtils.replace(mensagem, "%USUARIO-SENHA%", usuario.getSenha());
-//
-//		emailProvider.send(emailTo, mensagem, subject);
-
-	}
-
-	@Async
-	public void mandarEmailAnuncioPresteAVencimento(Usuario usuario, Anuncio anuncio, PlanoAnuncio plano) {
-
 //		String emailTo = usuario.getEmail();
 //		String subject = "Cat&aacute;logoNet &ndash; O plano do seu an&uacute;ncio est&aacute; quase vencendo";
 //		String mensagem = FileUtils.pegarStringArquivo(PATH_EMAIL_PLANO_ANUNCIO_PARA_VENCER);
@@ -158,11 +219,11 @@ public class MandadorEmail {
 //		mensagem = StringUtils.replace(mensagem, "%PRODUTO-DURACAO%", String.valueOf(plano.getDiasRestantes()));
 //
 //		emailProvider.send(emailTo, mensagem, subject);
+//
+//	}
 
-	}
-
-	@Async
-	public void mandarEmailAnuncioVencimento(Usuario usuario, Anuncio anuncio, PlanoAnuncio plano) {
+//	@Async
+//	public void mandarEmailAnuncioVencimento(Usuario usuario, Anuncio anuncio, Plano plano) {
 //
 //		String emailTo = usuario.getEmail();
 //		String subject = "Cat&aacute;logoNet &ndash; O plano do seu an&uacute;ncio venceu";
@@ -184,17 +245,6 @@ public class MandadorEmail {
 //		mensagem = StringUtils.replace(mensagem, "%DATA-ATUAL%", dataAtual);
 //
 //		emailProvider.send(emailTo, mensagem, subject);
-	}
+//	}
 
-	@Async
-	public void mandarEmailAprovacaoDeAnuncio(Usuario usuario, Anuncio anuncio) {
-		//System.out.println("mandarEmailAprovacaoDeAnuncio ainda nao implementado: " + PATH_EMAIL_ANUNCIO_APROVADO);
-		throw new RuntimeException("mandarEmailAprovacaoDeAnuncio ainda nao implementado");
-	}
-
-	@Async
-	public void mandarEmailReprovacaoDeAnuncio(Usuario usuario, Anuncio anuncio) {
-		//System.out.println("mandarEmailReprovacaoDeAnuncio" + PATH_EMAIL_ANUNCIO_REPROVADO);
-		throw new RuntimeException("mandarEmailReprovacaoDeAnuncio");
-	}
 }

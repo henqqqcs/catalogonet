@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.catalogonet.gerenciador.GerenciadorPedido;
+import com.catalogonet.gerenciador.GerenciadorDePedido;
 import com.catalogonet.model.PedidoStatus;
 
 @Controller
@@ -13,7 +13,7 @@ public class PagamentoTesteController {
 
 	
 	@Autowired
-	private GerenciadorPedido gerenciadorPedido;
+	private GerenciadorDePedido gerenciadorPedido;
 	
 	@RequestMapping("/pagamento-teste/{idPedido}")
 	public String pagamentoTeste(@PathVariable("idPedido") String idPedido) {

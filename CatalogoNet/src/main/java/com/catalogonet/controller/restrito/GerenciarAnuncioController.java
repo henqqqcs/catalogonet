@@ -1,8 +1,6 @@
 package com.catalogonet.controller.restrito;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import javax.servlet.http.HttpServletResponse;
 
@@ -11,7 +9,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.Errors;
-import org.springframework.validation.FieldError;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -25,13 +22,11 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.catalogonet.model.Anuncio;
 import com.catalogonet.model.Categoria;
 import com.catalogonet.model.FileMeta;
-import com.catalogonet.model.PlanoAnuncio;
 import com.catalogonet.model.SubCategoria;
 import com.catalogonet.model.Usuario;
 import com.catalogonet.negocio.AnuncioRN;
 import com.catalogonet.negocio.CategoriaRN;
 import com.catalogonet.negocio.ImagemRN;
-import com.catalogonet.negocio.PlanoRN;
 import com.catalogonet.negocio.UsuarioRN;
 import com.catalogonet.util.ImageUtils;
 import com.catalogonet.validators.AnuncioValidator;
@@ -47,9 +42,6 @@ public class GerenciarAnuncioController {
 	@Autowired
 	private AnuncioRN anuncioRN;
 
-	@Autowired
-	private PlanoRN planoRN;
-	
 	@Autowired
 	private CategoriaRN categoriaRN;
 
@@ -67,89 +59,7 @@ public class GerenciarAnuncioController {
 		binder.setValidator(anuncioValidator);
 	}
 
-	// ======================================================================
-	// =========================== Publicacao ===============================
-	// ======================================================================
-	@RequestMapping("/{tituloNaUrl}/{idAnuncio}/publicar")
-	public String publicarAnuncio(@PathVariable("tituloNaUrl") String tituloNaUrl,
-			@PathVariable("idAnuncio") Long idAnuncio, @ModelAttribute("anuncio") Anuncio anuncio,
-			RedirectAttributes redirectAttrs, BindingResult result, ModelMap map) {
-
-		Usuario usuario = usuarioRN.pegaUsuarioNaSessao(map);
-		// verifica se o anuncio pertence ao usuario
-		if (anuncioRN.buscarAnuncioDoUsuario(usuario.getId(), idAnuncio) == null) {
-			return "redirect:/area-da-empresa/meus-anuncios";
-		}
-
-		map.put("anucio", anuncio);
-
-		Map<String, String> mapaInformacoes = new HashMap<String, String>();
-		Map<String, String> mapaLocalizacao = new HashMap<String, String>();
-		Map<String, String> mapaCategoria = new HashMap<String, String>();
-		Map<String, String> mapaTags = new HashMap<String, String>();
-
-		// valida informacao
-		anuncioValidator.validateInformacoes(anuncio, result);
-		if (result.hasErrors()) {
-			for (FieldError f : result.getFieldErrors()) {
-				mapaInformacoes.put(f.getField(), f.getDefaultMessage());
-			}
-		}
-
-		// valida localizacao
-		anuncioValidator.validateLocalizacao(anuncio, result);
-		if (result.hasErrors()) {
-			for (FieldError f : result.getFieldErrors()) {
-				if (!mapaInformacoes.containsKey(f.getField()))
-					mapaLocalizacao.put(f.getField(), f.getDefaultMessage());
-			}
-		}
-
-		// valida categoria
-		anuncioValidator.validateCategorias(anuncio, result);
-		if (result.hasErrors()) {
-			for (FieldError f : result.getFieldErrors()) {
-				if (!mapaInformacoes.containsKey(f.getField()) && !mapaLocalizacao.containsKey(f.getField()))
-					mapaCategoria.put(f.getField(), f.getDefaultMessage());
-			}
-		}
-
-		// valida tags
-		anuncioValidator.validateTags(anuncio, result);
-		if (result.hasErrors()) {
-			for (FieldError f : result.getFieldErrors()) {
-				if (!mapaInformacoes.containsKey(f.getField()) && !mapaLocalizacao.containsKey(f.getField())
-						&& !mapaCategoria.containsKey(f.getField()))
-					mapaTags.put(f.getField(), f.getDefaultMessage());
-			}
-		}
-
-		System.out.println("|--------- mapa de informacao ----------------");
-		iterarMapa(mapaInformacoes);
-		System.out.println("|--------- mapa de categoria ----------------");
-		iterarMapa(mapaLocalizacao);
-		System.out.println("|--------- mapa de localizacao ----------------");
-		iterarMapa(mapaCategoria);
-		System.out.println("|--------- mapa de tags ----------------");
-		iterarMapa(mapaTags);
-
-		map.put("mapaInformacoes", mapaInformacoes);
-		map.put("mapaLocalizacao", mapaLocalizacao);
-		map.put("mapaCategoria", mapaCategoria);
-		map.put("mapaTags", mapaTags);
-
-		return "/restrito/anuncio/gerenciar_anuncio/publicar";
-	}
-
-	private void iterarMapa(Map<String, String> map) {
-
-		for (Map.Entry<String, String> entry : map.entrySet()) {
-			System.out.println("Field: " + entry.getKey() + " menssagem: " + entry.getValue());
-		}
-
-	}
-
-	@RequestMapping(value = { "/{tituloNaUrl}/{idAnuncio}", "/{tituloNaUrl}/{idAnuncio}/estatisticas" })
+	@RequestMapping(value = { "/{tituloNaUrl}/{idAnuncio}" })
 	public String paginaEstatisticas(@PathVariable("tituloNaUrl") String tituloNaUrl,
 			@PathVariable("idAnuncio") Long idAnuncio, ModelMap map) {
 
@@ -163,31 +73,9 @@ public class GerenciarAnuncioController {
 		List<FileMeta> listaImagens = imagemRN.listarImagensDoAnuncio(anuncio.getId());
 		map.put("listaImagens", listaImagens);
 
-		// plano do anuncio
-		PlanoAnuncio plano = planoRN.buscarPlanoDoAnuncio(anuncio.getId());
-		map.put("plano", plano);
-
 		map.put("anuncio", anuncio);
 
 		return "/restrito/anuncio/gerenciar_anuncio/resumo";
-	}
-
-	@RequestMapping("/{tituloNaUrl}/{idAnuncio}/plano")
-	public String paginaPlano(@PathVariable("tituloNaUrl") String tituloNaUrl,
-			@PathVariable("idAnuncio") Long idAnuncio, ModelMap map) {
-
-		Usuario usuario = usuarioRN.pegaUsuarioNaSessao(map);
-		Anuncio anuncio = anuncioRN.buscarAnuncioDoUsuario(usuario.getId(), idAnuncio);
-		PlanoAnuncio plano = planoRN.buscarPlanoAtivoDoAnuncio(idAnuncio);
-
-		if (anuncio == null) {
-			return "redirect:/area-da-empresa/meus-anuncios";
-		}
-
-		map.put("anuncio", anuncio);
-		map.put("plano", plano);
-
-		return "/restrito/anuncio/gerenciar_anuncio/anuncio-plano";
 	}
 
 	@RequestMapping("/{tituloNaUrl}/{idAnuncio}/informacoes")
@@ -382,7 +270,7 @@ public class GerenciarAnuncioController {
 		anuncioOriginal.setSubCategoria(subCategoria);
 
 		anuncioRN.atualizar(anuncioOriginal);
-		
+
 		redirectAttrs.addFlashAttribute("success", "success");
 		return "redirect:/area-da-empresa/meus-anuncios/" + anuncioOriginal.getTituloNaUrl() + "/"
 				+ anuncioOriginal.getId() + "/categoria";

@@ -9,104 +9,98 @@ import javax.persistence.TypedQuery;
 import org.springframework.stereotype.Repository;
 
 import com.catalogonet.dao.interfaces.PlanoDAO;
-import com.catalogonet.model.PlanoAnuncio;
+import com.catalogonet.model.Plano;
 
 @Repository
 public class JpaPlanoDAO implements PlanoDAO {
 
 	@PersistenceContext
-	EntityManager em;
+	private EntityManager em;
 
 	@Override
-	public PlanoAnuncio adicionarPlanoAnuncio(PlanoAnuncio planoAnuncio) {
-		em.persist(planoAnuncio);
+	public Plano adicionarPlano(Plano plano) {
+		em.persist(plano);
 		em.flush();
-		return planoAnuncio;
+		return plano;
 	}
 
 	@Override
-	public void atualizarPlanoAnuncio(PlanoAnuncio planoAnuncio) {
-		em.merge(planoAnuncio);
+	public void atualizarPlano(Plano plano) {
+		em.merge(plano);
 	}
 
 	@Override
-	public void removerPlanoAnuncio(Long idPlanoAnuncio) {
-		PlanoAnuncio plano = em.find(PlanoAnuncio.class, idPlanoAnuncio);
+	public void removerPlano(Long idPlano) {
+		Plano plano = em.find(Plano.class, idPlano);
 		em.remove(plano);
 	}
 
 	@Override
-	public PlanoAnuncio buscarPlanoAnuncioPorId(Long idPlanoAnuncio) {
-		return em.find(PlanoAnuncio.class, idPlanoAnuncio);
+	public Plano buscarPlanoPorId(Long idPlano) {
+		return em.find(Plano.class, idPlano);
 	}
 
 	@Override
-	public List<PlanoAnuncio> listarPlanoAnuncioUsuario(Long idUsuario) {
-		String consulta = "select p from PlanoAnuncio p where p.usuario.id = :idUsuario";
-		TypedQuery<PlanoAnuncio> query = em.createQuery(consulta, PlanoAnuncio.class);
+	public List<Plano> listarPlanosDoUsuario(Long idUsuario) {
+		String consulta = "select p from Plano p where p.usuario.id = :idUsuario";
+		TypedQuery<Plano> query = em.createQuery(consulta, Plano.class);
 		query.setParameter("idUsuario", idUsuario);
 		return query.getResultList();
 	}
 
 	@Override
-	public List<PlanoAnuncio> listarPlanoAnuncioNaoUtilizado(Long idUsuario) {
-		String consulta = "select p from PlanoAnuncio p where p.usuario.id = :idUsuario AND p.anuncio IS NULL";
-		TypedQuery<PlanoAnuncio> query = em.createQuery(consulta, PlanoAnuncio.class);
+	public List<Plano> listarPlanosNaoUtilizados(Long idUsuario) {
+		String consulta = "select p from Plano p where p.usuario.id = :idUsuario AND p.anuncio IS NULL";
+		TypedQuery<Plano> query = em.createQuery(consulta, Plano.class);
 		query.setParameter("idUsuario", idUsuario);
 		return query.getResultList();
 	}
 	
 //	@Override
-//	public List<Anuncio> listarAnunciosGratuitosNaoAprovados() {
-//		String consulta = "SELECT a FROM Anuncio a WHERE a.prioridadeProduto = com.catalogonet.produto.PrioridadeProduto.PRODUTO_GRATUITO and a.verificado = false";
-//		TypedQuery<Anuncio> query = em.createQuery(consulta, Anuncio.class);
-//		return query.getResultList();
-//	}
-	
-	@Override
-	public PlanoAnuncio buscarPlanoAtivoDoAnuncio(Long idAnuncio) {
-
-		try {
-			
-			String consulta = "select p from PlanoAnuncio p where p.anuncio.id = :idAnuncio AND p.ativo = true";
-			TypedQuery<PlanoAnuncio> query = em.createQuery(consulta, PlanoAnuncio.class);
-			query.setParameter("idAnuncio", idAnuncio);
-			return query.getSingleResult();
-		} catch (Exception e) {
-			System.out.println("O metodo buscarPlanoAtivoDoAnuncio da classe JpaPlanoDAO lancou uma exception: " + e.getMessage());
-			return null;
-		}
-
-	}
-
-	@Override
-	public PlanoAnuncio buscarPlanoDoAnuncio(Long idAnuncio) {
-		try {
-			String consulta = "select p from PlanoAnuncio p where p.anuncio.id = :idAnuncio";
-			TypedQuery<PlanoAnuncio> query = em.createQuery(consulta, PlanoAnuncio.class);
-			query.setParameter("idAnuncio", idAnuncio);
-			return query.getResultList().get(0);
-		} catch (Exception e) {
-			System.out.println("O metodo buscarPlanoDoAnuncio da classe JpaPlanoDAO lnacou uma exception: " + e.getMessage());
-			return null;
-		}
-	}
-
-//	/**
-//	 * Lista todos os plano que este anuncio ja teve, inclusive os desativados
-//	 */
-//	@Override
-//	public List<PlanoAnuncio> listarTodosPlanosDoAnuncio(Long idAnuncio) {
+//	public Plano buscarPlanoAtivoDoAnuncio(Long idAnuncio) {
 //
 //		try {
-//			String consulta = "select p from PlanoAnuncio p where p.anuncio.id = :idAnuncio";
-//			TypedQuery<PlanoAnuncio> query = em.createQuery(consulta, PlanoAnuncio.class);
+//			
+//			String consulta = "select p from Plano p where p.anuncio.id = :idAnuncio AND p.status = :statusAtivo";
+//			TypedQuery<Plano> query = em.createQuery(consulta, Plano.class);
 //			query.setParameter("idAnuncio", idAnuncio);
+//			query.setParameter("statusAtivo", StatusPlano.ATIVO);
+//			return query.getSingleResult();
+//		} catch (Exception e) {
+//			System.out.println("O metodo buscarPlanoAtivoDoAnuncio da classe JpaPlanoDAO lancou uma exception: " + e.getMessage());
+//			return null;
+//		}
+//
+//	}
+//
+//	@Override
+//	public Plano buscarPlanoDoAnuncio(Long idAnuncio) {
+//		try {
+//			String consulta = "select p from Plano p where p.anuncio.id = :idAnuncio";
+//			TypedQuery<Plano> query = em.createQuery(consulta, Plano.class);
+//			query.setParameter("idAnuncio", idAnuncio);
+//			return query.getResultList().get(0);
+//		} catch (Exception e) {
+//			System.out.println("O metodo buscarPlanoDoAnuncio da classe JpaPlanoDAO lancou uma exception: " + e.getMessage());
+//			return null;
+//		}
+//	}
+//
+//	@Override
+//	public List<Plano> listarPlanosComAnuncioDoUsuario(Long idUsuario) {
+//		
+//		try {
+//			String consulta = "select p from Plano p where p.usuario.id = :idUsuario AND p.anuncio != NULL";
+//			//String consulta = "select p from Plano p where p.anuncio.id = :idUsuario";
+//			TypedQuery<Plano> query = em.createQuery(consulta, Plano.class);
+//			query.setParameter("idUsuario", idUsuario);
 //			return query.getResultList();
 //		} catch (Exception e) {
-//			return null;
+//			System.out.println("O metodo listarPlanosComAnuncio da classe JpaPlanoDAO lancou uma exception: " + e.getMessage());
+//			return Collections.emptyList();
 //		}
 //		
 //	}
+
 
 }
