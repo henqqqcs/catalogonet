@@ -120,7 +120,7 @@ public class Anuncio implements Serializable {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "usuario_id", nullable = false)
 	private Usuario usuario;
-	
+
 	@OneToOne(fetch = FetchType.LAZY)
 	private Plano plano;
 
@@ -242,7 +242,7 @@ public class Anuncio implements Serializable {
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
 	}
-	
+
 	public Plano getPlano() {
 		return plano;
 	}

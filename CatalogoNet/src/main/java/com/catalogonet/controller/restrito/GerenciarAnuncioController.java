@@ -8,9 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.Errors;
-import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -54,11 +51,6 @@ public class GerenciarAnuncioController {
 	@Autowired
 	private AnuncioValidator anuncioValidator;
 
-	@InitBinder("anuncio")
-	public void dataBinding(WebDataBinder binder) {
-		binder.setValidator(anuncioValidator);
-	}
-
 	@RequestMapping(value = { "/{tituloNaUrl}/{idAnuncio}" })
 	public String paginaEstatisticas(@PathVariable("tituloNaUrl") String tituloNaUrl,
 			@PathVariable("idAnuncio") Long idAnuncio, ModelMap map) {
@@ -94,53 +86,28 @@ public class GerenciarAnuncioController {
 		return "/restrito/anuncio/gerenciar_anuncio/informacoes";
 	}
 
-	/**
-	 * Atualizar informacoes do anuncio
-	 * 
-	 * @param tituloNaUrl
-	 * @param idAnuncio
-	 * @param anuncio
-	 * @param errors
-	 * @param result
-	 * @param map
-	 * @return
-	 */
 	@RequestMapping("/{tituloNaUrl}/{idAnuncio}/informacoes-handle")
 	public String paginaInformacoesHandle(@PathVariable("tituloNaUrl") String tituloNaUrl,
 			@PathVariable("idAnuncio") Long idAnuncio, @ModelAttribute("anuncioUpdate") Anuncio anuncioUpdate,
-			Errors errors, RedirectAttributes redirectAttrs, BindingResult result, ModelMap map) {
+			RedirectAttributes redirectAttrs, ModelMap map) {
 
 		// buscar anuncio original
 		Anuncio anuncioOriginal = anuncioRN.buscarPorId(idAnuncio);
 		anuncioUpdate.setId(anuncioOriginal.getId());
 
 		// validar
-		anuncioValidator.validateInformacoes(anuncioUpdate, errors);
+		BindingResult result = anuncioValidator.validateInformacoes(anuncioUpdate);
 
-		if (errors.hasErrors()) {
+		if (result.hasErrors()) {
 			redirectAttrs.addFlashAttribute("errors", "errors");
 			redirectAttrs.addFlashAttribute("anuncioUpdate", anuncioUpdate);
 			redirectAttrs.addFlashAttribute("org.springframework.validation.BindingResult.anuncioUpdate", result);
-			return "redirect:/area-da-empresa/meus-anuncios/" + anuncioUpdate.getTituloNaUrl() + "/"
-					+ anuncioUpdate.getId() + "/informacoes";
+			return "redirect:/area-da-empresa/meus-anuncios/" + anuncioOriginal.getTituloNaUrl() + "/"
+					+ anuncioOriginal.getId() + "/informacoes";
 		}
 
-		// titulo
-		anuncioOriginal.setTitulo(anuncioUpdate.getTitulo());
-
-		// descricao
-		anuncioOriginal.setDescricao(anuncioUpdate.getDescricao());
-
-		// telefone
-		anuncioOriginal.setTelefone1(anuncioUpdate.getTelefone1());
-		anuncioOriginal.setTelefone2(anuncioUpdate.getTelefone2());
-
-		// site
-		anuncioOriginal.setSite(anuncioUpdate.getSite());
-		// email
-		anuncioOriginal.setEmail(anuncioUpdate.getEmail());
-		// facebook
-		anuncioOriginal.setFacebook(anuncioUpdate.getFacebook());
+		// setar informacoes
+		anuncioOriginal = setInformacoesDoAnuncio(anuncioUpdate, anuncioOriginal);
 
 		// atualizar
 		anuncioRN.atualizar(anuncioOriginal);
@@ -150,6 +117,17 @@ public class GerenciarAnuncioController {
 		redirectAttrs.addFlashAttribute("success", "success");
 		return "redirect:/area-da-empresa/meus-anuncios/" + anuncioOriginal.getTituloNaUrl() + "/"
 				+ anuncioOriginal.getId() + "/informacoes";
+	}
+
+	private Anuncio setInformacoesDoAnuncio(Anuncio anuncioUpdate, Anuncio anuncioOriginal) {
+		anuncioOriginal.setTitulo(anuncioUpdate.getTitulo());
+		anuncioOriginal.setDescricao(anuncioUpdate.getDescricao());
+		anuncioOriginal.setTelefone1(anuncioUpdate.getTelefone1());
+		anuncioOriginal.setTelefone2(anuncioUpdate.getTelefone2());
+		anuncioOriginal.setSite(anuncioUpdate.getSite());
+		anuncioOriginal.setEmail(anuncioUpdate.getEmail());
+		anuncioOriginal.setFacebook(anuncioUpdate.getFacebook());
+		return anuncioOriginal;
 	}
 
 	// ======================================================================
@@ -176,16 +154,16 @@ public class GerenciarAnuncioController {
 	@RequestMapping("/{tituloNaUrl}/{idAnuncio}/localizacao-handle")
 	public String paginaLocalizacaoHandle(@PathVariable("tituloNaUrl") String tituloNaUrl,
 			@PathVariable("idAnuncio") Long idAnuncio, @ModelAttribute("anuncioUpdate") Anuncio anuncioUpdate,
-			Errors errors, RedirectAttributes redirectAttrs, BindingResult result, ModelMap map) {
+			RedirectAttributes redirectAttrs, ModelMap map) {
 
 		// buscar anuncio original
 		Anuncio anuncioOriginal = anuncioRN.buscarPorId(idAnuncio);
 		anuncioUpdate.setId(anuncioOriginal.getId());
 
-		// validar
-		anuncioValidator.validateLocalizacao(anuncioUpdate, errors);
+		// valiadr
+		BindingResult result = anuncioValidator.validateLocalizacao(anuncioUpdate);
 
-		if (errors.hasErrors()) {
+		if (result.hasErrors()) {
 			redirectAttrs.addFlashAttribute("errors", "errors");
 			redirectAttrs.addFlashAttribute("anuncioUpdate", anuncioUpdate);
 			redirectAttrs.addFlashAttribute("org.springframework.validation.BindingResult.anuncioUpdate", result);
@@ -193,24 +171,7 @@ public class GerenciarAnuncioController {
 					+ anuncioOriginal.getId() + "/localizacao";
 		}
 
-		// estado
-		anuncioOriginal.setEstado(anuncioUpdate.getEstado());
-
-		// cidade
-		anuncioOriginal.setCidade(anuncioUpdate.getCidade());
-
-		// bairro
-		anuncioOriginal.setBairro(anuncioUpdate.getBairro());
-
-		// endereco
-		anuncioOriginal.setEndereco(anuncioUpdate.getEndereco());
-
-		// cep
-		anuncioOriginal.setCep(anuncioUpdate.getCep());
-
-		// lat e long
-		anuncioOriginal.setMapLatitude(anuncioUpdate.getMapLatitude());
-		anuncioOriginal.setMapLongitude(anuncioUpdate.getMapLongitude());
+		anuncioOriginal = setAnuncioLocalizacao(anuncioUpdate, anuncioOriginal);
 
 		// atualizar
 		anuncioRN.atualizar(anuncioOriginal);
@@ -218,6 +179,17 @@ public class GerenciarAnuncioController {
 		redirectAttrs.addFlashAttribute("success", "success");
 		return "redirect:/area-da-empresa/meus-anuncios/" + anuncioOriginal.getTituloNaUrl() + "/"
 				+ anuncioOriginal.getId() + "/localizacao";
+	}
+
+	private Anuncio setAnuncioLocalizacao(Anuncio anuncioUpdate, Anuncio anuncioOriginal) {
+		anuncioOriginal.setEstado(anuncioUpdate.getEstado());
+		anuncioOriginal.setCidade(anuncioUpdate.getCidade());
+		anuncioOriginal.setBairro(anuncioUpdate.getBairro());
+		anuncioOriginal.setEndereco(anuncioUpdate.getEndereco());
+		anuncioOriginal.setCep(anuncioUpdate.getCep());
+		anuncioOriginal.setMapLatitude(anuncioUpdate.getMapLatitude());
+		anuncioOriginal.setMapLongitude(anuncioUpdate.getMapLongitude());
+		return anuncioOriginal;
 	}
 
 	// ======================================================================
@@ -244,16 +216,16 @@ public class GerenciarAnuncioController {
 	@RequestMapping("/{tituloNaUrl}/{idAnuncio}/categoria-handle")
 	public String paginaCategoriaHandle(@PathVariable("tituloNaUrl") String tituloNaUrl,
 			@PathVariable("idAnuncio") Long idAnuncio, @ModelAttribute("anuncioUpdate") Anuncio anuncioUpdate,
-			Errors errors, RedirectAttributes redirectAttrs, BindingResult result, ModelMap map) {
+			RedirectAttributes redirectAttrs, ModelMap map) {
 
 		// buscar anuncio original
 		Anuncio anuncioOriginal = anuncioRN.buscarPorId(idAnuncio);
 		anuncioUpdate.setId(anuncioOriginal.getId());
 
 		// validar
-		anuncioValidator.validateCategorias(anuncioUpdate, errors);
+		BindingResult result = anuncioValidator.validateCategoria(anuncioUpdate);
 
-		if (errors.hasErrors()) {
+		if (result.hasErrors()) {
 			redirectAttrs.addFlashAttribute("errors", "errors");
 			redirectAttrs.addFlashAttribute("anuncioUpdate", anuncioUpdate);
 			redirectAttrs.addFlashAttribute("org.springframework.validation.BindingResult.anuncioUpdate", result);
@@ -261,6 +233,16 @@ public class GerenciarAnuncioController {
 					+ anuncioOriginal.getId() + "/categoria";
 		}
 
+		anuncioOriginal = setAnuncioCategorias(anuncioUpdate, anuncioOriginal);
+
+		anuncioRN.atualizar(anuncioOriginal);
+
+		redirectAttrs.addFlashAttribute("success", "success");
+		return "redirect:/area-da-empresa/meus-anuncios/" + anuncioOriginal.getTituloNaUrl() + "/"
+				+ anuncioOriginal.getId() + "/categoria";
+	}
+
+	private Anuncio setAnuncioCategorias(Anuncio anuncioUpdate, Anuncio anuncioOriginal) {
 		// colocar categoria
 		Categoria categoria = categoriaRN.buscarCategoriaPorId(anuncioUpdate.getCategoria().getId());
 		anuncioOriginal.setCategoria(categoria);
@@ -269,11 +251,7 @@ public class GerenciarAnuncioController {
 		SubCategoria subCategoria = categoriaRN.buscarSubCategoriaPorId(anuncioUpdate.getSubCategoria().getId());
 		anuncioOriginal.setSubCategoria(subCategoria);
 
-		anuncioRN.atualizar(anuncioOriginal);
-
-		redirectAttrs.addFlashAttribute("success", "success");
-		return "redirect:/area-da-empresa/meus-anuncios/" + anuncioOriginal.getTituloNaUrl() + "/"
-				+ anuncioOriginal.getId() + "/categoria";
+		return anuncioOriginal;
 	}
 
 	// ======================================================================
@@ -299,12 +277,12 @@ public class GerenciarAnuncioController {
 	@RequestMapping("/{tituloNaUrl}/{idAnuncio}/palavras-chave-handle")
 	public String paginaPalavrasChaveHandle(@PathVariable("tituloNaUrl") String tituloNaUrl,
 			@PathVariable("idAnuncio") Long idAnuncio, @ModelAttribute("anuncioUpdate") Anuncio anuncioUpdate,
-			Errors errors, RedirectAttributes redirectAttrs, BindingResult result, ModelMap map) {
+			RedirectAttributes redirectAttrs, ModelMap map) {
 
 		Anuncio anuncioOriginal = anuncioRN.buscarPorId(idAnuncio);
 
-		// validate tags
-		anuncioValidator.validateTags(anuncioUpdate, errors);
+		// validar tags
+		BindingResult result = anuncioValidator.validateTags(anuncioUpdate);
 
 		if (result.hasErrors()) {
 			redirectAttrs.addFlashAttribute("errors", "errors");
@@ -314,7 +292,7 @@ public class GerenciarAnuncioController {
 					+ anuncioOriginal.getId() + "/palavras-chave";
 		}
 
-		anuncioOriginal.setTags(anuncioUpdate.getTags());
+		// anuncioOriginal.setTags(anuncioUpdate.getTags());
 
 		// atualizar
 		anuncioRN.atualizar(anuncioOriginal);

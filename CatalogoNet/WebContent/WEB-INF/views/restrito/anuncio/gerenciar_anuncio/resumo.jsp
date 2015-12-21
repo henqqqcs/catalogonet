@@ -113,9 +113,7 @@
 											<div class="col-md-6">
 												<p>
 													<c:url var="publicarUrl" value="/area-da-empresa/meus-anuncios/${anuncio.tituloNaUrl}/${anuncio.id}/publicar" />
-													<form:form id="anuncioForm" modelAttribute="anuncio" action="${publicarUrl}" method="POST">
-														<button class="btn btn-success btn-lg" type="submit" title="Publicar seu anúncio">Publicar</button>
-													</form:form>
+													<a href="${publicarUrl}" class="btn btn-success btn-lg" title="Publicar seu anúncio">Publicar</a> 
 												</p>
 												<p>
 													<a href="#" class="btn btn-info btn-lg" title="Clique aqui para editar seu anúncio passo a passo">Editar anúncio</a>

@@ -1,6 +1,5 @@
 package com.catalogonet.negocio;
 
-import java.time.LocalDate;
 import java.util.List;
 
 import javax.transaction.Transactional;
@@ -20,22 +19,11 @@ public class AnuncioRN {
 	private AnuncioDAO dao;
 
 	public void salvar(Anuncio anuncio) {
-
-		// coloca data de criacao
-		if (anuncio.getDataCriacao() == null) {
-			anuncio.setDataCriacao(LocalDate.now());
-		}
 		dao.salvar(anuncio);
 	}
 
 	public void atualizar(Anuncio anuncio) {
 		dao.atualizar(anuncio);
-
-		// sempre que um anuncio que foi reprovado, for atualizado, ele sera
-		// verificado novamente
-		if (anuncio.isAprovado() == false) {
-			anuncio.setVerificado(false);
-		}
 	}
 	
 	public void remover(Long id) {
