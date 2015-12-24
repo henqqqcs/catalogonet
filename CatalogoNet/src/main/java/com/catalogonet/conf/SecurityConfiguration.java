@@ -40,14 +40,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 		http.
 			authorizeRequests().
-			antMatchers("/area-da-empresa/**").
-			hasRole("USUARIO").
-			antMatchers("/adminadmin/**").
-			hasRole("ADMIN").
-			antMatchers("/**").
-			permitAll().
-			anyRequest().
-			authenticated().
+			antMatchers("/area-da-empresa/**").hasRole("USUARIO").
+			antMatchers("/adminadmin/**").hasRole("ADMIN").
+			antMatchers("/**").permitAll().
 		and().
 			formLogin().
 			loginPage("/login").

@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <script type="text/javascript">
 $(window).scroll(function(){var a=$(window).scrollTop(),e=screen.width,r=210;e>780&&(r=130),e>=981&&(r=150),780>=e?(a>r?($(".wrapper-form-busca").hide(),$(".wrapper-form-busca-hidden").show()):$(".wrapper-form-busca").show(),a>r&&!$(".wrapper-form-busca-hidden").hasClass("active")?($(".wrapper-form-busca-hidden").addClass("active"),0==$(".busca-hidden-mensagem-clique").text().length&&$(".busca-hidden-mensagem-clique").append('<span id="mensagem-to-apend">Clique aqui para pesquisar <span class="glyphicon glyphicon-search"></span></span>')):r>=a&&$(".wrapper-form-busca-hidden").hasClass("active")&&($(".busca-hidden-mensagem-clique").text().length>0&&$("#mensagem-to-apend").remove(),$(".wrapper-form-busca-hidden").removeClass("active"),$(".wrapper-form-busca").removeClass("wrapper-fixed"))):a>r&&!$(".wrapper-form-busca").hasClass("active")?($(".wrapper-form-busca").addClass("wrapper-fixed"),$(".wrapper-form-busca").addClass("active")):r>=a&&$(".wrapper-form-busca").hasClass("active")&&($(".wrapper-form-busca").removeClass("wrapper-fixed"),$(".wrapper-form-busca").removeClass("active"))});
 </script>
@@ -31,7 +32,7 @@ $(document).ready(function(){
     
         <c:url var="busca" value="/busca/buscaRequest" />
         <!-- form -->
-        <form action="${busca}" method="POST">
+        <form:form action="${busca}" method="POST">
           <!-- info -->
           <div class="form-busca">
             <label for="input-busca" class="form-busca-label">Buscar</label> 
@@ -53,7 +54,7 @@ $(document).ready(function(){
             </button>
           </div>
           <!-- fim botao -->
-        </form>
+        </form:form>
         <!-- fim form -->
 
       </div>
