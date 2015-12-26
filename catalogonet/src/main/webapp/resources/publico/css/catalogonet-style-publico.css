@@ -1,0 +1,1249 @@
+/*========================================================================================*/
+/*======================================= 300px ==========================================*/
+/*========================================================================================*/
+
+
+/*----------------------------------------------------------------------------------------*/
+/*------------------------------------ contato -------------------------------------------*/
+
+
+/*------------------------------------ fim contato ---------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+
+/*========================================================================================*/
+/*======================================= 480px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:480px)  {
+
+
+/*----------------------------------------------------------------------------------------*/
+/*------------------------------------ contato -------------------------------------------*/
+
+
+/*------------------------------------ fim contato ---------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+}
+
+/*========================================================================================*/
+/*======================================= 680px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:680px)  { 
+
+
+/*----------------------------------------------------------------------------------------*/
+/*------------------------------------ contato -------------------------------------------*/
+
+/*------------------------------------ fim contato ---------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+}
+
+/*========================================================================================*/
+/*======================================= 780px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:780px)  {
+
+
+/*----------------------------------------------------------------------------------------*/
+/*------------------------------------ contato -------------------------------------------*/
+
+.contato-page-form {
+  float: left;
+  width: 49%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.contato-page-texto {
+  float: right;
+  width: 49%;
+  margin-right: auto;
+  margin-left: auto;
+  
+}
+/*------------------------------------ fim contato ---------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+}
+
+/*========================================================================================*/
+/*======================================= 981px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:981px){
+
+/*----------------------------------------------------------------------------------------*/
+/*------------------------------------ contato -------------------------------------------*/
+
+
+/*------------------------------------ fim contato ---------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+}
+.row-gray-divulgue {
+  background-color: #f9f9f9;
+  border-top: 1px solid #f5f5f5;
+  border-bottom: 1px solid #f5f5f5;
+
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+
+/*.divulgue-anuncio-wrapper {
+  margin-bottom: 60px;
+}*/
+
+.divulgue-anuncio-header {
+  font-size: 44px;
+  font-weight: 300;
+      line-height: 1.29;
+      margin: 1.236em 0 .618em;
+}
+
+.divulgue-anuncio-detalhe {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 18px;
+}
+
+.google-img-wrapper {
+  display: none;
+}
+
+
+@media screen and (min-width:768px)  { 
+
+.google-img-wrapper {
+  display: block;
+  margin-left: -8px;
+}
+
+
+ .google-img-wrapper img {
+    width: 100%;
+  }
+
+
+}
+
+@media screen and (min-width:991px)  { 
+
+/*  .google-img-wrapper {
+      width: 1000px;
+      height: 1000px;
+     overflow: hidden;
+  }
+
+  .google-img {
+    display: block;
+    width: 1000px;
+    margin-left: 0px;
+  }*/
+
+
+}
+
+
+/*======== divulgue-imagens-icones ========= */
+.divulgue-imagens-icones {
+  text-align: center;
+}
+
+
+.divulgue-anuncio-tabela-tittle {
+  font-size: 40px;
+}
+
+/*.imagem-teste {
+  background-color: blue;
+  min-height: 400px;
+  min-width: 400px;
+}
+
+.divulgue-anuncio-tittle {
+      font-size: 35px;
+    font-weight: 300;
+    margin-bottom: 16px;
+    margin-top: 60px;
+  }
+  
+.divulgue-anuncio-beneficios-header {
+  margin: 15px 0 9px;
+      font-size: 16px;
+    font-weight: 700;
+        line-height: 1.43;
+}
+
+
+.divulgue-anuncio-beneficios-detalhes {
+  margin: 10px 0;
+      line-height: 1.54;
+      min-height: 65px;
+}
+
+.divulgue-lista-beneficios {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.divulgue-lista-beneficios .divulgue-anuncio-beneficios-detalhes {
+  min-height: 0;
+}
+
+.divulgue-lista-beneficios ul {
+  margin: 0;
+  padding: 0;
+}
+
+.divulgue-lista-beneficios li {
+  margin-bottom: 5px;
+}
+
+.divulgue-lista-beneficios .glyphicon {
+  color: #009900;
+}
+*/
+
+/*=========== divulgue 2 =================*/
+
+.divulgue-wrapper {
+  margin-bottom: 60px;
+  margin-top: 60px;
+}
+
+
+/*==================== menu =================*/
+
+
+.divulgue-menu {
+  background-color: #f5f5f5;
+  border-bottom: 2px solid #eee;
+  width: 100%;
+  height: 100px;
+}
+
+.divulgue-menu ul {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  background-color: blue;
+}
+
+.divulgue-menu li { 
+  display: inline-block;
+  float: left;
+  width: 33.3222%;
+  height: 100px;
+  padding: 10px 5px;
+  cursor: pointer;
+}
+.divulgue-menu li:hover { 
+  background-color: #F9F9F9;
+   border-bottom: 2px solid #face0e;
+}
+.divulgue-menu li:active { 
+  background-color: #eee;
+   border-bottom: 2px solid #000;
+}
+
+
+.divulgue-menu li:hover h3 {
+  text-decoration: underline;
+}
+
+.divulgue-menu .active:hover {
+  background-color: #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.divulgue-menu .active {
+  background-color: #fff;
+  border-left: 2px solid #eee;
+  border-right: 2px solid #eee;
+}
+
+.divulgue-menu h3{
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+
+.divulgue-menu-icon img {
+  width: 50px;
+}
+
+
+@media screen and (min-width:480px)  {
+
+  .divulgue-menu ul {
+    width: 479px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: black;
+  }
+
+  .divulgue-menu-icon img {
+    width: 60px;
+  }
+
+}
+
+
+@media screen and (min-width:680px)  { 
+
+  .divulgue-menu ul {
+    width: 600px;
+  }
+
+  .divulgue-menu {
+    height: 150px;
+  }
+  .divulgue-menu li {
+    height: 150px;
+  }
+
+  .divulgue-menu-icon img {
+    width: auto;
+  }
+
+}
+
+.login-register-row {
+  max-width: 970px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-register-tittle {
+  margin: 0;
+  font-size: 22px;
+  /*font-weight: bold;*/
+  text-align: center;
+}
+
+.login-register-form {
+  padding: 10px 20px 10px 20px;
+  min-height: 276px;
+  max-height: 276px;
+}
+
+.login-register-form h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0px 0px 20px 0px;
+}
+
+.form-item-forget-pass {
+  margin-bottom: 10px;
+}
+
+.cadastro-header {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.cadastro-header h2 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/*========= cadastro ==========*/
+.form-cadastro-usuario hr {
+  border-top: 1px solid #000;
+}
+.form-cadastro-usuario h3 {
+  font-size: 18px;
+}
+
+.form-cadastro-usuario .form-group .glyphicon-asterisk{
+  font-size: 0.5em;
+  position: relative;
+  top: -6px;
+  color: red;
+}
+/*========================================================================================*/
+/*======================================= 300px ==========================================*/
+/*========================================================================================*/
+
+
+/*----------------------------------------------------------------------------------------*/
+/*-------------------------------------- index -------------------------------------------*/
+.local-top {
+  width: 100%;
+  float: left;
+}
+.local-top-item {
+  max-width: 230px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.local-titulo {
+  font-size: 24px;
+}
+.thumbnail {
+  border: 0;
+}
+.thumbnail .glyphicon {
+  color: #face0e;
+  font-size: 80%;
+}
+.thumbnail img {
+  border-top: 7px solid #face0e;
+}
+
+/*---listagem---*/
+.lista-local-ranking ol li {
+  border-bottom: 1px solid #999;
+  line-height: 18px;
+}
+.lista-local-ranking ol li:last-child {
+  border: 0;
+}
+/*-- estilos --*/
+.lista-local-ranking ol li div a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: 10px 4px 10px 4px;
+}
+.lista-local-ranking ol li div h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.lista-local-ranking ol li .item-numero {
+  float: left;
+  color: #666;
+  line-height: 30px;
+  font-size: 40px;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+.item-saiba-mais {
+  font-size: 14px;
+}
+
+/*-------------------------------------- fim index ---------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+
+/*========================================================================================*/
+/*======================================= 480px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:480px)  {
+
+
+
+/*----------------------------------------------------------------------------------------*/
+/*-------------------------------------- index -------------------------------------------*/
+.local-top {
+  width: 50%;
+}
+/*-------------------------------------- fim index ---------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+}
+
+/*========================================================================================*/
+/*======================================= 680px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:680px)  { 
+
+
+/*----------------------------------------------------------------------------------------*/
+/*-------------------------------------- index -------------------------------------------*/
+
+/*-------------------------------------- fim index ---------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+}
+
+/*========================================================================================*/
+/*======================================= 780px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:780px)  {
+
+
+/*----------------------------------------------------------------------------------------*/
+/*-------------------------------------- index -------------------------------------------*/
+
+/*-------------------------------------- fim index ---------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+}
+
+/*========================================================================================*/
+/*======================================= 900px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:900px)  {
+
+
+/*----------------------------------------------------------------------------------------*/
+/*-------------------------------------- index -------------------------------------------*/
+.local-top {
+  width: 25%;
+}
+/*-------------------------------------- fim index ---------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+}
+
+/*========================================================================================*/
+/*======================================= 981px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:981px){
+
+
+/*----------------------------------------------------------------------------------------*/
+/*-------------------------------------- index -------------------------------------------*/
+
+  
+/*-------------------------------------- fim index ---------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+}
+.pagamento-container {
+  padding: 10px 20px;
+}
+.pagamento-container .table {
+  margin-bottom: 30px;
+}
+.pagamento-container .table th {
+  /*height: 10px;*/
+  background-color:#face0e;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.pagamento-container .table td {
+  padding-left: 10px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.form-pagamento-botao {
+  text-align: center;
+}
+
+/* -- ambiente-seguro --*/
+.pagamento-ambiente-seguro {
+  padding-top: 80px;
+  margin-bottom: 40px;
+}
+.pagamento-ambiente-seguro span {
+  display: block;
+  font-size: 22px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.pagamento-pagamento h3 {
+  margin-top: 1px;
+}
+
+.pagamento-resumo .list-group .list-group-item {
+  background-color: inherit;
+}
+
+.pagamento-resumo-tittle {
+  font-size: 22px;
+  margin-bottom: 15px;
+  /*font-weight: bold;*/
+}
+
+.pagamento-resumo .pull-left {
+  font-weight: bold;
+}
+
+.form-pagamento-metodo .list-group .img {
+  overflow: hidden;
+}
+
+.form-pagamento-metodo input[type=radio] {
+  cursor: pointer;
+  width: 30px;
+  position: relative;
+  top: 2px;
+}
+
+.form-pagamento-metodo label {
+  cursor: pointer;
+}
+
+.form-pagamento-metodo .list-group-item {
+  border-color: 2px solid #dddddd;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.form-pagamento-metodo .list-group-item:hover {
+  background-color: #F6F6F6;
+}
+
+#pagamento-list-active {
+  border: 2px solid #2a9dcc !important;
+}
+
+
+
+
+
+#resultado-busca-wrapper {
+  margin-top: 10px;
+}
+
+#resultado-busca-wrapper ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#resultado-busca-wrapper h1 {
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+  display: inline;
+}
+
+.logotipo {
+  float: right;
+  margin-right: 5px;
+  width: 25%;
+}
+.logotipo .img-thumbnail {
+  border: 0;
+  padding: 0;
+}
+
+#resultado-busca-wrapper .col-md-10 {
+  /*margin-left: 0;*/
+  padding: 0;
+  /*padding-left: 10px;*/
+  /*padding-right: 10px;*/
+}
+
+/*anuncio style*/
+.anuncio-wrapper {
+  padding: 10px 10px;
+}
+.anuncio-wrapper h2{
+  font-size: 1.4em;
+  margin: 0;
+}
+
+.categoria {
+  display: none;
+}
+
+/*list*/
+  #resultado-busca-wrapper li:not(:first-child) {
+    margin-top: 12px;
+  }
+
+/*botoes*/
+.phone-wrapper, .map-wrapper {
+  display: inline-block;
+  margin-top: 5px;
+}
+
+/* ------------------- anuncio gratuito ---------------------------*/
+.anuncio-gratuito {
+  border-left: 5px solid #FFF;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+  border-right: 1px solid #FFF;
+}
+/*---------------------------- anuncio profissional --------------------*/
+.anuncio-profissional {
+  border-left: 5px solid #33CC33;
+  border-top: 1px solid #33CC33;
+  border-bottom: 1px solid #33CC33;
+  border-right: 1px solid #33CC33;
+  background-color: #EBFAEB;
+}
+/*---------------------------- anuncio ultimate --------------------*/
+.anuncio-ultimate {
+  border-left: 5px solid #FF9900;
+  border-top: 1px solid #FF9900;
+  border-bottom: 1px solid #FF9900;
+  border-right: 1px solid #FF9900;
+  background-color: #FFF5E6;
+}
+/*-------------- anuncio hover ----------*/
+ 
+.anuncio-wrapper:hover, 
+.anuncio-wrapper:focus {
+  background-color: #E6F0F8;
+  border-left: 5px solid #0064b4;
+  border-bottom: 1px solid #0064b4;
+  border-right: 1px solid #0064b4;
+  border-top: 1px solid #0064b4;
+  cursor: pointer;
+}
+
+.anuncio-wrapper:active {
+  background-color: #CFD8DF;
+  border-left: 5px solid #00467E;
+  border-bottom: 1px solid #00467E;
+  border-right: 1px solid #00467E;
+  border-top: 1px solid #00467E;
+}
+
+#pagination-wrapper {
+  text-align: center;
+  font-weight: bold;
+}
+
+.pagination li:not(:last-child):not(:first-child){
+  display: none;
+}
+
+/*anuncie-aqui*/
+#resultado-anuncie-aqui {
+
+  text-align: center;
+}
+
+@media screen and (min-width:520px)  {
+
+
+  .resultado-container-left {
+    width: 522px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #resultado-busca-wrapper .alert {
+    width: 522px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .logotipo {
+  float: right;
+  margin-right: 5px;
+  width: auto;
+  }
+
+}
+
+
+@media screen and (min-width:680px)  { 
+
+
+}
+
+
+@media screen and (min-width:768px)  {
+
+  .resultado-container-left {
+    width: 100%;
+  }
+
+  #resultado-busca-wrapper .alert {
+    width: auto;
+  }
+
+
+  .anuncio-wrapper h2{
+    font-size: 1.6em;
+  }
+
+  .categoria {
+    display: inline-block;
+  }
+
+  .pagination li:not(:last-child):not(:first-child){
+    display: inline;
+  }
+
+  #botao-anuncie {
+    margin-top: 8px;
+  }
+
+}
+
+
+@media screen and (min-width:981px){
+
+  #resultado-busca-wrapper {
+    margin-top: 20px;
+  }
+
+}
+
+#anuncio-view-pagina {
+  margin-top: 20px;
+}
+
+
+#anuncio-view-pagina .col-md-10 {
+  padding: 0;
+}
+.anuncio-header-left {
+  
+  background-color: #f8f7f1;
+  border: 1px solid #CCC;
+  /*height: 250px;*/
+}
+
+.anuncio-body-left {
+  background-color: #FFF;
+  border: 1px solid #CCC;
+  height: auto;
+}
+
+.anuncio-body-right {
+  background-color: #eee;
+  height: auto;
+}
+
+.anuncio-view-wrapper {
+  padding: 15px 15px;
+}
+
+
+.links-bar-wrapper a {
+  font-size: 0.8em;
+}
+
+
+/*anuncio-header-style*/
+
+.anuncio-view-wrapper h1 {
+  font-size: 1.4em;
+}
+.links-bar-wrapper {
+  margin-top: 15px;
+  border-top: 1px solid #333;
+}
+.links-bar-wrapper ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+.links-bar-wrapper ul li{
+  display: inline-block;
+  margin-top: 15px;
+  margin-right: 10px;
+}
+
+/*imagens*/
+
+.anuncio-figure-wrapper {
+  float: left;
+  margin-bottom: 10px;
+  width: 50%;
+}
+
+.anuncio-figure-wrapper figure {
+  max-width: 120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.anuncio-img-thumbnail {
+    padding: 4px;
+    line-height: 1.42857143;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    width: 124px;
+    height: 104px;
+
+}
+
+.anuncio-add-photo {
+  border: 2px dashed #999;
+  height: 100%;
+  text-align: center;
+  color: #333;
+}
+.anuncio-add-photo:hover {
+  border: 2px dashed #0064b4;
+}
+
+
+/*map*/
+  .anuncio-header-right {
+    height: 242px;
+    border: 1px solid #CCC;
+  }
+
+  .anuncio-info-item {
+    margin-top: 0px;
+  }
+
+  .anuncio-info-comments {
+    overflow: hidden;
+  }
+
+@media screen and (min-width:480px)  {
+
+
+
+
+}
+
+
+@media screen and (min-width:680px)  { 
+
+
+
+}
+
+
+@media screen and (min-width:768px)  {
+
+
+    .nopadding-right {
+      padding-right: 0 !important;
+      margin-right: 0 !important; 
+    }
+
+    .nopadding-left {
+      padding-left: 0 !important;
+      margin-left: 0 !important; 
+    }
+
+
+    .links-bar-wrapper a {
+      font-size: 1em;
+    }
+
+  .anuncio-figure-wrapper {
+    float: left;
+    width: 32%;
+  }
+
+
+}
+
+
+
+.wrapper-form-busca {
+  background-color: #face0e;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.form-busca-local-wrapper {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.form-busca-local-wrapper input {
+  font-size: 18px;
+}
+.form-busca-label, .form-local-label {
+  display: none;
+}
+
+.form-busca, .form-local {
+  margin-bottom: 10px;
+}
+
+.btn-busca {
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+}
+
+/*hidden effect*/
+
+.busca-hidden-mensagem-clique {
+  margin-top: 5px;
+}
+.wrapper-form-busca-hidden.active {
+  background-color: #face0e;
+  cursor: pointer;
+  height: 50px;
+  font-size: 23px;
+  text-align: center;
+}
+.wrapper-form-busca-hidden:active {
+  background-color: #AF900A;
+}
+.busca-hidden-mensagem-clique.active {
+  margin-top: 5px;
+}
+
+
+.wrapper-fixed {
+    top:0;
+    left:0;
+    right:0;
+    position: fixed;
+    border-top: 1px solid #000;
+    z-index: 1;
+    display:block;
+    opacity: 0;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+.wrapper-fixed.active {
+     opacity:1   
+}
+.wrapper-form-busca-hidden {
+    top:0;
+    left:0;
+    right:0;
+    position: fixed;
+    border-top: 1px solid #000;
+    z-index: 1;
+    
+    display:block;
+    opacity: 0;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+.wrapper-form-busca-hidden.active {
+     opacity:1   
+}
+
+
+@media screen and (min-width:780px)  {
+
+  .form-busca, .form-local {
+    display: inline;
+  }
+
+  .form-busca-label, .form-local-label {
+    display: inline;
+  }
+
+  .form-busca-local-wrapper .form-busca .form-control {
+    width: 300px; 
+    height: 40px;
+    display: inline;
+  }
+  .form-busca-local-wrapper .form-local .form-control {
+    width: 220px;
+    height: 40px;
+    display: inline;
+  }
+
+  .form-botao {
+    display: inline;
+  }
+
+  .form-botao .btn-busca {
+    display: inline;
+    width: auto;
+    height: auto;
+    padding: 8px 12px;
+  }
+
+  .form-busca-local-wrapper {
+    padding-top: 20px;
+  }
+
+  .form-busca-local-wrapper label {
+    font-size: 20px;
+  }
+
+  .wrapper-fixed {
+      top:0;
+      left:0;
+      right:0;
+      position: fixed;
+      padding-top: 0px;
+    padding-bottom: 10px;
+      border-top: 1px solid #000;
+      z-index: 1;
+      display:block;
+      opacity: 0;
+     transition: opacity .25s ease-in-out;
+     -moz-transition: opacity .25s ease-in-out;
+     -webkit-transition: opacity .25s ease-in-out;
+  }
+
+
+}
+
+/*========================================================================================*/
+/*======================================= 300px ==========================================*/
+/*========================================================================================*/
+
+/*----------------------------------------------------------------------------------------*/
+/*------------------------------------ categorias ----------------------------------------*/
+
+.categorias-mais-acessadas h2 {
+  font-size: 22px;
+}
+.categorias-mais-acessadas h2 small {
+  font-size: 14px;
+  display: block;
+  margin-top: 5px;
+}
+
+/* -- categoria-gourp --*/
+.categorias-group {
+  border: 2px solid #ccc;
+  margin-bottom: 8px;
+}
+
+.categorias-group ul li {
+  border-bottom: 1px solid #666;
+}
+.categorias-group ul li:last-child {
+  border: 0;
+}
+
+
+.categorias-group h4 {
+  margin: 0;
+  padding: 12px 2px 12px 4px;
+  background-color: black;
+  color: #face0e;
+}
+.categorias-group ul li a {
+  /*background-color: blue;*/
+  background-color: #f4f4f4;
+  color: #535353;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: 8px 2px 8px 4px;
+}
+
+.categorias-group .glyphicon {
+  float: right;
+}
+/*----------------------------------- fim categoras --------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+
+/*========================================================================================*/
+/*======================================= 480px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:480px)  {
+
+/*----------------------------------------------------------------------------------------*/
+/*------------------------------------ categorias ----------------------------------------*/
+
+/*----------------------------------- fim categoras --------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+}
+
+/*========================================================================================*/
+/*======================================= 680px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:680px)  { 
+
+/*----------------------------------------------------------------------------------------*/
+/*------------------------------------ categorias ----------------------------------------*/
+
+.categorias-container {
+  clear: both;
+  margin-top: 10px;
+}
+
+.categorias-group {
+  float: left;
+  width: 25%;
+  border: 0;
+}
+
+.categorias-mais-acessadas h2 {
+  font-size: 28px;
+}
+.categorias-mais-acessadas h2 small {
+  font-size: 16px;
+  display: inline-block;
+  margin-top: 0px;
+  /*float: right;*/
+}
+.categorias-group ul li { 
+  border: 0;
+  margin-bottom: 8px;
+  /*padding-top: 8px;*/
+}
+.categorias-group h4 {
+  background-color: inherit;
+  color: inherit;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.categorias-group ul li a {
+  background-color: inherit;
+  display: inline-block;
+  width: auto;
+  font-weight: normal;
+  padding: 0px 0px 0px 4px;
+  color: inherit;
+}
+.cat-dot {
+  color: #face0e;
+}
+.categorias-group .glyphicon {
+  float: none;
+  top: 2px;
+}
+
+/*----------------------------------- fim categoras --------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+}
+
+/*========================================================================================*/
+/*======================================= 780px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:780px)  {
+
+
+/*----------------------------------------------------------------------------------------*/
+/*------------------------------------ categorias ----------------------------------------*/
+
+
+/*----------------------------------- fim categoras --------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+}
+
+/*========================================================================================*/
+/*======================================= 900px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:900px)  {
+
+
+/*----------------------------------------------------------------------------------------*/
+/*------------------------------------ categorias ----------------------------------------*/
+
+
+/*----------------------------------- fim categoras --------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+}
+
+/*========================================================================================*/
+/*======================================= 981px ==========================================*/
+/*========================================================================================*/
+@media screen and (min-width:981px){
+
+
+/*----------------------------------------------------------------------------------------*/
+/*------------------------------------ categorias ----------------------------------------*/
+
+
+/*----------------------------------- fim categoras --------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+}
